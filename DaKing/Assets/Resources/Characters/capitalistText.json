@@ -1,0 +1,26 @@
+{
+	"charName" : "capitalist",
+	"lstDialogOne":[
+		"Well hello there ol'chap",
+		"I'm on the prowel, looking to start a self-defense business chain",
+		"And your kingdom looks just dashing!",
+		"I'd need a small loan of 5 coins, but as they say, you have to spend money to make money! |c"
+	],
+	"lstOutcomeYesText":[
+		"Splendid!"
+	],
+	"lstOutcomeNoText":[
+		"What what?!",
+		"Nevermind, toodle pip!"
+	],
+	"lstOutcomeYesResult":[
+		-5,
+		0,
+		0
+	],
+	"lstOutcomeNoResult":[
+		0,
+		0,
+		0
+	]
+}

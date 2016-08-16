@@ -1,0 +1,75 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &198026
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 458050}
+  - 114: {fileID: 11443750}
+  m_Layer: 0
+  m_Name: SoundDef-PageTurn
+  m_TagString: SoundPlayer
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &458050
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 198026}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.19910103, y: -0.614344, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+--- !u!114 &11443750
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 198026}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4649248b052d42b681196b38486eacf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - {fileID: 8300000, guid: 10b3557a0f2484148b6b4a1abb2f9fe0, type: 3}
+  - {fileID: 8300000, guid: a3a372f962afb4edb9bfb5946ae0cb06, type: 3}
+  - {fileID: 8300000, guid: a512182a650b041409ec08a79bca8327, type: 3}
+  - {fileID: 8300000, guid: b0895c649d67942b9aa98a1461c72e22, type: 3}
+  - {fileID: 8300000, guid: a527a10ea41be46d68df00429a75e8d4, type: 3}
+  - {fileID: 8300000, guid: 8ab147f8dc508482cb6b3d0993e30ad9, type: 3}
+  - {fileID: 8300000, guid: ff9f7e46f238041d9a34aebb1da21a03, type: 3}
+  - {fileID: 8300000, guid: fe148c0c188344d5d9b999dccfd92e41, type: 3}
+  - {fileID: 8300000, guid: 45d89278cf9de4a1aa64d9151ec14852, type: 3}
+  - {fileID: 8300000, guid: c38986192e1974a85acbc7847a8636b4, type: 3}
+  - {fileID: 8300000, guid: 479c4bd4bffe7460fa2e5f01dadd5e13, type: 3}
+  - {fileID: 8300000, guid: 6ace2492ea4ae497e9685200ef3e6416, type: 3}
+  - {fileID: 8300000, guid: 51192abe8db45465dae04ea7d9222a31, type: 3}
+  - {fileID: 8300000, guid: ffd9e473ef3634ec7b19eac46777f987, type: 3}
+  - {fileID: 8300000, guid: 7d9181ec0ca9c47ff8fcfb6d2af7567b, type: 3}
+  sources: []
+  numSources: 1
+  minFrequency: 1
+  MaxFrequency: 7
+  timers: []
+  vol: 1
+  looping: 0
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 198026}
+  m_IsPrefabParent: 1

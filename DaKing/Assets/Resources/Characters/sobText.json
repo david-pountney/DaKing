@@ -1,0 +1,19 @@
+{
+	"charName" : "sob",
+	"lstDialogOne":[
+		"Can I be king?|c"
+	],
+	"lstOutcomeYesText":[
+		"Hahar! The kingdom is mine!|d"
+	],
+	"lstOutcomeNoText":[
+		"Darn!",
+		"...",
+		"You haven't seen the last of me!"
+	],
+	"lstOutcomeNoResult":[
+		0,
+		0,
+		0
+	]
+}

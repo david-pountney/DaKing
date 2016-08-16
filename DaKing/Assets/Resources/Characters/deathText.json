@@ -1,0 +1,15 @@
+{
+	"charName" : "death",
+	"lstDialogOne":[
+		"*tut* *tut* *tut*",
+		"Your petty kingdom is falling",
+		"Your land is divided",
+		"Children sing songs of mockery in the streets",
+		"Your time is soon coming..."
+	],
+	"lstOutcomePassiveResult":[
+		0,
+		0,
+		-30
+	]
+}

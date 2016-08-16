@@ -1,0 +1,29 @@
+{
+	"charName" : "scientist",
+	"lstDialogOne":[
+		"Your lordship",
+		"I represent the 'Morning Star' foundation",
+		"We help the peasents in the kingdom",
+		"Today we are fund raising for the unemployed plebs out on the streets",
+		"Care to donate just 3 coins to help the needy?|c"
+	],
+	"lstOutcomeYesText":[
+		"Hehe, awesome. I'll put the plebs to work immediatly"
+	],
+	"lstOutcomeNoText":[
+		"Thats a shame, I'll be back soon with no doubt another noble cause"
+	],
+	"lstOutcomeYesResult":[
+		-3,
+		0,
+		0
+	],
+	"lstOutcomeNoResult":[
+		0,
+		0,
+		-25
+	],
+	"lstCantAffordText":[
+		"Oh dear, it looks like you can't afford to help m-I mean..the needy"
+	]
+}
