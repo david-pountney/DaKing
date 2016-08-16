@@ -51,6 +51,12 @@ public class PlayerAttributes : MonoBehaviour {
         MoodDisplayScript.getInstance().handleMood(0);
     }
 
+    public void setMoney( int newVal )
+    {
+        money = newVal;
+        moneyText.text = money.ToString();
+    }
+
     public void moneyChanged(int amount)
     {
         money += amount;
@@ -63,6 +69,19 @@ public class PlayerAttributes : MonoBehaviour {
     {
         military += amount;
         militaryText.text = military.ToString();
+    }
+
+    public void setMilitary(int newVal)
+    {
+        military = newVal;
+        militaryText.text = military.ToString();
+    }
+
+    public void setMood(int newVal)
+    {
+        depression = newVal;
+        depressionText.text = depression.ToString();
+        checkForNewStageOfDepression();
     }
 
     public void depressionChanged(int amount)

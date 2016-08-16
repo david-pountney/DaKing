@@ -1,7 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class ExecuteChoices : MonoBehaviour {
+public class ExecuteChoices : MonoBehaviour
+{
 
     private PlayerAttributes playerAttributes;
     private MovementForChars movementForChars;
@@ -51,10 +52,20 @@ public class ExecuteChoices : MonoBehaviour {
 
             //Give military
             if (yesMilitaryOutcome > 0)
-                StartCoroutine(changeMilitary(yesMilitaryOutcome, 1));
+            {
+                Debug.Log("yesMilitaryOutcome" + yesMilitaryOutcome);
+                iTween.ValueTo(gameObject, iTween.Hash("from", playerAttributes.military, "to", playerAttributes.military + yesMilitaryOutcome, "onupdate", "itweenChangeMilitary"));
+                // StartCoroutine(changeMilitary(yesMilitaryOutcome, 1));
+            }
+
             //Remove military
             else if (yesMilitaryOutcome < 0)
-                StartCoroutine(changeMilitary(yesMilitaryOutcome, -1));
+            {
+                Debug.Log("yesMilitaryOutcome" + yesMilitaryOutcome);
+                iTween.ValueTo(gameObject, iTween.Hash("from", playerAttributes.military, "to", playerAttributes.military + yesMilitaryOutcome, "onupdate", "itweenChangeMilitary"));
+                // StartCoroutine(changeMilitary(yesMilitaryOutcome, -1));
+            }
+
 
             //Give depression
             if (yesDepressionOutcome > 0)
@@ -101,10 +112,20 @@ public class ExecuteChoices : MonoBehaviour {
 
             //Give military
             if (noMilitaryOutcome > 0)
-                StartCoroutine(changeMilitary(noMilitaryOutcome, 1));
+            {
+                Debug.Log("noMilitaryOutcome" + noMilitaryOutcome);
+                iTween.ValueTo(gameObject, iTween.Hash("from", playerAttributes.military, "to", playerAttributes.military + noMilitaryOutcome, "onupdate", "itweenChangeMilitary"));
+                // StartCoroutine(changeMilitary(noMilitaryOutcome, 1));
+            }
+
             //Remove military
             else if (noMilitaryOutcome < 0)
-                StartCoroutine(changeMilitary(noMilitaryOutcome, -1));
+            {
+                Debug.Log("noMilitaryOutcome" + noMilitaryOutcome);
+                iTween.ValueTo(gameObject, iTween.Hash("from", playerAttributes.military, "to", playerAttributes.military + noMilitaryOutcome, "onupdate", "itweenChangeMilitary"));
+                // StartCoroutine(changeMilitary(noMilitaryOutcome, -1));
+            }
+
 
             //Give depression
             if (noDepressionOutcome > 0)
@@ -147,10 +168,20 @@ public class ExecuteChoices : MonoBehaviour {
 
         //Give military
         if (passiveOneMilitaryOutcome > 0)
-            StartCoroutine(changeMilitary(passiveOneMilitaryOutcome, 1));
+        {
+            Debug.Log("passiveOneMilitaryOutcome" + passiveOneMilitaryOutcome);
+            iTween.ValueTo(gameObject, iTween.Hash("from", playerAttributes.military, "to", playerAttributes.military + passiveOneMilitaryOutcome, "onupdate", "itweenChangeMilitary"));
+            // StartCoroutine(changeMilitary(passiveOneMilitaryOutcome, 1));
+        }
+
         //Remove military
         else if (passiveOneMilitaryOutcome < 0)
-            StartCoroutine(changeMilitary(passiveOneMilitaryOutcome, -1));
+        {
+            Debug.Log("passiveOneMilitaryOutcome" + passiveOneMilitaryOutcome);
+            iTween.ValueTo(gameObject, iTween.Hash("from", playerAttributes.military, "to", playerAttributes.military + passiveOneMilitaryOutcome, "onupdate", "itweenChangeMilitary"));
+            // StartCoroutine(changeMilitary(passiveOneMilitaryOutcome, -1));
+        }
+
 
         //Give depression
         if (passiveOneDepressionOutcome > 0)
@@ -177,10 +208,20 @@ public class ExecuteChoices : MonoBehaviour {
 
         //Give military
         if (passiveTwoMilitaryOutcome > 0)
-            StartCoroutine(changeMilitary(passiveTwoMilitaryOutcome, 1));
+        {
+            Debug.Log("passiveTwoMilitaryOutcome" + passiveTwoMilitaryOutcome);
+            iTween.ValueTo(gameObject, iTween.Hash("from", playerAttributes.military, "to", playerAttributes.military + passiveTwoMilitaryOutcome, "onupdate", "itweenChangeMilitary"));
+            // StartCoroutine(changeMilitary(passiveTwoMilitaryOutcome, 1));
+        }
+
         //Remove military
         else if (passiveTwoMilitaryOutcome < 0)
-            StartCoroutine(changeMilitary(passiveTwoMilitaryOutcome, -1));
+        {
+            Debug.Log("passiveTwoMilitaryOutcome" + passiveTwoMilitaryOutcome);
+            iTween.ValueTo(gameObject, iTween.Hash("from", playerAttributes.military, "to", playerAttributes.military + passiveTwoMilitaryOutcome, "onupdate", "itweenChangeMilitary"));
+            // StartCoroutine(changeMilitary(passiveTwoMilitaryOutcome, -1));
+        }
+
 
         //Give depression
         if (passiveTwoDepressionOutcome > 0)
@@ -191,6 +232,11 @@ public class ExecuteChoices : MonoBehaviour {
 
         //Display flash text
         playerAttributes.flashTextValues(passiveTwoMoneyOutcome, passiveTwoMilitaryOutcome, passiveTwoDepressionOutcome);
+    }
+
+    private void itweenChangeMilitary(int newVal)
+    {
+        playerAttributes.setMilitary(newVal);
     }
 
     private IEnumerator changeMilitary(int amount, int step)
