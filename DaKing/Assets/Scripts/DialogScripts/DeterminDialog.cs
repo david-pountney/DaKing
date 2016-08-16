@@ -12,7 +12,7 @@ public class DeterminDialog : MonoBehaviour {
 
     void Awake()
     {
-        theChoice = GetComponent<ExecuteChoices>();
+            theChoice = GetComponent<ExecuteChoices>();
     }
 
     public virtual List<string> GetDialog()

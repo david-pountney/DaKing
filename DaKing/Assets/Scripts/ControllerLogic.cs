@@ -63,11 +63,11 @@ public class ControllerLogic : MonoBehaviour {
                     {
                         CurrentChar = characterChild.GetComponent<MovementForChars>();
                         moveScript = characterChild.GetComponent<MovementForChars>();
+                        characterChild.GetComponent<MovementForChars>().setup();
                     }
                     if (moveScript)
                         moveScript.Activated = true;
 
-                    characterChild.GetComponent<MovementForChars>().setup();
                 }
             }
         }

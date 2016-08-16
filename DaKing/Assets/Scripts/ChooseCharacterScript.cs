@@ -8,22 +8,22 @@ using System.Collections;
 /// </summary>
 public class ChooseCharacterScript : MonoBehaviour {
 
-    //The previous choice that determins which character is shown
-    public ExecuteChoices theChoice;
-
-	// Use this for initialization
-	void Start () {
-	
-	}
+    //Which character in another Character objects children are we basing this decision on?
+    public GameObject theCharacter;
 	
     /// <summary>
     /// Call this method to decide which character is chosen based on a previous choice the player has made
     /// </summary>
     public MovementForChars ChooseCharacter()
     {
-        
+        //Get the script that contains the 'yes'/'no' decision a character made
+        ExecuteChoices theChoice = null;
+
         Transform child1 = null;
         Transform child2 = null;
+
+        if (theCharacter)
+            theChoice = theCharacter.GetComponent<ExecuteChoices>();
 
         if(transform.childCount > 0)
             child1 = transform.GetChild(0);
@@ -48,11 +48,12 @@ public class ChooseCharacterScript : MonoBehaviour {
                 return child1.GetComponent<MovementForChars>();
         }
         else
+        //if answer was no
         {
-            child2 = transform.GetChild(1);
-
             if (child2)
                 return child2.GetComponent<MovementForChars>();
+            else
+                return child1.GetComponent<MovementForChars>();
         }
         
         return null;

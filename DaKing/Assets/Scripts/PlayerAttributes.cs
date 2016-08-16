@@ -96,25 +96,25 @@ public class PlayerAttributes : MonoBehaviour {
         if (depression > quarterPercentDepressionValue)
         {
             GetComponent<SpriteRenderer>().sprite = noDepressionKing;
-            GetComponent<Animator>().runtimeAnimatorController = Resources.Load("animations/KingOnThrone001_0") as RuntimeAnimatorController;
+            //GetComponent<Animator>().runtimeAnimatorController = Resources.Load("animations/KingOnThrone001_0") as RuntimeAnimatorController;
         }
         //Up to Three quater depression health
         else if (depression <= quarterPercentDepressionValue && depression > halfPercentDepressionValue)
         {
             GetComponent<SpriteRenderer>().sprite = threeQuarterPercentDepressionKing;
-            GetComponent<Animator>().runtimeAnimatorController = Resources.Load("animations/KingOnThrone002_0") as RuntimeAnimatorController;
+            //GetComponent<Animator>().runtimeAnimatorController = Resources.Load("animations/KingOnThrone002_0") as RuntimeAnimatorController;
         }
         //Up to Half depression health
         else if (depression <= halfPercentDepressionValue && depression > threeQuarterPercentDepressionValue)
         {
             GetComponent<SpriteRenderer>().sprite = halfPercentDepressionKing;
-            GetComponent<Animator>().runtimeAnimatorController = Resources.Load("animations/KingOnThrone003_0") as RuntimeAnimatorController;
+            //GetComponent<Animator>().runtimeAnimatorController = Resources.Load("animations/KingOnThrone003_0") as RuntimeAnimatorController;
         }
         //Up to a quater depression health
         else if (depression <= threeQuarterPercentDepressionValue)
         {
             GetComponent<SpriteRenderer>().sprite = quarterPercentDepressionKing;
-            GetComponent<Animator>().runtimeAnimatorController = Resources.Load("animations/KingOnThrone004_0") as RuntimeAnimatorController;
+            //GetComponent<Animator>().runtimeAnimatorController = Resources.Load("animations/KingOnThrone004_0") as RuntimeAnimatorController;
         }
     }
 }
