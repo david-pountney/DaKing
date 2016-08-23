@@ -25,7 +25,7 @@ public class PlayerAttributes : MonoBehaviour {
     public Sprite threeQuarterPercentDepressionKing;
 
     //Whats the highest value for depression?
-    private int _maxDepression = 100;
+    public int maxDepression = 100;
 
     public int noDepressionValue;
     public int threeQuarterPercentDepressionValue;
@@ -88,7 +88,7 @@ public class PlayerAttributes : MonoBehaviour {
     {
         depression += amount;
 
-        if (depression + amount > _maxDepression) depression = _maxDepression;
+        if (depression + amount > maxDepression) depression = maxDepression;
 
         depressionText.text = depression.ToString();
 

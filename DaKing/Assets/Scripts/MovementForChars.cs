@@ -255,8 +255,14 @@ public class MovementForChars : MonoBehaviour {
     {
         if (activated)
         {
-            speechInstance.transform.GetComponentInChildren<Text>().text = dialogScript.cantAffordDialog[0];
-
+            if (dialogScript.cantAffordDialog == null)
+            {
+                Debug.LogError("dialogScript.cantAffordDialog is null for character -> " + transform.name);
+            }
+            else
+            {
+                speechInstance.transform.GetComponentInChildren<Text>().text = dialogScript.cantAffordDialog[0];
+            }
             //Play the page turning sound
             soundScript.fire();
         }
