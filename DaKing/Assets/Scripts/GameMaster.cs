@@ -14,7 +14,7 @@ public class GameMaster : MonoBehaviour {
 
         lstCharData = new List<CharacterData>();
         int i = 0;
-        foreach (TextAsset jsonFile in ResourceManager.getInstance().lstJsonData)
+        foreach (TextAsset jsonFile in ResourceManager.instance.lstJsonData)
         {
             lstCharData.Add(JsonUtility.FromJson<CharacterData>(jsonFile.text));
 

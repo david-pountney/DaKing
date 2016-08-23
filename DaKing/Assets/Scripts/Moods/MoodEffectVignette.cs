@@ -14,11 +14,11 @@ public class MoodEffectVignette: IMoodEffect
     VignetteAndChromaticAberration vignetteAndChromaticAberration;
     public MoodEffectVignette()
     {
-        vignetteAndChromaticAberration = ResourceManager.getMainCamera().GetComponent<VignetteAndChromaticAberration>();
     }
 
     public IEnumerator updateEffect(float moodPercent)
     {
+        vignetteAndChromaticAberration = ResourceManager.instance.getMainCamera().GetComponent<VignetteAndChromaticAberration>();
 
         float effectTarget = effectMax - MathsHelper.ConvertRange(effectMin, effectMax, moodPercent);
         Debug.Log("Intensity Target = " + effectTarget);

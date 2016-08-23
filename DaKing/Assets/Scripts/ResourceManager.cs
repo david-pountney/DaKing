@@ -14,11 +14,14 @@ public class ResourceManager : MonoBehaviour
 
     Dictionary<string, GameObject> dicCharacterByName;
 
-    static ResourceManager instance;
+    public static ResourceManager instance;
+
     void Awake()
     {
         if (ResourceManager.instance == null)
         {
+            mainCamera = GameObject.FindGameObjectWithTag("MainCamera");
+
             DontDestroyOnLoad(transform.gameObject);
             ResourceManager.instance = this;
             load();
@@ -28,15 +31,11 @@ public class ResourceManager : MonoBehaviour
             Destroy(this.gameObject);
         }
     }
-    public static ResourceManager getInstance()
-    {
-        return instance;
-    }
 
     void load()
     {
         Debug.Log("loading...!");
-        ResourceManager.getInstance().dicCharacterByName = new Dictionary<string, GameObject>();
+        ResourceManager.instance.dicCharacterByName = new Dictionary<string, GameObject>();
 
         lstJsonData = new List<TextAsset>();
         DirectoryInfo dir = new DirectoryInfo(@"Assets/Resources/"+jsonDataPath);
@@ -48,25 +47,25 @@ public class ResourceManager : MonoBehaviour
         }
 
 
-        mainCamera = GameObject.FindGameObjectWithTag("MainCamera");
         playerAttributes = GameObject.FindGameObjectWithTag("King").GetComponent<PlayerAttributes>();
 
         Debug.Log("loading fin!");
     }
 
-    public static PlayerAttributes getPlayerAttributes()
+    public PlayerAttributes getPlayerAttributes()
     {
-        return ResourceManager.getInstance().playerAttributes;
+        return playerAttributes;
     }
 
-    public static GameObject getMainCamera()
+    public GameObject getMainCamera()
     {
-        return ResourceManager.getInstance().mainCamera;
+        return mainCamera;
     }
-    public static GameObject getCharacterByName(string charName)
+
+    public GameObject getCharacterByName(string charName)
     {
         GameObject theChar;
-        ResourceManager.getInstance().dicCharacterByName.TryGetValue(charName, out theChar);
+        dicCharacterByName.TryGetValue(charName, out theChar);
         return theChar;
     }
 }

@@ -115,7 +115,7 @@ public class MovementForChars : MonoBehaviour {
     private void startSpeak()
     {
         speechInstance = Instantiate(speech, new Vector2(0, 0), Quaternion.identity) as GameObject;
-        speechInstance.transform.SetParent(GameObject.Find("Canvas").transform);
+        speechInstance.transform.SetParent(GameObject.Find("GameCanvas").transform);
         speechInstance.transform.localPosition = new Vector2(speechBubbleX, speechBubbleY);
 
         //Get dialog

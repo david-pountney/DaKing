@@ -14,11 +14,12 @@ public class MoodEffectBloomIntensity : IMoodEffect  {
 
     public MoodEffectBloomIntensity()
     {
-        bloom = ResourceManager.getMainCamera().GetComponent<BloomOptimized>();
     }
 
     public IEnumerator updateEffect(float moodPercent)
     {
+        bloom = ResourceManager.instance.getMainCamera().GetComponent<BloomOptimized>();
+
         float effectTarget = MathsHelper.ConvertRange(effectMin, effectMax, moodPercent);
         Debug.Log("Bloom Intensity Target = " + effectTarget);
 

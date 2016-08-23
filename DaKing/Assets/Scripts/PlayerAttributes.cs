@@ -42,13 +42,9 @@ public class PlayerAttributes : MonoBehaviour {
         newDayMilitary = military;
         newDayDepression = depression;
 
-
         moneyText.text = money.ToString();
         militaryText.text = military.ToString();
         depressionText.text = depression.ToString();
-
-        //Init default values of mood
-        MoodDisplayScript.getInstance().handleMood(0);
     }
 
     public void setMoney( int newVal )

@@ -14,11 +14,12 @@ public class MoodEffectSaturation : IMoodEffect  {
 
     public MoodEffectSaturation()
     {
-        colorCorrection = ResourceManager.getMainCamera().GetComponent<ColorCorrectionCurves>();
     }
 
     public IEnumerator updateEffect(float moodPercent)
     {
+        colorCorrection = ResourceManager.instance.getMainCamera().GetComponent<ColorCorrectionCurves>();
+
         float saturationTarget = MathsHelper.ConvertRange(effectMin, effectMax, moodPercent);
         Debug.Log("Saturation Target = " + saturationTarget);
 

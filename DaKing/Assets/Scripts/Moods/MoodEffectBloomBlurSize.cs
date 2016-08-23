@@ -14,11 +14,12 @@ public class MoodEffectBloomBlurSize : IMoodEffect  {
 
     public MoodEffectBloomBlurSize()
     {
-        bloom = ResourceManager.getMainCamera().GetComponent<BloomOptimized>();
     }
 
     public IEnumerator updateEffect(float moodPercent)
     {
+        bloom = ResourceManager.instance.getMainCamera().GetComponent<BloomOptimized>();
+
         float effectTarget = MathsHelper.ConvertRange(effectMin, effectMax, moodPercent);
         Debug.Log("Bloom Size Target = " + effectTarget);
 
