@@ -3,7 +3,6 @@ using System.Collections;
 
 public class ExecuteChoices : MonoBehaviour
 {
-
     private PlayerAttributes playerAttributes;
     private MovementForChars movementForChars;
 
