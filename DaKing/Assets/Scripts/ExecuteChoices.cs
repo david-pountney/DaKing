@@ -44,7 +44,7 @@ public class ExecuteChoices : MonoBehaviour
             // Handle Money
             Debug.Log("yesMoneyOutcome" + yesMoneyOutcome);
             iTween.ValueTo(gameObject, iTween.Hash("from", playerAttributes.money, "to", playerAttributes.money + yesMoneyOutcome, "onupdate", "itweenChangeMoney"));
-
+            spawnCoins.updateCoins(yesMoneyOutcome);
 
             // Handle military
             Debug.Log("yesMilitaryOutcome" + yesMilitaryOutcome);
@@ -89,8 +89,9 @@ public class ExecuteChoices : MonoBehaviour
             movementForChars.showNoSpeech();
 
             // Handle Money
-            Debug.Log("noMilitaryOutcome" + noMilitaryOutcome);
-            iTween.ValueTo(gameObject, iTween.Hash("from", playerAttributes.money, "to", playerAttributes.money + noMilitaryOutcome, "onupdate", "itweenChangeMoney"));
+            Debug.Log("noMilitaryOutcome" + noMoneyOutcome);
+            iTween.ValueTo(gameObject, iTween.Hash("from", playerAttributes.money, "to", playerAttributes.money + noMoneyOutcome, "onupdate", "itweenChangeMoney"));
+            spawnCoins.updateCoins(noMoneyOutcome);
 
             // Handle Military
             Debug.Log("noMilitaryOutcome" + noMilitaryOutcome);
@@ -131,6 +132,7 @@ public class ExecuteChoices : MonoBehaviour
         // Handle Money
         Debug.Log("passiveOneMoneyOutcome" + passiveOneMoneyOutcome);
         iTween.ValueTo(gameObject, iTween.Hash("from", playerAttributes.money, "to", playerAttributes.money + passiveOneMoneyOutcome, "onupdate", "itweenChangeMoney"));
+        spawnCoins.updateCoins(passiveOneMoneyOutcome);
 
         // Handle Militry
         iTween.ValueTo(gameObject, iTween.Hash("from", playerAttributes.military, "to", playerAttributes.military + passiveOneMilitaryOutcome, "onupdate", "itweenChangeMilitary"));
@@ -153,6 +155,7 @@ public class ExecuteChoices : MonoBehaviour
         // Handle Money
         Debug.Log("passiveTwoMoneyOutcome" + passiveTwoMoneyOutcome);
         iTween.ValueTo(gameObject, iTween.Hash("from", playerAttributes.money, "to", playerAttributes.money + passiveTwoMoneyOutcome, "onupdate", "itweenChangeMoney"));
+        spawnCoins.updateCoins(passiveTwoMoneyOutcome);
 
         Debug.Log("passiveTwoMilitaryOutcome" + passiveTwoMilitaryOutcome);
         iTween.ValueTo(gameObject, iTween.Hash("from", playerAttributes.military, "to", playerAttributes.military + passiveTwoMilitaryOutcome, "onupdate", "itweenChangeMilitary"));

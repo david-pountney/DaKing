@@ -37,7 +37,20 @@ public class SpawnCoins : MonoBehaviour {
 
         startDroppingCoins(coinsToDrop);
     }
-	
+
+    public void updateCoins(int amount)
+    {
+        if (amount < 0)
+        {
+            StartCoroutine(removeCoins(amount));
+        }
+        else
+        {
+            StartCoroutine(dropCoins(amount));
+        }
+    }
+
+
     public void startDroppingCoins(int amount)
     {
         StartCoroutine(dropCoins(amount));
