@@ -116,7 +116,7 @@ RectTransform:
   m_RootOrder: 1
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.6, y: 0.5}
-  m_AnchoredPosition: {x: -619.5, y: 300.6}
+  m_AnchoredPosition: {x: -619.5, y: 342.6}
   m_SizeDelta: {x: -108, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &34037310
@@ -235,6 +235,18 @@ Prefab:
     - target: {fileID: 22479452, guid: 5edbde3737ded8f4ebfa43c318695f9e, type: 2}
       propertyPath: m_Pivot.y
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 22479452, guid: 5edbde3737ded8f4ebfa43c318695f9e, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 22479452, guid: 5edbde3737ded8f4ebfa43c318695f9e, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 22479452, guid: 5edbde3737ded8f4ebfa43c318695f9e, type: 2}
+      propertyPath: m_LocalScale.z
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5edbde3737ded8f4ebfa43c318695f9e, type: 2}
@@ -679,9 +691,9 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1031407271}
   m_RootOrder: 0
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 644, y: -402}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 4, y: -69.6}
   m_SizeDelta: {x: 200, y: 96}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &167826017
@@ -1733,7 +1745,7 @@ RectTransform:
   m_RootOrder: 2
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -511.7, y: 300.3}
+  m_AnchoredPosition: {x: -511.7, y: 342.3}
   m_SizeDelta: {x: 60, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &771735410
@@ -2257,6 +2269,10 @@ Prefab:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: c394dd2b9a3c8c44ab41cc3009996031, type: 2}
+    - target: {fileID: 11470164, guid: 2260230439d8ae249869b38ced179444, type: 2}
+      propertyPath: previousCharactersDecision
+      value: 
+      objectReference: {fileID: 2110231622}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2260230439d8ae249869b38ced179444, type: 2}
   m_IsPrefabParent: 0
@@ -3285,6 +3301,12 @@ Transform:
 GameObject:
   m_PrefabParentObject: {fileID: 131198, guid: 5a2847c57eef820479ddde60c7657051, type: 2}
   m_PrefabInternal: {fileID: 318518677}
+--- !u!114 &1243841678 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 11473526, guid: 5a2847c57eef820479ddde60c7657051,
+    type: 2}
+  m_PrefabInternal: {fileID: 318518677}
+  m_Script: {fileID: 11500000, guid: 12f7bcab77466234b9ab2943e7682aca, type: 3}
 --- !u!1001 &1250858938
 Prefab:
   m_ObjectHideFlags: 0
@@ -3423,7 +3445,7 @@ RectTransform:
   m_RootOrder: 4
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -511.7, y: 275.6}
+  m_AnchoredPosition: {x: -511.7, y: 317.6}
   m_SizeDelta: {x: 60, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1294810644
@@ -3651,6 +3673,7 @@ MonoBehaviour:
     type: 3}
   threeQuarterPercentDepressionKing: {fileID: 21300000, guid: 6e1ac3049e0e92c408b232faf7ece57d,
     type: 3}
+  maxDepression: 100
   noDepressionValue: 100
   threeQuarterPercentDepressionValue: 25
   halfPercentDepressionValue: 50
@@ -3812,7 +3835,7 @@ RectTransform:
   m_RootOrder: 6
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -511.7, y: 250.4}
+  m_AnchoredPosition: {x: -511.7, y: 292.4}
   m_SizeDelta: {x: 60, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1402375484
@@ -3941,6 +3964,10 @@ Prefab:
       propertyPath: gameover
       value: 
       objectReference: {fileID: 530247848}
+    - target: {fileID: 11408118, guid: cd15882634a625242a74d98004538d33, type: 2}
+      propertyPath: previousCharactersDecision
+      value: 
+      objectReference: {fileID: 1243841678}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: cd15882634a625242a74d98004538d33, type: 2}
   m_IsPrefabParent: 0
@@ -4849,7 +4876,7 @@ Transform:
   m_LocalScale: {x: 0.92, y: 0.92, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 5
 --- !u!1 &1786016430
 GameObject:
   m_ObjectHideFlags: 0
@@ -5105,7 +5132,7 @@ RectTransform:
   m_RootOrder: 3
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.6, y: 0.5}
-  m_AnchoredPosition: {x: -619.5, y: 275.7}
+  m_AnchoredPosition: {x: -619.5, y: 317.7}
   m_SizeDelta: {x: -108, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1938286374
@@ -5230,7 +5257,7 @@ RectTransform:
   m_RootOrder: 5
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.6, y: 0.5}
-  m_AnchoredPosition: {x: -619.5, y: 250.3}
+  m_AnchoredPosition: {x: -619.5, y: 292.3}
   m_SizeDelta: {x: -108, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1959051091
@@ -5993,6 +6020,12 @@ Prefab:
 GameObject:
   m_PrefabParentObject: {fileID: 162158, guid: d072e294a65dfa5448077ec3d554b300, type: 2}
   m_PrefabInternal: {fileID: 1230850883}
+--- !u!114 &2110231622 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 11493706, guid: d072e294a65dfa5448077ec3d554b300,
+    type: 2}
+  m_PrefabInternal: {fileID: 1230850883}
+  m_Script: {fileID: 11500000, guid: 12f7bcab77466234b9ab2943e7682aca, type: 3}
 --- !u!1 &2134557991
 GameObject:
   m_ObjectHideFlags: 0
