@@ -5,12 +5,12 @@ using System.Collections.Generic;
 public class DoubleOptionDialog : DeterminDialog {
 
     public List<string> dialogOption2;
-    private ExecuteChoices previousCharactersDecision;
+    public ExecuteChoices previousCharactersDecision;
 
     public override List<string> GetDialog()
     {
-        if(transform.parent.GetComponent<ChooseCharacterScript>().theCharacter)
-            previousCharactersDecision = transform.parent.GetComponent<ChooseCharacterScript>().theCharacter.GetComponent<ExecuteChoices>();
+        //if(transform.parent.GetComponent<ChooseCharacterScript>().theCharacter)
+        //    previousCharactersDecision = transform.parent.GetComponent<ChooseCharacterScript>().theCharacter.GetComponent<ExecuteChoices>();
 
         //if yes
         if (previousCharactersDecision.outcomeChoice)
