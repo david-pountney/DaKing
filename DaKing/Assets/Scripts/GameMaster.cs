@@ -21,8 +21,6 @@ public class GameMaster : MonoBehaviour {
             currentChar = lstCharData[i++];
 
             //Get the character in the scene via the name
-            Debug.Log(currentChar.charName);
-            //DeterminDialog charInstance = GameObject.Find(currentChar.charName).GetComponent<DeterminDialog>();
             DeterminDialog charInstance = GameObject.Find(currentChar.charName).GetComponent<DeterminDialog>();
 
             //Error check
