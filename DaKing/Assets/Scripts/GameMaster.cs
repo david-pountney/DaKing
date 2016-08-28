@@ -20,6 +20,9 @@ public class GameMaster : MonoBehaviour {
 
             currentChar = lstCharData[i++];
 
+            //Check if character is in the scene
+            if (!GameObject.Find(currentChar.charName)) continue;
+
             //Get the character in the scene via the name
             DeterminDialog charInstance = GameObject.Find(currentChar.charName).GetComponent<DeterminDialog>();
 
