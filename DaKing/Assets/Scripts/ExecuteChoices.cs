@@ -42,12 +42,12 @@ public class ExecuteChoices : MonoBehaviour
             movementForChars.showYesSpeech();
 
             // Handle Money
-            Debug.Log("yesMoneyOutcome" + yesMoneyOutcome);
+            // Debug.Log("yesMoneyOutcome" + yesMoneyOutcome);
             iTween.ValueTo(gameObject, iTween.Hash("from", playerAttributes.money, "to", playerAttributes.money + yesMoneyOutcome, "onupdate", "itweenChangeMoney"));
             spawnCoins.updateCoins(yesMoneyOutcome);
 
             // Handle military
-            Debug.Log("yesMilitaryOutcome" + yesMilitaryOutcome);
+            // Debug.Log("yesMilitaryOutcome" + yesMilitaryOutcome);
             iTween.ValueTo(gameObject, iTween.Hash("from", playerAttributes.military, "to", playerAttributes.military + yesMilitaryOutcome, "onupdate", "itweenChangeMilitary"));
 
             // // Handle mood
@@ -89,12 +89,12 @@ public class ExecuteChoices : MonoBehaviour
             movementForChars.showNoSpeech();
 
             // Handle Money
-            Debug.Log("noMilitaryOutcome" + noMoneyOutcome);
+            // Debug.Log("noMilitaryOutcome" + noMoneyOutcome);
             iTween.ValueTo(gameObject, iTween.Hash("from", playerAttributes.money, "to", playerAttributes.money + noMoneyOutcome, "onupdate", "itweenChangeMoney"));
             spawnCoins.updateCoins(noMoneyOutcome);
 
             // Handle Military
-            Debug.Log("noMilitaryOutcome" + noMilitaryOutcome);
+            // Debug.Log("noMilitaryOutcome" + noMilitaryOutcome);
             iTween.ValueTo(gameObject, iTween.Hash("from", playerAttributes.military, "to", playerAttributes.military + noMilitaryOutcome, "onupdate", "itweenChangeMilitary"));
 
             // Handle Mood
@@ -130,7 +130,7 @@ public class ExecuteChoices : MonoBehaviour
     {
 
         // Handle Money
-        Debug.Log("passiveOneMoneyOutcome" + passiveOneMoneyOutcome);
+        // Debug.Log("passiveOneMoneyOutcome" + passiveOneMoneyOutcome);
         iTween.ValueTo(gameObject, iTween.Hash("from", playerAttributes.money, "to", playerAttributes.money + passiveOneMoneyOutcome, "onupdate", "itweenChangeMoney"));
         spawnCoins.updateCoins(passiveOneMoneyOutcome);
 
@@ -153,11 +153,11 @@ public class ExecuteChoices : MonoBehaviour
     {
 
         // Handle Money
-        Debug.Log("passiveTwoMoneyOutcome" + passiveTwoMoneyOutcome);
+        // Debug.Log("passiveTwoMoneyOutcome" + passiveTwoMoneyOutcome);
         iTween.ValueTo(gameObject, iTween.Hash("from", playerAttributes.money, "to", playerAttributes.money + passiveTwoMoneyOutcome, "onupdate", "itweenChangeMoney"));
         spawnCoins.updateCoins(passiveTwoMoneyOutcome);
 
-        Debug.Log("passiveTwoMilitaryOutcome" + passiveTwoMilitaryOutcome);
+        // Debug.Log("passiveTwoMilitaryOutcome" + passiveTwoMilitaryOutcome);
         iTween.ValueTo(gameObject, iTween.Hash("from", playerAttributes.military, "to", playerAttributes.military + passiveTwoMilitaryOutcome, "onupdate", "itweenChangeMilitary"));
 
         // // Handle depression
@@ -178,40 +178,13 @@ public class ExecuteChoices : MonoBehaviour
 
     private void itweenChangeMoney(int newVal)
     {
+        // Debug.Log("set Monnie: "+newVal);
         playerAttributes.setMoney(newVal);
     }
 
     private void itweenChangeMood(int newVal)
     {
         playerAttributes.setMood(newVal);
-    }
-
-    private IEnumerator changeMilitary(int amount, int step)
-    {
-        int flip = System.Math.Abs(amount);
-
-        for (int i = 0; i < flip; ++i)
-        {
-            //Update UI
-            playerAttributes.militaryChanged(step);
-
-            yield return new WaitForSeconds(spawnCoins.timeBetweenCoinAdding);
-        }
-    }
-
-    private IEnumerator changeDepression(int amount, int step)
-    {
-        MoodDisplayScript.getInstance().handleMood(amount);
-
-        int flip = System.Math.Abs(amount);
-
-        for (int i = 0; i < flip; ++i)
-        {
-            //Update UI
-            playerAttributes.depressionChanged(step);
-
-            yield return new WaitForSeconds(spawnCoins.timeBetweenCoinAdding);
-        }
     }
 
     private void endChoiceLogic()

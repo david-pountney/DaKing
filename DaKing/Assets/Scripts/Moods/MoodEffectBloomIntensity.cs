@@ -21,7 +21,7 @@ public class MoodEffectBloomIntensity : IMoodEffect  {
         bloom = ResourceManager.instance.getMainCamera().GetComponent<BloomOptimized>();
 
         float effectTarget = MathsHelper.ConvertRange(effectMin, effectMax, moodPercent);
-        Debug.Log("Bloom Intensity Target = " + effectTarget);
+        //Debug.Log("Bloom Intensity Target = " + effectTarget);
 
         bool reachedTarget = false;
         while (!reachedTarget)

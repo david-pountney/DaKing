@@ -4,8 +4,9 @@ using System.Collections;
 using System.Collections.Generic;
 using System;
 
-public class SpawnCoins : MonoBehaviour {
-    
+public class SpawnCoins : MonoBehaviour
+{
+
     public int coinsToDrop;
     public float startX = 1f;
     public float endX = 5f;
@@ -18,12 +19,13 @@ public class SpawnCoins : MonoBehaviour {
 
     public List<Vector2> _listOfPositions;
     public PlayerAttributes playerAttributes;
-    
+
     private float gapX;
     private float gapY;
 
     // Use this for initialization
-    void Start () {
+    void Start()
+    {
 
         _listOfPositions = new List<Vector2>();
 
@@ -65,7 +67,7 @@ public class SpawnCoins : MonoBehaviour {
     private void addToList()
     {
         float currentX = startX;
-        
+
         while (currentX < endX)
         {
             _listOfPositions.Add(new Vector2(currentX, floor));
@@ -99,8 +101,6 @@ public class SpawnCoins : MonoBehaviour {
 
                 clone = Instantiate(coin, new Vector2(transform.localPosition.x + randX, transform.localPosition.y + 10), Quaternion.identity) as GameObject;
 
-                playerAttributes.moneyChanged(1);
-
                 randX = UnityEngine.Random.Range(-5, 5); ;
 
                 Rigidbody2D rb = clone.GetComponent<Rigidbody2D>();
@@ -122,8 +122,6 @@ public class SpawnCoins : MonoBehaviour {
             coin = GameObject.FindGameObjectWithTag("Coin");
             DestroyObject(coin);
 
-            //Update UI
-            playerAttributes.moneyChanged(-1);
 
             yield return new WaitForSeconds(timeBetweenCoinRemoval);
         }
