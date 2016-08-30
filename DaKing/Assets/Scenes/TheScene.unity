@@ -480,6 +480,14 @@ Prefab:
       propertyPath: dialogOption2.Array.data[2]
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 441138, guid: 2260230439d8ae249869b38ced179444, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 1.400645
+      objectReference: {fileID: 0}
+    - target: {fileID: 441138, guid: 2260230439d8ae249869b38ced179444, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 1.400645
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 11470164, guid: 2260230439d8ae249869b38ced179444, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 2260230439d8ae249869b38ced179444, type: 2}
@@ -2348,6 +2356,14 @@ Prefab:
       propertyPath: previousCharactersDecision
       value: 
       objectReference: {fileID: 2110231622}
+    - target: {fileID: 441138, guid: 2260230439d8ae249869b38ced179444, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 1.400645
+      objectReference: {fileID: 0}
+    - target: {fileID: 441138, guid: 2260230439d8ae249869b38ced179444, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 1.400645
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2260230439d8ae249869b38ced179444, type: 2}
   m_IsPrefabParent: 0
