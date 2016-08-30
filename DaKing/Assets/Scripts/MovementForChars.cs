@@ -169,7 +169,9 @@ public class MovementForChars : MonoBehaviour {
             {
                 killSpeechAndChoices();
                 exit = true;
-                transform.localScale = new Vector2(transform.localScale.x * -1, transform.localScale.y);
+                 
+                //FlipCharacter();
+
                 return;
             }
             else
@@ -183,7 +185,9 @@ public class MovementForChars : MonoBehaviour {
             {
                 killSpeechAndChoices();
                 exit = true;
-                transform.localScale = new Vector2(transform.localScale.x * -1, transform.localScale.y);
+
+                //FlipCharacter();
+
                 return;
             }
             else
@@ -195,7 +199,9 @@ public class MovementForChars : MonoBehaviour {
         {
             killSpeechAndChoices();
             exit = true;
-            transform.localScale = new Vector2(transform.localScale.x * -1, transform.localScale.y);
+
+            //FlipCharacter();
+            
             return;
         }
         
@@ -221,6 +227,15 @@ public class MovementForChars : MonoBehaviour {
             removeTagFromText(3);
             executePassiveTwo();
         }
+
+    }
+
+    /// <summary>
+    /// Flips character around when leaving the room
+    /// </summary>
+    private void FlipCharacter()
+    {
+        transform.localScale = new Vector2(transform.localScale.x * -1, transform.localScale.y);
 
     }
 
