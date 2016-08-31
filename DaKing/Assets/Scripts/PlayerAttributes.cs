@@ -2,7 +2,8 @@
 using UnityEngine.UI;
 using System.Collections;
 
-public class PlayerAttributes : MonoBehaviour {
+public class PlayerAttributes : MonoBehaviour
+{
     //Money
     public static int newDayMoney;
     public int money;
@@ -31,7 +32,7 @@ public class PlayerAttributes : MonoBehaviour {
     public int threeQuarterPercentDepressionValue;
     public int halfPercentDepressionValue;
     public int quarterPercentDepressionValue;
-    
+
     //Flash text contorller
     public FlashTextController flashTextController;
 
@@ -47,24 +48,11 @@ public class PlayerAttributes : MonoBehaviour {
         depressionText.text = depression.ToString();
     }
 
-    public void setMoney( int newVal )
+    public void setMoney(int newVal)
     {
         money = newVal;
         moneyText.text = money.ToString();
-    }
-
-    public void moneyChanged(int amount)
-    {
-        money += amount;
-        moneyText.text = money.ToString();
-
-        if (money < 0) moneyText.color = Color.red;
-    }
-
-    public void militaryChanged(int amount)
-    {
-        military += amount;
-        militaryText.text = military.ToString();
+        // Debug.Log("PlayerAttribute.money: " + money);
     }
 
     public void setMilitary(int newVal)
@@ -77,18 +65,7 @@ public class PlayerAttributes : MonoBehaviour {
     {
         depression = newVal;
         depressionText.text = depression.ToString();
-        checkForNewStageOfDepression();
-    }
-
-    public void depressionChanged(int amount)
-    {
-        depression += amount;
-
-        if (depression + amount > maxDepression) depression = maxDepression;
-
-        depressionText.text = depression.ToString();
-
-        //See if we need to change the sprite of the king
+        MoodDisplayScript.getInstance().handleMood(depression);
         checkForNewStageOfDepression();
     }
 
