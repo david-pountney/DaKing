@@ -17,6 +17,8 @@ public class SimpleMusicController : MonoBehaviour {
 		target_vol = source.volume;
 		source.volume = 0;
 
+
+
 		//fade_in ();
 	}
 	
