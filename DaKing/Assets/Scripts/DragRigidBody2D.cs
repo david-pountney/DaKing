@@ -32,7 +32,7 @@ public class DragRigidBody2D : MonoBehaviour {
 	GameObject dragPrefab;
 	void Start()
 	{
-		init();
+		//init();
 
 		if(dragDamping == 0)
 		{

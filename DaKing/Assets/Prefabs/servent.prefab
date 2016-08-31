@@ -12,7 +12,6 @@ GameObject:
   - 114: {fileID: 11442876}
   - 114: {fileID: 11476060}
   - 114: {fileID: 11429960}
-  - 95: {fileID: 95000013637751834}
   m_Layer: 0
   m_Name: servent
   m_TagString: Character
