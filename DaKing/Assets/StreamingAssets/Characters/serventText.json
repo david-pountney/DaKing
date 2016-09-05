@@ -1,0 +1,18 @@
+{
+	"charName" : "servent",
+	"lstDialogOne":[
+		"Your highness..",
+		"Todays members of the royal court have arrived",
+		"As always, they will bring about their requests before you for consideration",
+		"There..'requests' have been more and more forceful over the last few days",
+		"As you are aware, the state of the kingdom is urgent and dare I say..dire",
+		"The people suffer and become impatient",
+		"Our treasure is nearly empty. Our military almost exhausted. This is all thats left...|p1",
+		"Use the kingdoms resources wisely, or one day the people might come for your head on a pike"
+	],
+	"lstOutcomePassiveResultOne":[
+		10,
+		10,
+		0
+	]
+}

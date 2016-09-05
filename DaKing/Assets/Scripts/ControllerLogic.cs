@@ -24,13 +24,17 @@ public class ControllerLogic : MonoBehaviour {
     // Use this for initialization
     void Start () {
 
+
+    }
+
+    public void Init()
+    {
         musicController.GetComponent<SimpleMusicController>().fade_in();
 
         //Init default values of mood
         MoodDisplayScript.getInstance().handleMood(0);
 
         nextCharacter();
-
     }
 
     public void nextCharacter()

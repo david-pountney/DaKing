@@ -10,18 +10,28 @@ public class GameMaster : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+
+	}
+
+    public void Init()
+    {
         Debug.Log("GameMaster.Start()");
 
         lstCharData = new List<CharacterData>();
         int i = 0;
-        foreach (TextAsset jsonFile in ResourceManager.instance.lstJsonData)
+        Debug.Log("beofe foreach");
+        Debug.Log("lstJsonData Count: " + ResourceManager.instance.lstJsonData.Count);
+
+        foreach (string jsonFile in ResourceManager.instance.lstJsonData)
         {
-            lstCharData.Add(JsonUtility.FromJson<CharacterData>(jsonFile.text));
+            Debug.Log("inside foreach");
+            lstCharData.Add(JsonUtility.FromJson<CharacterData>(jsonFile));
 
             currentChar = lstCharData[i++];
 
             //Check if character is in the scene
             if (!GameObject.Find(currentChar.charName)) continue;
+            Debug.Log("inside foreach 2");
 
             //Get the character in the scene via the name
             DeterminDialog charInstance = GameObject.Find(currentChar.charName).GetComponent<DeterminDialog>();
@@ -35,20 +45,24 @@ public class GameMaster : MonoBehaviour {
                 charInstance.theChoice = GameObject.Find(currentChar.dependentCharName).GetComponent<ExecuteChoices>();
             }
 
-            if(currentChar.lstDialogOne.Count > 0)
+            if (currentChar.lstDialogOne.Count > 0)
             {
                 charInstance.DialogOption1 = currentChar.lstDialogOne;
             }
+
+            Debug.Log("inside foreach 3");
+
+
             if (currentChar.lstDialogTwo.Count > 0)
             {
                 //Get the chars double dialog component
                 DoubleOptionDialog doubleCharInstance = GameObject.Find(currentChar.charName).GetComponent<DoubleOptionDialog>();
-                if(!doubleCharInstance) Debug.LogError("DoubleOptionDialog component not found on character.");
+                if (!doubleCharInstance) Debug.LogError("DoubleOptionDialog component not found on character.");
                 doubleCharInstance.dialogOption2 = currentChar.lstDialogTwo;
             }
 
             //Yes speech
-            if(currentChar.lstOutcomeYesText.Count > 0)
+            if (currentChar.lstOutcomeYesText.Count > 0)
             {
                 charInstance.speechYes = currentChar.lstOutcomeYesText;
             }
@@ -95,5 +109,5 @@ public class GameMaster : MonoBehaviour {
                 charInstance.theChoice.passiveTwoDepressionOutcome = currentChar.lstOutcomePassiveResultTwo[2];
             }
         }
-	}
+    }
 }

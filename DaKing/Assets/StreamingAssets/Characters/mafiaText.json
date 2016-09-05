@@ -1,0 +1,29 @@
+{
+	"charName" : "mafia",
+	"lstDialogOne":[
+		"E'llo...",
+		"We're lookin for a little kid runnin around the kingdom",
+		"His mom is lookin' for him",
+		"Big puppy dog eyes, well small..",
+		"You haven't happened to have seen him have you? |c"
+	],
+	"lstOutcomeYesText":[
+		"Ah hah! Found you! You little git!",
+		"Thought you could get away from us?",
+		"...",
+		"We'll just take him off your hands for you."
+	],
+	"lstOutcomeNoText":[
+		"If you see him, let us know.."
+	],
+	"lstOutcomeYesResult":[
+		0,
+		0,
+		0
+	],
+	"lstOutcomeNoResult":[
+		0,
+		0,
+		0
+	]
+}

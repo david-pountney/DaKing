@@ -157,7 +157,7 @@ public class DragRigidBody2D : MonoBehaviour {
 
 #endif
 
-#if UNITY_STANDALONE || UNITY_WEBPLAYER
+#if UNITY_STANDALONE || UNITY_WEBPLAYER || UNITY_WEBGL
 
     Transform currentlyDraggedTransform;
     Rigidbody2D currentlyDraggedRigidbody;

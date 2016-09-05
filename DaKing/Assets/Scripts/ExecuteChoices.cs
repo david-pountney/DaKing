@@ -53,7 +53,8 @@ public class ExecuteChoices : MonoBehaviour
             // // Handle mood
             int moodOutcome = playerAttributes.depression + yesDepressionOutcome;
             if (moodOutcome > playerAttributes.maxDepression) moodOutcome = playerAttributes.maxDepression;
-            iTween.ValueTo(gameObject, iTween.Hash("from", playerAttributes.depression, "to", moodOutcome, "onupdate", "itweenChangeMood"));
+            if (moodOutcome != playerAttributes.depression)
+                iTween.ValueTo(gameObject, iTween.Hash("from", playerAttributes.depression, "to", moodOutcome, "onupdate", "itweenChangeMood"));
 
             // if (yesDepressionOutcome > 0) StartCoroutine(changeDepression(yesDepressionOutcome, 1));
             // else if (yesDepressionOutcome < 0) StartCoroutine(changeDepression(yesDepressionOutcome, -1));
@@ -100,7 +101,8 @@ public class ExecuteChoices : MonoBehaviour
             // Handle Mood
             int moodOutcome = playerAttributes.depression + noDepressionOutcome;
             if (moodOutcome > playerAttributes.maxDepression) moodOutcome = playerAttributes.maxDepression;
-            iTween.ValueTo(gameObject, iTween.Hash("from", playerAttributes.depression, "to", moodOutcome, "onupdate", "itweenChangeMood"));
+            if (moodOutcome != playerAttributes.depression)
+                iTween.ValueTo(gameObject, iTween.Hash("from", playerAttributes.depression, "to", moodOutcome, "onupdate", "itweenChangeMood"));
             // if (noDepressionOutcome > 0) StartCoroutine(changeDepression(noDepressionOutcome, 1));
             // else if (noDepressionOutcome < 0) StartCoroutine(changeDepression(noDepressionOutcome, -1));
 
@@ -140,7 +142,9 @@ public class ExecuteChoices : MonoBehaviour
         // // Handle depression
         int moodOutcome = playerAttributes.depression + passiveOneDepressionOutcome;
         if (moodOutcome > playerAttributes.maxDepression) moodOutcome = playerAttributes.maxDepression;
-        iTween.ValueTo(gameObject, iTween.Hash("from", playerAttributes.depression, "to", moodOutcome, "onupdate", "itweenChangeMood"));
+
+        if(moodOutcome != playerAttributes.depression)
+            iTween.ValueTo(gameObject, iTween.Hash("from", playerAttributes.depression, "to", moodOutcome, "onupdate", "itweenChangeMood"));
         // if (passiveOneDepressionOutcome > 0) StartCoroutine(changeDepression(passiveOneDepressionOutcome, 1));
         // else if (passiveOneDepressionOutcome < 0) StartCoroutine(changeDepression(passiveOneDepressionOutcome, -1));
 

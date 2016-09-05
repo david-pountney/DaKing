@@ -30,6 +30,9 @@ public class TransitionToGameScript : MonoBehaviour
     [Tooltip("The main menu canvas")]
     private CanvasGroup mainMenuCanvasGroup;
 
+    //Is the main menu enabled? 
+    private bool mainMenuEnabled =  true;
+
     // Use this for initialization
     void Start()
     {
@@ -42,7 +45,17 @@ public class TransitionToGameScript : MonoBehaviour
     /// </summary>
     public void OnPressed()
     {
-        StartCoroutine(FadeOut());
+        if (mainMenuEnabled)
+        {
+            //Turn off main menu
+            mainMenuEnabled = false;
+
+            //Fade main menu out
+            StartCoroutine(FadeOut());
+
+            //Start reading in characters json files
+            controllerLogic.GetComponent<GameMaster>().Init();
+        }
     }
 
     /// <summary>
@@ -70,7 +83,9 @@ public class TransitionToGameScript : MonoBehaviour
     /// </summary>
     public void StartGame()
     {
-        controllerLogic.gameObject.SetActive(true);
+        //controllerLogic.gameObject.SetActive(true);
+
+        controllerLogic.Init();
 
         gameCanvas.gameObject.SetActive(true);
 

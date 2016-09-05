@@ -1,0 +1,19 @@
+{
+	"charName" : "flyingBrown",
+	"lstDialogOne":[
+		"So I have this black and brownish jar...",
+		"Not sure what's inside, smells kinda bad though",
+		"Wanna open it? |c"
+	],
+	"lstOutcomeYesText":[
+		"Hahar! You fool!|d"
+	],
+	"lstOutcomeNoText":[
+		"Yeah, I wouldn't either"
+	],
+	"lstOutcomeNoResult":[
+		0,
+		0,
+		0
+	]
+}

@@ -10,7 +10,7 @@ public class ResourceManager : MonoBehaviour
     GameObject mainCamera;
     PlayerAttributes playerAttributes;
 
-    public List<TextAsset> lstJsonData;
+    public List<string> lstJsonData;
 
     Dictionary<string, GameObject> dicCharacterByName;
 
@@ -24,10 +24,12 @@ public class ResourceManager : MonoBehaviour
 
             DontDestroyOnLoad(transform.gameObject);
             ResourceManager.instance = this;
+            Debug.Log("Awake called, going to load");
             load();
         }
         else
         {
+            Debug.Log("destroying resource manager");
             Destroy(this.gameObject);
         }
     }
@@ -37,15 +39,23 @@ public class ResourceManager : MonoBehaviour
         Debug.Log("loading...!");
         ResourceManager.instance.dicCharacterByName = new Dictionary<string, GameObject>();
 
-        lstJsonData = new List<TextAsset>();
-        DirectoryInfo dir = new DirectoryInfo(@"Assets/Resources/"+jsonDataPath);
-        FileInfo[] dirInfo = dir.GetFiles("*.json");
-        foreach (FileInfo file in dirInfo)
-        {
-            Debug.Log(@jsonDataPath + "/" + file.Name.Split( new char[] {'.'} )[0] );
-            lstJsonData.Add(Resources.Load<TextAsset>(@jsonDataPath+"/"+file.Name.Split( new char[] {'.'} )[0]));
-        }
+        lstJsonData = new List<string>();
 
+        //Get all characters
+        GameObject[] characters = GameObject.FindGameObjectsWithTag("Character");
+
+        string filePath = System.IO.Path.Combine(Application.streamingAssetsPath, jsonDataPath);
+        //filePath = "file:///E:/DaKing/DaKing/Build/StreamingAssets/Characters";
+
+        Debug.Log("hgot here");
+        string result = "";
+
+        foreach (GameObject character in characters)
+        {
+            Debug.Log("loading characters...");
+            StartCoroutine(LoadWWW(filePath + "/" + character.name + "Text.json"));
+
+        }
 
         playerAttributes = GameObject.FindGameObjectWithTag("King").GetComponent<PlayerAttributes>();
 
@@ -68,4 +78,24 @@ public class ResourceManager : MonoBehaviour
         dicCharacterByName.TryGetValue(charName, out theChar);
         return theChar;
     }
+
+    private IEnumerator LoadWWW(string filePath)
+    {
+        //Debug.Log("filePath is: " + filePath);
+        if (filePath.Contains("://"))
+        {
+            WWW www = new WWW(filePath);
+            yield return www;
+            //Debug.Log(www.text);
+            Debug.Log("On a remote machine, loading the file via WWW");
+
+            lstJsonData.Add(www.text);
+        }
+        else {
+            Debug.Log("On a local machine, loading the file via System.IO");
+
+            lstJsonData.Add(System.IO.File.ReadAllText(filePath));
+        }
+    }
+
 }

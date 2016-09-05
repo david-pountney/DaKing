@@ -1,0 +1,32 @@
+{
+	"charName" : "yellowGuy",
+	"lstDialogOne":[
+		"Well hello there!",
+		"I've been fortunate enough to be asigned the task of being your new psychic!",
+		"For a few human souls, I can predict your future",
+		"I think 2 souls would surfice...|c"
+	],
+	"lstOutcomeYesText":[
+		"Perfect, I just love the bitter-sweet taste of royal desolute souls",
+		"So tender and moist..",
+		"Never has there been such a luxury, such a delicacy!",
+		"...",
+		"Oh yes, your future..",
+		"All good, you live a long and happy life",
+		"Anyway, about those souls.."
+	],
+	"lstOutcomeNoText":[
+		"What?! Not even one pityless soul?",
+		"Don't you care about your future?"
+	],
+	"lstOutcomeYesResult":[
+		0,
+		-2,
+		5
+	],
+	"lstOutcomeNoResult":[
+		0,
+		0,
+		-2
+	]
+}

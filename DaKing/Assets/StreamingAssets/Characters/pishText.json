@@ -1,0 +1,28 @@
+{
+	"charName" : "pish",
+	"lstDialogOne":[
+		"H-hello?",
+		"Have you seen my mommy?",
+		"She said she would be back home tomorrow",
+		"But tomorrow was ages ago..",
+		"And now I'm really hungry and don't have anything to eat",
+		"...*sobs*",
+		"Can...can I stay here till mommy comes back? |c"
+	],
+	"lstOutcomeYesText":[
+		"T-thank you"
+	],
+	"lstOutcomeNoText":[
+		"*cries*"
+	],
+	"lstOutcomeYesResult":[
+		0,
+		0,
+		5
+	],
+	"lstOutcomeNoResult":[
+		0,
+		0,
+		-15
+	]
+}
