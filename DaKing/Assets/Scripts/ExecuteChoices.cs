@@ -145,8 +145,9 @@ public class ExecuteChoices : MonoBehaviour
         // // Handle depression
         int moodOutcome = playerAttributes.depression + passiveOneDepressionOutcome;
         if (moodOutcome > playerAttributes.maxDepression) moodOutcome = playerAttributes.maxDepression;
+        if (moodOutcome <= 0) movementForChars.GameIsNowOver = true;
 
-        if(moodOutcome != playerAttributes.depression)
+        if (moodOutcome != playerAttributes.depression)
             iTween.ValueTo(gameObject, iTween.Hash("from", playerAttributes.depression, "to", moodOutcome, "onupdate", "itweenChangeMood"));
         // if (passiveOneDepressionOutcome > 0) StartCoroutine(changeDepression(passiveOneDepressionOutcome, 1));
         // else if (passiveOneDepressionOutcome < 0) StartCoroutine(changeDepression(passiveOneDepressionOutcome, -1));
@@ -170,6 +171,8 @@ public class ExecuteChoices : MonoBehaviour
         // // Handle depression
         int moodOutcome = playerAttributes.depression + passiveTwoDepressionOutcome;
         if (moodOutcome > playerAttributes.maxDepression) moodOutcome = playerAttributes.maxDepression;
+        if (moodOutcome <= 0) movementForChars.GameIsNowOver = true;
+
         iTween.ValueTo(gameObject, iTween.Hash("from", playerAttributes.depression, "to", moodOutcome, "onupdate", "itweenChangeMood"));
         // if (passiveTwoDepressionOutcome > 0) StartCoroutine(changeDepression(passiveTwoDepressionOutcome, 1));
         // else if (passiveTwoDepressionOutcome < 0) StartCoroutine(changeDepression(passiveTwoDepressionOutcome, -1));

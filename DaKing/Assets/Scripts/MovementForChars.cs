@@ -95,7 +95,7 @@ public class MovementForChars : MonoBehaviour {
                 moveRight();
             }
 
-            if (Input.GetKeyDown(KeyCode.Space))
+            if (Input.GetKeyUp(KeyCode.Space))
             {
                 if (choices && !choices.activeSelf && !enter && !exit && speechInstance.activeSelf)
                     changeSpeak();
@@ -158,6 +158,9 @@ public class MovementForChars : MonoBehaviour {
         {
             gameover.SetActive(true);
             gameover.GetComponent<CurtainActivate>().startEndDay();
+
+            GameObject.Find("MusicController").GetComponent<SimpleMusicController>().fade_out();
+
             killSpeechAndChoices();
             
             return;
