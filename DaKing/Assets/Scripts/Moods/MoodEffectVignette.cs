@@ -16,6 +16,18 @@ public class MoodEffectVignette: IMoodEffect
     {
     }
 
+    public void SetEffect(float moodPercent)
+    {
+        Debug.Log("MoodEffectVignette(" + moodPercent + ")");
+        moodPercent = 1 - moodPercent;
+        vignetteAndChromaticAberration = Camera.main.GetComponent<VignetteAndChromaticAberration>();
+        float effectTarget = MathsHelper.ConvertRange(effectMin, effectMax, moodPercent);
+
+        Debug.Log("Final moodPercent = " + moodPercent);
+        Debug.Log("MoodEffectVignette Intensity Target = " + effectTarget);
+        vignetteAndChromaticAberration.intensity = effectTarget;
+    }
+
     public IEnumerator updateEffect(float moodPercent)
     {
         vignetteAndChromaticAberration = Camera.main.GetComponent<VignetteAndChromaticAberration>();

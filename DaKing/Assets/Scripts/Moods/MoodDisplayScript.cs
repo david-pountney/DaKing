@@ -36,12 +36,12 @@ public class MoodDisplayScript : MonoBehaviour {
 
     public void handleMood(int newMood)
     {
-        newMood += ResourceManager.instance.getPlayerAttributes().depression;
         float moodPercent = newMood / 100f;
         //Debug.Log("moodPercent = "+moodPercent);
         for (int i = 0; i < arrMoodEffects.Length; ++i)
         {
-            StartCoroutine(arrMoodEffects[i].updateEffect(moodPercent));
+            arrMoodEffects[i].SetEffect(moodPercent);
+           // StartCoroutine(arrMoodEffects[i].updateEffect(moodPercent));
         }
     }
 }
