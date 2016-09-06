@@ -324,6 +324,8 @@ public class MovementForChars : MonoBehaviour {
                 removeTagFromText(2);
                 gameIsNowOver = true;
             }
+
+
         }
     }
 
@@ -391,4 +393,16 @@ public class MovementForChars : MonoBehaviour {
         }
     }
 
+    public bool GameIsNowOver
+    {
+        get
+        {
+            return gameIsNowOver;
+        }
+
+        set
+        {
+            gameIsNowOver = value;
+        }
+    }
 }

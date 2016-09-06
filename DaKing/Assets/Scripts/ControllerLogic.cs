@@ -13,7 +13,7 @@ public class ControllerLogic : MonoBehaviour {
     //The current character object in the list of characters
     public MovementForChars currentChar;
 
-    public GameObject musicController;
+    private GameObject musicController;
 
     //Current day number
     private int dayNumber = 0;
@@ -22,13 +22,18 @@ public class ControllerLogic : MonoBehaviour {
     private MovementForChars characterChild;
 
     // Use this for initialization
-    void Start () {
+    void Awake () {
+        musicController = GameObject.Find("MusicController");
+    }
 
-
+    // Use this for initialization
+    void OnLevelWasLoaded()
+    {
+        musicController = GameObject.Find("MusicController");
     }
 
     public void Init()
-    {
+    { 
         musicController.GetComponent<SimpleMusicController>().fade_in();
 
         //Init default values of mood

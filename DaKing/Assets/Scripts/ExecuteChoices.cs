@@ -53,6 +53,7 @@ public class ExecuteChoices : MonoBehaviour
             // // Handle mood
             int moodOutcome = playerAttributes.depression + yesDepressionOutcome;
             if (moodOutcome > playerAttributes.maxDepression) moodOutcome = playerAttributes.maxDepression;
+            if (moodOutcome <= 0) movementForChars.GameIsNowOver = true;
             if (moodOutcome != playerAttributes.depression)
                 iTween.ValueTo(gameObject, iTween.Hash("from", playerAttributes.depression, "to", moodOutcome, "onupdate", "itweenChangeMood"));
 
@@ -67,7 +68,7 @@ public class ExecuteChoices : MonoBehaviour
 
             endChoiceLogic();
         }
-        //Not enough money
+        //Not enough resource
         else
         {
             movementForChars.executeCantAffordSpeech();
@@ -101,6 +102,8 @@ public class ExecuteChoices : MonoBehaviour
             // Handle Mood
             int moodOutcome = playerAttributes.depression + noDepressionOutcome;
             if (moodOutcome > playerAttributes.maxDepression) moodOutcome = playerAttributes.maxDepression;
+            if (moodOutcome <= 0) movementForChars.GameIsNowOver = true;
+
             if (moodOutcome != playerAttributes.depression)
                 iTween.ValueTo(gameObject, iTween.Hash("from", playerAttributes.depression, "to", moodOutcome, "onupdate", "itweenChangeMood"));
             // if (noDepressionOutcome > 0) StartCoroutine(changeDepression(noDepressionOutcome, 1));
@@ -114,7 +117,7 @@ public class ExecuteChoices : MonoBehaviour
 
             endChoiceLogic();
         }
-        //Not enough money
+        //Not enough resource
         else
         {
             movementForChars.executeCantAffordSpeech();

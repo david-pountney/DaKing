@@ -18,7 +18,7 @@ public class MoodEffectSaturation : IMoodEffect  {
 
     public IEnumerator updateEffect(float moodPercent)
     {
-        colorCorrection = ResourceManager.instance.getMainCamera().GetComponent<ColorCorrectionCurves>();
+        colorCorrection = Camera.main.GetComponent<ColorCorrectionCurves>();
 
         float saturationTarget = MathsHelper.ConvertRange(effectMin, effectMax, moodPercent);
         //Debug.Log("Saturation Target = " + saturationTarget);

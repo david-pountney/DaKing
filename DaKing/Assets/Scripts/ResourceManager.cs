@@ -25,13 +25,15 @@ public class ResourceManager : MonoBehaviour
             DontDestroyOnLoad(transform.gameObject);
             ResourceManager.instance = this;
             Debug.Log("Awake called, going to load");
-            load();
+
         }
         else
         {
             Debug.Log("destroying resource manager");
             Destroy(this.gameObject);
         }
+
+        load();
     }
 
     void load()
