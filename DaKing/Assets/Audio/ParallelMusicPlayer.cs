@@ -15,7 +15,10 @@ public class ParallelMusicPlayer : MonoBehaviour {
 
 	public PlayerAudioData[] additionalAudioData;
 
-	public float defaultTransitionTime = 1f;
+	public float target_vol;
+
+	public float fade_percent = 1;
+
 	// Use this for initialization
 	void Start () {
 	
@@ -33,5 +36,40 @@ public class ParallelMusicPlayer : MonoBehaviour {
 		}
 
 	}
+	
+	// Update is called once per frame
+	void Update () {
+		for (int i = 0; i < sources.Count; i++) {
+			if(additionalAudioData[i].fadeDir != 0) {
+				float fade_amount = target_vol / 100 * fade_percent * additionalAudioData[i].fadeDir;
+				float current_vol = sources[i].volume;
+				current_vol += fade_amount;
+				if(current_vol > target_vol) {
+					current_vol = target_vol;	
+				} else if(current_vol < 0) {
+					current_vol = 0;
+				}
+				if (current_vol == target_vol || current_vol == 0) {
+					additionalAudioData[i].fadeDir = 0;
+				}
+				sources[i].volume = current_vol;
+			}
+		}
+	}
 
+	public void fadeOutTrack(int index) {
+		additionalAudioData[index].fadeDir = -1;
+	}
+
+	//public override void fadeOutTrack(int index, float duration) {
+	//	additionalAudioData[index].fadeDir = -1;
+	//}
+
+	public void fadeInTrack(int index) {
+		additionalAudioData[index].fadeDir = 1;
+	}
+
+	//public override void fadeInTrack(int index, float duration) {
+	//	additionalAudioData[index].fadeDir = 1;
+	//}
 }
