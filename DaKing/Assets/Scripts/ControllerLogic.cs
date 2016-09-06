@@ -32,7 +32,7 @@ public class ControllerLogic : MonoBehaviour {
         musicController.GetComponent<SimpleMusicController>().fade_in();
 
         //Init default values of mood
-        MoodDisplayScript.getInstance().handleMood(0);
+        MoodDisplayScript.getInstance().handleMood(ResourceManager.instance.getPlayerAttributes().depression);
 
         nextCharacter();
     }
