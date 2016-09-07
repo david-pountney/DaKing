@@ -18,7 +18,7 @@ public class MoodEffectBloomIntensity : IMoodEffect  {
 
     public void SetEffect(float moodPercent)
     {
-        bloom = ResourceManager.instance.getMainCamera().GetComponent<BloomOptimized>();
+        bloom = Camera.main.GetComponent<BloomOptimized>();
         float effectTarget = MathsHelper.ConvertRange(effectMin, effectMax, moodPercent);
         bloom.intensity = effectTarget;
     }

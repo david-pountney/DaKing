@@ -6,7 +6,7 @@ public class ExecuteChoices : MonoBehaviour
     private PlayerAttributes playerAttributes;
     private MovementForChars movementForChars;
 
-    public SpawnCoins spawnCoins;
+    private SpawnCoins spawnCoins;
 
     public int yesMoneyOutcome;
     public int noMoneyOutcome;
@@ -32,6 +32,9 @@ public class ExecuteChoices : MonoBehaviour
     {
         playerAttributes = GameObject.FindGameObjectWithTag("King").GetComponent<PlayerAttributes>();
         movementForChars = GetComponent<MovementForChars>();
+        spawnCoins = GameObject.Find("Controller").GetComponent<SpawnCoins>();
+
+            
     }
 
     public void executeYesChoice()

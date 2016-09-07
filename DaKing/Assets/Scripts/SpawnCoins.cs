@@ -48,6 +48,8 @@ public class SpawnCoins : MonoBehaviour
         }
         else
         {
+            Debug.Log(gameObject.name);
+            Debug.Log(this.name);
             StartCoroutine(dropCoins(amount));
         }
     }
@@ -55,6 +57,7 @@ public class SpawnCoins : MonoBehaviour
 
     public void startDroppingCoins(int amount)
     {
+
         StartCoroutine(dropCoins(amount));
 
     }

@@ -8,7 +8,7 @@ public class MovementForChars : MonoBehaviour {
 
     public GameObject speech;
     public GameObject choices;
-    public GameObject controllerLogic;
+    private GameObject controllerLogic;
     public GameObject gameover;
 
     //Might wanna make this a list later on, deping if we want multiple previous decisions effecting dialog
@@ -68,6 +68,9 @@ public class MovementForChars : MonoBehaviour {
 
         //Set up sound player
         soundScript = GameObject.FindGameObjectWithTag("SoundPlayer").GetComponent<SoundDef>();
+
+        //Set up controller logic script
+        controllerLogic = GameObject.Find("Controller");
     }
 
     public void Update()

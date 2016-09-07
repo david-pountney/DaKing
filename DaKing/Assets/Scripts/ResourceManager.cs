@@ -30,7 +30,7 @@ public class ResourceManager : MonoBehaviour
         else
         {
             Debug.Log("destroying resource manager");
-            Destroy(this.gameObject);
+            Destroy(this);
         }
 
         load();
