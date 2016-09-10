@@ -7,7 +7,6 @@ using System;
 public class ControllerLogic : MonoBehaviour {
 
     public List<GameObject> _listOfCharacters;
-    public List<GameObject> _listOfCharacters2;
 
     //The index of the current character in the list of characters
     private int currentCharIndex;
@@ -42,13 +41,13 @@ public class ControllerLogic : MonoBehaviour {
         GameObject characterContainer = GameObject.Find("Characters");
         GameObject nextDay = GameObject.Find("NextDayMarker");
 
-        _listOfCharacters2 = new List<GameObject>();
+        _listOfCharacters = new List<GameObject>();
 
         int i = 0;
         foreach (Transform child in characterContainer.transform)
         {
-            if(i % 5 == 0 && i != 0) _listOfCharacters2.Add(nextDay);
-            _listOfCharacters2.Add(child.gameObject);
+            if(i % 5 == 0 && i != 0) _listOfCharacters.Add(nextDay);
+            _listOfCharacters.Add(child.gameObject);
 
             i++;
         }
@@ -60,8 +59,12 @@ public class ControllerLogic : MonoBehaviour {
     { 
         musicController.GetComponent<SimpleMusicController>().fade_in();
 
+        Debug.Log(ResourceManager.instance.getPlayerAttributes().depression);
+
+        PlayerAttributes playerAttributes = GameObject.FindGameObjectWithTag("King").GetComponent<PlayerAttributes>();
+
         //Init default values of mood
-        MoodDisplayScript.getInstance().handleMood(ResourceManager.instance.getPlayerAttributes().depression);
+        MoodDisplayScript.getInstance().handleMood(playerAttributes.depression);
 
         nextCharacter();
     }
@@ -75,9 +78,9 @@ public class ControllerLogic : MonoBehaviour {
         if (CurrentChar && CurrentChar.GetComponent<MovementForChars>())
             CurrentChar.GetComponent<MovementForChars>().Activated = false;
 
-        if (_listOfCharacters2.Count > currentCharIndex)
+        if (_listOfCharacters.Count > currentCharIndex)
         {
-            character = _listOfCharacters2[currentCharIndex++];
+            character = _listOfCharacters[currentCharIndex++];
 
             //Check if end of characters for day
             if (character.name == "NextDayMarker")
