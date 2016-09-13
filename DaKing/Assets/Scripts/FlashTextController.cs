@@ -7,6 +7,10 @@ public class FlashTextController : MonoBehaviour {
     public Text flashMoneyText;
     public Text flashMilitaryText;
     public Text flashDepressionText;
+    public Image flashDepressionImage;
+    public Sprite flashMoodUpSprite;
+    public Sprite flashMoodSameSprite;
+    public Sprite flashMoodDownSprite;
 
     public float timeBetweenFade;
 
@@ -52,16 +56,19 @@ public class FlashTextController : MonoBehaviour {
         if (depressionAmount > 0)
         {
             flashDepressionText.text = "+" + depressionAmount.ToString();
+            flashDepressionImage.GetComponent<Image>().sprite = flashMoodUpSprite;
             depressionCol = Color.green;
         }
         if (depressionAmount < 0)
         {
             flashDepressionText.text = depressionAmount.ToString();
+            flashDepressionImage.GetComponent<Image>().sprite = flashMoodDownSprite;
             depressionCol = Color.red;
         }
         else if (depressionAmount == 0)
         {
             flashDepressionText.text = depressionAmount.ToString();
+            flashDepressionImage.GetComponent<Image>().sprite = flashMoodSameSprite;
             depressionCol = Color.black;
         }
 
@@ -86,6 +93,7 @@ public class FlashTextController : MonoBehaviour {
             moneyCol.a = alpha;
             militaryCol.a = alpha;
             depressionCol.a = alpha;
+            flashDepressionImage.GetComponent<Image>().color = new Color(alpha, alpha, alpha, alpha);
 
             flashMoneyText.color = moneyCol;
             flashMilitaryText.color = militaryCol;
@@ -105,7 +113,7 @@ public class FlashTextController : MonoBehaviour {
         Color moneyCol = flashMoneyText.color = new Color(monC.r, monC.g, monC.b, alpha);
         Color militaryCol = flashMoneyText.color = new Color(milC.r, milC.g, milC.b, alpha);
         Color depressionCol = flashMoneyText.color = new Color(depC.r, depC.g, depC.b, alpha);
-
+        
         while (flashMoneyText.color.a > 0)
         {
             alpha -= .05f;
@@ -113,6 +121,7 @@ public class FlashTextController : MonoBehaviour {
             moneyCol.a = alpha;
             militaryCol.a = alpha;
             depressionCol.a = alpha;
+            flashDepressionImage.GetComponent<Image>().color = new Color(alpha, alpha, alpha, alpha);
 
             flashMoneyText.color = moneyCol;
             flashMilitaryText.color = militaryCol;
