@@ -1,16 +1,19 @@
 {
 	"charName" : "pish4",
 	"lstDialogOne":[
-		"S-sir...",
-		"I don't mean to be rude or anything..",
-		"But I found this on the pavement",
-		"I think you should have it",
-		"Because you are the King!",
+		"Mom said the bad people want to hurt us",
+		"They want all our money",
+		"Because they are bad people",
+		"Dad said he would make them go away",
+		"Dad has gone away somewhere",
+		"Now mom won't stop crying",
+		"And I don't know where she is",
+		"...",
 		"... |p1"
 	],
 	"lstOutcomePassiveResultOne":[
-		1,
 		0,
-		0
+		0,
+		-1
 	]
 }

@@ -1,0 +1,13 @@
+{
+	"charName" : "death2",
+	"lstDialogOne":[
+		"Still here?",
+		"Oh don't worry..",
+		"You won't be for long |p1"
+	],
+	"lstOutcomePassiveResultOne":[
+		0,
+		0,
+		-10
+	]
+}
