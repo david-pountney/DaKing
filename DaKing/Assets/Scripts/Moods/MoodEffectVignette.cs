@@ -20,7 +20,7 @@ public class MoodEffectVignette: IMoodEffect
     {
         Debug.Log("MoodEffectVignette(" + moodPercent + ")");
         moodPercent = 1 - moodPercent;
-        vignetteAndChromaticAberration = ResourceManager.instance.getMainCamera().GetComponent<VignetteAndChromaticAberration>();
+        vignetteAndChromaticAberration = Camera.main.GetComponent<VignetteAndChromaticAberration>();
         float effectTarget = MathsHelper.ConvertRange(effectMin, effectMax, moodPercent);
 
         Debug.Log("Final moodPercent = " + moodPercent);
@@ -30,7 +30,7 @@ public class MoodEffectVignette: IMoodEffect
 
     public IEnumerator updateEffect(float moodPercent)
     {
-        vignetteAndChromaticAberration = ResourceManager.instance.getMainCamera().GetComponent<VignetteAndChromaticAberration>();
+        vignetteAndChromaticAberration = Camera.main.GetComponent<VignetteAndChromaticAberration>();
 
         float effectTarget = effectMax - MathsHelper.ConvertRange(effectMin, effectMax, moodPercent);
         //Debug.Log("Intensity Target = " + effectTarget);

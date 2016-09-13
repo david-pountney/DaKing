@@ -5,7 +5,7 @@ public class TransitionToGameScript : MonoBehaviour
 {
 
     [Tooltip("The script responcible for starting the game")]
-    public ControllerLogic controllerLogic;
+    private ControllerLogic controllerLogic;
 
     [Tooltip("This is the game canvas that draws the in game UI")]
     public CanvasGroup gameCanvas;
@@ -36,6 +36,14 @@ public class TransitionToGameScript : MonoBehaviour
     // Use this for initialization
     void Start()
     {
+        controllerLogic = GameObject.Find("Controller").GetComponent<ControllerLogic>();
+        gameCameraPosition = GameObject.Find("GameCameraPosition").transform;
+        mainMenuCanvasGroup = transform.parent.GetComponent<CanvasGroup>();
+    }
+
+    void OnLevelWasLoaded()
+    {
+        controllerLogic = GameObject.Find("Controller").GetComponent<ControllerLogic>();
         gameCameraPosition = GameObject.Find("GameCameraPosition").transform;
         mainMenuCanvasGroup = transform.parent.GetComponent<CanvasGroup>();
     }

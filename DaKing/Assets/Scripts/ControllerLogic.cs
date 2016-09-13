@@ -2,6 +2,7 @@
 using UnityEngine.UI;
 using System.Collections;
 using System.Collections.Generic;
+using System;
 
 public class ControllerLogic : MonoBehaviour {
 
@@ -13,7 +14,7 @@ public class ControllerLogic : MonoBehaviour {
     //The current character object in the list of characters
     public MovementForChars currentChar;
 
-    public GameObject musicController;
+    private GameObject musicController;
 
     //Current day number
     private int dayNumber = 0;
@@ -22,17 +23,48 @@ public class ControllerLogic : MonoBehaviour {
     private MovementForChars characterChild;
 
     // Use this for initialization
-    void Start () {
-
-
+    void Awake () {
+        musicController = GameObject.Find("MusicController");
+        currentCharIndex = 0;
+        GetAllCharacters();
+    }
+    
+    void OnLevelWasLoaded()
+    {
+        musicController = GameObject.Find("MusicController");
+        currentCharIndex = 0;
+        GetAllCharacters();
     }
 
-    public void Init()
+    private void GetAllCharacters()
     {
+        GameObject characterContainer = GameObject.Find("Characters");
+        GameObject nextDay = GameObject.Find("NextDayMarker");
+
+        _listOfCharacters = new List<GameObject>();
+
+        int i = 0;
+        foreach (Transform child in characterContainer.transform)
+        {
+            if(i % 5 == 0 && i != 0) _listOfCharacters.Add(nextDay);
+            _listOfCharacters.Add(child.gameObject);
+
+            i++;
+        }
+    }
+
+
+
+    public void Init()
+    { 
         musicController.GetComponent<SimpleMusicController>().fade_in();
 
+        Debug.Log(ResourceManager.instance.getPlayerAttributes().depression);
+
+        PlayerAttributes playerAttributes = GameObject.FindGameObjectWithTag("King").GetComponent<PlayerAttributes>();
+
         //Init default values of mood
-        MoodDisplayScript.getInstance().handleMood(ResourceManager.instance.getPlayerAttributes().depression);
+        MoodDisplayScript.getInstance().handleMood(playerAttributes.depression);
 
         nextCharacter();
     }
@@ -51,7 +83,7 @@ public class ControllerLogic : MonoBehaviour {
             character = _listOfCharacters[currentCharIndex++];
 
             //Check if end of characters for day
-            if (character.tag == "NextDay")
+            if (character.name == "NextDayMarker")
             {
                 //We are now onto the next day
                 DayNumber++;

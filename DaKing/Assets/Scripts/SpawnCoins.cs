@@ -6,7 +6,6 @@ using System;
 
 public class SpawnCoins : MonoBehaviour
 {
-
     public int coinsToDrop;
     public float startX = 1f;
     public float endX = 5f;
@@ -18,7 +17,7 @@ public class SpawnCoins : MonoBehaviour
     public GameObject coin;
 
     public List<Vector2> _listOfPositions;
-    public PlayerAttributes playerAttributes;
+    private PlayerAttributes playerAttributes;
 
     private float gapX;
     private float gapY;
@@ -26,7 +25,8 @@ public class SpawnCoins : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-
+        playerAttributes = GameObject.Find("king").GetComponent<PlayerAttributes>();
+            
         _listOfPositions = new List<Vector2>();
 
         gapX = coin.GetComponent<SpriteRenderer>().sprite.bounds.size.x;
@@ -48,6 +48,8 @@ public class SpawnCoins : MonoBehaviour
         }
         else
         {
+            Debug.Log(gameObject.name);
+            Debug.Log(this.name);
             StartCoroutine(dropCoins(amount));
         }
     }
@@ -55,6 +57,7 @@ public class SpawnCoins : MonoBehaviour
 
     public void startDroppingCoins(int amount)
     {
+
         StartCoroutine(dropCoins(amount));
 
     }
