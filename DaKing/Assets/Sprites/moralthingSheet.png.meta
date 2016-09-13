@@ -1,0 +1,163 @@
+fileFormatVersion: 2
+guid: a6f157c4c556e104cbbd155055a21a5e
+timeCreated: 1473795896
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: moralthingSheet_0
+    21300002: moralthingSheet_1
+    21300004: moralthingSheet_2
+    21300006: moralthingSheet_3
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: moralthingSheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 512
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 90, y: 30}
+        - {x: 90, y: 59}
+        - {x: 47, y: 172}
+        - {x: -88, y: 172}
+        - {x: -128, y: 126}
+        - {x: -128, y: 19}
+        - {x: -50, y: 17}
+        - {x: -39, y: -183}
+        - {x: -31, y: -184}
+        - {x: 41, y: -184}
+        - {x: 45, y: -178}
+        - {x: 43, y: 3}
+        - {x: 88, y: 24}
+    - name: moralthingSheet_1
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 512
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 61, y: 172}
+        - {x: -37, y: 172}
+        - {x: -59, y: 169}
+        - {x: -102, y: 142}
+        - {x: -128, y: 97}
+        - {x: -128, y: 41}
+        - {x: -123, y: 24}
+        - {x: -103, y: 19}
+        - {x: -45, y: 23}
+        - {x: -35, y: -181}
+        - {x: -17, y: -184}
+        - {x: 36, y: -184}
+        - {x: 46, y: -162}
+        - {x: 90, y: -9}
+        - {x: 90, y: 73}
+    - name: moralthingSheet_2
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 68, y: 172}
+        - {x: 16, y: 172}
+        - {x: 11, y: 171}
+        - {x: 8, y: 172}
+        - {x: -85, y: 172}
+        - {x: -128, y: 125}
+        - {x: -128, y: 19}
+        - {x: -50, y: 17}
+        - {x: -31, y: -178}
+        - {x: -20, y: -184}
+        - {x: 36, y: -184}
+        - {x: 48, y: -102}
+        - {x: 90, y: -24}
+        - {x: 90, y: 91}
+    - name: moralthingSheet_3
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 0
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 66, y: 168}
+        - {x: 52, y: 172}
+        - {x: 14, y: 172}
+        - {x: -3, y: 162}
+        - {x: -52, y: 172}
+        - {x: -85, y: 172}
+        - {x: -128, y: 104}
+        - {x: -128, y: 37}
+        - {x: -123, y: 24}
+        - {x: -103, y: 19}
+        - {x: -38, y: -182}
+        - {x: -28, y: -184}
+        - {x: 37, y: -184}
+        - {x: 47, y: -161}
+        - {x: 90, y: -60}
+        - {x: 90, y: 87}
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

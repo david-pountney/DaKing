@@ -1,0 +1,177 @@
+fileFormatVersion: 2
+guid: 0ae950779a8942d4ca3b180cd4f4eb42
+timeCreated: 1473796098
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: sobSheet_0
+    21300002: sobSheet_1
+    21300004: sobSheet_2
+    21300006: sobSheet_3
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: sobSheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 512
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -45, y: -157}
+        - {x: -93, y: -162}
+        - {x: -93, y: -185}
+        - {x: -47, y: -190}
+        - {x: 48, y: -190}
+        - {x: 70, y: -179}
+        - {x: 70, y: -167}
+        - {x: 61, y: -157}
+      - - {x: 63, y: 165}
+        - {x: 5, y: 165}
+        - {x: -61, y: 138}
+        - {x: -99, y: 59}
+        - {x: -99, y: -30}
+        - {x: -69, y: -66}
+        - {x: 47, y: -66}
+        - {x: 112, y: -27}
+        - {x: 112, y: 52}
+        - {x: 81, y: 151}
+    - name: sobSheet_1
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 512
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -22, y: -149}
+        - {x: -89, y: -167}
+        - {x: -89, y: -185}
+        - {x: -87, y: -188}
+        - {x: -48, y: -194}
+        - {x: 48, y: -194}
+        - {x: 74, y: -179}
+        - {x: 74, y: -163}
+        - {x: 14, y: -149}
+      - - {x: -1, y: 165}
+        - {x: -93, y: 88}
+        - {x: -99, y: 50}
+        - {x: -99, y: -39}
+        - {x: -54, y: -66}
+        - {x: 77, y: -66}
+        - {x: 112, y: -31}
+        - {x: 112, y: 83}
+        - {x: 72, y: 165}
+    - name: sobSheet_2
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -72, y: -155}
+        - {x: -82, y: -165}
+        - {x: -82, y: -189}
+        - {x: 56, y: -189}
+        - {x: 56, y: -155}
+      - - {x: 64, y: 165}
+        - {x: -7, y: 165}
+        - {x: -85, y: 83}
+        - {x: -99, y: 30}
+        - {x: -99, y: -42}
+        - {x: -54, y: -66}
+        - {x: 15, y: -66}
+        - {x: 93, y: -37}
+        - {x: 112, y: -27}
+        - {x: 112, y: 55}
+        - {x: 83, y: 153}
+    - name: sobSheet_3
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 0
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 10, y: -157}
+        - {x: -24, y: -157}
+        - {x: -49, y: -162}
+        - {x: -67, y: -168}
+        - {x: -67, y: -187}
+        - {x: 38, y: -187}
+        - {x: 58, y: -173}
+        - {x: 58, y: -167}
+        - {x: 57, y: -165}
+      - - {x: 1, y: 165}
+        - {x: -4, y: 163}
+        - {x: -76, y: 80}
+        - {x: -99, y: 21}
+        - {x: -99, y: -38}
+        - {x: -54, y: -66}
+        - {x: 23, y: -66}
+        - {x: 109, y: -35}
+        - {x: 112, y: -31}
+        - {x: 112, y: 26}
+        - {x: 60, y: 165}
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

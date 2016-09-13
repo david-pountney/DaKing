@@ -1,0 +1,257 @@
+fileFormatVersion: 2
+guid: 0a132f06d666eca4d9b73d5a0288147f
+timeCreated: 1473796137
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: teapotladySheet_0
+    21300002: teapotladySheet_1
+    21300004: teapotladySheet_2
+    21300006: teapotladySheet_3
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: teapotladySheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 512
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 92, y: -214}
+        - {x: 100, y: -174}
+        - {x: 128, y: -135}
+        - {x: 199, y: -107}
+        - {x: 209, y: -89}
+        - {x: 209, y: -42}
+        - {x: 204, y: -6}
+        - {x: 191, y: 88}
+        - {x: 140, y: 153}
+        - {x: 98, y: 177}
+        - {x: 57, y: 177}
+        - {x: -3, y: 169}
+        - {x: -31, y: 157}
+        - {x: -74, y: 111}
+        - {x: -77, y: 37}
+        - {x: -65, y: 10}
+        - {x: -32, y: -7}
+        - {x: -42, y: -34}
+        - {x: -109, y: -37}
+        - {x: -148, y: -16}
+        - {x: -199, y: -60}
+        - {x: -218, y: -56}
+        - {x: -229, y: -63}
+        - {x: -229, y: -77}
+        - {x: -210, y: -110}
+        - {x: -170, y: -149}
+        - {x: -119, y: -147}
+        - {x: -75, y: -86}
+        - {x: -67, y: -86}
+        - {x: -47, y: -141}
+        - {x: -11, y: -169}
+        - {x: 20, y: -180}
+        - {x: 48, y: -217}
+        - {x: 59, y: -217}
+        - {x: 64, y: -211}
+        - {x: 78, y: -217}
+        - {x: 84, y: -217}
+      - - {x: 188, y: -117}
+        - {x: 184, y: -119}
+        - {x: 184, y: -121}
+        - {x: 188, y: -124}
+        - {x: 194, y: -124}
+        - {x: 194, y: -117}
+    - name: teapotladySheet_1
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 512
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 93, y: -214}
+        - {x: 123, y: -132}
+        - {x: 123, y: -117}
+        - {x: 121, y: -115}
+        - {x: 121, y: -113}
+        - {x: 126, y: -118}
+        - {x: 131, y: -121}
+        - {x: 134, y: -122}
+        - {x: 157, y: -128}
+        - {x: 209, y: -95}
+        - {x: 209, y: -2}
+        - {x: 190, y: 87}
+        - {x: 157, y: 146}
+        - {x: 109, y: 177}
+        - {x: -8, y: 177}
+        - {x: -83, y: 113}
+        - {x: -77, y: 37}
+        - {x: -65, y: 10}
+        - {x: -34, y: -31}
+        - {x: -113, y: -37}
+        - {x: -138, y: -20}
+        - {x: -145, y: -22}
+        - {x: -219, y: -55}
+        - {x: -229, y: -62}
+        - {x: -229, y: -77}
+        - {x: -210, y: -110}
+        - {x: -169, y: -147}
+        - {x: -135, y: -146}
+        - {x: -121, y: -143}
+        - {x: -58, y: -87}
+        - {x: -50, y: -142}
+        - {x: 39, y: -217}
+        - {x: 60, y: -217}
+        - {x: 67, y: -211}
+        - {x: 75, y: -217}
+        - {x: 88, y: -217}
+    - name: teapotladySheet_2
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 92, y: -214}
+        - {x: 95, y: -187}
+        - {x: 112, y: -157}
+        - {x: 150, y: -129}
+        - {x: 209, y: -93}
+        - {x: 209, y: -48}
+        - {x: 199, y: 15}
+        - {x: 194, y: 77}
+        - {x: 158, y: 148}
+        - {x: 111, y: 177}
+        - {x: 33, y: 177}
+        - {x: -3, y: 169}
+        - {x: -31, y: 157}
+        - {x: -74, y: 111}
+        - {x: -77, y: 37}
+        - {x: -65, y: 10}
+        - {x: -32, y: -7}
+        - {x: -42, y: -34}
+        - {x: -111, y: -32}
+        - {x: -138, y: -20}
+        - {x: -145, y: -22}
+        - {x: -219, y: -55}
+        - {x: -229, y: -63}
+        - {x: -229, y: -76}
+        - {x: -225, y: -83}
+        - {x: -209, y: -108}
+        - {x: -169, y: -147}
+        - {x: -125, y: -153}
+        - {x: -80, y: -103}
+        - {x: -56, y: -97}
+        - {x: -39, y: -157}
+        - {x: 22, y: -180}
+        - {x: 48, y: -217}
+        - {x: 60, y: -217}
+        - {x: 65, y: -211}
+        - {x: 79, y: -217}
+        - {x: 84, y: -217}
+    - name: teapotladySheet_3
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 5
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 126, y: -139}
+        - {x: 197, y: -104}
+        - {x: 209, y: -97}
+        - {x: 209, y: -34}
+        - {x: 205, y: 12}
+        - {x: 194, y: 72}
+        - {x: 141, y: 150}
+        - {x: 98, y: 172}
+        - {x: 57, y: 172}
+        - {x: -3, y: 164}
+        - {x: -31, y: 152}
+        - {x: -74, y: 106}
+        - {x: -77, y: 32}
+        - {x: -65, y: 5}
+        - {x: -32, y: -12}
+        - {x: -34, y: -36}
+        - {x: -95, y: -44}
+        - {x: -147, y: -20}
+        - {x: -218, y: -61}
+        - {x: -229, y: -69}
+        - {x: -229, y: -81}
+        - {x: -225, y: -88}
+        - {x: -199, y: -123}
+        - {x: -166, y: -146}
+        - {x: -157, y: -151}
+        - {x: -111, y: -144}
+        - {x: -88, y: -115}
+        - {x: -57, y: -91}
+        - {x: -46, y: -145}
+        - {x: -34, y: -157}
+        - {x: 5, y: -177}
+        - {x: 43, y: -200}
+        - {x: 49, y: -222}
+        - {x: 87, y: -222}
+        - {x: 92, y: -219}
+        - {x: 94, y: -195}
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
