@@ -25,12 +25,12 @@ public class ResourceManager : MonoBehaviour
 
             DontDestroyOnLoad(transform.gameObject);
             ResourceManager.instance = this;
-            Debug.Log("Awake called, going to load");
+            //Debug.Log("Awake called, going to load");
 
         }
         else
         {
-            Debug.Log("destroying resource manager");
+            //Debug.Log("destroying resource manager");
             Destroy(this);
         }
 
@@ -39,7 +39,7 @@ public class ResourceManager : MonoBehaviour
 
     void load()
     {
-        Debug.Log("loading...!");
+        //Debug.Log("loading...!");
         ResourceManager.instance.dicCharacterByName = new Dictionary<string, GameObject>();
 
         lstJsonData = new List<string>();
@@ -50,19 +50,19 @@ public class ResourceManager : MonoBehaviour
         string filePath = System.IO.Path.Combine(Application.streamingAssetsPath, jsonDataPath);
         //filePath = "file:///E:/DaKing/DaKing/Build/StreamingAssets/Characters";
 
-        Debug.Log("hgot here");
+        //Debug.Log("hgot here");
         string result = "";
 
         foreach (GameObject character in characters)
         {
-            Debug.Log("loading characters...");
+            //Debug.Log("loading characters...");
             StartCoroutine(LoadWWW(filePath + "/" + character.name + "Text.json"));
 
         }
 
         playerAttributes = GameObject.FindGameObjectWithTag("King").GetComponent<PlayerAttributes>();
         sadParticles = GameObject.FindGameObjectWithTag("SadParticles");
-        Debug.Log("loading fin!");
+        //Debug.Log("loading fin!");
     }
 
     public PlayerAttributes getPlayerAttributes()

@@ -587,6 +587,10 @@ Prefab:
       propertyPath: gameover
       value: 
       objectReference: {fileID: 530247848}
+    - target: {fileID: 11452874, guid: acfc9b15f70a445429def5cdab29ea17, type: 2}
+      propertyPath: speechBubbleY
+      value: -50
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: acfc9b15f70a445429def5cdab29ea17, type: 2}
   m_IsPrefabParent: 0
@@ -2340,6 +2344,10 @@ Prefab:
       propertyPath: m_Name
       value: pish2
       objectReference: {fileID: 0}
+    - target: {fileID: 11452874, guid: acfc9b15f70a445429def5cdab29ea17, type: 2}
+      propertyPath: speechBubbleY
+      value: -50
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: acfc9b15f70a445429def5cdab29ea17, type: 2}
   m_IsPrefabParent: 0
@@ -2747,7 +2755,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 460592, guid: 5a2847c57eef820479ddde60c7657051, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 7.14
+      value: 6.78
       objectReference: {fileID: 0}
     - target: {fileID: 460592, guid: 5a2847c57eef820479ddde60c7657051, type: 2}
       propertyPath: m_LocalPosition.y
@@ -2802,6 +2810,26 @@ Prefab:
       value: 
       objectReference: {fileID: 21300000, guid: 83108b4adc221e74c9d938cb94f266b7,
         type: 3}
+    - target: {fileID: 11441250, guid: 5a2847c57eef820479ddde60c7657051, type: 2}
+      propertyPath: speechBubbleY
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 11441250, guid: 5a2847c57eef820479ddde60c7657051, type: 2}
+      propertyPath: startingPointY
+      value: -2.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 460592, guid: 5a2847c57eef820479ddde60c7657051, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 0.7275736
+      objectReference: {fileID: 0}
+    - target: {fileID: 460592, guid: 5a2847c57eef820479ddde60c7657051, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 0.7275736
+      objectReference: {fileID: 0}
+    - target: {fileID: 460592, guid: 5a2847c57eef820479ddde60c7657051, type: 2}
+      propertyPath: m_LocalScale.z
+      value: 0.7275736
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5a2847c57eef820479ddde60c7657051, type: 2}
   m_IsPrefabParent: 0
@@ -3097,6 +3125,14 @@ Prefab:
       value: 
       objectReference: {fileID: 21300000, guid: bffccb1b444457049917792d3def7cb6,
         type: 3}
+    - target: {fileID: 11437940, guid: 430217818891e6d4b8900b28d508bffa, type: 2}
+      propertyPath: startingPointY
+      value: -2.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 11437940, guid: 430217818891e6d4b8900b28d508bffa, type: 2}
+      propertyPath: speechBubbleY
+      value: 40
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 430217818891e6d4b8900b28d508bffa, type: 2}
   m_IsPrefabParent: 0
@@ -3309,8 +3345,20 @@ Prefab:
     - target: {fileID: 21298696, guid: 2260230439d8ae249869b38ced179444, type: 2}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 9c74db5bcdf0a4446b74c3c7d403ef3c,
+      objectReference: {fileID: 21300000, guid: ebc6d60d47bb1904f8e24e99afecfb72,
         type: 3}
+    - target: {fileID: 441138, guid: 2260230439d8ae249869b38ced179444, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 0.30234084
+      objectReference: {fileID: 0}
+    - target: {fileID: 441138, guid: 2260230439d8ae249869b38ced179444, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 0.30234084
+      objectReference: {fileID: 0}
+    - target: {fileID: 441138, guid: 2260230439d8ae249869b38ced179444, type: 2}
+      propertyPath: m_LocalScale.z
+      value: 0.21585828
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 11470164, guid: 2260230439d8ae249869b38ced179444, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 2260230439d8ae249869b38ced179444, type: 2}
@@ -3524,6 +3572,10 @@ Prefab:
       propertyPath: gameover
       value: 
       objectReference: {fileID: 530247848}
+    - target: {fileID: 11442876, guid: 934f232f5c3f3cc4f8a5f3397f45c3a5, type: 2}
+      propertyPath: speechBubbleY
+      value: 20
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 934f232f5c3f3cc4f8a5f3397f45c3a5, type: 2}
   m_IsPrefabParent: 0
@@ -4456,6 +4508,17 @@ MonoBehaviour:
           m_Arguments:
             m_ObjectArgument: {fileID: 1029985384}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Transform, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 1194189850}
+          m_MethodName: ButtonHighlighted
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
             m_StringArgument: 
@@ -5542,6 +5605,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b0ffcd93b0d6134da254fcb042e4e82, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  audioClip: {fileID: 8300000, guid: cd7044bf418f642df9a2130900bd3fd5, type: 3}
 --- !u!222 &1194189851
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5735,6 +5799,14 @@ Prefab:
       value: 
       objectReference: {fileID: 21300000, guid: a6f157c4c556e104cbbd155055a21a5e,
         type: 3}
+    - target: {fileID: 11468246, guid: bb9ff57f1c991634fa70ca66aa140f2a, type: 2}
+      propertyPath: startingPointY
+      value: -3
+      objectReference: {fileID: 0}
+    - target: {fileID: 11468246, guid: bb9ff57f1c991634fa70ca66aa140f2a, type: 2}
+      propertyPath: speechBubbleY
+      value: 20
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: bb9ff57f1c991634fa70ca66aa140f2a, type: 2}
   m_IsPrefabParent: 0
@@ -6003,6 +6075,10 @@ Prefab:
       value: 
       objectReference: {fileID: 21300000, guid: 0ae950779a8942d4ca3b180cd4f4eb42,
         type: 3}
+    - target: {fileID: 11490194, guid: 2ec958086f02ccc4f96461c901faf576, type: 2}
+      propertyPath: speechBubbleY
+      value: 20
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2ec958086f02ccc4f96461c901faf576, type: 2}
   m_IsPrefabParent: 0
@@ -6234,6 +6310,10 @@ Prefab:
       value: 
       objectReference: {fileID: 21300000, guid: 0a132f06d666eca4d9b73d5a0288147f,
         type: 3}
+    - target: {fileID: 11489926, guid: 87100e5cbc89f4f46845eff083187c9e, type: 2}
+      propertyPath: speechBubbleY
+      value: 60
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 87100e5cbc89f4f46845eff083187c9e, type: 2}
   m_IsPrefabParent: 0
@@ -6475,6 +6555,17 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+        - m_Target: {fileID: 1194189850}
+          m_MethodName: ButtonHighlighted
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
       m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
         Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   - eventID: 1
@@ -6631,7 +6722,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 496052, guid: cd15882634a625242a74d98004538d33, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 7.14
+      value: 6.78
       objectReference: {fileID: 0}
     - target: {fileID: 496052, guid: cd15882634a625242a74d98004538d33, type: 2}
       propertyPath: m_LocalPosition.y
@@ -6690,6 +6781,18 @@ Prefab:
       value: 
       objectReference: {fileID: 21300000, guid: 83108b4adc221e74c9d938cb94f266b7,
         type: 3}
+    - target: {fileID: 496052, guid: cd15882634a625242a74d98004538d33, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 0.7275736
+      objectReference: {fileID: 0}
+    - target: {fileID: 496052, guid: cd15882634a625242a74d98004538d33, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 0.7275736
+      objectReference: {fileID: 0}
+    - target: {fileID: 496052, guid: cd15882634a625242a74d98004538d33, type: 2}
+      propertyPath: m_LocalScale.z
+      value: 0.7275736
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: cd15882634a625242a74d98004538d33, type: 2}
   m_IsPrefabParent: 0
@@ -7748,7 +7851,8 @@ Prefab:
       propertyPath: yesMoneyOutcome
       value: -5
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 11409854, guid: 1dd8df7e3e1d8e84fb5b64da7f3a219a, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 1dd8df7e3e1d8e84fb5b64da7f3a219a, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &1721028279 stripped
@@ -7776,6 +7880,24 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &1721028282
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1721028280}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9fcdb0fbad0a0454b835e9d1b22745b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  theChoice: {fileID: 0}
+  dialogOption1: []
+  speechYes: []
+  speechNo: []
+  cantAffordDialog: []
+  dialogOption2: []
+  previousCharactersDecision: {fileID: 0}
 --- !u!1 &1727885685
 GameObject:
   m_ObjectHideFlags: 0
@@ -7788,6 +7910,8 @@ GameObject:
   - 114: {fileID: 1727885688}
   - 114: {fileID: 1727885687}
   - 114: {fileID: 1727885690}
+  - 114: {fileID: 1727885692}
+  - 114: {fileID: 1727885691}
   m_Layer: 5
   m_Name: ExitText
   m_TagString: Untagged
@@ -7906,6 +8030,48 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &1727885691
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1727885685}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d87a2ca47a76564297182f057efb41b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioClip: {fileID: 8300000, guid: 745b2b0fcfd084dadb474e26ded272b9, type: 3}
+--- !u!114 &1727885692
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1727885685}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1862395651, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 9
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1727885691}
+          m_MethodName: OnSelect
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  delegates: []
 --- !u!1001 &1750719967
 Prefab:
   m_ObjectHideFlags: 0
@@ -7970,6 +8136,10 @@ Prefab:
       value: 
       objectReference: {fileID: 21300000, guid: 0ae950779a8942d4ca3b180cd4f4eb42,
         type: 3}
+    - target: {fileID: 11402776, guid: 291d6d682230a5d40997e2c6881f717e, type: 2}
+      propertyPath: speechBubbleY
+      value: 20
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 291d6d682230a5d40997e2c6881f717e, type: 2}
   m_IsPrefabParent: 0
@@ -8954,6 +9124,8 @@ GameObject:
   - 114: {fileID: 2065180152}
   - 114: {fileID: 2065180153}
   - 114: {fileID: 2065180154}
+  - 114: {fileID: 2065180156}
+  - 114: {fileID: 2065180155}
   m_Layer: 5
   m_Name: StartGameText
   m_TagString: Untagged
@@ -9099,6 +9271,49 @@ MonoBehaviour:
   timeToAnimateFadeOutMainMenu: 0.75
   timeToDelayAnimatingOntoGameScreen: 1
   timeToAnimateGameScreenFadingIn: 1
+  audioClip: {fileID: 8300000, guid: a00a27dacfcc94b4abbe9ec734a8abea, type: 3}
+--- !u!114 &2065180155
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2065180148}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d87a2ca47a76564297182f057efb41b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioClip: {fileID: 8300000, guid: 745b2b0fcfd084dadb474e26ded272b9, type: 3}
+--- !u!114 &2065180156
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2065180148}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1862395651, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 9
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 2065180155}
+          m_MethodName: OnSelect
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  delegates: []
 --- !u!1001 &2071140285
 Prefab:
   m_ObjectHideFlags: 0
@@ -9163,6 +9378,10 @@ Prefab:
       value: 
       objectReference: {fileID: 21300000, guid: 4f05d486bb889804792fe9159a89ab85,
         type: 3}
+    - target: {fileID: 11410402, guid: 1dd8df7e3e1d8e84fb5b64da7f3a219a, type: 2}
+      propertyPath: speechBubbleY
+      value: 60
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1dd8df7e3e1d8e84fb5b64da7f3a219a, type: 2}
   m_IsPrefabParent: 0

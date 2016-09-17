@@ -24,14 +24,26 @@ public class TransitionToGameScript : MonoBehaviour
     [Tooltip("Time to animate the game menu fading in")]
     public float timeToAnimateGameScreenFadingIn = 1f;
 
+    [Header("Audio Options")]
+
+    [Tooltip("Sound clip that plays when the game starts")]
+    public AudioClip audioClip;
+
     [Tooltip("The object which we reference to know where to animate the main camera to when the game is started")]
     private Transform gameCameraPosition;
 
     [Tooltip("The main menu canvas")]
     private CanvasGroup mainMenuCanvasGroup;
 
+    private AudioSource audioSource;
+
     //Is the main menu enabled? 
     private bool mainMenuEnabled =  true;
+
+    void Awake()
+    {
+        audioSource = Camera.main.GetComponent<AudioSource>();
+    }
 
     // Use this for initialization
     void Start()
@@ -57,6 +69,9 @@ public class TransitionToGameScript : MonoBehaviour
         {
             //Turn off main menu
             mainMenuEnabled = false;
+
+            //Play starting game sound
+            audioSource.PlayOneShot(audioClip);
 
             //Fade main menu out
             StartCoroutine(FadeOut());

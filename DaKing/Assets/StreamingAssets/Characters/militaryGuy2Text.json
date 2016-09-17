@@ -3,7 +3,7 @@
 	"lstDialogOne":[
 		"M'lord",
 		"The battle was decisivly won",
-		"The enemy was outnumbered and fell against our might! |p1"
+		"The enemy was outnumbered and fell against our overwelming might! |p1"
 	],
 	"lstDialogTwo":[
 		"The battle was won, m'lord",
@@ -13,14 +13,14 @@
 		"Shall we pay 2 coins for their funerals or leave the financial burden to their families?|c"
 	],
 	"lstOutcomePassiveResultOne":[
-		-2,
 		0,
-		15
+		0,
+		5
 	],
 	"lstOutcomePassiveResultTwo":[
 		0,
 		0,
-		-15
+		-10
 	],
 	"lstOutcomeYesText":[
 		"I'll let their families know"
@@ -30,6 +30,11 @@
 	],
 	"lstOutcomeNoResult":[
 		0,
+		0,
+		0
+	],
+	"lstOutcomeYesResult":[
+		-2,
 		0,
 		0
 	],
