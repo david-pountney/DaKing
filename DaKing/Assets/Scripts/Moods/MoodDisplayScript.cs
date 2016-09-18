@@ -31,7 +31,7 @@ public class MoodDisplayScript : MonoBehaviour {
         arrMoodEffects[1] = new MoodEffectVignette();
         arrMoodEffects[2] = new MoodEffectBloomIntensity();
         arrMoodEffects[3] = new MoodEffectBloomBlurSize();
-        Debug.Log("Instantiated");
+        //Debug.Log("Instantiated");
     }
 
     public void handleMood(int newMood)
