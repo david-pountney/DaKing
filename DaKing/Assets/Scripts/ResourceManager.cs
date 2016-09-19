@@ -9,7 +9,6 @@ public class ResourceManager : MonoBehaviour
 
     GameObject mainCamera;
     PlayerAttributes playerAttributes;
-    public GameObject sadParticles;
 
     public List<string> lstJsonData;
 
@@ -61,7 +60,6 @@ public class ResourceManager : MonoBehaviour
         }
 
         playerAttributes = GameObject.FindGameObjectWithTag("King").GetComponent<PlayerAttributes>();
-        sadParticles = GameObject.FindGameObjectWithTag("SadParticles");
         //Debug.Log("loading fin!");
     }
 

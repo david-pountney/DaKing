@@ -6,23 +6,19 @@ public class MoodDisplayScript : MonoBehaviour {
 
     private IMoodEffect[] arrMoodEffects = new IMoodEffect[4];
 
-    static MoodDisplayScript instance;
+    public static MoodDisplayScript instance;
     void Awake()
     {
-        if (MoodDisplayScript.instance == null)
+        if (instance == null)
         {
             DontDestroyOnLoad(transform.gameObject);
             this.init();
-            MoodDisplayScript.instance = this;
+            instance = this;
         }
         else
         {
             Destroy(this.gameObject);
         }
-    }
-    public static MoodDisplayScript getInstance()
-    {
-        return instance;
     }
 
     private void init()

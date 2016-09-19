@@ -48,8 +48,8 @@ public class SpawnCoins : MonoBehaviour
         }
         else
         {
-            Debug.Log(gameObject.name);
-            Debug.Log(this.name);
+            //Debug.Log(gameObject.name);
+            //Debug.Log(this.name);
             StartCoroutine(dropCoins(amount));
         }
     }

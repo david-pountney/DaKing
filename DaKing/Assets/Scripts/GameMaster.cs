@@ -15,23 +15,20 @@ public class GameMaster : MonoBehaviour {
 
     public void Init()
     {
-        Debug.Log("GameMaster.Start()");
+        //Debug.Log("GameMaster.Start()");
 
         lstCharData = new List<CharacterData>();
         int i = 0;
-        Debug.Log("beofe foreach");
-        Debug.Log("lstJsonData Count: " + ResourceManager.instance.lstJsonData.Count);
+        //Debug.Log("lstJsonData Count: " + ResourceManager.instance.lstJsonData.Count);
 
         foreach (string jsonFile in ResourceManager.instance.lstJsonData)
         {
-            Debug.Log("inside foreach");
             lstCharData.Add(JsonUtility.FromJson<CharacterData>(jsonFile));
 
             currentChar = lstCharData[i++];
 
             //Check if character is in the scene
             if (!GameObject.Find(currentChar.charName)) continue;
-            Debug.Log("inside foreach 2");
 
             //Get the character in the scene via the name
             DeterminDialog charInstance = GameObject.Find(currentChar.charName).GetComponent<DeterminDialog>();
@@ -49,9 +46,6 @@ public class GameMaster : MonoBehaviour {
             {
                 charInstance.DialogOption1 = currentChar.lstDialogOne;
             }
-
-            Debug.Log("inside foreach 3");
-
 
             if (currentChar.lstDialogTwo.Count > 0)
             {

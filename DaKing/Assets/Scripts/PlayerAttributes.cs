@@ -63,14 +63,9 @@ public class PlayerAttributes : MonoBehaviour
 
     public void setMood(int newVal)
     {
-        if (newVal < depression)
-        {
-            ResourceManager.instance.sadParticles.GetComponent<ParticleSystem>().Clear();
-            ResourceManager.instance.sadParticles.GetComponent<ParticleSystem>().Play();
-        }
         depression = newVal;
         depressionText.text = depression.ToString();
-        MoodDisplayScript.getInstance().handleMood(depression);
+        MoodDisplayScript.instance.handleMood(depression);
         checkForNewStageOfDepression();
     }
 

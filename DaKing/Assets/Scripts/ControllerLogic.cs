@@ -64,7 +64,7 @@ public class ControllerLogic : MonoBehaviour {
         PlayerAttributes playerAttributes = GameObject.FindGameObjectWithTag("King").GetComponent<PlayerAttributes>();
 
         //Init default values of mood
-        MoodDisplayScript.getInstance().handleMood(playerAttributes.depression);
+        MoodDisplayScript.instance.handleMood(playerAttributes.depression);
 
         nextCharacter();
     }
