@@ -2,11 +2,11 @@
 using UnityEngine.UI;
 using System.Collections;
 
-public class FlashTextController : MonoBehaviour {
+public class FlashTextController : MonoBehaviour
+{
 
     public Text flashMoneyText;
     public Text flashMilitaryText;
-    public Text flashDepressionText;
     public Image flashDepressionImage;
     public Sprite flashMoodUpSprite;
     public Sprite flashMoodSameSprite;
@@ -55,19 +55,16 @@ public class FlashTextController : MonoBehaviour {
 
         if (depressionAmount > 0)
         {
-            flashDepressionText.text = "+" + depressionAmount.ToString();
             flashDepressionImage.GetComponent<Image>().sprite = flashMoodUpSprite;
             depressionCol = Color.green;
         }
         if (depressionAmount < 0)
         {
-            flashDepressionText.text = depressionAmount.ToString();
             flashDepressionImage.GetComponent<Image>().sprite = flashMoodDownSprite;
             depressionCol = Color.red;
         }
         else if (depressionAmount == 0)
         {
-            flashDepressionText.text = depressionAmount.ToString();
             flashDepressionImage.GetComponent<Image>().sprite = flashMoodSameSprite;
             depressionCol = Color.black;
         }
@@ -84,7 +81,6 @@ public class FlashTextController : MonoBehaviour {
 
         flashMoneyText.color = moneyCol;
         flashMilitaryText.color = militaryCol;
-        flashDepressionText.color = depressionCol;
 
         while (flashMoneyText.color.a < 1)
         {
@@ -97,7 +93,6 @@ public class FlashTextController : MonoBehaviour {
 
             flashMoneyText.color = moneyCol;
             flashMilitaryText.color = militaryCol;
-            flashDepressionText.color = depressionCol;
 
             yield return new WaitForSeconds(timeBetweenFade);
         }
@@ -113,7 +108,7 @@ public class FlashTextController : MonoBehaviour {
         Color moneyCol = flashMoneyText.color = new Color(monC.r, monC.g, monC.b, alpha);
         Color militaryCol = flashMoneyText.color = new Color(milC.r, milC.g, milC.b, alpha);
         Color depressionCol = flashMoneyText.color = new Color(depC.r, depC.g, depC.b, alpha);
-        
+
         while (flashMoneyText.color.a > 0)
         {
             alpha -= .05f;
@@ -125,7 +120,6 @@ public class FlashTextController : MonoBehaviour {
 
             flashMoneyText.color = moneyCol;
             flashMilitaryText.color = militaryCol;
-            flashDepressionText.color = depressionCol;
 
             yield return new WaitForSeconds(timeBetweenFade);
         }
