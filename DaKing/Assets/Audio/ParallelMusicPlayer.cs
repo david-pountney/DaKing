@@ -15,6 +15,8 @@ public class ParallelMusicPlayer : MonoBehaviour {
 
 	public PlayerAudioData[] additionalAudioData;
 
+	public bool playAllOnAwake = false;
+
 	public float target_vol;
 
 	public float fade_percent = 1;
@@ -32,7 +34,9 @@ public class ParallelMusicPlayer : MonoBehaviour {
 			sources[i].clip = sounds[i];
 			sources[i].volume = 0;
 			additionalAudioData [i] = new PlayerAudioData ();
-			sources [i].Play ();
+			if (playAllOnAwake) {
+				sources [i].Play ();
+			}
 		}
 
 	}
@@ -54,6 +58,18 @@ public class ParallelMusicPlayer : MonoBehaviour {
 				}
 				sources[i].volume = current_vol;
 			}
+		}
+	}
+
+	public void startAll() {
+		for (int i = 0; i < sounds.Count; i++) {
+			sources [i].Play ();
+		}
+	}
+
+	public void stopAll() {
+		for (int i = 0; i < sounds.Count; i++) {
+			sources [i].Stop ();
 		}
 	}
 
