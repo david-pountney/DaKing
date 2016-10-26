@@ -56,8 +56,11 @@ public class ControllerLogic : MonoBehaviour {
 
 
     public void Init()
-    { 
-        musicController.GetComponent<SimpleMusicController>().fade_in();
+    {
+		// ensure music is reset
+		//musicController.GetComponent<KDMoodMusicPlayer>().stopAll ();
+		musicController.GetComponent<KDMoodMusicPlayer>().startAll ();
+		musicController.GetComponent<KDMoodMusicPlayer>().fadeInTrack(0);
 
         Debug.Log(ResourceManager.instance.getPlayerAttributes().depression);
 

@@ -14,7 +14,7 @@ public class CurtainActivate : MonoBehaviour {
     public void startEndDay()
     {
         if(musicController)
-            musicController.GetComponent<SimpleMusicController>().fade_out();
+			musicController.GetComponent<KDMoodMusicPlayer>().fadeOutAll();
 
         StartCoroutine(fadeIn(new Color(0,0,0), curtains));
     }

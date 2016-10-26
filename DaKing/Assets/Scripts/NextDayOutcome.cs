@@ -152,7 +152,10 @@ public class NextDayOutcome : AnimatedMenu {
 
     private void fadeAllComponents()
     {
-        musicController.GetComponent<SimpleMusicController>().fade_in();
+		KDMoodMusicPlayer musicPlayer = musicController.GetComponent<KDMoodMusicPlayer> ();
+		musicPlayer.stopAll();
+		musicPlayer.startAll ();
+		musicPlayer.fadeInTrack(0);
 
         Image curtain = GetComponent<CurtainActivate>().curtains;
 
