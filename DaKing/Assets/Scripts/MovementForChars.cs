@@ -162,7 +162,7 @@ public class MovementForChars : MonoBehaviour {
             gameover.SetActive(true);
             gameover.GetComponent<CurtainActivate>().startEndDay();
 
-			GameObject.Find("MusicController").GetComponent<KDMoodMusicPlayer>().fadeOutAll();
+			GameObject.Find("MusicControllerMood").GetComponent<KDMoodMusicPlayer>().fadeOutAll();
 
             killSpeechAndChoices();
             

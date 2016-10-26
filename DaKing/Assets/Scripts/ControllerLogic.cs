@@ -24,14 +24,14 @@ public class ControllerLogic : MonoBehaviour {
 
     // Use this for initialization
     void Awake () {
-        musicController = GameObject.Find("MusicController");
+        musicController = GameObject.Find("MusicControllerMood");
         currentCharIndex = 0;
         GetAllCharacters();
     }
     
     void OnLevelWasLoaded()
     {
-        musicController = GameObject.Find("MusicController");
+        musicController = GameObject.Find("MusicControllerMood");
         currentCharIndex = 0;
         GetAllCharacters();
     }
