@@ -33,6 +33,7 @@ public class ParallelMusicPlayer : MonoBehaviour {
 			sources.Add (theSource);
 			sources[i].clip = sounds[i];
 			sources[i].volume = 0;
+			sources[i].loop = true;
 			additionalAudioData [i] = new PlayerAudioData ();
 			if (playAllOnAwake) {
 				sources [i].Play ();
@@ -75,6 +76,12 @@ public class ParallelMusicPlayer : MonoBehaviour {
 
 	public void fadeOutTrack(int index) {
 		additionalAudioData[index].fadeDir = -1;
+	}
+
+	public void fadeOutAll() {
+		for (int i = 0; i < sounds.Count; i++) {
+			additionalAudioData[i].fadeDir = -1;
+		}
 	}
 
 	//public override void fadeOutTrack(int index, float duration) {
