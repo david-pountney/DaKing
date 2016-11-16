@@ -4482,11 +4482,11 @@ MonoBehaviour:
   militaryText: {fileID: 1294810644}
   depression: 100
   noDepressionKing: {fileID: 21300000, guid: 2bee46d77c001b44c889a7b05f3b6093, type: 3}
-  quarterPercentDepressionKing: {fileID: 21300000, guid: 2f24e5227ca4f2b4891c26c6f79a82b0,
+  quarterPercentDepressionKing: {fileID: 21300000, guid: b92026830d3db294794523371dc54690,
     type: 3}
   halfPercentDepressionKing: {fileID: 21300000, guid: b8b00df62bb9650448e0a7891fda005f,
     type: 3}
-  threeQuarterPercentDepressionKing: {fileID: 21300000, guid: b92026830d3db294794523371dc54690,
+  threeQuarterPercentDepressionKing: {fileID: 21300000, guid: 2f24e5227ca4f2b4891c26c6f79a82b0,
     type: 3}
   maxDepression: 100
   noDepressionValue: 100
