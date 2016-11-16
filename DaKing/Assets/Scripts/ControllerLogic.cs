@@ -52,9 +52,7 @@ public class ControllerLogic : MonoBehaviour {
             i++;
         }
     }
-
-
-
+    
     public void Init()
     {
 		// ensure music is reset

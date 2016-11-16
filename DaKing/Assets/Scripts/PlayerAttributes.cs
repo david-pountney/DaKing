@@ -17,7 +17,6 @@ public class PlayerAttributes : MonoBehaviour
     //Depression
     public static int newDayDepression;
     public int depression;
-    public Text depressionText;
 
     //Depression sprites
     public Sprite noDepressionKing;
@@ -45,7 +44,6 @@ public class PlayerAttributes : MonoBehaviour
 
         moneyText.text = money.ToString();
         militaryText.text = military.ToString();
-        depressionText.text = depression.ToString();
     }
 
     public void setMoney(int newVal)
@@ -64,7 +62,6 @@ public class PlayerAttributes : MonoBehaviour
     public void setMood(int newVal)
     {
         depression = newVal;
-        depressionText.text = depression.ToString();
         MoodDisplayScript.instance.handleMood(depression);
         checkForNewStageOfDepression();
     }

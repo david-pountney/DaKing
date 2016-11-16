@@ -25,6 +25,7 @@ public class ChoicesScript : MonoBehaviour {
 
     public void yesButtonClicked()
     {
+        Debug.Log("Clicked Yes");
         MovementForChars character = GameObject.FindGameObjectWithTag("Controller").GetComponent<ControllerLogic>().CurrentChar; 
         
         if(character)
@@ -36,6 +37,7 @@ public class ChoicesScript : MonoBehaviour {
 
     public void noButtonClicked()
     {
+        Debug.Log("Clicked No");
         MovementForChars character = GameObject.FindGameObjectWithTag("Controller").GetComponent<ControllerLogic>().CurrentChar;
 
         if (character)
