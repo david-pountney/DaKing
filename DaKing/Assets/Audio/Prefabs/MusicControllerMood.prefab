@@ -1,14 +1,14 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &123946
+--- !u!1 &172614
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 4
   m_Component:
-  - 4: {fileID: 401194}
-  - 114: {fileID: 11498682}
+  - 4: {fileID: 431066}
+  - 114: {fileID: 11419016}
   m_Layer: 0
   m_Name: MusicControllerMood
   m_TagString: Untagged
@@ -16,30 +16,33 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &401194
+--- !u!4 &431066
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 123946}
+  m_GameObject: {fileID: 172614}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.7949121, y: -0.6938402, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
---- !u!114 &11498682
+--- !u!114 &11419016
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 123946}
+  m_GameObject: {fileID: 172614}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 58a5af94355324608a9cb30f9c701e60, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sounds: []
+  sounds:
+  - {fileID: 8300000, guid: d74ac1873164a48439c0e09200647405, type: 3}
+  - {fileID: 8300000, guid: 406b4f8882051404984740e49a27cf47, type: 3}
+  - {fileID: 8300000, guid: 3ce668d59a2cd415d84bb57353c8c20a, type: 3}
   sources: []
   playAllOnAwake: 0
   target_vol: 0.5
@@ -54,5 +57,5 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 123946}
+  m_RootGameObject: {fileID: 172614}
   m_IsPrefabParent: 1
