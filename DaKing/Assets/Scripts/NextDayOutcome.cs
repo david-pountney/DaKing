@@ -155,7 +155,8 @@ public class NextDayOutcome : AnimatedMenu {
 		KDMoodMusicPlayer musicPlayer = musicController.GetComponent<KDMoodMusicPlayer> ();
 		musicPlayer.stopAll();
 		musicPlayer.startAll ();
-		musicPlayer.fadeInTrack(0);
+		//musicPlayer.fadeInTrack(0);
+		musicPlayer.transitionMood(ResourceManager.instance.getPlayerAttributes().depression);
 
         Image curtain = GetComponent<CurtainActivate>().curtains;
 
