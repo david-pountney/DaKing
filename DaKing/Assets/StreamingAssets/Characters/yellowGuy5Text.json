@@ -1,0 +1,35 @@
+{
+	"charName" : "yellowGuy5",
+	"lstDialogOne":[
+		"Quickly!",
+		"I have had terrible dreams!",
+		"Visions!",
+		"Laminations of viciously plagued foresights of the end!",
+		"Throw 5 coins at me quick! You must hear of your terrible fate!|c"
+	],
+	"lstOutcomeYesText":[
+		"Wonderful! ",
+		"Lovely lovely monies..",
+		"Yeessss...",
+		"...",
+		"Oh yes, your demise..",
+		"Err..Your chiefs casorole will be most inadequte"
+	],
+	"lstOutcomeNoText":[
+		"What?! You don't care about your fate?",
+		"How foolish"
+	],
+	"lstOutcomeYesResult":[
+		-5,
+		0,
+		0
+	],
+	"lstOutcomeNoResult":[
+		0,
+		0,
+		-2
+	],
+	"lstCantAffordText":[
+		"How sad the King has no monies, pittyful"
+	]
+}

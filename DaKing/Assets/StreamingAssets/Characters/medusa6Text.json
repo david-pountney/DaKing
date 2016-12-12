@@ -1,0 +1,25 @@
+{
+	"charName" : "medusa6",
+	"lstDialogOne":[
+		"Hey",
+		"I've really missed you..",
+		"Why don't we talk as much?",
+		"Promise me I'll get to see you more |c"
+	],
+	"lstOutcomeYesText":[
+		"<3"
+	],
+	"lstOutcomeNoText":[
+		"You're always with HER!"
+	],
+	"lstOutcomeYesResult":[
+		0,
+		0,
+		10
+	],
+	"lstOutcomeNoResult":[
+		0,
+		0,
+		10
+	]
+}

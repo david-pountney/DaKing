@@ -1,0 +1,19 @@
+{
+	"charName" : "yourself4",
+	"lstDialogOne":[
+		"Please sir",
+		"My kingdom has fallen",
+		"The people are dying, the women lament",
+		"Pity me for this demons intent",
+		"On the collape of everything I've ever held dear",
+		"And now my retreat of everything feared",
+		"I've lost my family in this state of depression",
+		"Lashed out at my peers in the mist of aggression",
+		"If only I was better. |p1"
+	],
+	"lstOutcomePassiveResultOne":[
+		0,
+		0,
+		-20
+	]
+}

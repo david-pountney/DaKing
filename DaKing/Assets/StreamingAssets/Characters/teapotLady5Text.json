@@ -1,0 +1,26 @@
+{
+	"charName" : "teapotLady5",
+	"lstDialogOne":[
+		"*sigh*",
+		"Your son Jack has become..ill",
+		"Nothing serious, but I recommend letting the physician take a look at him",
+		"Of course, this won't be cheap..",
+		"Shall I call for the physician? |c"
+	],
+	"lstOutcomeYesText":[
+		"*sigh* Okay"
+	],
+	"lstOutcomeNoText":[
+		"*sigh* Okay"
+	],
+	"lstOutcomeYesResult":[
+		0,
+		0,
+		0
+	],
+	"lstOutcomeNoResult":[
+		0,
+		0,
+		0
+	]
+}

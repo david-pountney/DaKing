@@ -1,0 +1,27 @@
+{
+	"charName" : "militaryGuy7",
+	"lstDialogOne":[
+		"M'lord",
+		"We have a chance to recruit some men from the local prisons",
+		"Might not be a good long term decision..",
+		"But would bolster our military might almost immediatly",
+		"It wouldn't cost us a penny either..",
+		"The decision is yours m'lord |c"
+	],
+	"lstOutcomeYesText":[
+		"Right away m'lord"
+	],
+	"lstOutcomeNoText":[
+		"Your call m'lord"
+	],
+	"lstOutcomeYesResult":[
+		0,
+		4,
+		0
+	],
+	"lstOutcomeNoResult":[
+		0,
+		0,
+		0
+	]
+}

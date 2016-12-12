@@ -1,0 +1,42 @@
+{
+	"charName" : "scientist3",
+	"lstDialogOne":[
+		"I'm pleased to announce the Morning Stars charitable work has been a success!",
+		"Now more poor unemployed souls have been given great opportunities to work for someone much richer than them! |p1",
+		"Today I am here to ask for your support in helping to clear the streets of rabid animals",
+		"There are hundreds, if not thousands of animals wondering the streets!",
+		"With your help, these animals suffering will end and people are free to reclaim the kingdom!",
+		"All I ask.. is for 2 coins |c"
+	],
+	"lstDialogTwo":[
+		"Your lordship",
+		"Today I am here to ask for your support in helping to clear the streets of rabid animals",
+		"There are hundreds, if not thousands of animals wondering the streets!",
+		"With your help, these animals suffering will end and people are free to reclaim the kingdom!",
+		"All I ask.. is for 2 coins |c"
+	],
+	"lstOutcomePassiveResultOne":[
+		0,
+		0,
+		20
+	],
+	"lstOutcomeYesText":[
+		"Hehehe, I will begin to round up the creatures immediatly"
+	],
+	"lstOutcomeNoText":[
+		"Thats a shame, I'll be back soon with no doubt another noble cause"
+	],
+	"lstOutcomeYesResult":[
+		0,
+		-2,
+		5
+	],
+	"lstOutcomeNoResult":[
+		0,
+		0,
+		-2
+	],
+	"lstCantAffordText":[
+		"Oh dear, it looks like you can't afford to help m-I mean..the needy"
+	]
+}

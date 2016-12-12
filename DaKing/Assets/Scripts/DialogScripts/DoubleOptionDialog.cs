@@ -12,6 +12,9 @@ public class DoubleOptionDialog : DeterminDialog {
         //if(transform.parent.GetComponent<ChooseCharacterScript>().theCharacter)
         //    previousCharactersDecision = transform.parent.GetComponent<ChooseCharacterScript>().theCharacter.GetComponent<ExecuteChoices>();
 
+        if (!previousCharactersDecision)
+            Debug.Log("ERROR: No previous character reference on " + this.gameObject.name + " on Double Option script");
+
         //if yes
         if (previousCharactersDecision.outcomeChoice)
         {

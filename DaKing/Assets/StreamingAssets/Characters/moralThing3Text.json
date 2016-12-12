@@ -1,0 +1,25 @@
+{
+	"charName" : "moralThing3",
+	"lstDialogOne":[
+		"If you could save one person..",
+		"A loved one, who has never left your side",
+		"Rather than two people you've never met..",
+		"Would you? |c"
+	],
+	"lstOutcomeYesText":[
+		"Interesting..."
+	],
+	"lstOutcomeNoText":[
+		"I thought you'd say so"
+	],
+	"lstOutcomeYesResult":[
+		0,
+		0,
+		0
+	],
+	"lstOutcomeNoResult":[
+		0,
+		0,
+		0
+	]
+}

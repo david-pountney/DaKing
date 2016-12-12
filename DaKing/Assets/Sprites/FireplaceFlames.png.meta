@@ -1,0 +1,325 @@
+fileFormatVersion: 2
+guid: 2d8becdcae697d447a5f25c7cbb3af3f
+timeCreated: 1479322620
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: FireplaceFlames_0
+    21300002: FireplaceFlames_1
+    21300004: FireplaceFlames_2
+    21300006: FireplaceFlames_3
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: FireplaceFlames_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 512
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 67, y: -224}
+        - {x: 95, y: -211}
+        - {x: 113, y: -214}
+        - {x: 164, y: -227}
+        - {x: 178, y: -227}
+        - {x: 228, y: -201}
+        - {x: 249, y: -176}
+        - {x: 253, y: -163}
+        - {x: 256, y: -148}
+        - {x: 256, y: -100}
+        - {x: 254, y: -91}
+        - {x: 238, y: -48}
+        - {x: 208, y: 56}
+        - {x: 200, y: 79}
+        - {x: 171, y: 154}
+        - {x: 165, y: 185}
+        - {x: 158, y: 199}
+        - {x: 153, y: 199}
+        - {x: 148, y: 191}
+        - {x: 120, y: 118}
+        - {x: 97, y: 44}
+        - {x: 96, y: 52}
+        - {x: 70, y: 135}
+        - {x: 60, y: 139}
+        - {x: 41, y: 136}
+        - {x: 32, y: 140}
+        - {x: 29, y: 123}
+        - {x: 32, y: 80}
+        - {x: 13, y: 53}
+        - {x: 5, y: 70}
+        - {x: -4, y: 102}
+        - {x: -30, y: 188}
+        - {x: -43, y: 252}
+        - {x: -45, y: 256}
+        - {x: -53, y: 256}
+        - {x: -65, y: 233}
+        - {x: -97, y: 165}
+        - {x: -129, y: 81}
+        - {x: -135, y: 63}
+        - {x: -152, y: 6}
+        - {x: -170, y: -40}
+        - {x: -176, y: -72}
+        - {x: -176, y: -112}
+        - {x: -165, y: -158}
+        - {x: -158, y: -177}
+        - {x: -147, y: -193}
+        - {x: -132, y: -210}
+        - {x: -116, y: -218}
+        - {x: -76, y: -233}
+        - {x: -54, y: -233}
+        - {x: -45, y: -230}
+        - {x: -21, y: -216}
+        - {x: -4, y: -227}
+        - {x: 25, y: -228}
+    - name: FireplaceFlames_1
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 512
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 215, y: -224}
+        - {x: 234, y: -212}
+        - {x: 249, y: -197}
+        - {x: 256, y: -176}
+        - {x: 256, y: -113}
+        - {x: 255, y: -103}
+        - {x: 251, y: -89}
+        - {x: 245, y: -73}
+        - {x: 220, y: -24}
+        - {x: 210, y: 3}
+        - {x: 183, y: 57}
+        - {x: 155, y: 104}
+        - {x: 142, y: 142}
+        - {x: 127, y: 202}
+        - {x: 123, y: 234}
+        - {x: 118, y: 237}
+        - {x: 112, y: 237}
+        - {x: 108, y: 229}
+        - {x: 82, y: 175}
+        - {x: 56, y: 111}
+        - {x: 35, y: 61}
+        - {x: 15, y: -5}
+        - {x: -4, y: 53}
+        - {x: -21, y: 94}
+        - {x: -37, y: 145}
+        - {x: -46, y: 183}
+        - {x: -55, y: 187}
+        - {x: -60, y: 178}
+        - {x: -77, y: 133}
+        - {x: -83, y: 118}
+        - {x: -86, y: 129}
+        - {x: -96, y: 135}
+        - {x: -123, y: 83}
+        - {x: -170, y: 8}
+        - {x: -190, y: -31}
+        - {x: -209, y: -71}
+        - {x: -229, y: -103}
+        - {x: -236, y: -115}
+        - {x: -238, y: -125}
+        - {x: -238, y: -152}
+        - {x: -235, y: -166}
+        - {x: -226, y: -188}
+        - {x: -199, y: -209}
+        - {x: -161, y: -231}
+        - {x: -133, y: -232}
+        - {x: -91, y: -226}
+        - {x: -44, y: -240}
+        - {x: -27, y: -239}
+        - {x: 18, y: -212}
+        - {x: 29, y: -228}
+        - {x: 49, y: -239}
+        - {x: 65, y: -245}
+        - {x: 97, y: -254}
+        - {x: 110, y: -254}
+        - {x: 150, y: -237}
+        - {x: 180, y: -220}
+        - {x: 200, y: -228}
+    - name: FireplaceFlames_2
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 43, y: -248}
+        - {x: 95, y: -252}
+        - {x: 143, y: -226}
+        - {x: 159, y: -211}
+        - {x: 171, y: -189}
+        - {x: 175, y: -171}
+        - {x: 175, y: -135}
+        - {x: 174, y: -121}
+        - {x: 152, y: -66}
+        - {x: 144, y: -31}
+        - {x: 124, y: 33}
+        - {x: 99, y: 100}
+        - {x: 79, y: 166}
+        - {x: 76, y: 173}
+        - {x: 71, y: 174}
+        - {x: 66, y: 166}
+        - {x: 38, y: 92}
+        - {x: 33, y: 78}
+        - {x: 24, y: 46}
+        - {x: 14, y: 55}
+        - {x: -25, y: 130}
+        - {x: -42, y: 198}
+        - {x: -44, y: 221}
+        - {x: -49, y: 233}
+        - {x: -55, y: 233}
+        - {x: -58, y: 229}
+        - {x: -94, y: 154}
+        - {x: -106, y: 124}
+        - {x: -107, y: 118}
+        - {x: -109, y: 125}
+        - {x: -111, y: 127}
+        - {x: -115, y: 128}
+        - {x: -120, y: 121}
+        - {x: -132, y: 96}
+        - {x: -194, y: -4}
+        - {x: -227, y: -72}
+        - {x: -244, y: -97}
+        - {x: -256, y: -119}
+        - {x: -256, y: -163}
+        - {x: -254, y: -179}
+        - {x: -237, y: -201}
+        - {x: -181, y: -236}
+        - {x: -134, y: -237}
+        - {x: -104, y: -249}
+        - {x: -79, y: -256}
+        - {x: -53, y: -256}
+        - {x: -7, y: -235}
+        - {x: 2, y: -229}
+        - {x: 18, y: -239}
+    - name: FireplaceFlames_3
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 0
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 3, y: -246}
+        - {x: 17, y: -246}
+        - {x: 63, y: -224}
+        - {x: 81, y: -236}
+        - {x: 110, y: -237}
+        - {x: 151, y: -232}
+        - {x: 182, y: -210}
+        - {x: 204, y: -176}
+        - {x: 212, y: -148}
+        - {x: 213, y: -130}
+        - {x: 213, y: -116}
+        - {x: 194, y: -11}
+        - {x: 177, y: 54}
+        - {x: 156, y: 115}
+        - {x: 150, y: 127}
+        - {x: 145, y: 129}
+        - {x: 138, y: 119}
+        - {x: 127, y: 93}
+        - {x: 103, y: 55}
+        - {x: 83, y: 23}
+        - {x: 68, y: 83}
+        - {x: 49, y: 142}
+        - {x: 34, y: 197}
+        - {x: 28, y: 240}
+        - {x: 25, y: 246}
+        - {x: 19, y: 246}
+        - {x: 13, y: 243}
+        - {x: 5, y: 220}
+        - {x: -14, y: 180}
+        - {x: -27, y: 151}
+        - {x: -55, y: 79}
+        - {x: -59, y: 68}
+        - {x: -76, y: 106}
+        - {x: -94, y: 176}
+        - {x: -104, y: 182}
+        - {x: -132, y: 110}
+        - {x: -144, y: 76}
+        - {x: -154, y: 41}
+        - {x: -160, y: 18}
+        - {x: -170, y: 33}
+        - {x: -210, y: 104}
+        - {x: -218, y: 108}
+        - {x: -220, y: 105}
+        - {x: -221, y: 91}
+        - {x: -221, y: 49}
+        - {x: -224, y: -13}
+        - {x: -224, y: -79}
+        - {x: -226, y: -130}
+        - {x: -226, y: -167}
+        - {x: -218, y: -192}
+        - {x: -208, y: -213}
+        - {x: -190, y: -230}
+        - {x: -158, y: -242}
+        - {x: -130, y: -237}
+        - {x: -118, y: -241}
+        - {x: -87, y: -246}
+        - {x: -76, y: -246}
+        - {x: -59, y: -235}
+        - {x: -42, y: -232}
+        - {x: -12, y: -243}
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
