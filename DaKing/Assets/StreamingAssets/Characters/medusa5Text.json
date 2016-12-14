@@ -2,9 +2,11 @@
 	"charName" : "medusa5",
 	"lstDialogOne":[
 		"Hey",
-		"I've really missed you..",
-		"Why don't we talk as much?",
-		"Promise me I'll get to see you more |c"
+		"I really love you",
+		"Why don't we run away together?",
+		"Leave everything behind and start a new life together?",
+		"Just me and you",
+		"You do want that, don't you? |c"
 	],
 	"lstOutcomeYesText":[
 		"<3"

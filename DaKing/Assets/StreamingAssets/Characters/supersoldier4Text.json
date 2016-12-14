@@ -1,0 +1,25 @@
+{
+	"charName" : "supersoldier4",
+	"lstDialogOne":[
+		"15 for more super soldiers? |c",
+	],
+	"lstOutcomeYesText":[
+		"Hehehe, I will begin to round up the creatures immediatly"
+	],
+	"lstOutcomeNoText":[
+		"Thats a shame, I'll be back soon with no doubt another noble cause"
+	],
+	"lstOutcomeYesResult":[
+		-15,
+		0,
+		-5
+	],
+	"lstOutcomeNoResult":[
+		0,
+		0,
+		0
+	],
+	"lstCantAffordText":[
+		"Oh dear, it looks like you can't afford to help m-I mean..the needy"
+	]
+}

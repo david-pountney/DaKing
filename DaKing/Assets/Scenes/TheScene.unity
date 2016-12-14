@@ -2304,6 +2304,10 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 0.7275736
       objectReference: {fileID: 0}
+    - target: {fileID: 131198, guid: 5a2847c57eef820479ddde60c7657051, type: 2}
+      propertyPath: m_Name
+      value: supersoldier
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5a2847c57eef820479ddde60c7657051, type: 2}
   m_IsPrefabParent: 0
@@ -3682,7 +3686,7 @@ Prefab:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 1993302236}
+    m_TransformParent: {fileID: 1918051221}
     m_Modifications:
     - target: {fileID: 496052, guid: cd15882634a625242a74d98004538d33, type: 2}
       propertyPath: m_LocalPosition.x
@@ -3759,7 +3763,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 185380, guid: cd15882634a625242a74d98004538d33, type: 2}
       propertyPath: m_Name
-      value: scientist5
+      value: supersoldier5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: cd15882634a625242a74d98004538d33, type: 2}
@@ -5551,7 +5555,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 496052, guid: cd15882634a625242a74d98004538d33, type: 2}
       propertyPath: m_RootOrder
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 11470816, guid: cd15882634a625242a74d98004538d33, type: 2}
       propertyPath: playerAttributes
@@ -5596,7 +5600,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 185380, guid: cd15882634a625242a74d98004538d33, type: 2}
       propertyPath: m_Name
-      value: scientist6
+      value: supersoldier6
+      objectReference: {fileID: 0}
+    - target: {fileID: 185380, guid: cd15882634a625242a74d98004538d33, type: 2}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: cd15882634a625242a74d98004538d33, type: 2}
@@ -6478,7 +6486,7 @@ Prefab:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 1668276135}
+    m_TransformParent: {fileID: 1993302236}
     m_Modifications:
     - target: {fileID: 496052, guid: cd15882634a625242a74d98004538d33, type: 2}
       propertyPath: m_LocalPosition.x
@@ -6555,7 +6563,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 185380, guid: cd15882634a625242a74d98004538d33, type: 2}
       propertyPath: m_Name
-      value: scientist4
+      value: supersoldier4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: cd15882634a625242a74d98004538d33, type: 2}
@@ -9889,7 +9897,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   money: 0
   moneyText: {fileID: 771735410}
-  military: 100
+  military: 0
   militaryText: {fileID: 1294810644}
   depression: 100
   noDepressionKing: {fileID: 21300000, guid: 2bee46d77c001b44c889a7b05f3b6093, type: 3}
@@ -10467,7 +10475,6 @@ Transform:
   - {fileID: 49530755}
   - {fileID: 1851439991}
   - {fileID: 784240973}
-  - {fileID: 313657552}
   m_Father: {fileID: 0}
   m_RootOrder: 15
 --- !u!1001 &1426717639
@@ -10475,7 +10482,7 @@ Prefab:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 1425316161}
+    m_TransformParent: {fileID: 1781213516}
     m_Modifications:
     - target: {fileID: 496052, guid: cd15882634a625242a74d98004538d33, type: 2}
       propertyPath: m_LocalPosition.x
@@ -10507,7 +10514,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 496052, guid: cd15882634a625242a74d98004538d33, type: 2}
       propertyPath: m_RootOrder
-      value: 85
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 11470816, guid: cd15882634a625242a74d98004538d33, type: 2}
       propertyPath: playerAttributes
@@ -10549,6 +10556,10 @@ Prefab:
     - target: {fileID: 496052, guid: cd15882634a625242a74d98004538d33, type: 2}
       propertyPath: m_LocalScale.z
       value: 0.7275736
+      objectReference: {fileID: 0}
+    - target: {fileID: 185380, guid: cd15882634a625242a74d98004538d33, type: 2}
+      propertyPath: m_Name
+      value: supersoldier2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: cd15882634a625242a74d98004538d33, type: 2}
@@ -10807,7 +10818,7 @@ Prefab:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 1781213516}
+    m_TransformParent: {fileID: 1668276135}
     m_Modifications:
     - target: {fileID: 496052, guid: cd15882634a625242a74d98004538d33, type: 2}
       propertyPath: m_LocalPosition.x
@@ -10884,7 +10895,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 185380, guid: cd15882634a625242a74d98004538d33, type: 2}
       propertyPath: m_Name
-      value: scientist3
+      value: supersoldier3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: cd15882634a625242a74d98004538d33, type: 2}
@@ -12602,7 +12613,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 989318790}
+  - {fileID: 1470812575}
   m_Father: {fileID: 1425316161}
   m_RootOrder: 41
 --- !u!114 &1668276136
@@ -13969,7 +13980,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 1470812575}
+  - {fileID: 313657552}
   m_Father: {fileID: 1425316161}
   m_RootOrder: 29
 --- !u!114 &1781213517
@@ -14396,6 +14407,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 532572721}
   - {fileID: 823921669}
   m_Father: {fileID: 1425316161}
   m_RootOrder: 76
@@ -14823,7 +14835,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 532572721}
+  - {fileID: 989318790}
   m_Father: {fileID: 1425316161}
   m_RootOrder: 58
 --- !u!114 &1993302237

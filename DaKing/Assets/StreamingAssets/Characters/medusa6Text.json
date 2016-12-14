@@ -2,9 +2,8 @@
 	"charName" : "medusa6",
 	"lstDialogOne":[
 		"Hey",
-		"I've really missed you..",
-		"Why don't we talk as much?",
-		"Promise me I'll get to see you more |c"
+		"I can't stand knowing you're with her any longer",
+		"Run away with me |c"
 	],
 	"lstOutcomeYesText":[
 		"<3"
@@ -15,11 +14,11 @@
 	"lstOutcomeYesResult":[
 		0,
 		0,
-		10
+		30
 	],
 	"lstOutcomeNoResult":[
 		0,
 		0,
-		10
+		-30
 	]
 }

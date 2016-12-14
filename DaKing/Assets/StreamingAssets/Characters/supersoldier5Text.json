@@ -1,0 +1,14 @@
+{
+	"charName" : "supersoldier5",
+	"lstDialogOne":[
+		"If you said yes so many times you win. You win |p1"
+	],
+	"lstDialogTwo":[
+		"If you said yes so many times you win. You lose |d"
+	],
+	"lstOutcomePassiveResultOne":[
+		0,
+		0,
+		0
+	]
+}

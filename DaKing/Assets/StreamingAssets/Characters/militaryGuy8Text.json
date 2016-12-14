@@ -2,26 +2,20 @@
 	"charName" : "militaryGuy8",
 	"lstDialogOne":[
 		"M'lord",
-		"We have a chance to recruit some men from the local prisons",
-		"Might not be a good long term decision..",
-		"But would bolster our military might almost immediatly",
-		"It wouldn't cost us a penny either..",
-		"The decision is yours m'lord |c"
+		"We lost the battle and the war, your son died"
 	],
-	"lstOutcomeYesText":[
-		"Right away m'lord"
+	"lstDialogTwo":[
+		"M'lord",
+		"We lost the battle and the war, lucky your son didn't fight ey?"
 	],
-	"lstOutcomeNoText":[
-		"Your call m'lord"
-	],
-	"lstOutcomeYesResult":[
+	"lstOutcomePassiveResultOne":[
 		0,
-		4,
-		0
+		-11,
+		-10
 	],
-	"lstOutcomeNoResult":[
+	"lstOutcomePassiveResultTwo":[
 		0,
-		0,
-		0
+		-10,
+		-5
 	]
 }

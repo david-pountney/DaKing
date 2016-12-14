@@ -27,7 +27,7 @@
 	"lstOutcomePassiveResultTwo":[
 		0,
 		0,
-		0,
+		0
 	],
 	"lstOutcomeYesText":[
 		"Smashing!"
@@ -44,7 +44,7 @@
 		0,
 		0,
 		0
-	]
+	],
 	"lstCantAffordText":[
 		"I haven't the time for the 'lower classes'"
 	]

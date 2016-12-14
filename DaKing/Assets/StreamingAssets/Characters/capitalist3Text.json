@@ -2,21 +2,49 @@
 	"charName" : "capitalist3",
 	"lstDialogOne":[
 		"Well hello there ol'chap",
-		"I've had a spiffing last few weeks!",
+		"I've had just a terrible last few weeks",
 		"Just",
-		"Spiffy",
-		"Anyways, I thought I'd share some of my new found 'dosh'",
-		"Enjoy ol'chap! |p1"
+		"Terrible",
+		"Anyways, no returns for you I'm afraid |p1",
+		"But I completly understand where I went wrong!",
+		"Give me another 100 and we'll be rich!",
+		"Whaddya say? |c"
 	],
-		"lstDialogTwo":[
+	"lstDialogTwo":[
 		"Well hello there ol'chap",
-		"I've made a bit of wonga the last week",
-		"Not too much, but enough I thought I'd share with you ol'chap!",
+		"Lost loads of money",
+		"Not good...",
 		"With the economy being what it is an' all",
 		"Anyways, I thought I'd share some of my new found 'dosh'",
 		"Enjoy ol'chap! |p1"
 	],
+	"lstOutcomePassiveResultOne":[
+		150,
+		0,
+		10
+	],
+	"lstOutcomePassiveResultTwo":[
+		0,
+		0,
+		0
+	],
+	"lstOutcomeYesText":[
+		"Hehehe, I will begin to round up the creatures immediatly"
+	],
+	"lstOutcomeNoText":[
+		"Thats a shame, I'll be back soon with no doubt another noble cause"
+	],
+	"lstOutcomeYesResult":[
+		-100,
+		0,
+		0
+	],
+	"lstOutcomeNoResult":[
+		0,
+		0,
+		0
+	],
 	"lstCantAffordText":[
-		"I haven't the time for the 'lower classes'"
+		"Oh dear, it looks like you can't afford to help m-I mean..the needy"
 	]
 }

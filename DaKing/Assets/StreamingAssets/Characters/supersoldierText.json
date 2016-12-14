@@ -1,11 +1,7 @@
 {
-	"charName" : "scientist",
+	"charName" : "supersoldier",
 	"lstDialogOne":[
-		"Your lordship",
-		"I represent the 'Morning Star' foundation",
-		"We help the peasents in the kingdom",
-		"Today we are fund raising for the unemployed plebs out on the streets",
-		"Care to donate just 3 coins to help the needy?|c"
+		"Give 40 to make super soldiers? |c"
 	],
 	"lstOutcomeYesText":[
 		"Hehe, awesome. I'll put the plebs to work immediatly"

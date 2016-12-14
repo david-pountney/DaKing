@@ -4,7 +4,7 @@
 		"So that black and brownish jar 'might' of been laced with poison...",
 		"Honestly, The things you find out on the streets these days!",
 		"*Nervous laugh*",
-		"Anyway...I'm here to plead for forgiveness",
+		"Anyway...I'm here to plead for forgiveness |p1",
 		"Could you find it in your heart to have mercy on a fool like me? |c"
 	],
 	"lstOutcomeYesText":[
@@ -22,5 +22,10 @@
 		0,
 		0,
 		-5
+	],
+	"lstOutcomePassiveResultOne":[
+		0,
+		0,
+		5
 	]
 }

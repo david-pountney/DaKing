@@ -1,19 +1,11 @@
 {
 	"charName" : "pish5",
 	"lstDialogOne":[
-		"Mom said the bad people want to hurt us",
-		"They want all our money",
-		"Because they are bad people",
-		"Dad said he would make them go away",
-		"Dad has gone away somewhere",
-		"Now mom won't stop crying",
-		"And I don't know where she is",
-		"...",
-		"... |p1"
+		"Thanks for not killing me |p1",
 	],
 	"lstOutcomePassiveResultOne":[
 		0,
 		0,
-		-1
+		10
 	]
 }

@@ -6,7 +6,12 @@
 		"Wanna open it? |c"
 	],
 	"lstOutcomeYesText":[
-		"Hahar! You fool!|d"
+		"Hahar! You fool!...",
+		"...",
+		"Any second now..",
+		"Annnnnyyyyyy seeeccond",
+		"...",
+		"Please have mercy my King, I never mean't to hurt you!"
 	],
 	"lstOutcomeNoText":[
 		"Yeah, I wouldn't either"

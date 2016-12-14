@@ -1,16 +1,16 @@
 {
 	"charName" : "medusa4",
 	"lstDialogOne":[
-		"Hey",
-		"I've really missed you..",
-		"Why don't we talk as much?",
-		"Promise me I'll get to see you more |c"
+		"Who do you want to be with?",
+		"Me",
+		"or her..",
+		"You want me, don't you? |c"
 	],
 	"lstOutcomeYesText":[
 		"<3"
 	],
 	"lstOutcomeNoText":[
-		"You're always with HER!"
+		"*cries*"
 	],
 	"lstOutcomeYesResult":[
 		0,

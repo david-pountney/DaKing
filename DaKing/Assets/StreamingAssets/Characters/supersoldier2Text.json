@@ -1,18 +1,18 @@
 {
-	"charName" : "servent6",
+	"charName" : "supersoldier2",
 	"lstDialogOne":[
-		"Is there life after death? |c",
-	],
+		"25 for more super soldiers? |c"
+	]
 	"lstOutcomeYesText":[
-		"Right away m'lord"
+		"*sigh* Okay"
 	],
 	"lstOutcomeNoText":[
-		"Your call m'lord"
+		"*sigh* Okay"
 	],
 	"lstOutcomeYesResult":[
+		-25,
 		0,
-		0,
-		0
+		-5
 	],
 	"lstOutcomeNoResult":[
 		0,

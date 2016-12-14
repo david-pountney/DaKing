@@ -2,13 +2,20 @@
 	"charName" : "capitalist4",
 	"lstDialogOne":[
 		"Well hello there ol'chap",
-		"I'm on the prowel, looking to start a spanking new business chain",
-		"And your kingdom looks just dashing!",
-		"Want to lend us a hand?",
-		"I could make us both very rich",
-		"VERY",
-		"Rich",
-		"I'd need a small loan of 5 coins, but as they say, you have to spend money to make money! |c"
+		"I've had just a terrible last few weeks",
+		"Just",
+		"Terrible",
+		"Anyways, no returns for you I'm afraid |p1",
+		"But I completly understand where I went wrong!",
+		"Give me another 100 and we'll be rich!",
+		"Whaddya say? |c",
+	],
+	"lstDialogTwo":[
+		"Well hello there ol'chap",
+		"Lost loads of money |p2",
+		"Not good...",
+		"With the economy being what it is an' all",
+		"Anyways, wanna give me more money? |c",
 	],
 	"lstOutcomeYesText":[
 		"Splendid!"
@@ -18,11 +25,21 @@
 		"Nevermind, I'll pay for it myself, toodle pip!"
 	],
 	"lstOutcomeYesResult":[
-		-5,
+		-50,
 		0,
 		0
 	],
 	"lstOutcomeNoResult":[
+		0,
+		0,
+		0
+	],
+	"lstOutcomePassiveResultOne":[
+		0,
+		0,
+		-5
+	],
+	"lstOutcomePassiveResultTwo":[
 		0,
 		0,
 		0

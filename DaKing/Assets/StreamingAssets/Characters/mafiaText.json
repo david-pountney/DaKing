@@ -17,9 +17,9 @@
 		"If you see him, let us know.."
 	],
 	"lstOutcomeYesResult":[
+		20,
 		0,
-		0,
-		0
+		-10
 	],
 	"lstOutcomeNoResult":[
 		0,
