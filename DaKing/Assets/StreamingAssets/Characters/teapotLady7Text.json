@@ -1,26 +1,14 @@
 {
 	"charName" : "teapotLady7",
 	"lstDialogOne":[
-		"*sigh*",
-		"Your son Jack has become..ill",
-		"Nothing serious, but I recommend letting the physician take a look at him",
-		"Of course, this won't be cheap..",
-		"Shall I call for the physician? |c"
+		"You might not want to hear this...",
+		"But I think your wife might be seeing someone else",
+		"To be frank, if you allow me.",
+		"I'm not surprised seeing as how you are behaving.|p1"
 	],
-	"lstOutcomeYesText":[
-		"*sigh* Okay"
-	],
-	"lstOutcomeNoText":[
-		"*sigh* Okay"
-	],
-	"lstOutcomeYesResult":[
+	"lstOutcomePassiveResultOne":[
 		0,
 		0,
-		0
-	],
-	"lstOutcomeNoResult":[
-		0,
-		0,
-		0
+		-5
 	]
 }

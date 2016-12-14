@@ -1,26 +1,22 @@
 {
 	"charName" : "teapotLady10",
 	"lstDialogOne":[
-		"*sigh*",
-		"Your son Jack has become..ill",
-		"Nothing serious, but I recommend letting the physician take a look at him",
-		"Of course, this won't be cheap..",
-		"Shall I call for the physician? |c"
+		"Good Day Sire.",
+		"Thank you for spending more time with the kids,",
+		"I think its really making a difference, they seem happier.|p1",
 	],
-	"lstOutcomeYesText":[
-		"*sigh* Okay"
+	"lstDialogTwo":[
+		"You selfish selfish human being.",
+		"I hope this lady never has people after you loose interest in them.|p2"
 	],
-	"lstOutcomeNoText":[
-		"*sigh* Okay"
-	],
-	"lstOutcomeYesResult":[
+	"lstOutcomePassiveResultOne":[
 		0,
 		0,
-		0
+		20
 	],
-	"lstOutcomeNoResult":[
+	"lstOutcomePassiveResultTwo":[
 		0,
 		0,
-		0
+		-10
 	]
 }

@@ -2,11 +2,11 @@
 	"charName" : "teapotLady",
 	"lstDialogOne":[
 		"*sigh*",
-		"I have been apointed as your new house maid",
-		"Your wife Mary and little boy will under my care for the forseeable future",
-		"No small task, may I add, judging from the behaviour of your son",
-		"The brat spilt burning hot water onto my lap just this weekend!",
-		"I shall see to it that the boy knows.. proper discipline |p1"
+		"I have been appointed as your new house maid",
+		"Your wife Mary and little boy will under my care for the foreseeable future",
+		"No small task, may I add, judging from the behavior of your son",
+		"The brat jumped out at me and split burning hot water onto me just this weekend!",
+		"I shall see to it that the boy knows.. proper discipline.|p1"
 	],
 	"lstOutcomePassiveResultOne":[
 		0,

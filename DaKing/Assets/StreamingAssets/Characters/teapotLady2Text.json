@@ -2,21 +2,21 @@
 	"charName" : "teapotLady2",
 	"lstDialogOne":[
 		"*sigh*",
-		"Your son Jack has become..ill",
-		"Nothing serious, but I recommend letting the physician take a look at him",
+		"Your physician is telling its time to see him about your illness again.",
 		"Of course, this won't be cheap..",
-		"Shall I call for the physician? |c"
+		"Didn't you mention needing that money to help someone else?",
+		"Shall I call for the physician anyway?|c"
 	],
 	"lstOutcomeYesText":[
-		"*sigh* Okay"
+		"*sigh* Okay."
 	],
 	"lstOutcomeNoText":[
-		"*sigh* Okay"
+		"*sigh* Okay."
 	],
 	"lstOutcomeYesResult":[
+		-50,
 		0,
-		0,
-		0
+		-10
 	],
 	"lstOutcomeNoResult":[
 		0,

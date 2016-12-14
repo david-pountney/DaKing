@@ -1,35 +1,32 @@
 {
 	"charName" : "yellowGuy4",
 	"lstDialogOne":[
-		"Quickly!",
-		"I have had terrible dreams!",
-		"Visions!",
-		"Laminations of viciously plagued foresights of the end!",
-		"Throw 5 coins at me quick! You must hear of your terrible fate!|c"
+		"You!",
+		"Thank goodness I've found you.",
+		"You'll want to here this, please allow me to consume some souls.|c"
 	],
 	"lstOutcomeYesText":[
-		"Wonderful! ",
-		"Lovely lovely monies..",
-		"Yeessss...",
+		"Wise choice.",
+		"You have an up coming battle, yes?",
+		"People are going to die.",
 		"...",
-		"Oh yes, your demise..",
-		"Err..Your chiefs casorole will be most inadequte"
+		"You will be sad"
 	],
 	"lstOutcomeNoText":[
-		"What?! You don't care about your fate?",
-		"How foolish"
+		"Fool!",
+		"You are letting your kingdom down."
 	],
 	"lstOutcomeYesResult":[
-		-5,
 		0,
+		-5,
 		0
 	],
 	"lstOutcomeNoResult":[
 		0,
 		0,
-		-2
+		0
 	],
 	"lstCantAffordText":[
-		"How sad the King has no monies, pittyful"
+		"Why have you got no men for me to consume?"
 	]
 }
