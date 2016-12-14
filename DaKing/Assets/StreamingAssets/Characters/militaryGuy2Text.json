@@ -14,12 +14,12 @@
 	],
 	"lstOutcomePassiveResultOne":[
 		0,
-		0,
+		-10,
 		5
 	],
 	"lstOutcomePassiveResultTwo":[
 		0,
-		0,
+		-10,
 		-10
 	],
 	"lstOutcomeYesText":[
@@ -31,12 +31,12 @@
 	"lstOutcomeNoResult":[
 		0,
 		0,
-		0
+		-5
 	],
 	"lstOutcomeYesResult":[
-		-2,
+		-10,
 		0,
-		0
+		5
 	],
 	"lstCantAffordText":[
 		"m'Lord, we do not have the money in the treasury.."

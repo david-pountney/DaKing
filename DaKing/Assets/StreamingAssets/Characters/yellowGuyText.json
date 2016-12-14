@@ -21,12 +21,12 @@
 	],
 	"lstOutcomeYesResult":[
 		0,
-		-2,
-		5
+		-10,
+		10
 	],
 	"lstOutcomeNoResult":[
 		0,
 		0,
-		-2
+		0
 	]
 }

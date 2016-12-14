@@ -14,14 +14,14 @@
 		"Thats a shame, I'll be back soon with no doubt another noble cause"
 	],
 	"lstOutcomeYesResult":[
-		-3,
+		-40,
 		0,
 		0
 	],
 	"lstOutcomeNoResult":[
 		0,
 		0,
-		-10
+		0
 	],
 	"lstCantAffordText":[
 		"Oh dear, it looks like you can't afford to help m-I mean..the needy"

@@ -6,7 +6,7 @@
 		"I have something 'extra special' for the plebs on the streets",
 		"Ya'know, make people forget about their wows and such and such...",
 		"Totally safe an' all! Makes them feel all warm and fuzzy inside!",
-		"Best part is, I'll give you 10 gold right now if you turn a blind eye",
+		"Best part is, I'll give you 25 gold right now if you turn a blind eye",
 		"Whaddaya say? |c"
 	],
 	"lstOutcomeYesText":[
@@ -16,7 +16,7 @@
 		"What a shame"
 	],
 	"lstOutcomeYesResult":[
-		10,
+		25,
 		0,
 		0
 	],

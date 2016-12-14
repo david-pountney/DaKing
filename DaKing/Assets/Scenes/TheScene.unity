@@ -828,8 +828,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 313657552}
+  m_Children: []
   m_Father: {fileID: 1425316161}
   m_RootOrder: 11
 --- !u!1001 &102514185
@@ -9890,7 +9889,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   money: 0
   moneyText: {fileID: 771735410}
-  military: 0
+  military: 100
   militaryText: {fileID: 1294810644}
   depression: 100
   noDepressionKing: {fileID: 21300000, guid: 2bee46d77c001b44c889a7b05f3b6093, type: 3}
@@ -10468,6 +10467,7 @@ Transform:
   - {fileID: 49530755}
   - {fileID: 1851439991}
   - {fileID: 784240973}
+  - {fileID: 313657552}
   m_Father: {fileID: 0}
   m_RootOrder: 15
 --- !u!1001 &1426717639
@@ -10475,7 +10475,7 @@ Prefab:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 88141679}
+    m_TransformParent: {fileID: 1425316161}
     m_Modifications:
     - target: {fileID: 496052, guid: cd15882634a625242a74d98004538d33, type: 2}
       propertyPath: m_LocalPosition.x
@@ -10507,7 +10507,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 496052, guid: cd15882634a625242a74d98004538d33, type: 2}
       propertyPath: m_RootOrder
-      value: 0
+      value: 85
       objectReference: {fileID: 0}
     - target: {fileID: 11470816, guid: cd15882634a625242a74d98004538d33, type: 2}
       propertyPath: playerAttributes

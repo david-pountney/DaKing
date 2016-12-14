@@ -2,11 +2,16 @@
 	"charName" : "pish2",
 	"lstDialogOne":[
 		"S-sir...",
-		"Mommy isn't home yet",
+		"Mommy isn't home yet |p1",
 		"What if she never comes home?",
 		"She went to go find my brother",
 		"He was taken by some bad people",
 		"Do you think she's okay? |c"
+	],
+	"lstOutcomePassiveResultOne":[
+		0,
+		0,
+		-10
 	],
 	"lstOutcomeYesText":[
 		"I hope so.."
@@ -17,11 +22,11 @@
 	"lstOutcomeYesResult":[
 		0,
 		0,
-		5
+		0
 	],
 	"lstOutcomeNoResult":[
 		0,
 		0,
-		-15
+		-10
 	]
 }

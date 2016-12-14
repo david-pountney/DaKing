@@ -3,25 +3,11 @@
 	"lstDialogOne":[
 		"Hey",
 		"I haven't seen you all week",
-		"I've missed you..",
-		"Is your wife home?",
-		"Can I be with you tonight? |c"
+		"I've missed you.. |p1",
 	],
-	"lstOutcomeYesText":[
-		":)",
-		"See you tonight x"
-	],
-	"lstOutcomeNoText":[
-		"You're always with HER!"
-	],
-	"lstOutcomeYesResult":[
+	"lstOutcomePassiveResultOne":[
 		0,
 		0,
-		-5
-	],
-	"lstOutcomeNoResult":[
-		0,
-		0,
-		-5
+		10
 	]
 }

@@ -3,8 +3,13 @@
 	"lstDialogOne":[
 		"Hey",
 		"I've really missed you..",
-		"Why don't we talk as much?",
+		"Why don't we talk as much? |p1",
 		"Promise me I'll get to see you more |c"
+	],
+	"lstOutcomePassiveResultOne":[
+		0,
+		0,
+		-5
 	],
 	"lstOutcomeYesText":[
 		"<3"

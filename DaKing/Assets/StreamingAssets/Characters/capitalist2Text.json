@@ -6,16 +6,45 @@
 		"Just",
 		"Spiffy",
 		"Anyways, I thought I'd share some of my new found 'dosh'",
-		"Enjoy ol'chap! |p1"
+		"Enjoy ol'chap! |p1",
+		"Now I think about it, it would be grand if you would help me out again",
+		"Just 75 coins and we'll both be laughing!",
+		"Whaddaya say? |c"
 	],
 		"lstDialogTwo":[
 		"Well hello there ol'chap",
 		"I've made a bit of wonga the last week",
-		"Not too much, but enough I thought I'd share with you ol'chap!",
-		"With the economy being what it is an' all",
-		"Anyways, I thought I'd share some of my new found 'dosh'",
-		"Enjoy ol'chap! |p1"
+		"Would have been much more if you had invested ol'chap! |p2",
+		"Now I think about it, it would be grand if you would help me out",
+		"Just 75 coins and we'll both be laughing!",
+		"Whaddaya say? |c"
 	],
+	"lstOutcomePassiveResultOne":[
+		100,
+		0,
+		10
+	],
+	"lstOutcomePassiveResultTwo":[
+		0,
+		0,
+		0,
+	],
+	"lstOutcomeYesText":[
+		"Smashing!"
+	],
+	"lstOutcomeNoText":[
+		"Oh dear..."
+	],
+	"lstOutcomeYesResult":[
+		-75,
+		0,
+		0
+	],
+	"lstOutcomeNoResult":[
+		0,
+		0,
+		0
+	]
 	"lstCantAffordText":[
 		"I haven't the time for the 'lower classes'"
 	]

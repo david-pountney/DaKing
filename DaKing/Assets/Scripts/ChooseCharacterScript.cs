@@ -33,7 +33,7 @@ public class ChooseCharacterScript : MonoBehaviour {
 
         if (!child1)
         {
-            Debug.LogError("You forgot to set one of the character objects ( " + gameObject.name + " ) children! ( child at index 0 )");
+            Debug.Log("You forgot to set one of the character objects ( " + gameObject.name + " ) children! ( child at index 0 )");
             return null;
         }
         //There is no previous choice effecting which character we pick, so just pick the first child
