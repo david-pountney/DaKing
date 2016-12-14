@@ -1,23 +1,17 @@
 {
 	"charName" : "yellowGuy5",
 	"lstDialogOne":[
-		"Quickly!",
-		"I have had terrible dreams!",
-		"Visions!",
-		"Laminations of viciously plagued foresights of the end!",
-		"Throw 5 coins at me quick! You must hear of your terrible fate!|c"
+		"I've got a secret.",
+		"Would you like to hear?|c"
 	],
 	"lstOutcomeYesText":[
-		"Wonderful! ",
-		"Lovely lovely monies..",
-		"Yeessss...",
-		"...",
-		"Oh yes, your demise..",
-		"Err..Your chiefs casorole will be most inadequte"
+		"You're not going to like this...",
+		"I don't actually have any powers, and I could never into see the future.",
+		"I just crave to consume delicious souls.",
+		"Doesn't look like you have much left for me though."
 	],
 	"lstOutcomeNoText":[
-		"What?! You don't care about your fate?",
-		"How foolish"
+		"Are you not even a little curios?"
 	],
 	"lstOutcomeYesResult":[
 		-5,
@@ -27,9 +21,6 @@
 	"lstOutcomeNoResult":[
 		0,
 		0,
-		-2
-	],
-	"lstCantAffordText":[
-		"How sad the King has no monies, pittyful"
+		0
 	]
 }

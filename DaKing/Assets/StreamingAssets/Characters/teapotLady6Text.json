@@ -1,26 +1,27 @@
 {
 	"charName" : "teapotLady6",
 	"lstDialogOne":[
-		"*sigh*",
-		"Your son Jack has become..ill",
-		"Nothing serious, but I recommend letting the physician take a look at him",
-		"Of course, this won't be cheap..",
-		"Shall I call for the physician? |c"
+		"Your... The woman you spend so much time with dropped by earlier.",
+		"Shes mentioned somthing about you owing her a present?",
+		"Do you want to get her somthing?.|c"
 	],
 	"lstOutcomeYesText":[
-		"*sigh* Okay"
+		"*sigh* As you wish."
 	],
 	"lstOutcomeNoText":[
-		"*sigh* Okay"
+		"*sigh* As you wish."
 	],
 	"lstOutcomeYesResult":[
+		-20,
 		0,
-		0,
-		0
+		5
 	],
 	"lstOutcomeNoResult":[
 		0,
 		0,
-		0
+		-5
+	],
+	"lstCantAffordText":[
+		"You can't really afford anything right now."
 	]
 }

@@ -1,35 +1,31 @@
 {
 	"charName" : "yellowGuy3",
 	"lstDialogOne":[
-		"Quickly!",
-		"I have had terrible dreams!",
-		"Visions!",
-		"Laminations of viciously plagued foresights of the end!",
-		"Throw 5 coins at me quick! You must hear of your terrible fate!|c"
+		"Oooo",
+		"You'll like this one.",
+		"Let me top up on some souls so that I can explain more clearly.|c"
 	],
 	"lstOutcomeYesText":[
-		"Wonderful! ",
-		"Lovely lovely monies..",
-		"Yeessss...",
+		"MMmmmmm",
+		"Thank you for that.",
+		"Yess, this is about your... \"mistress\"",
 		"...",
-		"Oh yes, your demise..",
-		"Err..Your chiefs casorole will be most inadequte"
+		"She has plans"
 	],
 	"lstOutcomeNoText":[
-		"What?! You don't care about your fate?",
-		"How foolish"
+		"How disappointing"
 	],
 	"lstOutcomeYesResult":[
-		-5,
 		0,
-		0
+		-10,
+		-2
 	],
 	"lstOutcomeNoResult":[
 		0,
 		0,
-		-2
+		0
 	],
 	"lstCantAffordText":[
-		"How sad the King has no monies, pittyful"
+		"How are you a king with no subjects?"
 	]
 }

@@ -1,26 +1,26 @@
 {
 	"charName" : "teapotLady11",
 	"lstDialogOne":[
-		"*sigh*",
-		"Your son Jack has become..ill",
-		"Nothing serious, but I recommend letting the physician take a look at him",
-		"Of course, this won't be cheap..",
-		"Shall I call for the physician? |c"
+		"Sire,",
+		"Your time has come, its time for you to rest.",
+		"Let son will take over from now.",
+		"It wont be an easy task for him, lets how well you have prepared him for the journey ahead.|p1"
 	],
-	"lstOutcomeYesText":[
-		"*sigh* Okay"
-	],
-	"lstOutcomeNoText":[
-		"*sigh* Okay"
+	"lstDialogTwo":[
+		"Sire,",
+		"Your illness is too far gone, and you are unfit to carry on your reign.",
+		"You have left no heir, and have made much enemies during your time.",
+		"I am not going hang around to see who wins.",
+		"Thanks for everything.|p2"
 	],
 	"lstOutcomeYesResult":[
 		0,
 		0,
-		0
+		10
 	],
 	"lstOutcomeNoResult":[
 		0,
 		0,
-		0
+		-5
 	]
 }

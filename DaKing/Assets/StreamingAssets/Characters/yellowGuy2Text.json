@@ -4,32 +4,33 @@
 		"Quickly!",
 		"I have had terrible dreams!",
 		"Visions!",
-		"Laminations of viciously plagued foresights of the end!",
-		"Throw 5 coins at me quick! You must hear of your terrible fate!|c"
+		"Plagued foresights of the end!",
+		"You must hear of your terrible fate!",
+		"Let me have some more souls, I need to see more clearly|c"
 	],
 	"lstOutcomeYesText":[
 		"Wonderful! ",
-		"Lovely lovely monies..",
+		"Lovely lovely souls...",
 		"Yeessss...",
 		"...",
 		"Oh yes, your demise..",
-		"Err..Your chiefs casorole will be most inadequte"
+		"Err... Its actually Pish, he might not fair so well."
 	],
 	"lstOutcomeNoText":[
 		"What?! You don't care about your fate?",
 		"How foolish"
 	],
 	"lstOutcomeYesResult":[
-		-5,
 		0,
-		0
+		-10,
+		-10
 	],
 	"lstOutcomeNoResult":[
 		0,
 		0,
-		-2
+		0
 	],
 	"lstCantAffordText":[
-		"How sad the King has no monies, pittyful"
+		"How sad, you don't have enough souls for me. pitiful."
 	]
 }
