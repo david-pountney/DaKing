@@ -1,7 +1,7 @@
 {
 	"charName" : "servent3",
 	"lstDialogOne":[
-		"Someone has stolen from the treasurey! |p1",
+		"Someone has stolen from the treasurey! |p1"
 	],
 	"lstOutcomePassiveResultOne":[
 		-10,

@@ -8,14 +8,14 @@
 		"Anyways, no returns for you I'm afraid |p1",
 		"But I completly understand where I went wrong!",
 		"Give me another 100 and we'll be rich!",
-		"Whaddya say? |c",
+		"Whaddya say? |c"
 	],
 	"lstDialogTwo":[
 		"Well hello there ol'chap",
 		"Lost loads of money |p2",
 		"Not good...",
 		"With the economy being what it is an' all",
-		"Anyways, wanna give me more money? |c",
+		"Anyways, wanna give me more money? |c"
 	],
 	"lstOutcomeYesText":[
 		"Splendid!"

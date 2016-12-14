@@ -2,12 +2,12 @@
 	"charName" : "supersoldier2",
 	"lstDialogOne":[
 		"25 for more super soldiers? |c"
-	]
+	],
 	"lstOutcomeYesText":[
-		"*sigh* Okay"
+		"sigh Okay"
 	],
 	"lstOutcomeNoText":[
-		"*sigh* Okay"
+		"sigh Okay"
 	],
 	"lstOutcomeYesResult":[
 		-25,

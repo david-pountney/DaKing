@@ -2,7 +2,7 @@
 	"charName" : "militaryGuy5",
 	"lstDialogOne":[
 		"M'lord",
-		"Should your son join the military? |c",
+		"Should your son join the military? |c"
 	],
 	"lstOutcomeYesText":[
 		"Right away m'lord"

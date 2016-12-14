@@ -1,21 +1,14 @@
 {
 	"charName" : "servent6",
 	"lstDialogOne":[
-		"Is there life after death? |c",
+		"Your highness..",
+		"The weekly taxes have been collected from the people",
+		"As a result, the treasury has been increased |p1",
+		"Do not count on such plentiful amounts in the future however..",
+		"Who knows what the future holds.."
 	],
-	"lstOutcomeYesText":[
-		"Right away m'lord"
-	],
-	"lstOutcomeNoText":[
-		"Your call m'lord"
-	],
-	"lstOutcomeYesResult":[
-		0,
-		0,
-		0
-	],
-	"lstOutcomeNoResult":[
-		0,
+	"lstOutcomePassiveResultOne":[
+		15,
 		0,
 		0
 	]

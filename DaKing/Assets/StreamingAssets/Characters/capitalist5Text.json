@@ -1,11 +1,11 @@
 {
 	"charName" : "capitalist5",
 	"lstDialogOne":[
-		"Here, I made loads of money in the end |p1",
+		"Here, I made loads of money in the end |p1"
 	],
 	"lstOutcomePassiveResultOne":[
 		100,
 		0,
 		0
-	],
+	]
 }
