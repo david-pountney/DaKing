@@ -1,35 +1,35 @@
 {
-	"charName" : "evilnation3",
-	"lstDialogOne":[
-		"Ah, greetings!",
-		"Our kind has one of its seasonal holidays vast approaching",
-		"It's our tradition to make a sacrifice to our Kings",
-		"We were wondering if you could help us in this sacred tradition",
-		"Maybe some of your kinds 'street living' ones?",
-		"The 'homeless'?",
-		"Of course our kind will pay you",
-		"50 gold.",
-		"Will you honor our tradition? |c"
-	],
-	"lstOutcomeYesText":[
-		"Hahar! You fool!...",
-		"...",
-		"Any second now..",
-		"Annnnnyyyyyy seeeccond",
-		"...",
-		"Please have mercy my King, I never meant to hurt you!"
-	],
-	"lstOutcomeNoText":[
-		"Yeah, I wouldn't either"
-	],
-	"lstOutcomeYesResult":[
-		50,
-		0,
-		-3
-	],
-	"lstOutcomeNoResult":[
-		0,
-		0,
-		0
-	]
+    "charName" : "evilnation3",
+    "lstDialogOne":[
+        "Ah, greetings!",
+        "Our kind has one of its seasonal holidays vast approaching",
+        "It's our tradition to make a sacrifice to our Kings",
+        "We were wondering if you could help us in this sacred tradition",
+        "Maybe some of your kinds 'street living' ones?",
+        "The 'homeless'?",
+        "Of course our kind will pay you",
+        "50 gold.",
+        "Will you honor our tradition? |c"
+    ],
+    "lstOutcomeYesText":[
+        "Hahar! You fool!...",
+        "...",
+        "Any second now..",
+        "Annnnnyyyyyy seeeccond",
+        "...",
+        "Please have mercy my King, I never meant to hurt you!"
+    ],
+    "lstOutcomeNoText":[
+        "Yeah, I wouldn't either"
+    ],
+    "lstOutcomeYesResult":[
+        50,
+        0,
+        -3
+    ],
+    "lstOutcomeNoResult":[
+        0,
+        0,
+        0
+    ]
 }
