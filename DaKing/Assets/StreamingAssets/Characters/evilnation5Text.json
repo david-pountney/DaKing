@@ -1,0 +1,30 @@
+{
+	"charName" : "evilnation5",
+	"lstDialogOne":[
+		"Ah, my poor sir!",
+		"Our kind mourns over the loss of your kingdom and it's people.",
+		"We have spoke with our leaders",
+		"We feel your remaining lands and people would be better suited under our kind.",
+		"Rumor has it, your cancer has limited your days",
+		"Can you really continue to govern and protect your people?",
+		"Why not spend the last of your days with your family?",
+		"Why not abdicate while you still have the chance?",
+		"What do you say? |c"
+	],
+	"lstOutcomeYesText":[
+		"A wise choice"
+	],
+	"lstOutcomeNoText":[
+		"Fool"
+	],
+	"lstOutcomeYesResult":[
+		0,
+		0,
+		0
+	],
+	"lstOutcomeNoResult":[
+		0,
+		0,
+		0
+	]
+}

@@ -1,0 +1,33 @@
+{
+	"charName" : "evilnation",
+	"lstDialogOne":[
+		"As you are aware, the agreement between your people and ours has been..",
+		"Uneasy..in recent months",
+		"Your relentless attempts to interfere with our traditions has strained our relationship",
+		"What our kind does with it's own people is none of your concern",
+		"Please end the restrictions on the following cultural traditions",
+		"...",
+		"Torture",
+		"Mind altering drugs",
+		"Cannibalism",
+		"Slave ownership",
+		"If you end the war on our cultures traditions, we will reconsider our 'peaceful relationship' with your people",
+		"Do we have an agreement? |c"
+	],
+	"lstOutcomeYesText":[
+		"Pleasure doing business with you"
+	],
+	"lstOutcomeNoText":[
+		"You will regret this."
+	],
+	"lstOutcomeYesResult":[
+		0,
+		0,
+		0
+	],
+	"lstOutcomeNoResult":[
+		0,
+		0,
+		-5
+	]
+}

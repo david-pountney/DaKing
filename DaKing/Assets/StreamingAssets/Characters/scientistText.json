@@ -1,0 +1,28 @@
+{
+	"charName" : "scientist",
+	"lstDialogOne":[
+		"My Lord..",
+		"I have your medical exam results",
+		"Good news",
+		"For now, the cancer seems to have remained in the abdominal region |p1",
+		"How long that remains the case for I honestly don't know"
+	],
+	"lstDialogTwo":[
+		"I bring bad news",
+		"According to your medical exam results, the cancer has spread from your abdominal region to *something* |p2",
+		"To speak freely, my liege, if I may..",
+		"Now would be a good time to speak to your family.",
+		"I know that seems hard",
+		"But I think it would be wise"
+	],
+	"lstOutcomePassiveResultOne":[
+		0,
+		0,
+		15
+	],
+	"lstOutcomePassiveResultTwo":[
+		0,
+		0,
+		0
+	]
+}

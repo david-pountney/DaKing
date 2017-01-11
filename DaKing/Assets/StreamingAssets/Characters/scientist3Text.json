@@ -1,0 +1,14 @@
+{
+	"charName" : "scientist3",
+	"lstDialogOne":[
+		"My dear King..",
+		"The cancer has formed a significant mass of tissue in your abdominal region |p1",
+		"Chemotherapy sessions have not produced the results we were hoping for.",
+		"At this stage, we think it would be best to spend your time with your family."
+	],
+	"lstOutcomePassiveResultOne":[
+		0,
+		0,
+		-5
+	]
+}

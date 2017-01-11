@@ -24,5 +24,8 @@
 		0,
 		0,
 		-10
+	],
+	"lstCantAffordText":[
+		"B-but you don't have enough money"
 	]
 }

@@ -1,0 +1,29 @@
+{
+	"charName" : "evilnation2",
+	"lstDialogOne":[
+		"Ah, greetings!",
+		"Our kind is very pleased with your decision to revoke your policy on illegal mind altering powders!",
+		"Your open mindedness and tolerance to our kinds culture and way of life is most pleasing!",
+		"As a token of our new found friendship..",
+		"Please accept this. |p1",
+		"Of course our kind expects to see a continuation of this trend, no less.."
+	],
+	"lstDialogTwo":[
+		"Hear this.",
+		"Your refusal to respect our peoples traditions on mind altering drugs has outraged our kinds leaders! |p2",
+		"Be warned, our armies stand ready to enforce the rights of our people in your lands",
+		"We have reports on your military, and know you have little.",
+		"Don't disappoint us again.",
+		"You have been warned."
+	],
+	"lstOutcomePassiveResultOne":[
+		20,
+		0,
+		0
+	],
+	"lstOutcomePassiveResultTwo":[
+		0,
+		0,
+		-5
+	]
+}

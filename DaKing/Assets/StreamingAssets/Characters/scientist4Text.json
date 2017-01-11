@@ -1,0 +1,11 @@
+{
+	"charName" : "scientist4",
+	"lstDialogOne":[
+		"Your still going to die! |p1"
+	],
+	"lstOutcomePassiveResultOne":[
+		0,
+		0,
+		-5
+	]
+}

@@ -1,0 +1,19 @@
+{
+	"charName" : "scientist5",
+	"lstDialogOne":[
+		"We have come here today sir.. ",
+		"To make one last request on behalf of the scientific community.",
+		"Whatever money is left in the treasury, before the Kingdom collapses-",
+		"Donate the treasury to science and help fight cancer",
+		"You can help save others who suffer from the tragedy that possesses you.",
+		"I'm sorry you can't be saved",
+		"But please think of what we could do with that money",
+		"Please.. |c"
+	],
+	"lstOutcomeYesText":[
+		"Thank you!"
+	],
+	"lstOutcomeNoText":[
+		"A sad day for cancer sufferers.."
+	]
+}

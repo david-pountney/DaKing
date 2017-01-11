@@ -272,6 +272,16 @@ public class MovementForChars : MonoBehaviour {
         GetComponent<ExecuteChoices>().executePassiveTwoChoice();
     }
 
+    public void executeRemoveAllMoney()
+    {
+        GetComponent<ExecuteChoices>().executeRemoveAll(true, false, false);
+    }
+
+    public void executeRemoveAllMilitary()
+    {
+        GetComponent<ExecuteChoices>().executeRemoveAll(false, true, false);
+    }
+
     public void executeCantAffordSpeech()
     {
         if (activated)
@@ -308,6 +318,18 @@ public class MovementForChars : MonoBehaviour {
                 removeTagFromText(2);
                 gameIsNowOver = true;
             }
+
+            if (checkForTags(@"|rmon"))
+            {
+                removeTagFromText(5);
+                executeRemoveAllMoney();
+            }
+
+            if (checkForTags(@"|rmil"))
+            {
+                removeTagFromText(5);
+                executeRemoveAllMilitary();
+            }
         }
     }
 
@@ -331,7 +353,17 @@ public class MovementForChars : MonoBehaviour {
                 gameIsNowOver = true;
             }
 
+            if (checkForTags(@"|rmon"))
+            {
+                removeTagFromText(5);
+                executeRemoveAllMoney();
+            }
 
+            if (checkForTags(@"|rmil"))
+            {
+                removeTagFromText(5);
+                executeRemoveAllMilitary();
+            }
         }
     }
 

@@ -160,9 +160,28 @@ public class ExecuteChoices : MonoBehaviour
 
     }
 
+    public void executeRemoveAll(bool loseMoney, bool loseMilitary, bool loseDepression)
+    {
+        // Handle Money
+        if (loseMoney)
+        {
+            yesMoneyOutcome = -playerAttributes.money;
+            noMoneyOutcome = -playerAttributes.money;
+        }
+
+        // Handle Militry
+        if (loseMilitary)
+        {
+            yesMilitaryOutcome = -playerAttributes.military;
+            noMilitaryOutcome = -playerAttributes.military;
+        }
+
+        if (loseDepression)
+            Debug.Log("Not implemented code");
+    }
+
     public void executePassiveTwoChoice()
     {
-
         // Handle Money
         // Debug.Log("passiveTwoMoneyOutcome" + passiveTwoMoneyOutcome);
         iTween.ValueTo(gameObject, iTween.Hash("from", playerAttributes.money, "to", playerAttributes.money + passiveTwoMoneyOutcome, "onupdate", "itweenChangeMoney"));

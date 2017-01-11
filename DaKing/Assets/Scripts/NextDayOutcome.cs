@@ -101,7 +101,7 @@ public class NextDayOutcome : AnimatedMenu {
 
         moneyOutcomeText.text = "Gold ";
         militaryOutcomeText.text = "Military ";
-        depressionOutcomeText.text = "Depression ";
+        depressionOutcomeText.text = "Mood ";
 
         //Add sign to number
         if (moneyDif > 0) moneyOutcomeText.text = moneyOutcomeText.text + "+";

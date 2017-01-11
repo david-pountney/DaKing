@@ -1,0 +1,27 @@
+{
+	"charName" : "scientist2",
+	"lstDialogOne":[
+		"My Lord..",
+		"Your prescription drugs  for your condition are running rather low..",
+		"Given the state funded organizations can no longer feasibly supply ordinary people..",
+		"We are now importing any medicine from foreign powers",
+		"The cost has risen slightly to 10 gold",
+		"Should I send word to purchase the drug? |c"
+	],
+	"lstOutcomeYesText":[
+		"Yes Lord"
+	],
+	"lstOutcomeNoText":[
+		"Yes Lord"
+	],
+	"lstOutcomeYesResult":[
+		-10,
+		0,
+		0
+	],
+	"lstOutcomeNoResult":[
+		0,
+		0,
+		0
+	]
+}
