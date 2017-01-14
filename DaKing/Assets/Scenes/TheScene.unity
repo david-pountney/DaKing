@@ -3041,6 +3041,10 @@ Prefab:
       propertyPath: m_Name
       value: sob5
       objectReference: {fileID: 0}
+    - target: {fileID: 11442970, guid: 291d6d682230a5d40997e2c6881f717e, type: 2}
+      propertyPath: yesMoneyOutcome
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 291d6d682230a5d40997e2c6881f717e, type: 2}
   m_IsPrefabParent: 0
@@ -4120,6 +4124,14 @@ Prefab:
     - target: {fileID: 185380, guid: cd15882634a625242a74d98004538d33, type: 2}
       propertyPath: m_Name
       value: supersoldier5
+      objectReference: {fileID: 0}
+    - target: {fileID: 11470816, guid: cd15882634a625242a74d98004538d33, type: 2}
+      propertyPath: yesMoneyOutcome
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11470816, guid: cd15882634a625242a74d98004538d33, type: 2}
+      propertyPath: noDepressionOutcome
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: cd15882634a625242a74d98004538d33, type: 2}
@@ -5201,7 +5213,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 661321668}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9fcdb0fbad0a0454b835e9d1b22745b9, type: 3}
+  m_Script: {fileID: 11500000, guid: 898ddaf69b36690439e2aafc0cdaa5fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   theChoice: {fileID: 0}
@@ -5209,8 +5221,6 @@ MonoBehaviour:
   speechYes: []
   speechNo: []
   cantAffordDialog: []
-  dialogOption2: []
-  previousCharactersDecision: {fileID: 718731741}
 --- !u!111 &661321670
 Animation:
   m_ObjectHideFlags: 0
@@ -5306,6 +5316,11 @@ Prefab:
       propertyPath: m_Name
       value: death3
       objectReference: {fileID: 0}
+    - target: {fileID: 21238530, guid: 430217818891e6d4b8900b28d508bffa, type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: bffccb1b444457049917792d3def7cb6,
+        type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 430217818891e6d4b8900b28d508bffa, type: 2}
   m_IsPrefabParent: 0
@@ -5397,7 +5412,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 499158, guid: 934f232f5c3f3cc4f8a5f3397f45c3a5, type: 2}
       propertyPath: m_RootOrder
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 11476060, guid: 934f232f5c3f3cc4f8a5f3397f45c3a5, type: 2}
       propertyPath: spawnCoins
@@ -6076,6 +6091,11 @@ Prefab:
       propertyPath: m_Name
       value: death2
       objectReference: {fileID: 0}
+    - target: {fileID: 21238530, guid: 430217818891e6d4b8900b28d508bffa, type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: bffccb1b444457049917792d3def7cb6,
+        type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 430217818891e6d4b8900b28d508bffa, type: 2}
   m_IsPrefabParent: 0
@@ -8491,6 +8511,11 @@ Prefab:
       propertyPath: m_Name
       value: death4
       objectReference: {fileID: 0}
+    - target: {fileID: 21238530, guid: 430217818891e6d4b8900b28d508bffa, type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: bffccb1b444457049917792d3def7cb6,
+        type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 430217818891e6d4b8900b28d508bffa, type: 2}
   m_IsPrefabParent: 0
@@ -9442,6 +9467,18 @@ Prefab:
     - target: {fileID: 119708, guid: acfc9b15f70a445429def5cdab29ea17, type: 2}
       propertyPath: m_Name
       value: pish5
+      objectReference: {fileID: 0}
+    - target: {fileID: 11479490, guid: acfc9b15f70a445429def5cdab29ea17, type: 2}
+      propertyPath: yesMoneyOutcome
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11479490, guid: acfc9b15f70a445429def5cdab29ea17, type: 2}
+      propertyPath: noDepressionOutcome
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11479490, guid: acfc9b15f70a445429def5cdab29ea17, type: 2}
+      propertyPath: yesDepressionOutcome
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: acfc9b15f70a445429def5cdab29ea17, type: 2}
@@ -10805,7 +10842,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ebc982b0873b6e54292895dbd66b26fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  money: 0
+  money: 9
   moneyText: {fileID: 771735410}
   military: 0
   militaryText: {fileID: 1294810644}
@@ -11985,6 +12022,10 @@ Prefab:
       propertyPath: m_Name
       value: sob4
       objectReference: {fileID: 0}
+    - target: {fileID: 11442970, guid: 291d6d682230a5d40997e2c6881f717e, type: 2}
+      propertyPath: yesMoneyOutcome
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 291d6d682230a5d40997e2c6881f717e, type: 2}
   m_IsPrefabParent: 0
@@ -12549,6 +12590,10 @@ Prefab:
       propertyPath: m_LocalScale.y
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 11442970, guid: 291d6d682230a5d40997e2c6881f717e, type: 2}
+      propertyPath: yesMoneyOutcome
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 291d6d682230a5d40997e2c6881f717e, type: 2}
   m_IsPrefabParent: 0
@@ -12998,7 +13043,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11485840, guid: 1dd8df7e3e1d8e84fb5b64da7f3a219a, type: 2}
       propertyPath: yesMoneyOutcome
-      value: -5
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 11409854, guid: 1dd8df7e3e1d8e84fb5b64da7f3a219a, type: 2}
@@ -13020,7 +13065,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1623730180}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9fcdb0fbad0a0454b835e9d1b22745b9, type: 3}
+  m_Script: {fileID: 11500000, guid: 898ddaf69b36690439e2aafc0cdaa5fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   theChoice: {fileID: 0}
@@ -13028,8 +13073,6 @@ MonoBehaviour:
   speechYes: []
   speechNo: []
   cantAffordDialog: []
-  dialogOption2: []
-  previousCharactersDecision: {fileID: 0}
 --- !u!95 &1623730182
 Animator:
   serializedVersion: 3

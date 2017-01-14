@@ -136,28 +136,39 @@ public class ExecuteChoices : MonoBehaviour
 
     public void executePassiveOneChoice()
     {
-
         // Handle Money
         // Debug.Log("passiveOneMoneyOutcome" + passiveOneMoneyOutcome);
-        iTween.ValueTo(gameObject, iTween.Hash("from", playerAttributes.money, "to", playerAttributes.money + passiveOneMoneyOutcome, "onupdate", "itweenChangeMoney"));
-        spawnCoins.updateCoins(passiveOneMoneyOutcome);
+        if ((passiveOneMoneyOutcome > 0 || (playerAttributes.money >= Mathf.Abs(passiveOneMoneyOutcome))) &&
+            (passiveOneMilitaryOutcome > 0 || (playerAttributes.military >= Mathf.Abs(passiveOneMilitaryOutcome))))
+        {
+            iTween.ValueTo(gameObject, iTween.Hash("from", playerAttributes.money, "to", playerAttributes.money + passiveOneMoneyOutcome, "onupdate", "itweenChangeMoney"));
+            spawnCoins.updateCoins(passiveOneMoneyOutcome);
 
-        // Handle Militry
-        iTween.ValueTo(gameObject, iTween.Hash("from", playerAttributes.military, "to", playerAttributes.military + passiveOneMilitaryOutcome, "onupdate", "itweenChangeMilitary"));
+            // Handle Militry
+            iTween.ValueTo(gameObject, iTween.Hash("from", playerAttributes.military, "to", playerAttributes.military + passiveOneMilitaryOutcome, "onupdate", "itweenChangeMilitary"));
 
-        // // Handle depression
-        int moodOutcome = playerAttributes.depression + passiveOneDepressionOutcome;
-        if (moodOutcome > playerAttributes.maxDepression) moodOutcome = playerAttributes.maxDepression;
-        if (moodOutcome <= 0) movementForChars.GameIsNowOver = true;
+            // // Handle depression
+            int moodOutcome = playerAttributes.depression + passiveOneDepressionOutcome;
+            if (moodOutcome > playerAttributes.maxDepression) moodOutcome = playerAttributes.maxDepression;
+            if (moodOutcome <= 0) movementForChars.GameIsNowOver = true;
 
-        if (moodOutcome != playerAttributes.depression)
-            iTween.ValueTo(gameObject, iTween.Hash("from", playerAttributes.depression, "to", moodOutcome, "onupdate", "itweenChangeMood"));
-        // if (passiveOneDepressionOutcome > 0) StartCoroutine(changeDepression(passiveOneDepressionOutcome, 1));
-        // else if (passiveOneDepressionOutcome < 0) StartCoroutine(changeDepression(passiveOneDepressionOutcome, -1));
+            if (moodOutcome != playerAttributes.depression)
+                iTween.ValueTo(gameObject, iTween.Hash("from", playerAttributes.depression, "to", moodOutcome, "onupdate", "itweenChangeMood"));
+            // if (passiveOneDepressionOutcome > 0) StartCoroutine(changeDepression(passiveOneDepressionOutcome, 1));
+            // else if (passiveOneDepressionOutcome < 0) StartCoroutine(changeDepression(passiveOneDepressionOutcome, -1));
 
-        //Display flash text
-        playerAttributes.flashTextValues(passiveOneMoneyOutcome, passiveOneMilitaryOutcome, passiveOneDepressionOutcome);
+            //Display flash text
+            playerAttributes.flashTextValues(passiveOneMoneyOutcome, passiveOneMilitaryOutcome, passiveOneDepressionOutcome);
+        }
+        //Not enough resource
+        else
+        {
+            //Remove depression
+            iTween.ValueTo(gameObject, iTween.Hash("from", playerAttributes.depression, "to", playerAttributes.depression - 5, "onupdate", "itweenChangeMood"));
 
+            //Display flash text
+            playerAttributes.flashTextValues(0, 0, -5);
+        }
     }
 
     public void executeRemoveAll(bool loseMoney, bool loseMilitary, bool loseDepression)
@@ -182,25 +193,38 @@ public class ExecuteChoices : MonoBehaviour
 
     public void executePassiveTwoChoice()
     {
-        // Handle Money
-        // Debug.Log("passiveTwoMoneyOutcome" + passiveTwoMoneyOutcome);
-        iTween.ValueTo(gameObject, iTween.Hash("from", playerAttributes.money, "to", playerAttributes.money + passiveTwoMoneyOutcome, "onupdate", "itweenChangeMoney"));
-        spawnCoins.updateCoins(passiveTwoMoneyOutcome);
+        if ((passiveTwoMoneyOutcome > 0 || (playerAttributes.money >= Mathf.Abs(passiveTwoMoneyOutcome))) &&
+        (passiveTwoMilitaryOutcome > 0 || (playerAttributes.military >= Mathf.Abs(passiveTwoMilitaryOutcome))))
+        {
+            // Handle Money
+            // Debug.Log("passiveTwoMoneyOutcome" + passiveTwoMoneyOutcome);
+            iTween.ValueTo(gameObject, iTween.Hash("from", playerAttributes.money, "to", playerAttributes.money + passiveTwoMoneyOutcome, "onupdate", "itweenChangeMoney"));
+            spawnCoins.updateCoins(passiveTwoMoneyOutcome);
 
-        // Debug.Log("passiveTwoMilitaryOutcome" + passiveTwoMilitaryOutcome);
-        iTween.ValueTo(gameObject, iTween.Hash("from", playerAttributes.military, "to", playerAttributes.military + passiveTwoMilitaryOutcome, "onupdate", "itweenChangeMilitary"));
+            // Debug.Log("passiveTwoMilitaryOutcome" + passiveTwoMilitaryOutcome);
+            iTween.ValueTo(gameObject, iTween.Hash("from", playerAttributes.military, "to", playerAttributes.military + passiveTwoMilitaryOutcome, "onupdate", "itweenChangeMilitary"));
 
-        // // Handle depression
-        int moodOutcome = playerAttributes.depression + passiveTwoDepressionOutcome;
-        if (moodOutcome > playerAttributes.maxDepression) moodOutcome = playerAttributes.maxDepression;
-        if (moodOutcome <= 0) movementForChars.GameIsNowOver = true;
+            // // Handle depression
+            int moodOutcome = playerAttributes.depression + passiveTwoDepressionOutcome;
+            if (moodOutcome > playerAttributes.maxDepression) moodOutcome = playerAttributes.maxDepression;
+            if (moodOutcome <= 0) movementForChars.GameIsNowOver = true;
 
-        iTween.ValueTo(gameObject, iTween.Hash("from", playerAttributes.depression, "to", moodOutcome, "onupdate", "itweenChangeMood"));
-        // if (passiveTwoDepressionOutcome > 0) StartCoroutine(changeDepression(passiveTwoDepressionOutcome, 1));
-        // else if (passiveTwoDepressionOutcome < 0) StartCoroutine(changeDepression(passiveTwoDepressionOutcome, -1));
+            iTween.ValueTo(gameObject, iTween.Hash("from", playerAttributes.depression, "to", moodOutcome, "onupdate", "itweenChangeMood"));
+            // if (passiveTwoDepressionOutcome > 0) StartCoroutine(changeDepression(passiveTwoDepressionOutcome, 1));
+            // else if (passiveTwoDepressionOutcome < 0) StartCoroutine(changeDepression(passiveTwoDepressionOutcome, -1));
 
-        //Display flash text
-        playerAttributes.flashTextValues(passiveTwoMoneyOutcome, passiveTwoMilitaryOutcome, passiveTwoDepressionOutcome);
+            //Display flash text
+            playerAttributes.flashTextValues(passiveTwoMoneyOutcome, passiveTwoMilitaryOutcome, passiveTwoDepressionOutcome);
+        }
+        //Not enough resource
+        else
+        {
+            //Remove depression
+            iTween.ValueTo(gameObject, iTween.Hash("from", playerAttributes.depression, "to", playerAttributes.depression - 5, "onupdate", "itweenChangeMood"));
+
+            //Display flash text
+            playerAttributes.flashTextValues(0, 0, -5);
+        }
     }
 
     private void itweenChangeMilitary(int newVal)
