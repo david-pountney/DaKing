@@ -100,6 +100,8 @@ public class MovementForChars : MonoBehaviour {
 
             if (Input.GetKeyUp(KeyCode.Space))
             {
+                if (!speechInstance)    return;
+
                 if (choices && !choices.activeSelf && !enter && !exit && speechInstance.activeSelf)
                     changeSpeak();
                 else if (!choices.activeSelf && !enter && !exit && speechInstance.activeSelf)
