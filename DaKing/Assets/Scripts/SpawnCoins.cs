@@ -104,6 +104,8 @@ public class SpawnCoins : MonoBehaviour
 
                 clone = Instantiate(coin, new Vector2(transform.localPosition.x + randX, transform.localPosition.y + 10), Quaternion.identity) as GameObject;
 
+                clone.transform.parent = ResourceManager.instance.getTreasureChest().transform;
+
                 randX = UnityEngine.Random.Range(-5, 5); ;
 
                 Rigidbody2D rb = clone.GetComponent<Rigidbody2D>();

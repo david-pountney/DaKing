@@ -8,6 +8,10 @@ public class GameMaster : MonoBehaviour {
 
     private CharacterData currentChar;
 
+    [SerializeField]
+    private int superSoldiersCount;
+    public int superSoldiersNeeded;
+
 	// Use this for initialization
 	void Start () {
 
@@ -19,6 +23,8 @@ public class GameMaster : MonoBehaviour {
 
         lstCharData = new List<CharacterData>();
         int i = 0;
+        superSoldiersCount = 0;
+        superSoldiersNeeded = 4;
         //Debug.Log("lstJsonData Count: " + ResourceManager.instance.lstJsonData.Count);
 
         foreach (string jsonFile in ResourceManager.instance.lstJsonData)
@@ -104,5 +110,14 @@ public class GameMaster : MonoBehaviour {
                 charInstance.theChoice.passiveTwoDepressionOutcome = currentChar.lstOutcomePassiveResultTwo[2];
             }
         }
+    }
+
+    public void addSoldierCount()
+    {
+        superSoldiersCount += 1;
+    }
+    public int getSoldireCount()
+    {
+        return superSoldiersCount;
     }
 }

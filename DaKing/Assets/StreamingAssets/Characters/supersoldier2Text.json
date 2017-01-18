@@ -1,10 +1,10 @@
 {
 	"charName" : "supersoldier2",
 	"lstDialogOne":[
-		"25 for more super soldiers? |c"
+		"25 for more super soldiers?|c"
 	],
 	"lstOutcomeYesText":[
-		"sigh Okay"
+		"sigh Okay|super"
 	],
 	"lstOutcomeNoText":[
 		"sigh Okay"
