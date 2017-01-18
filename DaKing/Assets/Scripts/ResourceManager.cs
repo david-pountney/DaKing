@@ -9,6 +9,8 @@ public class ResourceManager : MonoBehaviour
 
     GameObject mainCamera;
     PlayerAttributes playerAttributes;
+    GameMaster gameMaster;
+    GameObject treasureChest;
 
     public List<string> lstJsonData;
 
@@ -21,6 +23,9 @@ public class ResourceManager : MonoBehaviour
         if (ResourceManager.instance == null)
         {
             mainCamera = GameObject.FindGameObjectWithTag("MainCamera");
+
+            gameMaster = GameObject.FindGameObjectWithTag("Controller").GetComponent<GameMaster>();
+            treasureChest = GameObject.Find("TreasureChest");
 
             DontDestroyOnLoad(transform.gameObject);
             ResourceManager.instance = this;
@@ -63,6 +68,16 @@ public class ResourceManager : MonoBehaviour
         playerAttributes = king.GetComponent<PlayerAttributes>();
         Debug.Log(playerAttributes);
         //Debug.Log("loading fin!");
+    }
+
+    public GameObject getTreasureChest()
+    {
+        return treasureChest;
+    }
+
+    public GameMaster getGameMaster()
+    {
+        return gameMaster;
     }
 
     public PlayerAttributes getPlayerAttributes()

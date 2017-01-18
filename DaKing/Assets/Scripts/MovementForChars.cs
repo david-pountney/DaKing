@@ -315,23 +315,7 @@ public class MovementForChars : MonoBehaviour {
 
             answeredYes = true;
 
-            if (checkForTags(@"|d"))
-            {
-                removeTagFromText(2);
-                gameIsNowOver = true;
-            }
-
-            if (checkForTags(@"|rmon"))
-            {
-                removeTagFromText(5);
-                executeRemoveAllMoney();
-            }
-
-            if (checkForTags(@"|rmil"))
-            {
-                removeTagFromText(5);
-                executeRemoveAllMilitary();
-            }
+            parseTags();
         }
     }
 
@@ -349,7 +333,13 @@ public class MovementForChars : MonoBehaviour {
 
             answeredNo = true;
 
-            if (checkForTags(@"|d"))
+            parseTags();
+        }
+    }
+
+    private void parseTags()
+    {
+        if (checkForTags(@"|d"))
             {
                 removeTagFromText(2);
                 gameIsNowOver = true;
@@ -366,7 +356,19 @@ public class MovementForChars : MonoBehaviour {
                 removeTagFromText(5);
                 executeRemoveAllMilitary();
             }
-        }
+
+            if( checkForTags(@"|super"))
+            {
+                ResourceManager.instance.getGameMaster().addSoldierCount();
+                removeTagFromText(6);
+            }
+
+            if( checkForTags(@"|superlast"))
+            {
+                removeTagFromText(10);
+                GameMaster gm = ResourceManager.instance.getGameMaster();
+                this.GetComponent<ExecuteChoices>().outcomeChoice = gm.getSoldireCount() >= gm.superSoldiersNeeded;
+            }
     }
 
     private void createChoices()

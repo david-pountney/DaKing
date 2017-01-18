@@ -4,7 +4,7 @@
 		"Give 40 gold to make super soldiers? |c"
 	],
 	"lstOutcomeYesText":[
-		"Hehe, awesome. I'll put the plebs to work immediatly"
+		"Hehe, awesome. I'll put the plebs to work immediatly|super"
 	],
 	"lstOutcomeNoText":[
 		"Thats a shame, I'll be back soon with no doubt another noble cause"
