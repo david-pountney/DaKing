@@ -35,6 +35,8 @@ public class PlayerAttributes : MonoBehaviour
     //Flash text contorller
     public FlashTextController flashTextController;
 
+    private Animator animator;
+
     void Start()
     {
         //Make note of starting stats
@@ -44,6 +46,8 @@ public class PlayerAttributes : MonoBehaviour
 
         moneyText.text = money.ToString();
         militaryText.text = military.ToString();
+
+        animator = GetComponent<Animator>();
     }
 
     public void setMoney(int newVal)
@@ -81,27 +85,50 @@ public class PlayerAttributes : MonoBehaviour
 
     private void checkForNewStageOfDepression()
     {
+        AnimatorStateInfo stateInfo = animator.GetCurrentAnimatorStateInfo(0);
+
         //Up to Full depression health
         if (depression > quarterPercentDepressionValue)
         {
-            GetComponent<SpriteRenderer>().sprite = noDepressionKing;
+
+            if (stateInfo.IsName("king0Animation"))
+                animator.SetTrigger("downMood");
+
+            if (stateInfo.IsName("king1Animation"))
+                animator.SetTrigger("upMood");
+
             //GetComponent<Animator>().runtimeAnimatorController = Resources.Load("animations/KingOnThrone001_0") as RuntimeAnimatorController;
         }
         //Up to Three quater depression health
         else if (depression <= quarterPercentDepressionValue && depression > halfPercentDepressionValue)
         {
-            GetComponent<SpriteRenderer>().sprite = threeQuarterPercentDepressionKing;
+            if (stateInfo.IsName("king1Animation"))
+                animator.SetTrigger("downMood");
+
+            if (stateInfo.IsName("king2Animation"))
+                animator.SetTrigger("upMood");
+
+            //GetComponent<SpriteRenderer>().sprite = threeQuarterPercentDepressionKing;
             //GetComponent<Animator>().runtimeAnimatorController = Resources.Load("animations/KingOnThrone002_0") as RuntimeAnimatorController;
         }
         //Up to Half depression health
         else if (depression <= halfPercentDepressionValue && depression > threeQuarterPercentDepressionValue)
         {
-            GetComponent<SpriteRenderer>().sprite = halfPercentDepressionKing;
+            if (stateInfo.IsName("king2Animation"))
+                animator.SetTrigger("downMood");
+
+            if (stateInfo.IsName("king3Animation"))
+                animator.SetTrigger("upMood");
+
+            //GetComponent<SpriteRenderer>().sprite = halfPercentDepressionKing;
             //GetComponent<Animator>().runtimeAnimatorController = Resources.Load("animations/KingOnThrone003_0") as RuntimeAnimatorController;
         }
         //Up to a quater depression health
         else if (depression <= threeQuarterPercentDepressionValue)
         {
+            if (stateInfo.IsName("king2Animation"))
+                animator.SetTrigger("downMood");
+
             GetComponent<SpriteRenderer>().sprite = quarterPercentDepressionKing;
             //GetComponent<Animator>().runtimeAnimatorController = Resources.Load("animations/KingOnThrone004_0") as RuntimeAnimatorController;
         }

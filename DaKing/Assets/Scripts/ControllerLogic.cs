@@ -57,9 +57,11 @@ public class ControllerLogic : MonoBehaviour {
     { 
         musicController.GetComponent<SimpleMusicController>().fade_in();
 
-        Debug.Log(ResourceManager.instance.getPlayerAttributes().depression);
+        PlayerAttributes playerAttributes = GameObject.Find("king").GetComponent<PlayerAttributes>();
 
-        PlayerAttributes playerAttributes = GameObject.FindGameObjectWithTag("King").GetComponent<PlayerAttributes>();
+        Debug.Log(playerAttributes.depression);
+
+        //PlayerAttributes playerAttributes = GameObject.FindGameObjectWithTag("King").GetComponent<PlayerAttributes>();
 
         //Init default values of mood
         MoodDisplayScript.instance.handleMood(playerAttributes.depression);

@@ -59,12 +59,17 @@ public class ResourceManager : MonoBehaviour
 
         }
 
-        playerAttributes = GameObject.FindGameObjectWithTag("King").GetComponent<PlayerAttributes>();
+        GameObject king = GameObject.Find("king");
+        playerAttributes = king.GetComponent<PlayerAttributes>();
+        Debug.Log(playerAttributes);
         //Debug.Log("loading fin!");
     }
 
     public PlayerAttributes getPlayerAttributes()
     {
+        if(!playerAttributes)
+            playerAttributes = GameObject.FindGameObjectWithTag("King").GetComponent<PlayerAttributes>();
+
         return playerAttributes;
     }
 

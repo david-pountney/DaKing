@@ -28,7 +28,7 @@ public class NextDayOutcome : AnimatedMenu {
 
     // Use this for initialization
     void Start () {
-        _playerAttributes = GameObject.FindGameObjectWithTag("King").GetComponent<PlayerAttributes>();
+        _playerAttributes = GameObject.Find("king").GetComponent<PlayerAttributes>();
         _controllerLogic = GameObject.FindGameObjectWithTag("Controller").GetComponent<ControllerLogic>();
     }
 

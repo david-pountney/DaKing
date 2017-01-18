@@ -30,11 +30,9 @@ public class ExecuteChoices : MonoBehaviour
 
     void Start()
     {
-        playerAttributes = GameObject.FindGameObjectWithTag("King").GetComponent<PlayerAttributes>();
+        playerAttributes = GameObject.Find("king").GetComponent<PlayerAttributes>();
         movementForChars = GetComponent<MovementForChars>();
         spawnCoins = GameObject.Find("Controller").GetComponent<SpawnCoins>();
-
-            
     }
 
     public void executeYesChoice()
