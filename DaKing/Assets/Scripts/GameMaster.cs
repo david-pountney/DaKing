@@ -29,7 +29,7 @@ public class GameMaster : MonoBehaviour {
 
         foreach (string jsonFile in ResourceManager.instance.lstJsonData)
         {
-            Debug.Log("jsonFile:"+jsonFile);
+            //Debug.Log("jsonFile:"+jsonFile);
             lstCharData.Add(JsonUtility.FromJson<CharacterData>(jsonFile));
 
             currentChar = lstCharData[i++];

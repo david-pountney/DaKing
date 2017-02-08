@@ -1,23 +1,24 @@
 {
 	"charName" : "moralThing4",
 	"lstDialogOne":[
-		"Things are really bad for you"
+		"Things are looking pretty grim, yet you are still here",
+		"Like you said a good king should.",
+		"Who knows, things might get better...|p1"
 	],
 	"lstDialogTwo":[
-		"You gave up when you said you wouldn't when you said you would be",
-		"Bad things happen |p1",
-		"Things are really bad for you"
+		"Things are looking pretty grim...",
+		"Didn't you say a good King would't keep fighting if he is loosing?",
+		"Well what are you still doing here?|p2"
 	],
 	"lstOutcomePassiveResultOne":[
 		0,
 		0,
+		5
+	],
+	"lstOutcomePassiveResultTwo":[
+		0,
+		0,
 		-5
-	],
-	"lstOutcomeYesText":[
-		"Interesting..."
-	],
-	"lstOutcomeNoText":[
-		"I thought you'd say so"
 	],
 	"lstOutcomeYesResult":[
 		0,

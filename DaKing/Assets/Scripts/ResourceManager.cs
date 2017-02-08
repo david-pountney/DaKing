@@ -12,7 +12,7 @@ public class ResourceManager : MonoBehaviour
     GameMaster gameMaster;
     GameObject treasureChest;
 
-    public List<string> lstJsonData;
+    public List<string> lstJsonData = new List<string>();
 
     Dictionary<string, GameObject> dicCharacterByName;
 
@@ -20,54 +20,22 @@ public class ResourceManager : MonoBehaviour
 
     void Awake()
     {
-        if (ResourceManager.instance == null)
-        {
-            mainCamera = GameObject.FindGameObjectWithTag("MainCamera");
-
-            gameMaster = GameObject.FindGameObjectWithTag("Controller").GetComponent<GameMaster>();
-            treasureChest = GameObject.Find("TreasureChest");
-
-            DontDestroyOnLoad(transform.gameObject);
-            ResourceManager.instance = this;
-            //Debug.Log("Awake called, going to load");
-
-        }
-        else
-        {
-            //Debug.Log("destroying resource manager");
-            Destroy(this);
-        }
-
-        load();
-    }
-
-    void load()
-    {
-        //Debug.Log("loading...!");
+        ResourceManager.instance = this;
         ResourceManager.instance.dicCharacterByName = new Dictionary<string, GameObject>();
-
-        lstJsonData = new List<string>();
 
         //Get all characters
         GameObject[] characters = GameObject.FindGameObjectsWithTag("Character");
-
         string filePath = System.IO.Path.Combine(Application.streamingAssetsPath, jsonDataPath);
-        //filePath = "file:///E:/DaKing/DaKing/Build/StreamingAssets/Characters";
-
-        //Debug.Log("hgot here");
-        string result = "";
-
         foreach (GameObject character in characters)
         {
             //Debug.Log("loading characters...");
             StartCoroutine(LoadWWW(filePath + "/" + character.name + "Text.json"));
-
         }
 
-        GameObject king = GameObject.Find("king");
-        playerAttributes = king.GetComponent<PlayerAttributes>();
-        Debug.Log(playerAttributes);
-        //Debug.Log("loading fin!");
+        mainCamera = GameObject.FindGameObjectWithTag("MainCamera");
+        gameMaster = GameObject.FindGameObjectWithTag("Controller").GetComponent<GameMaster>();
+        treasureChest = GameObject.Find("TreasureChest");
+        playerAttributes = GameObject.Find("king").GetComponent<PlayerAttributes>();
     }
 
     public GameObject getTreasureChest()
