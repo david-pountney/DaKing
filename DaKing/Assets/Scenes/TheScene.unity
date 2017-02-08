@@ -573,19 +573,27 @@ Prefab:
     - target: {fileID: 21298696, guid: 2260230439d8ae249869b38ced179444, type: 2}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: ebc6d60d47bb1904f8e24e99afecfb72,
+      objectReference: {fileID: 21300000, guid: b8b00df62bb9650448e0a7891fda005f,
         type: 3}
     - target: {fileID: 441138, guid: 2260230439d8ae249869b38ced179444, type: 2}
       propertyPath: m_LocalScale.x
-      value: 0.30234084
+      value: -0.7036005
       objectReference: {fileID: 0}
     - target: {fileID: 441138, guid: 2260230439d8ae249869b38ced179444, type: 2}
       propertyPath: m_LocalScale.y
-      value: 0.30234084
+      value: 0.7036005
       objectReference: {fileID: 0}
     - target: {fileID: 441138, guid: 2260230439d8ae249869b38ced179444, type: 2}
       propertyPath: m_LocalScale.z
-      value: 0.21585828
+      value: 0.7036005
+      objectReference: {fileID: 0}
+    - target: {fileID: 11477054, guid: 2260230439d8ae249869b38ced179444, type: 2}
+      propertyPath: startingPointY
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11477054, guid: 2260230439d8ae249869b38ced179444, type: 2}
+      propertyPath: speechBubbleY
+      value: 50
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 11470164, guid: 2260230439d8ae249869b38ced179444, type: 2}
@@ -615,6 +623,23 @@ MonoBehaviour:
   speechYes: []
   speechNo: []
   cantAffordDialog: []
+--- !u!95 &54167732
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 54167730}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 4db4852082626be4086370b3c05ca759, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!1 &55551710 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 121930, guid: bb9ff57f1c991634fa70ca66aa140f2a, type: 2}
@@ -951,6 +976,10 @@ Prefab:
       propertyPath: m_LocalScale.y
       value: 1.400645
       objectReference: {fileID: 0}
+    - target: {fileID: 11477054, guid: 2260230439d8ae249869b38ced179444, type: 2}
+      propertyPath: startingPointY
+      value: -2
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 11470164, guid: 2260230439d8ae249869b38ced179444, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 2260230439d8ae249869b38ced179444, type: 2}
@@ -1030,6 +1059,14 @@ Prefab:
     - target: {fileID: 140534, guid: 934f232f5c3f3cc4f8a5f3397f45c3a5, type: 2}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11442876, guid: 934f232f5c3f3cc4f8a5f3397f45c3a5, type: 2}
+      propertyPath: speechBubbleY
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 11442876, guid: 934f232f5c3f3cc4f8a5f3397f45c3a5, type: 2}
+      propertyPath: startingPointY
+      value: -2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 934f232f5c3f3cc4f8a5f3397f45c3a5, type: 2}
@@ -1379,6 +1416,10 @@ Prefab:
       value: 
       objectReference: {fileID: 21300000, guid: 4f05d486bb889804792fe9159a89ab85,
         type: 3}
+    - target: {fileID: 11410402, guid: 1dd8df7e3e1d8e84fb5b64da7f3a219a, type: 2}
+      propertyPath: speechBubbleY
+      value: 60
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1dd8df7e3e1d8e84fb5b64da7f3a219a, type: 2}
   m_IsPrefabParent: 0
@@ -1907,6 +1948,23 @@ Prefab:
       propertyPath: m_Name
       value: scientist
       objectReference: {fileID: 0}
+    - target: {fileID: 499158, guid: 934f232f5c3f3cc4f8a5f3397f45c3a5, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 0.7275736
+      objectReference: {fileID: 0}
+    - target: {fileID: 499158, guid: 934f232f5c3f3cc4f8a5f3397f45c3a5, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 0.7275736
+      objectReference: {fileID: 0}
+    - target: {fileID: 499158, guid: 934f232f5c3f3cc4f8a5f3397f45c3a5, type: 2}
+      propertyPath: m_LocalScale.z
+      value: 0.7275736
+      objectReference: {fileID: 0}
+    - target: {fileID: 21261504, guid: 934f232f5c3f3cc4f8a5f3397f45c3a5, type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 83108b4adc221e74c9d938cb94f266b7,
+        type: 3}
     m_RemovedComponents:
     - {fileID: 11429960, guid: 934f232f5c3f3cc4f8a5f3397f45c3a5, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 934f232f5c3f3cc4f8a5f3397f45c3a5, type: 2}
@@ -2327,6 +2385,10 @@ Prefab:
     - target: {fileID: 441138, guid: 2260230439d8ae249869b38ced179444, type: 2}
       propertyPath: m_LocalScale.y
       value: 1.400645
+      objectReference: {fileID: 0}
+    - target: {fileID: 11477054, guid: 2260230439d8ae249869b38ced179444, type: 2}
+      propertyPath: startingPointY
+      value: -2
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 11470164, guid: 2260230439d8ae249869b38ced179444, type: 2}
@@ -2791,6 +2853,14 @@ Prefab:
     - target: {fileID: 140534, guid: 934f232f5c3f3cc4f8a5f3397f45c3a5, type: 2}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11442876, guid: 934f232f5c3f3cc4f8a5f3397f45c3a5, type: 2}
+      propertyPath: speechBubbleY
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 11442876, guid: 934f232f5c3f3cc4f8a5f3397f45c3a5, type: 2}
+      propertyPath: startingPointY
+      value: -2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 934f232f5c3f3cc4f8a5f3397f45c3a5, type: 2}
@@ -3419,6 +3489,10 @@ Prefab:
       propertyPath: m_LocalScale.y
       value: 1.400645
       objectReference: {fileID: 0}
+    - target: {fileID: 11477054, guid: 2260230439d8ae249869b38ced179444, type: 2}
+      propertyPath: startingPointY
+      value: -2
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 11470164, guid: 2260230439d8ae249869b38ced179444, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 2260230439d8ae249869b38ced179444, type: 2}
@@ -4046,6 +4120,10 @@ Prefab:
       value: 
       objectReference: {fileID: 21300000, guid: 4f05d486bb889804792fe9159a89ab85,
         type: 3}
+    - target: {fileID: 11410402, guid: 1dd8df7e3e1d8e84fb5b64da7f3a219a, type: 2}
+      propertyPath: speechBubbleY
+      value: 60
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1dd8df7e3e1d8e84fb5b64da7f3a219a, type: 2}
   m_IsPrefabParent: 0
@@ -4173,6 +4251,14 @@ Prefab:
     - target: {fileID: 11470816, guid: cd15882634a625242a74d98004538d33, type: 2}
       propertyPath: noDepressionOutcome
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11449826, guid: cd15882634a625242a74d98004538d33, type: 2}
+      propertyPath: startingPointY
+      value: -2.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 11449826, guid: cd15882634a625242a74d98004538d33, type: 2}
+      propertyPath: speechBubbleY
+      value: 60
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: cd15882634a625242a74d98004538d33, type: 2}
@@ -4557,19 +4643,27 @@ Prefab:
     - target: {fileID: 21298696, guid: 2260230439d8ae249869b38ced179444, type: 2}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: ebc6d60d47bb1904f8e24e99afecfb72,
+      objectReference: {fileID: 21300000, guid: b8b00df62bb9650448e0a7891fda005f,
         type: 3}
     - target: {fileID: 441138, guid: 2260230439d8ae249869b38ced179444, type: 2}
       propertyPath: m_LocalScale.x
-      value: 0.30234084
+      value: -0.7036005
       objectReference: {fileID: 0}
     - target: {fileID: 441138, guid: 2260230439d8ae249869b38ced179444, type: 2}
       propertyPath: m_LocalScale.y
-      value: 0.30234084
+      value: 0.7036005
       objectReference: {fileID: 0}
     - target: {fileID: 441138, guid: 2260230439d8ae249869b38ced179444, type: 2}
       propertyPath: m_LocalScale.z
-      value: 0.21585828
+      value: 0.7036005
+      objectReference: {fileID: 0}
+    - target: {fileID: 11477054, guid: 2260230439d8ae249869b38ced179444, type: 2}
+      propertyPath: startingPointY
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11477054, guid: 2260230439d8ae249869b38ced179444, type: 2}
+      propertyPath: speechBubbleY
+      value: 50
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 11470164, guid: 2260230439d8ae249869b38ced179444, type: 2}
@@ -5387,6 +5481,14 @@ Prefab:
       value: 
       objectReference: {fileID: 21300000, guid: bffccb1b444457049917792d3def7cb6,
         type: 3}
+    - target: {fileID: 11437940, guid: 430217818891e6d4b8900b28d508bffa, type: 2}
+      propertyPath: startingPointY
+      value: -2.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 11437940, guid: 430217818891e6d4b8900b28d508bffa, type: 2}
+      propertyPath: speechBubbleY
+      value: 40
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 430217818891e6d4b8900b28d508bffa, type: 2}
   m_IsPrefabParent: 0
@@ -5742,6 +5844,23 @@ Prefab:
       propertyPath: m_Name
       value: scientist4
       objectReference: {fileID: 0}
+    - target: {fileID: 499158, guid: 934f232f5c3f3cc4f8a5f3397f45c3a5, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 0.7275736
+      objectReference: {fileID: 0}
+    - target: {fileID: 499158, guid: 934f232f5c3f3cc4f8a5f3397f45c3a5, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 0.7275736
+      objectReference: {fileID: 0}
+    - target: {fileID: 499158, guid: 934f232f5c3f3cc4f8a5f3397f45c3a5, type: 2}
+      propertyPath: m_LocalScale.z
+      value: 0.7275736
+      objectReference: {fileID: 0}
+    - target: {fileID: 21261504, guid: 934f232f5c3f3cc4f8a5f3397f45c3a5, type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 83108b4adc221e74c9d938cb94f266b7,
+        type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 934f232f5c3f3cc4f8a5f3397f45c3a5, type: 2}
   m_IsPrefabParent: 0
@@ -6174,6 +6293,14 @@ Prefab:
       value: 
       objectReference: {fileID: 21300000, guid: bffccb1b444457049917792d3def7cb6,
         type: 3}
+    - target: {fileID: 11437940, guid: 430217818891e6d4b8900b28d508bffa, type: 2}
+      propertyPath: startingPointY
+      value: -2.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 11437940, guid: 430217818891e6d4b8900b28d508bffa, type: 2}
+      propertyPath: speechBubbleY
+      value: 40
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 430217818891e6d4b8900b28d508bffa, type: 2}
   m_IsPrefabParent: 0
@@ -6492,6 +6619,14 @@ Prefab:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 11449826, guid: cd15882634a625242a74d98004538d33, type: 2}
+      propertyPath: startingPointY
+      value: -2.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 11449826, guid: cd15882634a625242a74d98004538d33, type: 2}
+      propertyPath: speechBubbleY
+      value: 60
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: cd15882634a625242a74d98004538d33, type: 2}
   m_IsPrefabParent: 0
@@ -6592,7 +6727,7 @@ Transform:
   m_LocalScale: {x: 0.92, y: 0.92, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 5
 --- !u!1 &835953102
 GameObject:
   m_ObjectHideFlags: 0
@@ -6927,6 +7062,14 @@ Prefab:
       value: 
       objectReference: {fileID: 21300000, guid: a6f157c4c556e104cbbd155055a21a5e,
         type: 3}
+    - target: {fileID: 11468246, guid: bb9ff57f1c991634fa70ca66aa140f2a, type: 2}
+      propertyPath: startingPointY
+      value: -3
+      objectReference: {fileID: 0}
+    - target: {fileID: 11468246, guid: bb9ff57f1c991634fa70ca66aa140f2a, type: 2}
+      propertyPath: speechBubbleY
+      value: 20
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 11462118, guid: bb9ff57f1c991634fa70ca66aa140f2a, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: bb9ff57f1c991634fa70ca66aa140f2a, type: 2}
@@ -7334,6 +7477,14 @@ Prefab:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 11442876, guid: 934f232f5c3f3cc4f8a5f3397f45c3a5, type: 2}
+      propertyPath: speechBubbleY
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 11442876, guid: 934f232f5c3f3cc4f8a5f3397f45c3a5, type: 2}
+      propertyPath: startingPointY
+      value: -2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 934f232f5c3f3cc4f8a5f3397f45c3a5, type: 2}
   m_IsPrefabParent: 0
@@ -7629,6 +7780,14 @@ Prefab:
       propertyPath: m_Name
       value: supersoldier4
       objectReference: {fileID: 0}
+    - target: {fileID: 11449826, guid: cd15882634a625242a74d98004538d33, type: 2}
+      propertyPath: startingPointY
+      value: -2.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 11449826, guid: cd15882634a625242a74d98004538d33, type: 2}
+      propertyPath: speechBubbleY
+      value: 60
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: cd15882634a625242a74d98004538d33, type: 2}
   m_IsPrefabParent: 0
@@ -7868,6 +8027,10 @@ Prefab:
       propertyPath: gameover
       value: 
       objectReference: {fileID: 530247848}
+    - target: {fileID: 11477054, guid: 2260230439d8ae249869b38ced179444, type: 2}
+      propertyPath: startingPointY
+      value: -2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2260230439d8ae249869b38ced179444, type: 2}
   m_IsPrefabParent: 0
@@ -8022,6 +8185,10 @@ Prefab:
     - target: {fileID: 441138, guid: 2260230439d8ae249869b38ced179444, type: 2}
       propertyPath: m_LocalScale.y
       value: 1.400645
+      objectReference: {fileID: 0}
+    - target: {fileID: 11477054, guid: 2260230439d8ae249869b38ced179444, type: 2}
+      propertyPath: startingPointY
+      value: -2
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 11470164, guid: 2260230439d8ae249869b38ced179444, type: 2}
@@ -8754,6 +8921,14 @@ Prefab:
       value: 
       objectReference: {fileID: 21300000, guid: bffccb1b444457049917792d3def7cb6,
         type: 3}
+    - target: {fileID: 11437940, guid: 430217818891e6d4b8900b28d508bffa, type: 2}
+      propertyPath: startingPointY
+      value: -2.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 11437940, guid: 430217818891e6d4b8900b28d508bffa, type: 2}
+      propertyPath: speechBubbleY
+      value: 40
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 430217818891e6d4b8900b28d508bffa, type: 2}
   m_IsPrefabParent: 0
@@ -8882,6 +9057,14 @@ Prefab:
     - target: {fileID: 140534, guid: 934f232f5c3f3cc4f8a5f3397f45c3a5, type: 2}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11442876, guid: 934f232f5c3f3cc4f8a5f3397f45c3a5, type: 2}
+      propertyPath: startingPointY
+      value: -2
+      objectReference: {fileID: 0}
+    - target: {fileID: 11442876, guid: 934f232f5c3f3cc4f8a5f3397f45c3a5, type: 2}
+      propertyPath: speechBubbleY
+      value: 100
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 934f232f5c3f3cc4f8a5f3397f45c3a5, type: 2}
@@ -9840,6 +10023,23 @@ MonoBehaviour:
   speechYes: []
   speechNo: []
   cantAffordDialog: []
+--- !u!95 &1210334185
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1210334182}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 4db4852082626be4086370b3c05ca759, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!1001 &1214206653
 Prefab:
   m_ObjectHideFlags: 0
@@ -9986,6 +10186,10 @@ Prefab:
       propertyPath: gameover
       value: 
       objectReference: {fileID: 530247848}
+    - target: {fileID: 11455102, guid: d072e294a65dfa5448077ec3d554b300, type: 2}
+      propertyPath: startingPointY
+      value: -2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d072e294a65dfa5448077ec3d554b300, type: 2}
   m_IsPrefabParent: 0
@@ -10065,6 +10269,14 @@ Prefab:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 11442876, guid: 934f232f5c3f3cc4f8a5f3397f45c3a5, type: 2}
+      propertyPath: speechBubbleY
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 11442876, guid: 934f232f5c3f3cc4f8a5f3397f45c3a5, type: 2}
+      propertyPath: startingPointY
+      value: -2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 934f232f5c3f3cc4f8a5f3397f45c3a5, type: 2}
   m_IsPrefabParent: 0
@@ -10139,6 +10351,14 @@ Prefab:
     - target: {fileID: 140534, guid: 934f232f5c3f3cc4f8a5f3397f45c3a5, type: 2}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11442876, guid: 934f232f5c3f3cc4f8a5f3397f45c3a5, type: 2}
+      propertyPath: speechBubbleY
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 11442876, guid: 934f232f5c3f3cc4f8a5f3397f45c3a5, type: 2}
+      propertyPath: startingPointY
+      value: -2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 934f232f5c3f3cc4f8a5f3397f45c3a5, type: 2}
@@ -10339,6 +10559,10 @@ Prefab:
       value: 
       objectReference: {fileID: 21300000, guid: 4f05d486bb889804792fe9159a89ab85,
         type: 3}
+    - target: {fileID: 11410402, guid: 1dd8df7e3e1d8e84fb5b64da7f3a219a, type: 2}
+      propertyPath: speechBubbleY
+      value: 60
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1dd8df7e3e1d8e84fb5b64da7f3a219a, type: 2}
   m_IsPrefabParent: 0
@@ -10435,6 +10659,14 @@ Prefab:
       value: 
       objectReference: {fileID: 21300000, guid: a6f157c4c556e104cbbd155055a21a5e,
         type: 3}
+    - target: {fileID: 11468246, guid: bb9ff57f1c991634fa70ca66aa140f2a, type: 2}
+      propertyPath: startingPointY
+      value: -3
+      objectReference: {fileID: 0}
+    - target: {fileID: 11468246, guid: bb9ff57f1c991634fa70ca66aa140f2a, type: 2}
+      propertyPath: speechBubbleY
+      value: 20
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 11462118, guid: bb9ff57f1c991634fa70ca66aa140f2a, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: bb9ff57f1c991634fa70ca66aa140f2a, type: 2}
@@ -10586,6 +10818,23 @@ Prefab:
       propertyPath: m_Name
       value: scientist3
       objectReference: {fileID: 0}
+    - target: {fileID: 499158, guid: 934f232f5c3f3cc4f8a5f3397f45c3a5, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 0.7275736
+      objectReference: {fileID: 0}
+    - target: {fileID: 499158, guid: 934f232f5c3f3cc4f8a5f3397f45c3a5, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 0.7275736
+      objectReference: {fileID: 0}
+    - target: {fileID: 499158, guid: 934f232f5c3f3cc4f8a5f3397f45c3a5, type: 2}
+      propertyPath: m_LocalScale.z
+      value: 0.7275736
+      objectReference: {fileID: 0}
+    - target: {fileID: 21261504, guid: 934f232f5c3f3cc4f8a5f3397f45c3a5, type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 83108b4adc221e74c9d938cb94f266b7,
+        type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 934f232f5c3f3cc4f8a5f3397f45c3a5, type: 2}
   m_IsPrefabParent: 0
@@ -10691,19 +10940,27 @@ Prefab:
     - target: {fileID: 21298696, guid: 2260230439d8ae249869b38ced179444, type: 2}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: ebc6d60d47bb1904f8e24e99afecfb72,
+      objectReference: {fileID: 21300000, guid: b8b00df62bb9650448e0a7891fda005f,
         type: 3}
     - target: {fileID: 441138, guid: 2260230439d8ae249869b38ced179444, type: 2}
       propertyPath: m_LocalScale.x
-      value: 0.30234084
+      value: -0.7036005
       objectReference: {fileID: 0}
     - target: {fileID: 441138, guid: 2260230439d8ae249869b38ced179444, type: 2}
       propertyPath: m_LocalScale.y
-      value: 0.30234084
+      value: 0.7036005
       objectReference: {fileID: 0}
     - target: {fileID: 441138, guid: 2260230439d8ae249869b38ced179444, type: 2}
       propertyPath: m_LocalScale.z
-      value: 0.21585828
+      value: 0.7036005
+      objectReference: {fileID: 0}
+    - target: {fileID: 11477054, guid: 2260230439d8ae249869b38ced179444, type: 2}
+      propertyPath: startingPointY
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11477054, guid: 2260230439d8ae249869b38ced179444, type: 2}
+      propertyPath: speechBubbleY
+      value: 50
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 11470164, guid: 2260230439d8ae249869b38ced179444, type: 2}
@@ -10733,6 +10990,23 @@ MonoBehaviour:
   speechYes: []
   speechNo: []
   cantAffordDialog: []
+--- !u!95 &1293061799
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1293061797}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 4db4852082626be4086370b3c05ca759, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!1 &1294810642
 GameObject:
   m_ObjectHideFlags: 0
@@ -10915,6 +11189,14 @@ Prefab:
       value: 
       objectReference: {fileID: 21300000, guid: a6f157c4c556e104cbbd155055a21a5e,
         type: 3}
+    - target: {fileID: 11468246, guid: bb9ff57f1c991634fa70ca66aa140f2a, type: 2}
+      propertyPath: startingPointY
+      value: -3
+      objectReference: {fileID: 0}
+    - target: {fileID: 11468246, guid: bb9ff57f1c991634fa70ca66aa140f2a, type: 2}
+      propertyPath: speechBubbleY
+      value: 20
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 11462118, guid: bb9ff57f1c991634fa70ca66aa140f2a, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: bb9ff57f1c991634fa70ca66aa140f2a, type: 2}
@@ -11874,6 +12156,14 @@ Prefab:
       propertyPath: m_Name
       value: supersoldier2
       objectReference: {fileID: 0}
+    - target: {fileID: 11449826, guid: cd15882634a625242a74d98004538d33, type: 2}
+      propertyPath: startingPointY
+      value: -2.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 11449826, guid: cd15882634a625242a74d98004538d33, type: 2}
+      propertyPath: speechBubbleY
+      value: 60
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 11408118, guid: cd15882634a625242a74d98004538d33, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: cd15882634a625242a74d98004538d33, type: 2}
@@ -12088,6 +12378,10 @@ Prefab:
       propertyPath: m_LocalScale.y
       value: 1.400645
       objectReference: {fileID: 0}
+    - target: {fileID: 11477054, guid: 2260230439d8ae249869b38ced179444, type: 2}
+      propertyPath: startingPointY
+      value: -2
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 11470164, guid: 2260230439d8ae249869b38ced179444, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 2260230439d8ae249869b38ced179444, type: 2}
@@ -12216,6 +12510,14 @@ Prefab:
     - target: {fileID: 185380, guid: cd15882634a625242a74d98004538d33, type: 2}
       propertyPath: m_Name
       value: supersoldier3
+      objectReference: {fileID: 0}
+    - target: {fileID: 11449826, guid: cd15882634a625242a74d98004538d33, type: 2}
+      propertyPath: startingPointY
+      value: -2.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 11449826, guid: cd15882634a625242a74d98004538d33, type: 2}
+      propertyPath: speechBubbleY
+      value: 60
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: cd15882634a625242a74d98004538d33, type: 2}
@@ -12665,6 +12967,10 @@ Prefab:
       value: 
       objectReference: {fileID: 21300000, guid: 4f05d486bb889804792fe9159a89ab85,
         type: 3}
+    - target: {fileID: 11410402, guid: 1dd8df7e3e1d8e84fb5b64da7f3a219a, type: 2}
+      propertyPath: speechBubbleY
+      value: 60
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1dd8df7e3e1d8e84fb5b64da7f3a219a, type: 2}
   m_IsPrefabParent: 0
@@ -13601,6 +13907,10 @@ Prefab:
       propertyPath: m_LocalScale.y
       value: 1.400645
       objectReference: {fileID: 0}
+    - target: {fileID: 11477054, guid: 2260230439d8ae249869b38ced179444, type: 2}
+      propertyPath: startingPointY
+      value: -2
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 11470164, guid: 2260230439d8ae249869b38ced179444, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 2260230439d8ae249869b38ced179444, type: 2}
@@ -14158,6 +14468,23 @@ Prefab:
       propertyPath: m_Name
       value: scientist5
       objectReference: {fileID: 0}
+    - target: {fileID: 499158, guid: 934f232f5c3f3cc4f8a5f3397f45c3a5, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 0.7275736
+      objectReference: {fileID: 0}
+    - target: {fileID: 499158, guid: 934f232f5c3f3cc4f8a5f3397f45c3a5, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 0.7275736
+      objectReference: {fileID: 0}
+    - target: {fileID: 499158, guid: 934f232f5c3f3cc4f8a5f3397f45c3a5, type: 2}
+      propertyPath: m_LocalScale.z
+      value: 0.7275736
+      objectReference: {fileID: 0}
+    - target: {fileID: 21261504, guid: 934f232f5c3f3cc4f8a5f3397f45c3a5, type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 83108b4adc221e74c9d938cb94f266b7,
+        type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 934f232f5c3f3cc4f8a5f3397f45c3a5, type: 2}
   m_IsPrefabParent: 0
@@ -14308,6 +14635,10 @@ Prefab:
     - target: {fileID: 441138, guid: 2260230439d8ae249869b38ced179444, type: 2}
       propertyPath: m_LocalScale.y
       value: 1.400645
+      objectReference: {fileID: 0}
+    - target: {fileID: 11477054, guid: 2260230439d8ae249869b38ced179444, type: 2}
+      propertyPath: startingPointY
+      value: -2
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 11470164, guid: 2260230439d8ae249869b38ced179444, type: 2}
@@ -15681,7 +16012,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 18
+  m_RootOrder: 19
 --- !u!4 &1868748530 stripped
 Transform:
   m_PrefabParentObject: {fileID: 423732, guid: acfc9b15f70a445429def5cdab29ea17, type: 2}
@@ -16629,6 +16960,23 @@ Prefab:
       propertyPath: m_Name
       value: scientist2
       objectReference: {fileID: 0}
+    - target: {fileID: 499158, guid: 934f232f5c3f3cc4f8a5f3397f45c3a5, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 0.7275736
+      objectReference: {fileID: 0}
+    - target: {fileID: 499158, guid: 934f232f5c3f3cc4f8a5f3397f45c3a5, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 0.7275736
+      objectReference: {fileID: 0}
+    - target: {fileID: 499158, guid: 934f232f5c3f3cc4f8a5f3397f45c3a5, type: 2}
+      propertyPath: m_LocalScale.z
+      value: 0.7275736
+      objectReference: {fileID: 0}
+    - target: {fileID: 21261504, guid: 934f232f5c3f3cc4f8a5f3397f45c3a5, type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 83108b4adc221e74c9d938cb94f266b7,
+        type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 934f232f5c3f3cc4f8a5f3397f45c3a5, type: 2}
   m_IsPrefabParent: 0
@@ -17385,19 +17733,27 @@ Prefab:
     - target: {fileID: 21298696, guid: 2260230439d8ae249869b38ced179444, type: 2}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: ebc6d60d47bb1904f8e24e99afecfb72,
+      objectReference: {fileID: 21300000, guid: b8b00df62bb9650448e0a7891fda005f,
         type: 3}
     - target: {fileID: 441138, guid: 2260230439d8ae249869b38ced179444, type: 2}
       propertyPath: m_LocalScale.x
-      value: 0.30234084
+      value: -0.7036005
       objectReference: {fileID: 0}
     - target: {fileID: 441138, guid: 2260230439d8ae249869b38ced179444, type: 2}
       propertyPath: m_LocalScale.y
-      value: 0.30234084
+      value: 0.7036005
       objectReference: {fileID: 0}
     - target: {fileID: 441138, guid: 2260230439d8ae249869b38ced179444, type: 2}
       propertyPath: m_LocalScale.z
-      value: 0.21585828
+      value: 0.7036005
+      objectReference: {fileID: 0}
+    - target: {fileID: 11477054, guid: 2260230439d8ae249869b38ced179444, type: 2}
+      propertyPath: startingPointY
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11477054, guid: 2260230439d8ae249869b38ced179444, type: 2}
+      propertyPath: speechBubbleY
+      value: 50
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 11470164, guid: 2260230439d8ae249869b38ced179444, type: 2}
@@ -17427,6 +17783,23 @@ MonoBehaviour:
   speechYes: []
   speechNo: []
   cantAffordDialog: []
+--- !u!95 &2108015001
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2108014999}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 4db4852082626be4086370b3c05ca759, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!1001 &2109098641
 Prefab:
   m_ObjectHideFlags: 0
