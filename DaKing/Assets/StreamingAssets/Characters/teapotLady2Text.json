@@ -22,5 +22,9 @@
 		0,
 		0,
 		0
+	],
+	"lstCantAffordText":[
+		"Can't afford it?",
+		"Oh well, no one to blame but yourself.."
 	]
 }

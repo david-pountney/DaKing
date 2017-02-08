@@ -12,15 +12,10 @@
         "Will you honor our tradition? |c"
     ],
     "lstOutcomeYesText":[
-        "Hahar! You fool!...",
-        "...",
-        "Any second now..",
-        "Annnnnyyyyyy seeeccond",
-        "...",
-        "Please have mercy my King, I never meant to hurt you!"
+        "Blessings upon you and your children"
     ],
     "lstOutcomeNoText":[
-        "Yeah, I wouldn't either"
+        "Inconsiderate foreign bastard"
     ],
     "lstOutcomeYesResult":[
         50,
