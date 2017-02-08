@@ -1,24 +1,24 @@
 {
 	"charName" : "teapotLady8",
 	"lstDialogOne":[
+		"I hope you are content,",
+		"Your kids have left with your wife",
+		"I'm not even sure what I'm doing here anymore.|p1"
+	],
+	"lstDialogTwo":[
 		"Got good news for you.",
 		"I was wrong about the man your wife was seeing,",
 		"Turns out he was just her new hair dresser.",
-		"Hope my miss information from before didn't affect anything.|p1"
-	],
-	"lstDialogTwo":[
-		"I hope you are content,",
-		"Your kids have left with your wife",
-		"I'm not even sure what I'm doing here anymore.|p2"
+		"Hope my miss information from before didn't affect anything.|p2"
 	],
 	"lstOutcomePassiveResultOne":[
 		0,
 		0,
-		10
+		-10
 	],
 	"lstOutcomePassiveResultTwo":[
 		0,
 		0,
-		-10
+		10
 	]
 }

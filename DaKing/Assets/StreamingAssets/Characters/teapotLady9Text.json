@@ -1,23 +1,23 @@
 {
 	"charName" : "teapotLady9",
 	"lstDialogOne":[
-		"Good Afternoon Sire.",
-		"For what it's worth, I think you have really made the right chose.",
-		"These coming days are going to be tough, but I think you might be able to repair your family.|p1"
-	],
-	"lstDialogTwo":[
 		"I'm not sure if you still even care,",
 		"But you could at least help your wife out a little.",
-		"You left her and your kids with nothing.|p2"
+		"You left her and your kids with nothing.|p1"
+	],
+	"lstDialogTwo":[
+		"Good Afternoon Sire.",
+		"For what it's worth, I think you have really made the right chose.",
+		"These coming days are going to be tough, but I think you might be able to repair your family.|p2"
 	],
 	"lstOutcomePassiveResultOne":[
 		0,
 		0,
-		20
+		-10
 	],
 	"lstOutcomePassiveResultTwo":[
 		0,
 		0,
-		-10
+		20
 	]
 }
