@@ -3,9 +3,10 @@
     "lstDialogOne":[
         "E'llo...",
         "We're lookin for a little kid runnin around the kingdom",
-        "His mom is lookin' for him",
+        "...His mom is lookin' for him",
         "Big puppy dog eyes, well small..",
-        "You haven't happened to have seen him have you? |c"
+        "You haven't happened to have seen him have you?",
+        "Do you know where he is? |c"
     ],
     "lstOutcomeYesText":[
         "Ah hah! Found you! You little git!",
@@ -14,7 +15,7 @@
         "We'll just take him off your hands for you."
     ],
     "lstOutcomeNoText":[
-        "If you see him, let us know.."
+        "If you see him, let us know..."
     ],
     "lstOutcomeYesResult":[
         20,
