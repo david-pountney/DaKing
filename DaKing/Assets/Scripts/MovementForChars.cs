@@ -71,6 +71,8 @@ public class MovementForChars : MonoBehaviour {
 
         //Set up controller logic script
         controllerLogic = GameObject.Find("Controller");
+
+        speechInstance = GameObject.Find("speech");
     }
 
     public void Update()
@@ -94,7 +96,7 @@ public class MovementForChars : MonoBehaviour {
             }
             else if (exit)
             {
-                DestroyObject(speechInstance);
+                speechInstance.transform.localPosition = new Vector3(999f,999f,999f);
                 moveRight();
             }
 
@@ -119,8 +121,8 @@ public class MovementForChars : MonoBehaviour {
 
     private void startSpeak()
     {
-        speechInstance = Instantiate(speech, new Vector2(0, 0), Quaternion.identity) as GameObject;
-        speechInstance.transform.SetParent(GameObject.Find("GameCanvas").transform);
+        //speechInstance = Instantiate(speech, new Vector2(0, 0), Quaternion.identity) as GameObject;
+        //speechInstance.transform.SetParent(GameObject.Find("GameCanvas").transform);
         speechInstance.transform.localPosition = new Vector2(speechBubbleX, speechBubbleY);
 
         //Get dialog
@@ -402,7 +404,6 @@ public class MovementForChars : MonoBehaviour {
         //if(choicesInstance && choices.activeSelf) DestroyObject(choicesInstance);
 
         choices.SetActive(false);
-        speechInstance.SetActive(false);
 
         //Play the page turning sound
         soundScript.fire();
