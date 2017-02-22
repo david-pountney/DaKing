@@ -67,7 +67,7 @@ public class TransitionToGameScript : MonoBehaviour
     {
         if (mainMenuEnabled)
         {
-            if( !ResourceManager.instance.hasJsonLoaded() ) return;
+            //if( !ResourceManager.instance.hasJsonLoaded() ) return;
             //Turn off main menu
             mainMenuEnabled = false;
 

@@ -11,6 +11,7 @@ public class ResourceManager : MonoBehaviour
     PlayerAttributes playerAttributes;
     GameMaster gameMaster;
     GameObject treasureChest;
+    MenuController menuController;
 
     int jsonLoadCount = 0;
     int jsonCount = 9999;
@@ -42,6 +43,7 @@ public class ResourceManager : MonoBehaviour
         gameMaster = GameObject.FindGameObjectWithTag("Controller").GetComponent<GameMaster>();
         treasureChest = GameObject.Find("TreasureChest");
         playerAttributes = GameObject.Find("king").GetComponent<PlayerAttributes>();
+        menuController = GameObject.Find("MenuController").GetComponent<MenuController>();
     }
 
     public bool hasJsonLoaded()
@@ -88,7 +90,7 @@ public class ResourceManager : MonoBehaviour
             WWW www = new WWW(filePath);
             yield return www;
             //Debug.Log(www.text);
-            Debug.Log("On a remote machine, loading the file via WWW");
+            //Debug.Log("On a remote machine, loading the file via WWW");
 
             lstJsonData.Add(www.text);
             ++this.jsonLoadCount;
@@ -98,6 +100,12 @@ public class ResourceManager : MonoBehaviour
 
             lstJsonData.Add(System.IO.File.ReadAllText(filePath));
             ++this.jsonLoadCount;
+        }
+
+        if (hasJsonLoaded())
+        {
+            GameObject.Find("LoadingUI").SetActive(false);
+            GameObject.Find("MenuController").GetComponent<MenuController>().FinishedLoading();
         }
     }
 
