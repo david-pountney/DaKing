@@ -25,9 +25,38 @@ public class ResourceManager : MonoBehaviour
     void Awake()
     {
         Debug.Log("Resource manager awake");
-    
-        ResourceManager.instance = this;
-        ResourceManager.instance.dicCharacterByName = new Dictionary<string, GameObject>();
+
+        //Check if instance already exists
+        if (instance == null)
+        {
+            //if not, set instance to this
+            instance = this;
+            //Sets this to not be destroyed when reloading scene
+            DontDestroyOnLoad(gameObject);
+        }
+        //If instance already exists and it's not this:
+        else if (instance != this)
+            //Then destroy this. This enforces our singleton pattern, meaning there can only ever be one instance.
+            DestroyImmediate(gameObject);
+
+        instance.dicCharacterByName = new Dictionary<string, GameObject>();
+
+        StartLoadingCharacterTextFiles();
+    }
+
+    void OnLevelWasLoaded()
+    {
+        StartLoadingCharacterTextFiles();
+    }
+
+    private void StartLoadingCharacterTextFiles()
+    {
+        //If already loaded, dont do it again
+        if (hasJsonLoaded())
+        {
+            LoadingFinished();
+            return;
+        }
 
         //Get all characters
         GameObject[] characters = GameObject.FindGameObjectsWithTag("Character");
@@ -103,10 +132,13 @@ public class ResourceManager : MonoBehaviour
         }
 
         if (hasJsonLoaded())
-        {
-            GameObject.Find("LoadingUI").SetActive(false);
-            GameObject.Find("MenuController").GetComponent<MenuController>().FinishedLoading();
-        }
+            LoadingFinished();
+    }
+
+    private void LoadingFinished()
+    {
+        GameObject.Find("LoadingUI").SetActive(false);
+        GameObject.Find("MenuController").GetComponent<MenuController>().FinishedLoading();
     }
 
 }
