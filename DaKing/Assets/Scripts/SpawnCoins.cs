@@ -110,7 +110,7 @@ public class SpawnCoins : MonoBehaviour
 
                 clone.transform.parent = treasure.transform;
 
-                randX = UnityEngine.Random.Range(-5, 5); ;
+                randX = UnityEngine.Random.Range(-5, 5);
 
                 Rigidbody2D rb = clone.GetComponent<Rigidbody2D>();
                 rb.AddForce(new Vector2(randX, 0));
