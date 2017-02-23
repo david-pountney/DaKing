@@ -54,6 +54,8 @@ public class MovementForChars : MonoBehaviour {
     private bool answeredYes = false;
     private bool answeredNo = false;
 
+    private bool disableSpeech = false;
+
     //Which yes dialog are we currently on?
     private int currentYesTextIndex = 0;
     //Which no dialog are we currently on?
@@ -102,7 +104,7 @@ public class MovementForChars : MonoBehaviour {
 
             if (Input.GetKeyUp(KeyCode.Space))
             {
-                if (!speechInstance || gameIsNowOver)    return;
+                if (!speechInstance || disableSpeech)    return;
 
                 if (choices && !choices.activeSelf && !enter && !exit && speechInstance.activeSelf)
                     changeSpeak();
@@ -157,9 +159,6 @@ public class MovementForChars : MonoBehaviour {
         //If we are displaying the chocies to the player, dont allow them to skip dialog
         if (choices.activeSelf) return;
 
-        //Play the page turning sound
-        soundScript.fire();
-
         //Check if the king just died
         if (gameIsNowOver)
         {
@@ -169,11 +168,16 @@ public class MovementForChars : MonoBehaviour {
             GameObject.Find("MusicController").GetComponent<SimpleMusicController>().fade_out();
 
             killSpeechAndChoices();
-            
+
+            disableSpeech = true;
+
             return;
         }
 
-        if(answeredYes)
+        //Play the page turning sound
+        soundScript.fire();
+
+        if (answeredYes)
         {
             if (currentYesTextIndex >= _yesText.Count - 1)
             {
