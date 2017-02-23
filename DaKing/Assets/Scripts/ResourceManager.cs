@@ -33,20 +33,26 @@ public class ResourceManager : MonoBehaviour
             instance = this;
             //Sets this to not be destroyed when reloading scene
             DontDestroyOnLoad(gameObject);
+
+            instance.dicCharacterByName = new Dictionary<string, GameObject>();
+
+            StartLoadingCharacterTextFiles();
         }
         //If instance already exists and it's not this:
         else if (instance != this)
             //Then destroy this. This enforces our singleton pattern, meaning there can only ever be one instance.
             DestroyImmediate(gameObject);
 
-        instance.dicCharacterByName = new Dictionary<string, GameObject>();
-
-        StartLoadingCharacterTextFiles();
     }
 
     void OnLevelWasLoaded()
     {
         StartLoadingCharacterTextFiles();
+    }
+
+    void OnDestroy()
+    {
+        Debug.Log("ggg");
     }
 
     private void StartLoadingCharacterTextFiles()
