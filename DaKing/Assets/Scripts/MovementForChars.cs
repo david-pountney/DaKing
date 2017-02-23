@@ -102,7 +102,7 @@ public class MovementForChars : MonoBehaviour {
 
             if (Input.GetKeyUp(KeyCode.Space))
             {
-                if (!speechInstance)    return;
+                if (!speechInstance || gameIsNowOver)    return;
 
                 if (choices && !choices.activeSelf && !enter && !exit && speechInstance.activeSelf)
                     changeSpeak();

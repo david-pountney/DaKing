@@ -51,16 +51,17 @@ public class ResourceManager : MonoBehaviour
 
     private void StartLoadingCharacterTextFiles()
     {
+        //Get all characters
+        GameObject[] characters = GameObject.FindGameObjectsWithTag("Character");
+        this.jsonCount = characters.Length;
+
         //If already loaded, dont do it again
         if (hasJsonLoaded())
         {
             LoadingFinished();
             return;
         }
-
-        //Get all characters
-        GameObject[] characters = GameObject.FindGameObjectsWithTag("Character");
-        this.jsonCount = characters.Length;
+        
         string filePath = System.IO.Path.Combine(Application.streamingAssetsPath, jsonDataPath);
         foreach (GameObject character in characters)
         {
