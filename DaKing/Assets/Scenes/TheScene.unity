@@ -5585,7 +5585,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 499158, guid: 934f232f5c3f3cc4f8a5f3397f45c3a5, type: 2}
       propertyPath: m_RootOrder
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 11476060, guid: 934f232f5c3f3cc4f8a5f3397f45c3a5, type: 2}
       propertyPath: spawnCoins
@@ -9811,7 +9811,6 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 1362249052}
   - {fileID: 1104914570}
   m_Father: {fileID: 1425316161}
   m_RootOrder: 0
@@ -11631,7 +11630,7 @@ Prefab:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 1186236059}
+    m_TransformParent: {fileID: 1615862601}
     m_Modifications:
     - target: {fileID: 460772, guid: 87100e5cbc89f4f46845eff083187c9e, type: 2}
       propertyPath: m_LocalPosition.x
@@ -13579,7 +13578,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 1362249052}
   m_Father: {fileID: 1425316161}
   m_RootOrder: 6
 --- !u!1001 &1620074248
