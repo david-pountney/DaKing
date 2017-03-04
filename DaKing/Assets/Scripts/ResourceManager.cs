@@ -132,7 +132,7 @@ public class ResourceManager : MonoBehaviour
             ++this.jsonLoadCount;
         }
         else {
-            Debug.Log("On a local machine, loading the file via System.IO");
+            //Debug.Log("On a local machine, loading the file via System.IO");
 
             lstJsonData.Add(System.IO.File.ReadAllText(filePath));
             ++this.jsonLoadCount;

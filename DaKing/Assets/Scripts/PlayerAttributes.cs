@@ -82,7 +82,6 @@ public class PlayerAttributes : MonoBehaviour
     {
         depression = newVal;
         MoodDisplayScript.instance.handleMood(depression);
-        checkForNewStageOfDepression();
     }
 
     public void flashTextValues(int moneyAmount, int militaryAmount, int depressionAmount)
@@ -98,52 +97,12 @@ public class PlayerAttributes : MonoBehaviour
         newDayDepression = depression;
     }
 
-    private void checkForNewStageOfDepression()
+    public void setMoodState(int mood)
     {
         if (hasAlreadyChangedMood) return;
 
         AnimatorStateInfo stateInfo = animator.GetCurrentAnimatorStateInfo(0);
-
-        //Up to Full depression health
-        if (depression > quarterPercentDepressionValue)
-        {
-            if (stateInfo.IsName("king0Animation"))
-                animator.SetTrigger("downMood");
-
-            if (stateInfo.IsName("king1Animation"))
-                animator.SetTrigger("upMood");
-
-            hasAlreadyChangedMood = true;
-        }
-        //Up to Three quater depression health
-        else if (depression <= quarterPercentDepressionValue && depression > halfPercentDepressionValue)
-        {
-            if (stateInfo.IsName("king1Animation"))
-                animator.SetTrigger("downMood");
-
-            if (stateInfo.IsName("king2Animation"))
-                animator.SetTrigger("upMood");
-
-            hasAlreadyChangedMood = true;
-        }
-        //Up to Half depression health
-        else if (depression <= halfPercentDepressionValue && depression > threeQuarterPercentDepressionValue)
-        {
-            if (stateInfo.IsName("king2Animation"))
-                animator.SetTrigger("downMood");
-
-            if (stateInfo.IsName("king3Animation"))
-                animator.SetTrigger("upMood");
-
-            hasAlreadyChangedMood = true;
-        }
-        //Up to a quater depression health
-        else if (depression <= threeQuarterPercentDepressionValue)
-        {
-            if (stateInfo.IsName("king2Animation"))
-                animator.SetTrigger("downMood");
-
-            hasAlreadyChangedMood = true;
-        }
+        animator.SetInteger("mood", mood);
     }
+
 }
