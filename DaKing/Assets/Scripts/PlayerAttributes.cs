@@ -103,6 +103,9 @@ public class PlayerAttributes : MonoBehaviour
 
         AnimatorStateInfo stateInfo = animator.GetCurrentAnimatorStateInfo(0);
         animator.SetInteger("mood", mood);
+
+
+
     }
 
 }
