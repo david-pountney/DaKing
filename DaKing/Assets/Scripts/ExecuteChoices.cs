@@ -56,7 +56,8 @@ public class ExecuteChoices : MonoBehaviour
             if (moodOutcome > playerAttributes.maxDepression) moodOutcome = playerAttributes.maxDepression;
             if (moodOutcome <= 0) movementForChars.GameIsNowOver = true;
             if (moodOutcome != playerAttributes.depression)
-                iTween.ValueTo(gameObject, iTween.Hash("from", playerAttributes.depression, "to", moodOutcome, "onupdate", "itweenChangeMood", "oncomplete", "itweenCompleteMood"));
+                AnimateMoodValueChanging(moodOutcome);
+
 
             // if (yesDepressionOutcome > 0) StartCoroutine(changeDepression(yesDepressionOutcome, 1));
             // else if (yesDepressionOutcome < 0) StartCoroutine(changeDepression(yesDepressionOutcome, -1));
@@ -75,8 +76,8 @@ public class ExecuteChoices : MonoBehaviour
             movementForChars.executeCantAffordSpeech();
 
             //Remove depression
-            iTween.ValueTo(gameObject, iTween.Hash("from", playerAttributes.depression, "to", playerAttributes.depression - 5, "onupdate", "itweenChangeMood",
-                "oncomplete", "itweenCompleteMood"));
+            AnimateMoodValueChanging(playerAttributes.depression - 5);
+
 
             //Display flash text
             playerAttributes.flashTextValues(0, 0, -5);
@@ -106,7 +107,8 @@ public class ExecuteChoices : MonoBehaviour
             if (moodOutcome <= 0) movementForChars.GameIsNowOver = true;
 
             if (moodOutcome != playerAttributes.depression)
-                iTween.ValueTo(gameObject, iTween.Hash("from", playerAttributes.depression, "to", moodOutcome, "onupdate", "itweenChangeMood", "oncomplete", "itweenCompleteMood"));
+                AnimateMoodValueChanging(moodOutcome);
+
             // if (noDepressionOutcome > 0) StartCoroutine(changeDepression(noDepressionOutcome, 1));
             // else if (noDepressionOutcome < 0) StartCoroutine(changeDepression(noDepressionOutcome, -1));
 
@@ -124,8 +126,8 @@ public class ExecuteChoices : MonoBehaviour
             movementForChars.executeCantAffordSpeech();
 
             //Remove depression
-            iTween.ValueTo(gameObject, iTween.Hash("from", playerAttributes.depression, "to", playerAttributes.depression - 5, "onupdate", "itweenChangeMood",
-                "oncomplete", "itweenCompleteMood"));
+            AnimateMoodValueChanging(playerAttributes.depression - 5);
+
             // StartCoroutine(changeDepression(-5, -1));
 
             //Display flash text
@@ -152,7 +154,8 @@ public class ExecuteChoices : MonoBehaviour
             if (moodOutcome <= 0) movementForChars.GameIsNowOver = true;
 
             if (moodOutcome != playerAttributes.depression)
-                iTween.ValueTo(gameObject, iTween.Hash("from", playerAttributes.depression, "to", moodOutcome, "onupdate", "itweenChangeMood", "oncomplete", "itweenCompleteMood"));
+                AnimateMoodValueChanging(moodOutcome);
+
             // if (passiveOneDepressionOutcome > 0) StartCoroutine(changeDepression(passiveOneDepressionOutcome, 1));
             // else if (passiveOneDepressionOutcome < 0) StartCoroutine(changeDepression(passiveOneDepressionOutcome, -1));
 
@@ -162,8 +165,7 @@ public class ExecuteChoices : MonoBehaviour
         //Not enough resource
         else
         {
-            //Remove depression
-            iTween.ValueTo(gameObject, iTween.Hash("from", playerAttributes.depression, "to", playerAttributes.depression - 5, "onupdate", "itweenChangeMood", "oncomplete", "itweenCompleteMood"));
+            AnimateMoodValueChanging(playerAttributes.depression - 5);
 
             //Display flash text
             playerAttributes.flashTextValues(0, 0, -5);
@@ -208,8 +210,9 @@ public class ExecuteChoices : MonoBehaviour
             if (moodOutcome > playerAttributes.maxDepression) moodOutcome = playerAttributes.maxDepression;
             if (moodOutcome <= 0) movementForChars.GameIsNowOver = true;
 
-            iTween.ValueTo(gameObject, iTween.Hash("from", playerAttributes.depression, "to", moodOutcome, "onupdate", "itweenChangeMood",
-                "oncomplete", "itweenCompleteMood"));
+            AnimateMoodValueChanging(moodOutcome);
+            
+            playerAttributes.setMoodState(moodOutcome);
 
             //Display flash text
             playerAttributes.flashTextValues(passiveTwoMoneyOutcome, passiveTwoMilitaryOutcome, passiveTwoDepressionOutcome);
@@ -217,13 +220,20 @@ public class ExecuteChoices : MonoBehaviour
         //Not enough resource
         else
         {
-            //Remove depression
-            iTween.ValueTo(gameObject, iTween.Hash("from", playerAttributes.depression, "to", playerAttributes.depression - 5, "onupdate", "itweenChangeMood"
-                ,"oncomplete", "itweenCompleteMood"));
+            AnimateMoodValueChanging(playerAttributes.depression - 5);
 
             //Display flash text
             playerAttributes.flashTextValues(0, 0, -5);
         }
+    }
+
+    private void AnimateMoodValueChanging(int moodOutcome)
+    {
+        playerAttributes.setMoodState(moodOutcome);
+
+        //Change mood value shown on screen
+        iTween.ValueTo(gameObject, iTween.Hash("from", playerAttributes.depression, "to", moodOutcome, "onupdate", "itweenChangeMood"
+            , "oncomplete", "itweenCompleteMood"));
     }
 
     private void itweenChangeMilitary(int newVal)

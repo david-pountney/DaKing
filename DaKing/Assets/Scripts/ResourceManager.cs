@@ -11,6 +11,7 @@ public class ResourceManager : MonoBehaviour
     PlayerAttributes playerAttributes;
     GameMaster gameMaster;
     GameObject treasureChest;
+    MenuController menuController;
 
     int jsonLoadCount = 0;
     int jsonCount = 9999;
@@ -24,13 +25,49 @@ public class ResourceManager : MonoBehaviour
     void Awake()
     {
         Debug.Log("Resource manager awake");
-    
-        ResourceManager.instance = this;
-        ResourceManager.instance.dicCharacterByName = new Dictionary<string, GameObject>();
 
+        //Check if instance already exists
+        if (instance == null)
+        {
+            //if not, set instance to this
+            instance = this;
+            //Sets this to not be destroyed when reloading scene
+            DontDestroyOnLoad(gameObject);
+
+            instance.dicCharacterByName = new Dictionary<string, GameObject>();
+
+            StartLoadingCharacterTextFiles();
+        }
+        //If instance already exists and it's not this:
+        else if (instance != this)
+            //Then destroy this. This enforces our singleton pattern, meaning there can only ever be one instance.
+            DestroyImmediate(gameObject);
+
+    }
+
+    void OnLevelWasLoaded()
+    {
+        StartLoadingCharacterTextFiles();
+    }
+
+    void OnDestroy()
+    {
+        Debug.Log("ggg");
+    }
+
+    private void StartLoadingCharacterTextFiles()
+    {
         //Get all characters
         GameObject[] characters = GameObject.FindGameObjectsWithTag("Character");
         this.jsonCount = characters.Length;
+
+        //If already loaded, dont do it again
+        if (hasJsonLoaded())
+        {
+            LoadingFinished();
+            return;
+        }
+        
         string filePath = System.IO.Path.Combine(Application.streamingAssetsPath, jsonDataPath);
         foreach (GameObject character in characters)
         {
@@ -42,6 +79,7 @@ public class ResourceManager : MonoBehaviour
         gameMaster = GameObject.FindGameObjectWithTag("Controller").GetComponent<GameMaster>();
         treasureChest = GameObject.Find("TreasureChest");
         playerAttributes = GameObject.Find("king").GetComponent<PlayerAttributes>();
+        menuController = GameObject.Find("MenuController").GetComponent<MenuController>();
     }
 
     public bool hasJsonLoaded()
@@ -88,17 +126,26 @@ public class ResourceManager : MonoBehaviour
             WWW www = new WWW(filePath);
             yield return www;
             //Debug.Log(www.text);
-            Debug.Log("On a remote machine, loading the file via WWW");
+            //Debug.Log("On a remote machine, loading the file via WWW");
 
             lstJsonData.Add(www.text);
             ++this.jsonLoadCount;
         }
         else {
-            Debug.Log("On a local machine, loading the file via System.IO");
+            //Debug.Log("On a local machine, loading the file via System.IO");
 
             lstJsonData.Add(System.IO.File.ReadAllText(filePath));
             ++this.jsonLoadCount;
         }
+
+        if (hasJsonLoaded())
+            LoadingFinished();
+    }
+
+    private void LoadingFinished()
+    {
+        GameObject.Find("LoadingUI").SetActive(false);
+        GameObject.Find("MenuController").GetComponent<MenuController>().FinishedLoading();
     }
 
 }

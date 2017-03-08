@@ -22,6 +22,8 @@ public class SpawnCoins : MonoBehaviour
     private float gapX;
     private float gapY;
 
+    private GameObject treasure;
+
     // Use this for initialization
     void Start()
     {
@@ -88,6 +90,8 @@ public class SpawnCoins : MonoBehaviour
         float currentFloor = floor;
         int currentCoin = coinsToDrop;
 
+        treasure = GameObject.Find("TreasureChest");
+
         if (amount != 0)
         {
             for (int i = 0; i < amount; ++i)
@@ -104,9 +108,9 @@ public class SpawnCoins : MonoBehaviour
 
                 clone = Instantiate(coin, new Vector2(transform.localPosition.x + randX, transform.localPosition.y + 10), Quaternion.identity) as GameObject;
 
-                clone.transform.parent = ResourceManager.instance.getTreasureChest().transform;
+                clone.transform.parent = treasure.transform;
 
-                randX = UnityEngine.Random.Range(-5, 5); ;
+                randX = UnityEngine.Random.Range(-5, 5);
 
                 Rigidbody2D rb = clone.GetComponent<Rigidbody2D>();
                 rb.AddForce(new Vector2(randX, 0));
