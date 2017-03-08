@@ -7,7 +7,7 @@ public class MoodEffectSaturation : IMoodEffect  {
     private float updateVelocity    = 0f;
     private float updateDelay       = 0f;
     private float UpdateDuration    = 0.5f;
-    private float effectMax         = 1f;
+    private float effectMax         = 0.9f;
     private float effectMin         = 0f;
 
     ColorCorrectionCurves colorCorrection;
