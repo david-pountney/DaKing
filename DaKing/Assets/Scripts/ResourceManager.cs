@@ -5,12 +5,13 @@ using System.Collections.Generic;
 
 public class ResourceManager : MonoBehaviour
 {
+    public ResourceManagerLogic _resourceManagerLogic;
+    
     public string jsonDataPath;
 
     GameObject mainCamera;
     PlayerAttributes playerAttributes;
     GameMaster gameMaster;
-    GameObject treasureChest;
     MenuController menuController;
 
     int jsonLoadCount = 0;
@@ -22,10 +23,11 @@ public class ResourceManager : MonoBehaviour
 
     public static ResourceManager instance;
 
+
     void Awake()
     {
         Debug.Log("Resource manager awake");
-
+        
         //Check if instance already exists
         if (instance == null)
         {
@@ -57,9 +59,18 @@ public class ResourceManager : MonoBehaviour
 
     private void StartLoadingCharacterTextFiles()
     {
+        GameObject characterContainer = GameObject.Find("Characters");
+        List<MovementBehaviour> characters = new List<MovementBehaviour>();
+        characterContainer.GetComponentsInChildren<MovementBehaviour>(true, characters);
+
+        //Store characters
+        GlobalReferencesBehaviour.instance.SceneData.Characters = characters;
+
+
+
         //Get all characters
-        GameObject[] characters = GameObject.FindGameObjectsWithTag("Character");
-        this.jsonCount = characters.Length;
+        //GameObject[] characters = GameObject.FindGameObjectsWithTag("Character");
+        this.jsonCount = characters.Count;
 
         //If already loaded, dont do it again
         if (hasJsonLoaded())
@@ -69,15 +80,15 @@ public class ResourceManager : MonoBehaviour
         }
         
         string filePath = System.IO.Path.Combine(Application.streamingAssetsPath, jsonDataPath);
-        foreach (GameObject character in characters)
+        foreach (MovementBehaviour character in characters)
         {
             //Debug.Log("loading characters...");
-            StartCoroutine(LoadWWW(filePath + "/" + character.name + "Text.json"));
+            StartCoroutine(LoadWWW(filePath + "/" + character.gameObject.name + "Text.json"));
+            character.gameObject.SetActive(false);
         }
 
         mainCamera = GameObject.FindGameObjectWithTag("MainCamera");
         gameMaster = GameObject.FindGameObjectWithTag("Controller").GetComponent<GameMaster>();
-        treasureChest = GameObject.Find("TreasureChest");
         playerAttributes = GameObject.Find("king").GetComponent<PlayerAttributes>();
         menuController = GameObject.Find("MenuController").GetComponent<MenuController>();
     }
@@ -86,13 +97,7 @@ public class ResourceManager : MonoBehaviour
     {
         return this.jsonLoadCount >= this.jsonCount;
     }
-
-
-    public GameObject getTreasureChest()
-    {
-        return treasureChest;
-    }
-
+   
     public GameMaster getGameMaster()
     {
         return gameMaster;

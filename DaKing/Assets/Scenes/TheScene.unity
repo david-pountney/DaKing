@@ -106,6 +106,19 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &22574426
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 22574424}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1dece7bc5e256854eb03c9e30295bc19, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speechBubbleX: 350
+  speechBubbleY: -100
 --- !u!1001 &26105059
 Prefab:
   m_ObjectHideFlags: 0
@@ -300,6 +313,19 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 26105059}
   m_Script: {fileID: 11500000, guid: 12f7bcab77466234b9ab2943e7682aca, type: 3}
+--- !u!114 &26105065
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 26105061}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1dece7bc5e256854eb03c9e30295bc19, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speechBubbleX: 350
+  speechBubbleY: 125
 --- !u!1 &33585058
 GameObject:
   m_ObjectHideFlags: 0
@@ -408,6 +434,10 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 34037308}
+--- !u!1 &36765761 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 157718, guid: 07052e5958546a94f955b9fd92c252ed, type: 2}
+  m_PrefabInternal: {fileID: 1664582016}
 --- !u!1 &49530754
 GameObject:
   m_ObjectHideFlags: 0
@@ -640,6 +670,19 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &54167733
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 54167730}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1dece7bc5e256854eb03c9e30295bc19, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speechBubbleX: 350
+  speechBubbleY: 50
 --- !u!1 &55551710 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 121930, guid: bb9ff57f1c991634fa70ca66aa140f2a, type: 2}
@@ -661,6 +704,19 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &55551712
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 55551710}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1dece7bc5e256854eb03c9e30295bc19, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speechBubbleX: 350
+  speechBubbleY: 20
 --- !u!1001 &60402432
 Prefab:
   m_ObjectHideFlags: 0
@@ -828,6 +884,23 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 68975181}
+--- !u!1 &84497404 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 107394, guid: 291d6d682230a5d40997e2c6881f717e, type: 2}
+  m_PrefabInternal: {fileID: 1913973692}
+--- !u!114 &84497405
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 84497404}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1dece7bc5e256854eb03c9e30295bc19, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speechBubbleX: 350
+  speechBubbleY: 0
 --- !u!1 &88141677
 GameObject:
   m_ObjectHideFlags: 0
@@ -1096,6 +1169,19 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &106210244
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 106210242}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1dece7bc5e256854eb03c9e30295bc19, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speechBubbleX: 350
+  speechBubbleY: 100
 --- !u!1001 &112085900
 Prefab:
   m_ObjectHideFlags: 0
@@ -1448,6 +1534,19 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &152739670
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 152739668}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1dece7bc5e256854eb03c9e30295bc19, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speechBubbleX: 350
+  speechBubbleY: 60
 --- !u!1001 &156968847
 Prefab:
   m_ObjectHideFlags: 0
@@ -1539,6 +1638,19 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &156968851
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 156968849}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1dece7bc5e256854eb03c9e30295bc19, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speechBubbleX: 350
+  speechBubbleY: 0
 --- !u!224 &159493015 stripped
 RectTransform:
   m_PrefabParentObject: {fileID: 22479452, guid: 5edbde3737ded8f4ebfa43c318695f9e,
@@ -1571,6 +1683,19 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &162560453
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 162560451}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1dece7bc5e256854eb03c9e30295bc19, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speechBubbleX: 350
+  speechBubbleY: 40
 --- !u!1001 &164035132
 Prefab:
   m_ObjectHideFlags: 0
@@ -2012,6 +2137,19 @@ MonoBehaviour:
   cantAffordDialog: []
   dialogOption2: []
   previousCharactersDecision: {fileID: 848862166}
+--- !u!114 &217342305
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 217342302}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1dece7bc5e256854eb03c9e30295bc19, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speechBubbleX: 350
+  speechBubbleY: 0
 --- !u!1 &221140015
 GameObject:
   m_ObjectHideFlags: 0
@@ -2099,6 +2237,23 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5b0c675f1874247dbbcc9e747b0aae6e, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &238334055 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 107394, guid: 291d6d682230a5d40997e2c6881f717e, type: 2}
+  m_PrefabInternal: {fileID: 1577124443}
+--- !u!114 &238334056
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 238334055}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1dece7bc5e256854eb03c9e30295bc19, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speechBubbleX: 350
+  speechBubbleY: 0
 --- !u!1001 &244783388
 Prefab:
   m_ObjectHideFlags: 0
@@ -2192,6 +2347,19 @@ Animation:
   m_PlayAutomatically: 1
   m_AnimatePhysics: 0
   m_CullingType: 0
+--- !u!114 &244783392
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 244783390}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1dece7bc5e256854eb03c9e30295bc19, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speechBubbleX: 350
+  speechBubbleY: 0
 --- !u!1 &254203375 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 140534, guid: 934f232f5c3f3cc4f8a5f3397f45c3a5, type: 2}
@@ -2217,6 +2385,19 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &254203378
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 254203375}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1dece7bc5e256854eb03c9e30295bc19, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speechBubbleX: 350
+  speechBubbleY: 0
 --- !u!224 &259315892 stripped
 RectTransform:
   m_PrefabParentObject: {fileID: 22400152, guid: 07052e5958546a94f955b9fd92c252ed,
@@ -2284,6 +2465,19 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &286751570
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 286751568}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1dece7bc5e256854eb03c9e30295bc19, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speechBubbleX: 350
+  speechBubbleY: 150
 --- !u!1001 &301958379
 Prefab:
   m_ObjectHideFlags: 0
@@ -2440,6 +2634,19 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &301958384
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 301958381}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1dece7bc5e256854eb03c9e30295bc19, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speechBubbleX: 350
+  speechBubbleY: 150
 --- !u!4 &302355567 stripped
 Transform:
   m_PrefabParentObject: {fileID: 419590, guid: 1dd8df7e3e1d8e84fb5b64da7f3a219a, type: 2}
@@ -2506,6 +2713,19 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &313065704
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 313065702}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1dece7bc5e256854eb03c9e30295bc19, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speechBubbleX: 350
+  speechBubbleY: 20
 --- !u!1 &313294357
 GameObject:
   m_ObjectHideFlags: 0
@@ -2787,6 +3007,19 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &345197722
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 345197720}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1dece7bc5e256854eb03c9e30295bc19, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speechBubbleX: 350
+  speechBubbleY: 60
 --- !u!1001 &345544248
 Prefab:
   m_ObjectHideFlags: 0
@@ -2895,6 +3128,19 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &345544252
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 345544250}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1dece7bc5e256854eb03c9e30295bc19, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speechBubbleX: 350
+  speechBubbleY: 100
 --- !u!114 &345544253 stripped
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 11476060, guid: 934f232f5c3f3cc4f8a5f3397f45c3a5,
@@ -3087,6 +3333,19 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &357313458
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 357313456}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1dece7bc5e256854eb03c9e30295bc19, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speechBubbleX: 350
+  speechBubbleY: 20
 --- !u!1001 &378195264
 Prefab:
   m_ObjectHideFlags: 0
@@ -3191,6 +3450,19 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &378195268
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 378195266}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1dece7bc5e256854eb03c9e30295bc19, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speechBubbleX: 350
+  speechBubbleY: 20
 --- !u!1 &401678526
 GameObject:
   m_ObjectHideFlags: 0
@@ -3257,6 +3529,19 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &409532695
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 409532692}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1dece7bc5e256854eb03c9e30295bc19, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speechBubbleX: 350
+  speechBubbleY: 125
 --- !u!114 &409532696 stripped
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 11485840, guid: 1dd8df7e3e1d8e84fb5b64da7f3a219a,
@@ -3545,6 +3830,19 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &443462729
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 443462726}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1dece7bc5e256854eb03c9e30295bc19, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speechBubbleX: 350
+  speechBubbleY: 150
 --- !u!1 &447356781
 GameObject:
   m_ObjectHideFlags: 0
@@ -3789,6 +4087,19 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &467621925
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 467621923}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1dece7bc5e256854eb03c9e30295bc19, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speechBubbleX: 350
+  speechBubbleY: 60
 --- !u!1001 &472549978
 Prefab:
   m_ObjectHideFlags: 0
@@ -3903,7 +4214,7 @@ Transform:
   m_Children:
   - {fileID: 1341586678}
   m_Father: {fileID: 0}
-  m_RootOrder: 20
+  m_RootOrder: 22
 --- !u!1 &488163898
 GameObject:
   m_ObjectHideFlags: 0
@@ -4057,6 +4368,19 @@ MonoBehaviour:
   cantAffordDialog: []
   dialogOption2: []
   previousCharactersDecision: {fileID: 718731741}
+--- !u!114 &502978396
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 502978393}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1dece7bc5e256854eb03c9e30295bc19, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speechBubbleX: 350
+  speechBubbleY: 0
 --- !u!1001 &506658060
 Prefab:
   m_ObjectHideFlags: 0
@@ -4157,6 +4481,19 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &506658064
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 506658062}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1dece7bc5e256854eb03c9e30295bc19, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speechBubbleX: 350
+  speechBubbleY: 60
 --- !u!1 &530247848 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 168488, guid: 6c80dcaa860145f4fbede929b8923cef, type: 2}
@@ -4290,6 +4627,19 @@ Animation:
   m_PlayAutomatically: 1
   m_AnimatePhysics: 0
   m_CullingType: 0
+--- !u!114 &532572724
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 532572722}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1dece7bc5e256854eb03c9e30295bc19, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speechBubbleX: 350
+  speechBubbleY: 60
 --- !u!1001 &537873736
 Prefab:
   m_ObjectHideFlags: 0
@@ -4402,6 +4752,19 @@ Animation:
   m_PlayAutomatically: 1
   m_AnimatePhysics: 0
   m_CullingType: 0
+--- !u!114 &537873741
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 537873738}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1dece7bc5e256854eb03c9e30295bc19, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speechBubbleX: 350
+  speechBubbleY: 0
 --- !u!1 &543548728
 GameObject:
   m_ObjectHideFlags: 0
@@ -4546,6 +4909,19 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &597529746
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 597529744}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1dece7bc5e256854eb03c9e30295bc19, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speechBubbleX: 350
+  speechBubbleY: 40
 --- !u!1001 &604991233
 Prefab:
   m_ObjectHideFlags: 0
@@ -4863,7 +5239,7 @@ Transform:
   m_LocalScale: {x: 1, y: 20, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 18
+  m_RootOrder: 20
 --- !u!1001 &632805285
 Prefab:
   m_ObjectHideFlags: 0
@@ -4983,6 +5359,19 @@ MonoBehaviour:
   cantAffordDialog: []
   dialogOption2: []
   previousCharactersDecision: {fileID: 345544253}
+--- !u!114 &632805290
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 632805287}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1dece7bc5e256854eb03c9e30295bc19, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speechBubbleX: 350
+  speechBubbleY: 60
 --- !u!1 &650475996
 GameObject:
   m_ObjectHideFlags: 0
@@ -5253,6 +5642,19 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &655865499
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 655865496}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1dece7bc5e256854eb03c9e30295bc19, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speechBubbleX: 350
+  speechBubbleY: 125
 --- !u!1 &660946199 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 119708, guid: acfc9b15f70a445429def5cdab29ea17, type: 2}
@@ -5274,6 +5676,19 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &660946201
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 660946199}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1dece7bc5e256854eb03c9e30295bc19, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speechBubbleX: 350
+  speechBubbleY: -100
 --- !u!1001 &661321666
 Prefab:
   m_ObjectHideFlags: 0
@@ -5384,6 +5799,19 @@ Animation:
   m_PlayAutomatically: 1
   m_AnimatePhysics: 0
   m_CullingType: 0
+--- !u!114 &661321671
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 661321668}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1dece7bc5e256854eb03c9e30295bc19, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speechBubbleX: 350
+  speechBubbleY: 0
 --- !u!1 &665692642 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 185380, guid: cd15882634a625242a74d98004538d33, type: 2}
@@ -5404,6 +5832,19 @@ MonoBehaviour:
   speechYes: []
   speechNo: []
   cantAffordDialog: []
+--- !u!114 &665692644
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 665692642}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1dece7bc5e256854eb03c9e30295bc19, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speechBubbleX: 350
+  speechBubbleY: 60
 --- !u!111 &665692647
 Animation:
   m_ObjectHideFlags: 0
@@ -5631,6 +6072,59 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &739347579
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 739347577}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1dece7bc5e256854eb03c9e30295bc19, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speechBubbleX: 350
+  speechBubbleY: 60
+--- !u!1 &752584738
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 752584739}
+  - 114: {fileID: 752584740}
+  m_Layer: 0
+  m_Name: GlobalReferences
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &752584739
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 752584738}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.5252057, y: 0.10605843, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 1
+--- !u!114 &752584740
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 752584738}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4766c8d4d688ce49a32bda695a5806d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneData: {fileID: 2030026853}
 --- !u!1 &760646107
 GameObject:
   m_ObjectHideFlags: 0
@@ -5894,6 +6388,25 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &772414578
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 772414576}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1dece7bc5e256854eb03c9e30295bc19, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speechBubbleX: 350
+  speechBubbleY: 0
+--- !u!114 &772618359 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 11443750, guid: 5b0c675f1874247dbbcc9e747b0aae6e,
+    type: 2}
+  m_PrefabInternal: {fileID: 233176120}
+  m_Script: {fileID: 11500000, guid: d4649248b052d42b681196b38486eacf, type: 3}
 --- !u!1 &773027525
 GameObject:
   m_ObjectHideFlags: 0
@@ -6054,6 +6567,19 @@ MonoBehaviour:
   cantAffordDialog: []
   dialogOption2: []
   previousCharactersDecision: {fileID: 345544253}
+--- !u!114 &775663651
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 775663648}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1dece7bc5e256854eb03c9e30295bc19, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speechBubbleX: 350
+  speechBubbleY: 60
 --- !u!1 &776288203
 GameObject:
   m_ObjectHideFlags: 0
@@ -6148,6 +6674,19 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &777982288
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 777982286}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1dece7bc5e256854eb03c9e30295bc19, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speechBubbleX: 350
+  speechBubbleY: 60
 --- !u!1 &784240972
 GameObject:
   m_ObjectHideFlags: 0
@@ -6454,6 +6993,19 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &815141575
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 815141573}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1dece7bc5e256854eb03c9e30295bc19, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speechBubbleX: 350
+  speechBubbleY: 60
 --- !u!1 &815282619
 GameObject:
   m_ObjectHideFlags: 0
@@ -6622,7 +7174,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 185380, guid: cd15882634a625242a74d98004538d33, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 11449826, guid: cd15882634a625242a74d98004538d33, type: 2}
       propertyPath: startingPointY
@@ -6657,6 +7209,19 @@ Animation:
   m_PlayAutomatically: 1
   m_AnimatePhysics: 0
   m_CullingType: 0
+--- !u!114 &823921672
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 823921670}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1dece7bc5e256854eb03c9e30295bc19, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speechBubbleX: 350
+  speechBubbleY: 60
 --- !u!1 &829370187
 GameObject:
   m_ObjectHideFlags: 0
@@ -6732,7 +7297,7 @@ Transform:
   m_LocalScale: {x: 0.92, y: 0.92, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 9
 --- !u!1 &835953102
 GameObject:
   m_ObjectHideFlags: 0
@@ -6956,6 +7521,19 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &848862165
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 848862163}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1dece7bc5e256854eb03c9e30295bc19, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speechBubbleX: 350
+  speechBubbleY: 60
 --- !u!114 &848862166 stripped
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 11494512, guid: 87100e5cbc89f4f46845eff083187c9e,
@@ -6999,6 +7577,19 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &859831382
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 859831379}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1dece7bc5e256854eb03c9e30295bc19, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speechBubbleX: 350
+  speechBubbleY: 150
 --- !u!1001 &860997501
 Prefab:
   m_ObjectHideFlags: 0
@@ -7122,6 +7713,19 @@ MonoBehaviour:
   cantAffordDialog: []
   dialogOption2: []
   previousCharactersDecision: {fileID: 1715413339}
+--- !u!114 &860997506
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 860997503}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1dece7bc5e256854eb03c9e30295bc19, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speechBubbleX: 350
+  speechBubbleY: 20
 --- !u!1 &870350757
 GameObject:
   m_ObjectHideFlags: 0
@@ -7190,6 +7794,19 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 992724736}
   m_Script: {fileID: 11500000, guid: 12f7bcab77466234b9ab2943e7682aca, type: 3}
+--- !u!114 &880174895
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 880174892}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1dece7bc5e256854eb03c9e30295bc19, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speechBubbleX: 350
+  speechBubbleY: 0
 --- !u!1 &885761568
 GameObject:
   m_ObjectHideFlags: 0
@@ -7248,7 +7865,7 @@ Transform:
   m_LocalScale: {x: 0.52553034, y: 0.52553034, z: 0.52553034}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 8
 --- !u!95 &885761572
 Animator:
   serializedVersion: 3
@@ -7369,6 +7986,19 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &913920396
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 913920394}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1dece7bc5e256854eb03c9e30295bc19, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speechBubbleX: 350
+  speechBubbleY: 100
 --- !u!1 &919586211
 GameObject:
   m_ObjectHideFlags: 0
@@ -7518,6 +8148,19 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &921364115
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 921364113}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1dece7bc5e256854eb03c9e30295bc19, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speechBubbleX: 350
+  speechBubbleY: 100
 --- !u!1 &925072447 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 140534, guid: 934f232f5c3f3cc4f8a5f3397f45c3a5, type: 2}
@@ -7543,6 +8186,19 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &925072450
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 925072447}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1dece7bc5e256854eb03c9e30295bc19, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speechBubbleX: 350
+  speechBubbleY: 100
 --- !u!1 &927470005 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 119708, guid: acfc9b15f70a445429def5cdab29ea17, type: 2}
@@ -7564,6 +8220,19 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &927470007
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 927470005}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1dece7bc5e256854eb03c9e30295bc19, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speechBubbleX: 350
+  speechBubbleY: -50
 --- !u!1 &938006730 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 167468, guid: 430217818891e6d4b8900b28d508bffa, type: 2}
@@ -7585,6 +8254,19 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &938006732
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 938006730}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1dece7bc5e256854eb03c9e30295bc19, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speechBubbleX: 350
+  speechBubbleY: 40
 --- !u!4 &962706283 stripped
 Transform:
   m_PrefabParentObject: {fileID: 423732, guid: acfc9b15f70a445429def5cdab29ea17, type: 2}
@@ -7680,6 +8362,19 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &974148070
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 974148068}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1dece7bc5e256854eb03c9e30295bc19, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speechBubbleX: 350
+  speechBubbleY: 0
 --- !u!1 &989165872 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 199968, guid: 1dd8df7e3e1d8e84fb5b64da7f3a219a, type: 2}
@@ -7701,6 +8396,19 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &989165874
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 989165872}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1dece7bc5e256854eb03c9e30295bc19, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speechBubbleX: 350
+  speechBubbleY: 60
 --- !u!1001 &989318789
 Prefab:
   m_ObjectHideFlags: 0
@@ -7818,6 +8526,19 @@ Animation:
   m_PlayAutomatically: 1
   m_AnimatePhysics: 0
   m_CullingType: 0
+--- !u!114 &989318793
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 989318791}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1dece7bc5e256854eb03c9e30295bc19, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speechBubbleX: 350
+  speechBubbleY: 60
 --- !u!114 &989318794 stripped
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 11470816, guid: cd15882634a625242a74d98004538d33,
@@ -8240,6 +8961,19 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &1013881988
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1013881985}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1dece7bc5e256854eb03c9e30295bc19, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speechBubbleX: 350
+  speechBubbleY: 150
 --- !u!1 &1025165398
 GameObject:
   m_ObjectHideFlags: 0
@@ -8553,7 +9287,7 @@ RectTransform:
   - {fileID: 2065180149}
   - {fileID: 1727885686}
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 14
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
@@ -8728,6 +9462,19 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &1055858296
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1055858294}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1dece7bc5e256854eb03c9e30295bc19, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speechBubbleX: 350
+  speechBubbleY: 0
 --- !u!1 &1058360085
 GameObject:
   m_ObjectHideFlags: 0
@@ -8988,6 +9735,10 @@ Prefab:
       propertyPath: m_audioClip
       value: 
       objectReference: {fileID: 8300000, guid: 453864f23f4a83645931c810f37d28fd, type: 3}
+    - target: {fileID: 8222978, guid: 83e02e81020494d348c5a6b243f509a9, type: 2}
+      propertyPath: spreadCustomCurve.m_RotationOrder
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 83e02e81020494d348c5a6b243f509a9, type: 2}
   m_IsPrefabParent: 0
@@ -9165,6 +9916,19 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &1155423538
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1155423536}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1dece7bc5e256854eb03c9e30295bc19, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speechBubbleX: 350
+  speechBubbleY: 0
 --- !u!1 &1169364214
 GameObject:
   m_ObjectHideFlags: 0
@@ -9583,7 +10347,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 4
+    m_RotationOrder: 0
   reverbZoneMixCustomCurve:
     serializedVersion: 2
     m_Curve:
@@ -9700,7 +10464,7 @@ Transform:
   m_LocalScale: {x: 0.92, y: 0.92, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 7
 --- !u!95 &1181807662
 Animator:
   serializedVersion: 3
@@ -10004,6 +10768,19 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &1200726601
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1200726599}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1dece7bc5e256854eb03c9e30295bc19, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speechBubbleX: 350
+  speechBubbleY: -100
 --- !u!1 &1210334182 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 190014, guid: 2260230439d8ae249869b38ced179444, type: 2}
@@ -10045,6 +10822,19 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &1210334186
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1210334182}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1dece7bc5e256854eb03c9e30295bc19, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speechBubbleX: 350
+  speechBubbleY: 50
 --- !u!1001 &1214206653
 Prefab:
   m_ObjectHideFlags: 0
@@ -10136,6 +10926,19 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &1214206657
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1214206655}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1dece7bc5e256854eb03c9e30295bc19, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speechBubbleX: 350
+  speechBubbleY: 0
 --- !u!1001 &1230850883
 Prefab:
   m_ObjectHideFlags: 0
@@ -10393,10 +11196,36 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &1239333230
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1239333228}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1dece7bc5e256854eb03c9e30295bc19, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speechBubbleX: 350
+  speechBubbleY: 100
 --- !u!1 &1243841676 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 131198, guid: 5a2847c57eef820479ddde60c7657051, type: 2}
   m_PrefabInternal: {fileID: 318518677}
+--- !u!114 &1243841677
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1243841676}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1dece7bc5e256854eb03c9e30295bc19, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speechBubbleX: 350
+  speechBubbleY: 60
 --- !u!114 &1243841678 stripped
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 11473526, guid: 5a2847c57eef820479ddde60c7657051,
@@ -10596,6 +11425,19 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &1251966702
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1251966700}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1dece7bc5e256854eb03c9e30295bc19, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speechBubbleX: 350
+  speechBubbleY: 60
 --- !u!1001 &1270572926
 Prefab:
   m_ObjectHideFlags: 0
@@ -10719,6 +11561,19 @@ MonoBehaviour:
   cantAffordDialog: []
   dialogOption2: []
   previousCharactersDecision: {fileID: 1084991698}
+--- !u!114 &1270572931
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1270572928}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1dece7bc5e256854eb03c9e30295bc19, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speechBubbleX: 350
+  speechBubbleY: 20
 --- !u!1 &1283083863
 GameObject:
   m_ObjectHideFlags: 0
@@ -11012,6 +11867,19 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &1293061800
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1293061797}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1dece7bc5e256854eb03c9e30295bc19, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speechBubbleX: 350
+  speechBubbleY: 50
 --- !u!1 &1294810642
 GameObject:
   m_ObjectHideFlags: 0
@@ -11425,6 +12293,19 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &1339416802
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1339416800}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1dece7bc5e256854eb03c9e30295bc19, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speechBubbleX: 350
+  speechBubbleY: 0
 --- !u!1 &1341586675
 GameObject:
   m_ObjectHideFlags: 0
@@ -11965,6 +12846,19 @@ Animation:
   m_PlayAutomatically: 1
   m_AnimatePhysics: 0
   m_CullingType: 0
+--- !u!114 &1396435702
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1396435698}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1dece7bc5e256854eb03c9e30295bc19, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speechBubbleX: 350
+  speechBubbleY: 0
 --- !u!1 &1425316160
 GameObject:
   m_ObjectHideFlags: 0
@@ -12076,7 +12970,7 @@ Transform:
   - {fileID: 1851439991}
   - {fileID: 784240973}
   m_Father: {fileID: 0}
-  m_RootOrder: 19
+  m_RootOrder: 21
 --- !u!1001 &1426717639
 Prefab:
   m_ObjectHideFlags: 0
@@ -12235,6 +13129,19 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &1439433370
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1439433368}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1dece7bc5e256854eb03c9e30295bc19, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speechBubbleX: 350
+  speechBubbleY: 20
 --- !u!1 &1458230243
 GameObject:
   m_ObjectHideFlags: 0
@@ -12432,6 +13339,19 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &1465830855
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1465830852}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1dece7bc5e256854eb03c9e30295bc19, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speechBubbleX: 350
+  speechBubbleY: 150
 --- !u!1001 &1470812574
 Prefab:
   m_ObjectHideFlags: 0
@@ -12549,6 +13469,19 @@ Animation:
   m_PlayAutomatically: 1
   m_AnimatePhysics: 0
   m_CullingType: 0
+--- !u!114 &1470812578
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1470812576}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1dece7bc5e256854eb03c9e30295bc19, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speechBubbleX: 350
+  speechBubbleY: 60
 --- !u!1 &1472801028
 GameObject:
   m_ObjectHideFlags: 0
@@ -12694,6 +13627,19 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &1479027201
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1479027199}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1dece7bc5e256854eb03c9e30295bc19, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speechBubbleX: 350
+  speechBubbleY: 20
 --- !u!1 &1479236833 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 119708, guid: acfc9b15f70a445429def5cdab29ea17, type: 2}
@@ -12715,6 +13661,19 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &1479236835
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1479236833}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1dece7bc5e256854eb03c9e30295bc19, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speechBubbleX: 350
+  speechBubbleY: -50
 --- !u!1001 &1487794435
 Prefab:
   m_ObjectHideFlags: 0
@@ -13055,7 +14014,7 @@ Transform:
   m_LocalScale: {x: 1, y: 20, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 16
+  m_RootOrder: 18
 --- !u!1 &1560194346
 GameObject:
   m_ObjectHideFlags: 0
@@ -13096,7 +14055,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 5
 --- !u!1 &1562163346
 GameObject:
   m_ObjectHideFlags: 0
@@ -13541,6 +14500,19 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &1601470222
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1601470220}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1dece7bc5e256854eb03c9e30295bc19, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speechBubbleX: 350
+  speechBubbleY: 60
 --- !u!1 &1615862599
 GameObject:
   m_ObjectHideFlags: 0
@@ -13851,6 +14823,19 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &1623730183
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1623730180}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1dece7bc5e256854eb03c9e30295bc19, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speechBubbleX: 350
+  speechBubbleY: 125
 --- !u!1 &1638656437 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 167468, guid: 430217818891e6d4b8900b28d508bffa, type: 2}
@@ -13872,6 +14857,19 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &1638656439
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1638656437}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1dece7bc5e256854eb03c9e30295bc19, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speechBubbleX: 350
+  speechBubbleY: 40
 --- !u!1 &1650668523
 GameObject:
   m_ObjectHideFlags: 0
@@ -14075,6 +15073,19 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 1652082709}
   m_Script: {fileID: 11500000, guid: 12f7bcab77466234b9ab2943e7682aca, type: 3}
+--- !u!114 &1652082715
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1652082711}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1dece7bc5e256854eb03c9e30295bc19, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speechBubbleX: 350
+  speechBubbleY: 150
 --- !u!1001 &1653748002
 Prefab:
   m_ObjectHideFlags: 0
@@ -14166,6 +15177,19 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &1653748006
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1653748004}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1dece7bc5e256854eb03c9e30295bc19, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speechBubbleX: 350
+  speechBubbleY: 0
 --- !u!1 &1654521505
 GameObject:
   m_ObjectHideFlags: 0
@@ -14215,11 +15239,11 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1660182460}
-  - 114: {fileID: 1660182461}
   - 114: {fileID: 1660182462}
   - 114: {fileID: 1660182463}
   - 114: {fileID: 1660182459}
   - 114: {fileID: 1660182464}
+  - 114: {fileID: 1660182465}
   m_Layer: 0
   m_Name: Controller
   m_TagString: Controller
@@ -14252,50 +15276,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
---- !u!114 &1660182461
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1660182458}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a7141b5966dedd741bdef55710a4128f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _listOfCharacters:
-  - {fileID: 1186236058}
-  - {fileID: 1472801028}
-  - {fileID: 216792549}
-  - {fileID: 1786016430}
-  - {fileID: 786059329}
-  - {fileID: 1192521193}
-  - {fileID: 773027525}
-  - {fileID: 1615862599}
-  - {fileID: 419626869}
-  - {fileID: 1091187766}
-  - {fileID: 1283083863}
-  - {fileID: 1192521193}
-  - {fileID: 1565307516}
-  - {fileID: 88141677}
-  - {fileID: 1169364214}
-  - {fileID: 549207182}
-  - {fileID: 278469024}
-  - {fileID: 1192521193}
-  - {fileID: 1702144237}
-  - {fileID: 614715967}
-  - {fileID: 819644715}
-  - {fileID: 800559958}
-  - {fileID: 118472702}
-  - {fileID: 1192521193}
-  - {fileID: 1836000115}
-  - {fileID: 1353521735}
-  - {fileID: 910280997}
-  - {fileID: 334615085}
-  - {fileID: 347970379}
-  - {fileID: 1192521193}
-  currentChar: {fileID: 0}
+  m_RootOrder: 11
 --- !u!114 &1660182462
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14337,6 +15318,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6b63a42c4b24aa04997fe3e673e9d468, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1660182465
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1660182458}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cdbf54e35b3196244bff01010b081b7c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1001 &1664582016
@@ -14615,7 +15607,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 12
 --- !u!1001 &1701184643
 Prefab:
   m_ObjectHideFlags: 0
@@ -14990,6 +15982,19 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 1715413334}
   m_Script: {fileID: 11500000, guid: 12f7bcab77466234b9ab2943e7682aca, type: 3}
+--- !u!114 &1715413340
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1715413336}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1dece7bc5e256854eb03c9e30295bc19, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speechBubbleX: 350
+  speechBubbleY: 150
 --- !u!1001 &1721028278
 Prefab:
   m_ObjectHideFlags: 0
@@ -15184,6 +16189,19 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 1721028278}
   m_Script: {fileID: 11500000, guid: 12f7bcab77466234b9ab2943e7682aca, type: 3}
+--- !u!114 &1721028284
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1721028280}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1dece7bc5e256854eb03c9e30295bc19, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speechBubbleX: 350
+  speechBubbleY: 125
 --- !u!1 &1727885685
 GameObject:
   m_ObjectHideFlags: 0
@@ -15477,6 +16495,19 @@ MonoBehaviour:
   cantAffordDialog: []
   dialogOption2: []
   previousCharactersDecision: {fileID: 345544253}
+--- !u!114 &1734976495
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1734976492}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1dece7bc5e256854eb03c9e30295bc19, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speechBubbleX: 350
+  speechBubbleY: 60
 --- !u!1 &1738890905
 GameObject:
   m_ObjectHideFlags: 0
@@ -15670,6 +16701,19 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &1738957377
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1738957375}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1dece7bc5e256854eb03c9e30295bc19, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speechBubbleX: 350
+  speechBubbleY: 150
 --- !u!1001 &1744116742
 Prefab:
   m_ObjectHideFlags: 0
@@ -15770,6 +16814,19 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &1744116746
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1744116744}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1dece7bc5e256854eb03c9e30295bc19, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speechBubbleX: 350
+  speechBubbleY: 60
 --- !u!1 &1749556007
 GameObject:
   m_ObjectHideFlags: 0
@@ -16010,7 +17067,7 @@ RectTransform:
   - {fileID: 1584146588}
   - {fileID: 1715215317}
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 15
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
@@ -16073,7 +17130,7 @@ Transform:
   m_LocalScale: {x: 0.92, y: 0.92, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 10
 --- !u!4 &1766268246 stripped
 Transform:
   m_PrefabParentObject: {fileID: 499158, guid: 934f232f5c3f3cc4f8a5f3397f45c3a5, type: 2}
@@ -16181,6 +17238,19 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &1773523711
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1773523709}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1dece7bc5e256854eb03c9e30295bc19, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speechBubbleX: 350
+  speechBubbleY: 150
 --- !u!1 &1781213515
 GameObject:
   m_ObjectHideFlags: 0
@@ -16329,6 +17399,19 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &1823826693
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1823826691}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1dece7bc5e256854eb03c9e30295bc19, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speechBubbleX: 350
+  speechBubbleY: 20
 --- !u!1 &1836000115
 GameObject:
   m_ObjectHideFlags: 0
@@ -16437,7 +17520,24 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 21
+  m_RootOrder: 23
+--- !u!1 &1865793138 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 107394, guid: 291d6d682230a5d40997e2c6881f717e, type: 2}
+  m_PrefabInternal: {fileID: 1620074248}
+--- !u!114 &1865793139
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1865793138}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1dece7bc5e256854eb03c9e30295bc19, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speechBubbleX: 350
+  speechBubbleY: 0
 --- !u!4 &1868748530 stripped
 Transform:
   m_PrefabParentObject: {fileID: 423732, guid: acfc9b15f70a445429def5cdab29ea17, type: 2}
@@ -16467,6 +17567,19 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &1881853191
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1881853188}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1dece7bc5e256854eb03c9e30295bc19, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speechBubbleX: 350
+  speechBubbleY: 0
 --- !u!1 &1882248627
 GameObject:
   m_ObjectHideFlags: 0
@@ -16731,6 +17844,19 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &1924931151
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1924931148}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1dece7bc5e256854eb03c9e30295bc19, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speechBubbleX: 350
+  speechBubbleY: 0
 --- !u!1 &1932063417
 GameObject:
   m_ObjectHideFlags: 0
@@ -16791,7 +17917,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 17
 --- !u!1 &1938286372
 GameObject:
   m_ObjectHideFlags: 0
@@ -16916,7 +18042,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 16
 --- !u!1 &1949490890
 GameObject:
   m_ObjectHideFlags: 0
@@ -17249,6 +18375,19 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &1995921788
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1995921786}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1dece7bc5e256854eb03c9e30295bc19, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speechBubbleX: 350
+  speechBubbleY: 0
 --- !u!1 &2003876307
 GameObject:
   m_ObjectHideFlags: 0
@@ -17585,7 +18724,7 @@ RectTransform:
   - {fileID: 1192521195}
   - {fileID: 530247849}
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 13
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
@@ -17602,6 +18741,57 @@ CanvasGroup:
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
+--- !u!1 &2030026852
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 2030026854}
+  - 114: {fileID: 2030026853}
+  m_Layer: 0
+  m_Name: SceneReferences
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2030026853
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2030026852}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 269a6e23974f5a744a676fb9def0d08d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameOver: {fileID: 530247848}
+  playerAttributes: {fileID: 1341586676}
+  gameMaster: {fileID: 1660182459}
+  menuController: {fileID: 1560194347}
+  choices: {fileID: 1194189850}
+  resourceManager: {fileID: 1660182463}
+  speechBubble: {fileID: 36765761}
+  soundScript: {fileID: 772618359}
+  controller: {fileID: 1660182458}
+  nextDay: {fileID: 1192521193}
+  musicController: {fileID: 998816413}
+  gameCameraPosition: {fileID: 2105218501}
+--- !u!4 &2030026854
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2030026852}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.3819346, y: -0.15311696, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 2
 --- !u!1 &2056898153 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 121930, guid: bb9ff57f1c991634fa70ca66aa140f2a, type: 2}
@@ -17641,6 +18831,19 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &2056898156
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2056898153}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1dece7bc5e256854eb03c9e30295bc19, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speechBubbleX: 350
+  speechBubbleY: 20
 --- !u!1 &2065180148
 GameObject:
   m_ObjectHideFlags: 0
@@ -17919,6 +19122,23 @@ Prefab:
 Transform:
   m_PrefabParentObject: {fileID: 419590, guid: 1dd8df7e3e1d8e84fb5b64da7f3a219a, type: 2}
   m_PrefabInternal: {fileID: 2071140285}
+--- !u!1 &2078838585 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 107394, guid: 291d6d682230a5d40997e2c6881f717e, type: 2}
+  m_PrefabInternal: {fileID: 2018800806}
+--- !u!114 &2078838586
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2078838585}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1dece7bc5e256854eb03c9e30295bc19, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speechBubbleX: 350
+  speechBubbleY: 0
 --- !u!1001 &2098630280
 Prefab:
   m_ObjectHideFlags: 0
@@ -18056,7 +19276,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 6
 --- !u!1001 &2108014997
 Prefab:
   m_ObjectHideFlags: 0
@@ -18226,6 +19446,19 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &2108015002
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2108014999}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1dece7bc5e256854eb03c9e30295bc19, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speechBubbleX: 350
+  speechBubbleY: 50
 --- !u!1001 &2109098641
 Prefab:
   m_ObjectHideFlags: 0
@@ -18380,6 +19613,19 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 1230850883}
   m_Script: {fileID: 11500000, guid: 12f7bcab77466234b9ab2943e7682aca, type: 3}
+--- !u!114 &2110231623
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2110231620}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1dece7bc5e256854eb03c9e30295bc19, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speechBubbleX: 350
+  speechBubbleY: 150
 --- !u!1 &2110886392 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 140534, guid: 934f232f5c3f3cc4f8a5f3397f45c3a5, type: 2}
@@ -18401,6 +19647,19 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &2110886394
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2110886392}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1dece7bc5e256854eb03c9e30295bc19, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speechBubbleX: 350
+  speechBubbleY: 0
 --- !u!1 &2134557991
 GameObject:
   m_ObjectHideFlags: 0
@@ -18477,7 +19736,7 @@ Transform:
   m_LocalScale: {x: 20, y: 1, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 17
+  m_RootOrder: 19
 --- !u!1001 &2143296579
 Prefab:
   m_ObjectHideFlags: 0
@@ -18597,3 +19856,16 @@ MonoBehaviour:
   cantAffordDialog: []
   dialogOption2: []
   previousCharactersDecision: {fileID: 345544253}
+--- !u!114 &2143296584
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2143296581}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1dece7bc5e256854eb03c9e30295bc19, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speechBubbleX: 350
+  speechBubbleY: 60

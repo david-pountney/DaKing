@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 
 public class GameMaster : MonoBehaviour {
 
@@ -37,13 +38,18 @@ public class GameMaster : MonoBehaviour {
 
             //Check if character is in the scene
             Debug.Log("loading character with name: '"+currentChar.charName+'"');
-            if (!GameObject.Find(currentChar.charName)) {
+
+            MovementBehaviour currentCharacter = (from go in GlobalReferencesBehaviour.instance.SceneData.Characters
+                              where go.gameObject.name == currentChar.charName
+                              select go).FirstOrDefault();
+                              
+            if (!currentCharacter) {
                 Debug.Log("Skiping character as it is not in the scene");
                 continue;
             }
 
             //Get the character in the scene via the name
-            DeterminDialog charInstance = GameObject.Find(currentChar.charName).GetComponent<DeterminDialog>();
+            DeterminDialog charInstance = currentCharacter.GetComponent<DeterminDialog>();
 
             //Error check
             if (!charInstance) Debug.LogError("Character name not found in scene, please check the name in the JSON file and make sure said character is in the scene. Also check that there is a determinDialog component attached to said character.");
@@ -65,7 +71,7 @@ public class GameMaster : MonoBehaviour {
             {
                 Debug.Log("Adding dialog two");
                 //Get the chars double dialog component
-                DoubleOptionDialog doubleCharInstance = GameObject.Find(currentChar.charName).GetComponent<DoubleOptionDialog>();
+                DoubleOptionDialog doubleCharInstance = currentCharacter.GetComponent<DoubleOptionDialog>();
                 if (!doubleCharInstance) Debug.LogError("DoubleOptionDialog component not found on character.");
                 doubleCharInstance.dialogOption2 = currentChar.lstDialogTwo;
             }
@@ -125,6 +131,8 @@ public class GameMaster : MonoBehaviour {
                 charInstance.theChoice.passiveTwoDepressionOutcome = currentChar.lstOutcomePassiveResultTwo[2];
             }
             Debug.Log("Character loaded.");
+
+            currentCharacter.gameObject.SetActive(false);
         }
     }
 

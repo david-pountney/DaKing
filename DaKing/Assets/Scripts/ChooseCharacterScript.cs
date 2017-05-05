@@ -14,7 +14,7 @@ public class ChooseCharacterScript : MonoBehaviour {
     /// <summary>
     /// Call this method to decide which character is chosen based on a previous choice the player has made
     /// </summary>
-    public MovementForChars ChooseCharacter()
+    public MovementBehaviour ChooseCharacter()
     {
         //Get the script that contains the 'yes'/'no' decision a character made
         ExecuteChoices theChoice = null;
@@ -38,22 +38,22 @@ public class ChooseCharacterScript : MonoBehaviour {
         }
         //There is no previous choice effecting which character we pick, so just pick the first child
         if (!theChoice)
-            return child1.GetComponent<MovementForChars>();
+            return child1.GetComponent<MovementBehaviour>();
 
         //We always assume a previous 'yes' choice means the first child, otherwise the second child
         //If 'yes'...
         if (theChoice.outcomeChoice)
         {
             if (child1)
-                return child1.GetComponent<MovementForChars>();
+                return child1.GetComponent<MovementBehaviour>();
         }
         else
         //if answer was no
         {
             if (child2)
-                return child2.GetComponent<MovementForChars>();
+                return child2.GetComponent<MovementBehaviour>();
             else
-                return child1.GetComponent<MovementForChars>();
+                return child1.GetComponent<MovementBehaviour>();
         }
         
         return null;

@@ -4,7 +4,8 @@ using System.Collections;
 public class ExecuteChoices : MonoBehaviour
 {
     private PlayerAttributes playerAttributes;
-    private MovementForChars movementForChars;
+    private MovementBehaviour movementForChars;
+    private SpeechBehaviour _speechBehaviour;
 
     private SpawnCoins spawnCoins;
 
@@ -31,16 +32,17 @@ public class ExecuteChoices : MonoBehaviour
     void Start()
     {
         playerAttributes = GameObject.Find("king").GetComponent<PlayerAttributes>();
-        movementForChars = GetComponent<MovementForChars>();
+        movementForChars = GetComponent<MovementBehaviour>();
+        _speechBehaviour = GetComponent<SpeechBehaviour>();
         spawnCoins = GameObject.Find("Controller").GetComponent<SpawnCoins>();
     }
 
-    public void executeYesChoice()
+    public void ExecuteYesChoice()
     {
         if ((yesMoneyOutcome > 0 || (playerAttributes.money >= Mathf.Abs(yesMoneyOutcome))) &&
             (yesMilitaryOutcome > 0 || (playerAttributes.military >= Mathf.Abs(yesMilitaryOutcome))))
         {
-            movementForChars.showYesSpeech();
+            _speechBehaviour.SpeechLogic.ShowYesSpeech();
 
             // Handle Money
             // Debug.Log("yesMoneyOutcome" + yesMoneyOutcome);
@@ -54,7 +56,7 @@ public class ExecuteChoices : MonoBehaviour
             // // Handle mood
             int moodOutcome = playerAttributes.depression + yesDepressionOutcome;
             if (moodOutcome > playerAttributes.maxDepression) moodOutcome = playerAttributes.maxDepression;
-            if (moodOutcome <= 0) movementForChars.GameIsNowOver = true;
+            if (moodOutcome <= 0) _speechBehaviour.SpeechLogic.GameIsNowOver = true;
             if (moodOutcome != playerAttributes.depression)
                 AnimateMoodValueChanging(moodOutcome);
 
@@ -73,7 +75,7 @@ public class ExecuteChoices : MonoBehaviour
         //Not enough resource
         else
         {
-            movementForChars.executeCantAffordSpeech();
+            _speechBehaviour.SpeechLogic.ExecuteCantAffordSpeech();
 
             //Remove depression
             AnimateMoodValueChanging(playerAttributes.depression - 5);
@@ -85,12 +87,12 @@ public class ExecuteChoices : MonoBehaviour
 
     }
 
-    public void executeNoChoice()
+    public void ExecuteNoChoice()
     {
         if ((noMoneyOutcome > 0 || (playerAttributes.money >= Mathf.Abs(noMoneyOutcome))) &&
             (noMilitaryOutcome > 0 || (playerAttributes.military >= Mathf.Abs(noMilitaryOutcome))))
         {
-            movementForChars.showNoSpeech();
+            _speechBehaviour.SpeechLogic.ShowNoSpeech();
 
             // Handle Money
             // Debug.Log("noMilitaryOutcome" + noMoneyOutcome);
@@ -104,7 +106,7 @@ public class ExecuteChoices : MonoBehaviour
             // Handle Mood
             int moodOutcome = playerAttributes.depression + noDepressionOutcome;
             if (moodOutcome > playerAttributes.maxDepression) moodOutcome = playerAttributes.maxDepression;
-            if (moodOutcome <= 0) movementForChars.GameIsNowOver = true;
+            if (moodOutcome <= 0) _speechBehaviour.SpeechLogic.GameIsNowOver = true;
 
             if (moodOutcome != playerAttributes.depression)
                 AnimateMoodValueChanging(moodOutcome);
@@ -123,7 +125,7 @@ public class ExecuteChoices : MonoBehaviour
         //Not enough resource
         else
         {
-            movementForChars.executeCantAffordSpeech();
+            _speechBehaviour.SpeechLogic.ExecuteCantAffordSpeech();
 
             //Remove depression
             AnimateMoodValueChanging(playerAttributes.depression - 5);
@@ -135,7 +137,7 @@ public class ExecuteChoices : MonoBehaviour
         }
     }
 
-    public void executePassiveOneChoice()
+    public void ExecutePassiveOneChoice()
     {
         // Handle Money
         // Debug.Log("passiveOneMoneyOutcome" + passiveOneMoneyOutcome);
@@ -151,7 +153,7 @@ public class ExecuteChoices : MonoBehaviour
             // // Handle depression
             int moodOutcome = playerAttributes.depression + passiveOneDepressionOutcome;
             if (moodOutcome > playerAttributes.maxDepression) moodOutcome = playerAttributes.maxDepression;
-            if (moodOutcome <= 0) movementForChars.GameIsNowOver = true;
+            if (moodOutcome <= 0) _speechBehaviour.SpeechLogic.GameIsNowOver = true;
 
             if (moodOutcome != playerAttributes.depression)
                 AnimateMoodValueChanging(moodOutcome);
@@ -172,7 +174,7 @@ public class ExecuteChoices : MonoBehaviour
         }
     }
 
-    public void executeRemoveAll(bool loseMoney, bool loseMilitary, bool loseDepression)
+    public void ExecuteRemoveAll(bool loseMoney, bool loseMilitary, bool loseDepression)
     {
         // Handle Money
         if (loseMoney)
@@ -192,7 +194,7 @@ public class ExecuteChoices : MonoBehaviour
             Debug.Log("Not implemented code");
     }
 
-    public void executePassiveTwoChoice()
+    public void ExecutePassiveTwoChoice()
     {
         if ((passiveTwoMoneyOutcome > 0 || (playerAttributes.money >= Mathf.Abs(passiveTwoMoneyOutcome))) &&
         (passiveTwoMilitaryOutcome > 0 || (playerAttributes.military >= Mathf.Abs(passiveTwoMilitaryOutcome))))
@@ -208,7 +210,7 @@ public class ExecuteChoices : MonoBehaviour
             // // Handle depression
             int moodOutcome = playerAttributes.depression + passiveTwoDepressionOutcome;
             if (moodOutcome > playerAttributes.maxDepression) moodOutcome = playerAttributes.maxDepression;
-            if (moodOutcome <= 0) movementForChars.GameIsNowOver = true;
+            if (moodOutcome <= 0) _speechBehaviour.SpeechLogic.GameIsNowOver = true;
 
             AnimateMoodValueChanging(moodOutcome);
             
@@ -260,7 +262,7 @@ public class ExecuteChoices : MonoBehaviour
 
     private void endChoiceLogic()
     {
-        movementForChars.killChoices();
+        
     }
 
 

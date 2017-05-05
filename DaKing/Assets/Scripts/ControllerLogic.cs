@@ -4,39 +4,27 @@ using System.Collections;
 using System.Collections.Generic;
 using System;
 
-public class ControllerLogic : MonoBehaviour {
+public class ControllerLogic {
+
+    public GameObject MusicController { get { return _musicController; } set { _musicController = value; } }
 
     public List<GameObject> _listOfCharacters;
 
-    //The index of the current character in the list of characters
-    private int currentCharIndex;
-
     //The current character object in the list of characters
-    public MovementForChars currentChar;
+    public MovementBehaviour currentChar;
 
-    private GameObject musicController;
+    //The index of the current character in the list of characters
+    private int currentCharIndex = 0;
+    
+    private GameObject _musicController;
 
     //Current day number
     private int dayNumber = 0;
 
     //This is the character we are bringing on the screen
-    private MovementForChars characterChild;
+    private MovementBehaviour characterChild;
 
-    // Use this for initialization
-    void Awake () {
-        musicController = GameObject.Find("MusicController");
-        currentCharIndex = 0;
-        GetAllCharacters();
-    }
-    
-    void OnLevelWasLoaded()
-    {
-        musicController = GameObject.Find("MusicController");
-        currentCharIndex = 0;
-        GetAllCharacters();
-    }
-
-    private void GetAllCharacters()
+    public void GetAllCharacters()
     {
         GameObject characterContainer = GameObject.Find("Characters");
         GameObject nextDay = GameObject.Find("NextDayMarker");
@@ -54,10 +42,10 @@ public class ControllerLogic : MonoBehaviour {
     }
     
     public void Init()
-    { 
-        musicController.GetComponent<SimpleMusicController>().fade_in();
+    {
+        _musicController.GetComponent<SimpleMusicController>().fade_in();
 
-        PlayerAttributes playerAttributes = GameObject.Find("king").GetComponent<PlayerAttributes>();
+        PlayerAttributes playerAttributes = GlobalReferencesBehaviour.instance.SceneData.playerAttributes;
 
         Debug.Log(playerAttributes.depression);
 
@@ -72,11 +60,11 @@ public class ControllerLogic : MonoBehaviour {
     public void nextCharacter()
     {
         GameObject character = null;
-        MovementForChars moveScript = null;
+        MovementBehaviour moveScript = null;
 
         //Set character we have just finished with to be inactive
-        if (CurrentChar && CurrentChar.GetComponent<MovementForChars>())
-            CurrentChar.GetComponent<MovementForChars>().Activated = false;
+        if (CurrentChar && CurrentChar.GetComponent<MovementBehaviour>())
+            CurrentChar.gameObject.SetActive(false);
 
         if (_listOfCharacters.Count > currentCharIndex)
         {
@@ -88,7 +76,7 @@ public class ControllerLogic : MonoBehaviour {
                 //We are now onto the next day
                 DayNumber++;
                 //Start fading next day
-                GameObject.FindGameObjectWithTag("NextDay").GetComponent<CurtainActivate>().startEndDay();
+                GlobalReferencesBehaviour.instance.SceneData.nextDay.GetComponent<CurtainActivate>().startEndDay();
             }
             //Else just set up the next character to walk in
             else
@@ -98,16 +86,13 @@ public class ControllerLogic : MonoBehaviour {
                 {
                     //Here we get the actual character who will enter the room from the list of children the 'character' object has
                     characterChild = character.GetComponent<ChooseCharacterScript>().ChooseCharacter();
+                    characterChild.gameObject.SetActive(true);
 
                     if (characterChild)
                     {
-                        CurrentChar = characterChild.GetComponent<MovementForChars>();
-                        moveScript = characterChild.GetComponent<MovementForChars>();
-                        characterChild.GetComponent<MovementForChars>().setup();
+                        CurrentChar = characterChild.GetComponent<MovementBehaviour>();
+                        moveScript = characterChild.GetComponent<MovementBehaviour>();
                     }
-                    if (moveScript)
-                        moveScript.Activated = true;
-
                 }
             }
         }
@@ -126,7 +111,7 @@ public class ControllerLogic : MonoBehaviour {
         }
     }
 
-    public MovementForChars CurrentChar
+    public MovementBehaviour CurrentChar
     {
         get
         {
