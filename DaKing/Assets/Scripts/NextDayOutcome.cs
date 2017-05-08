@@ -17,21 +17,6 @@ public class NextDayOutcome : AnimatedMenu {
     //Sound effect (Boom)
     public AudioClip boomSFX;
 
-    //The outcome in difference from the last day
-    private int moneyDif; 
-    private int militaryDif; 
-    private int depressionDif;
-
-    //We use this for player stats
-    private PlayerAttributes _playerAttributes;
-    private ControllerBehaviour _controllerBehaviour;
-
-    // Use this for initialization
-    void Start () {
-        _playerAttributes = GlobalReferencesBehaviour.instance.SceneData.playerAttributes;
-        _controllerBehaviour = GlobalReferencesBehaviour.instance.SceneData.GetComponent<ControllerBehaviour>();
-    }
-
     /// <summary>
     /// Entry point to kick start the script
     /// </summary>
