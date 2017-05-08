@@ -5,7 +5,7 @@ public class TransitionToGameScript : MonoBehaviour
 {
 
     [Tooltip("The script responcible for starting the game")]
-    private ControllerLogic controllerLogic;
+    private ControllerBehaviour controllerBehaviour;
 
     [Tooltip("This is the game canvas that draws the in game UI")]
     public CanvasGroup gameCanvas;
@@ -48,15 +48,15 @@ public class TransitionToGameScript : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        controllerLogic = GameObject.Find("Controller").GetComponent<ControllerLogic>();
-        gameCameraPosition = GameObject.Find("GameCameraPosition").transform;
+        controllerBehaviour = GlobalReferencesBehaviour.instance.SceneData.controller.GetComponent<ControllerBehaviour>();
+        gameCameraPosition = GlobalReferencesBehaviour.instance.SceneData.gameCameraPosition.transform;
         mainMenuCanvasGroup = transform.parent.GetComponent<CanvasGroup>();
     }
 
     void OnLevelWasLoaded()
     {
-        controllerLogic = GameObject.Find("Controller").GetComponent<ControllerLogic>();
-        gameCameraPosition = GameObject.Find("GameCameraPosition").transform;
+        controllerBehaviour = GlobalReferencesBehaviour.instance.SceneData.controller.GetComponent<ControllerBehaviour>();
+        gameCameraPosition = GlobalReferencesBehaviour.instance.SceneData.gameCameraPosition.transform;
         mainMenuCanvasGroup = transform.parent.GetComponent<CanvasGroup>();
     }
 
@@ -78,7 +78,7 @@ public class TransitionToGameScript : MonoBehaviour
             StartCoroutine(FadeOut());
 
             //Start reading in characters json files
-            controllerLogic.GetComponent<GameMaster>().Init();
+            controllerBehaviour.GetComponent<GameMaster>().Init();
         }
     }
 
@@ -107,9 +107,7 @@ public class TransitionToGameScript : MonoBehaviour
     /// </summary>
     public void StartGame()
     {
-        //controllerLogic.gameObject.SetActive(true);
-
-        controllerLogic.Init();
+        controllerBehaviour.ControllerLogic.Init();
 
         gameCanvas.gameObject.SetActive(true);
 

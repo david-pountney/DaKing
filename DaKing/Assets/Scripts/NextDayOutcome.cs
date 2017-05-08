@@ -24,12 +24,12 @@ public class NextDayOutcome : AnimatedMenu {
 
     //We use this for player stats
     private PlayerAttributes _playerAttributes;
-    private ControllerLogic _controllerLogic;
+    private ControllerBehaviour _controllerBehaviour;
 
     // Use this for initialization
     void Start () {
-        _playerAttributes = GameObject.Find("king").GetComponent<PlayerAttributes>();
-        _controllerLogic = GameObject.FindGameObjectWithTag("Controller").GetComponent<ControllerLogic>();
+        _playerAttributes = GlobalReferencesBehaviour.instance.SceneData.playerAttributes;
+        _controllerBehaviour = GlobalReferencesBehaviour.instance.SceneData.GetComponent<ControllerBehaviour>();
     }
 
     /// <summary>
@@ -45,7 +45,7 @@ public class NextDayOutcome : AnimatedMenu {
 
     private void setupDayText()
     {
-        dayNumberText.text = "Day " + _controllerLogic.DayNumber;
+        dayNumberText.text = "Day " + _controllerBehaviour.ControllerLogic.DayNumber;
     }
 
     private void finalFade()
@@ -147,7 +147,7 @@ public class NextDayOutcome : AnimatedMenu {
         yield return new WaitForSeconds(3f);
 
         //Finishing code
-        _controllerLogic.nextCharacter();
+        _controllerBehaviour.ControllerLogic.nextCharacter();
     }
 
     private void fadeAllComponents()
