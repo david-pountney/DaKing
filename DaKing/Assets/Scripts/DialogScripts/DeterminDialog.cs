@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 public class DeterminDialog : MonoBehaviour {
 
-    public ExecuteChoices theChoice;
+    public ExecuteChoicesBehaviour theChoice;
     public List<string> dialogOption1;
     public List<string> speechYes;
     public List<string> speechNo;
@@ -12,7 +12,7 @@ public class DeterminDialog : MonoBehaviour {
 
     void Awake()
     {
-            theChoice = GetComponent<ExecuteChoices>();
+        theChoice = GetComponent<ExecuteChoicesBehaviour>();
     }
 
     public virtual List<string> GetDialog()

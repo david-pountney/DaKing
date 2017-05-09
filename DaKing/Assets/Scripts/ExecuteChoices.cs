@@ -1,71 +1,105 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class ExecuteChoices : MonoBehaviour
+public class ExecuteChoices
 {
-    private PlayerAttributes playerAttributes;
-    private MovementBehaviour movementForChars;
+    public Transform ThisTransform { get { return _thisTransform; } set { _thisTransform = value; } }
+
+    public PlayerAttributes PlayerAttributes { get { return _playerAttributes; } set { _playerAttributes = value; } }
+    public MovementBehaviour MovementForChars { get { return _movementForChars; } set { _movementForChars = value; } }
+    public SpeechBehaviour SpeechBehaviour { get { return _speechBehaviour; } set { _speechBehaviour = value; } }
+    public SpawnCoins SpawnCoins { get { return _spawnCoins; } set { _spawnCoins = value; } }
+
+    public int YesMoneyOutcome { get { return _yesMoneyOutcome; } set { _yesMoneyOutcome = value; } }
+    public int NoMoneyOutcome { get { return _noMoneyOutcome; } set { _noMoneyOutcome = value; } }
+    
+    public int YesMilitaryOutcome { get { return _yesMilitaryOutcome; } set { _yesMilitaryOutcome = value; } }
+    public int NoMilitaryOutcome { get { return _noMoneyOutcome; } set { _noMoneyOutcome = value; } }
+
+    public int YesMoodOutcome { get { return _yesMoodOutcome; } set { _yesMoodOutcome = value; } }
+    public int NoMoodOutcome { get { return _noMoodOutcome; } set { _noMoodOutcome = value; } }
+
+    public int PassiveOneMoneyOutcome { get { return _passiveOneMoneyOutcome; } set { _passiveOneMoneyOutcome = value; } }
+    public int PassiveOneMilitaryOutcome { get { return _passiveOneMilitaryOutcome; } set { _passiveOneMilitaryOutcome = value; } }
+    public int PassiveOneMoodOutcome { get { return _passiveOneMoodOutcome; } set { _passiveOneMoodOutcome = value; } }
+
+    public int PassiveTwoMoneyOutcome { get { return _passiveTwoMoneyOutcome; } set { _passiveTwoMoneyOutcome = value; } }
+    public int PassiveTwoMilitaryOutcome { get { return _passiveTwoMilitaryOutcome; } set { _passiveTwoMilitaryOutcome = value; } }
+    public int PassiveTwoMoodOutcome { get { return _passiveTwoMoodOutcome; } set { _passiveTwoMoodOutcome = value; } }
+
+    public int MoodLoss{ get { return _moodLoss; } set { _moodLoss = value; } }
+
+    private Transform _thisTransform;
+
+    private PlayerAttributes _playerAttributes;
+    private MovementBehaviour _movementForChars;
     private SpeechBehaviour _speechBehaviour;
 
-    private SpawnCoins spawnCoins;
+    private SpawnCoins _spawnCoins;
 
-    public int yesMoneyOutcome;
-    public int noMoneyOutcome;
+    [SerializeField]
+    private int _yesMoneyOutcome;
+    [SerializeField]
+    private int _noMoneyOutcome;
 
-    public int yesMilitaryOutcome;
-    public int noMilitaryOutcome;
+    [SerializeField]
+    private int _yesMilitaryOutcome;
+    [SerializeField]
+    private int _noMilitaryOutcome;
 
-    public int noDepressionOutcome;
-    public int yesDepressionOutcome;
+    [SerializeField]
+    private int _yesMoodOutcome;
+    [SerializeField]
+    private int _noMoodOutcome;
 
-    public int passiveOneMoneyOutcome;
-    public int passiveOneMilitaryOutcome;
-    public int passiveOneDepressionOutcome;
+    [SerializeField]
+    private int _passiveOneMoneyOutcome;
+    [SerializeField]
+    private int _passiveOneMilitaryOutcome;
+    [SerializeField]
+    private int _passiveOneMoodOutcome;
 
-    public int passiveTwoMoneyOutcome;
-    public int passiveTwoMilitaryOutcome;
-    public int passiveTwoDepressionOutcome;
+    [SerializeField]
+    private int _passiveTwoMoneyOutcome;
+    [SerializeField]
+    private int _passiveTwoMilitaryOutcome;
+    [SerializeField]
+    private int _passiveTwoMoodOutcome;
 
     //Stores whether the user said yes or no to this choice
     public bool outcomeChoice;
 
-    void Start()
-    {
-        playerAttributes = GameObject.Find("king").GetComponent<PlayerAttributes>();
-        movementForChars = GetComponent<MovementBehaviour>();
-        _speechBehaviour = GetComponent<SpeechBehaviour>();
-        spawnCoins = GameObject.Find("Controller").GetComponent<SpawnCoins>();
-    }
+    //How much mood does the player lose if he doesn't have enough resources to make a choice?
+    private int _moodLoss = 5;
 
+    public void ExecuteChoice(IChoiceLogic theChoiceType)
+    {
+        theChoiceType.ExecuteChoice(this);
+    }
+    /*
     public void ExecuteYesChoice()
     {
-        if ((yesMoneyOutcome > 0 || (playerAttributes.money >= Mathf.Abs(yesMoneyOutcome))) &&
-            (yesMilitaryOutcome > 0 || (playerAttributes.military >= Mathf.Abs(yesMilitaryOutcome))))
+        if (CheckIfYouHaveEnoughResources())
         {
             _speechBehaviour.SpeechLogic.ShowYesSpeech();
 
             // Handle Money
-            // Debug.Log("yesMoneyOutcome" + yesMoneyOutcome);
-            iTween.ValueTo(gameObject, iTween.Hash("from", playerAttributes.money, "to", playerAttributes.money + yesMoneyOutcome, "onupdate", "itweenChangeMoney"));
-            spawnCoins.updateCoins(yesMoneyOutcome);
+            iTween.ValueTo(gameObject, iTween.Hash("from", playerAttributes.money, "to", playerAttributes.money + _yesMoneyOutcome, "onupdate", "itweenChangeMoney"));
+            spawnCoins.updateCoins(_yesMoneyOutcome);
 
             // Handle military
-            // Debug.Log("yesMilitaryOutcome" + yesMilitaryOutcome);
-            iTween.ValueTo(gameObject, iTween.Hash("from", playerAttributes.military, "to", playerAttributes.military + yesMilitaryOutcome, "onupdate", "itweenChangeMilitary"));
+            iTween.ValueTo(gameObject, iTween.Hash("from", playerAttributes.military, "to", playerAttributes.military + _yesMilitaryOutcome, "onupdate", "itweenChangeMilitary"));
 
             // // Handle mood
-            int moodOutcome = playerAttributes.depression + yesDepressionOutcome;
+            int moodOutcome = playerAttributes.depression + _yesMoodOutcome;
             if (moodOutcome > playerAttributes.maxDepression) moodOutcome = playerAttributes.maxDepression;
             if (moodOutcome <= 0) _speechBehaviour.SpeechLogic.GameIsNowOver = true;
+
             if (moodOutcome != playerAttributes.depression)
                 AnimateMoodValueChanging(moodOutcome);
 
-
-            // if (yesDepressionOutcome > 0) StartCoroutine(changeDepression(yesDepressionOutcome, 1));
-            // else if (yesDepressionOutcome < 0) StartCoroutine(changeDepression(yesDepressionOutcome, -1));
-
             //Display flash text
-            playerAttributes.flashTextValues(yesMoneyOutcome, yesMilitaryOutcome, yesDepressionOutcome);
+            playerAttributes.flashTextValues(_yesMoneyOutcome, _yesMilitaryOutcome, _yesMoodOutcome);
 
             //Save the decision the player made
             outcomeChoice = true;
@@ -86,36 +120,31 @@ public class ExecuteChoices : MonoBehaviour
         }
 
     }
-
+    
     public void ExecuteNoChoice()
     {
-        if ((noMoneyOutcome > 0 || (playerAttributes.money >= Mathf.Abs(noMoneyOutcome))) &&
-            (noMilitaryOutcome > 0 || (playerAttributes.military >= Mathf.Abs(noMilitaryOutcome))))
+        if ((_noMoneyOutcome > 0 || (playerAttributes.money >= Mathf.Abs(_noMoneyOutcome))) &&
+            (_noMilitaryOutcome > 0 || (playerAttributes.military >= Mathf.Abs(_noMilitaryOutcome))))
         {
             _speechBehaviour.SpeechLogic.ShowNoSpeech();
 
             // Handle Money
-            // Debug.Log("noMilitaryOutcome" + noMoneyOutcome);
-            iTween.ValueTo(gameObject, iTween.Hash("from", playerAttributes.money, "to", playerAttributes.money + noMoneyOutcome, "onupdate", "itweenChangeMoney"));
-            spawnCoins.updateCoins(noMoneyOutcome);
+            iTween.ValueTo(gameObject, iTween.Hash("from", playerAttributes.money, "to", playerAttributes.money + _noMoneyOutcome, "onupdate", "itweenChangeMoney"));
+            spawnCoins.updateCoins(_noMoneyOutcome);
 
             // Handle Military
-            // Debug.Log("noMilitaryOutcome" + noMilitaryOutcome);
-            iTween.ValueTo(gameObject, iTween.Hash("from", playerAttributes.military, "to", playerAttributes.military + noMilitaryOutcome, "onupdate", "itweenChangeMilitary"));
+            iTween.ValueTo(gameObject, iTween.Hash("from", playerAttributes.military, "to", playerAttributes.military + _noMilitaryOutcome, "onupdate", "itweenChangeMilitary"));
 
             // Handle Mood
-            int moodOutcome = playerAttributes.depression + noDepressionOutcome;
+            int moodOutcome = playerAttributes.depression + _noMoodOutcome;
             if (moodOutcome > playerAttributes.maxDepression) moodOutcome = playerAttributes.maxDepression;
             if (moodOutcome <= 0) _speechBehaviour.SpeechLogic.GameIsNowOver = true;
 
             if (moodOutcome != playerAttributes.depression)
                 AnimateMoodValueChanging(moodOutcome);
 
-            // if (noDepressionOutcome > 0) StartCoroutine(changeDepression(noDepressionOutcome, 1));
-            // else if (noDepressionOutcome < 0) StartCoroutine(changeDepression(noDepressionOutcome, -1));
-
             //Display flash text
-            playerAttributes.flashTextValues(noMoneyOutcome, noMilitaryOutcome, noDepressionOutcome);
+            playerAttributes.flashTextValues(_noMoneyOutcome, _noMilitaryOutcome, _noMoodOutcome);
 
             //Save the decision the player made
             outcomeChoice = false;
@@ -141,17 +170,17 @@ public class ExecuteChoices : MonoBehaviour
     {
         // Handle Money
         // Debug.Log("passiveOneMoneyOutcome" + passiveOneMoneyOutcome);
-        if ((passiveOneMoneyOutcome > 0 || (playerAttributes.money >= Mathf.Abs(passiveOneMoneyOutcome))) &&
-            (passiveOneMilitaryOutcome > 0 || (playerAttributes.military >= Mathf.Abs(passiveOneMilitaryOutcome))))
+        if ((_passiveOneMoneyOutcome > 0 || (playerAttributes.money >= Mathf.Abs(_passiveOneMoneyOutcome))) &&
+            (_passiveOneMilitaryOutcome > 0 || (playerAttributes.military >= Mathf.Abs(_passiveOneMilitaryOutcome))))
         {
-            iTween.ValueTo(gameObject, iTween.Hash("from", playerAttributes.money, "to", playerAttributes.money + passiveOneMoneyOutcome, "onupdate", "itweenChangeMoney"));
-            spawnCoins.updateCoins(passiveOneMoneyOutcome);
+            iTween.ValueTo(gameObject, iTween.Hash("from", playerAttributes.money, "to", playerAttributes.money + _passiveOneMoneyOutcome, "onupdate", "itweenChangeMoney"));
+            spawnCoins.updateCoins(_passiveOneMoneyOutcome);
 
             // Handle Militry
-            iTween.ValueTo(gameObject, iTween.Hash("from", playerAttributes.military, "to", playerAttributes.military + passiveOneMilitaryOutcome, "onupdate", "itweenChangeMilitary"));
+            iTween.ValueTo(gameObject, iTween.Hash("from", playerAttributes.military, "to", playerAttributes.military + _passiveOneMilitaryOutcome, "onupdate", "itweenChangeMilitary"));
 
             // // Handle depression
-            int moodOutcome = playerAttributes.depression + passiveOneDepressionOutcome;
+            int moodOutcome = playerAttributes.depression + _passiveOneMoodOutcome;
             if (moodOutcome > playerAttributes.maxDepression) moodOutcome = playerAttributes.maxDepression;
             if (moodOutcome <= 0) _speechBehaviour.SpeechLogic.GameIsNowOver = true;
 
@@ -162,7 +191,7 @@ public class ExecuteChoices : MonoBehaviour
             // else if (passiveOneDepressionOutcome < 0) StartCoroutine(changeDepression(passiveOneDepressionOutcome, -1));
 
             //Display flash text
-            playerAttributes.flashTextValues(passiveOneMoneyOutcome, passiveOneMilitaryOutcome, passiveOneDepressionOutcome);
+            playerAttributes.flashTextValues(_passiveOneMoneyOutcome, _passiveOneMilitaryOutcome, _passiveOneMoodOutcome);
         }
         //Not enough resource
         else
@@ -179,15 +208,15 @@ public class ExecuteChoices : MonoBehaviour
         // Handle Money
         if (loseMoney)
         {
-            yesMoneyOutcome = -playerAttributes.money;
-            noMoneyOutcome = -playerAttributes.money;
+            _yesMoneyOutcome = -playerAttributes.money;
+            _noMoneyOutcome = -playerAttributes.money;
         }
 
         // Handle Militry
         if (loseMilitary)
         {
-            yesMilitaryOutcome = -playerAttributes.military;
-            noMilitaryOutcome = -playerAttributes.military;
+            _yesMilitaryOutcome = -playerAttributes.military;
+            _noMilitaryOutcome = -playerAttributes.military;
         }
 
         if (loseDepression)
@@ -196,19 +225,19 @@ public class ExecuteChoices : MonoBehaviour
 
     public void ExecutePassiveTwoChoice()
     {
-        if ((passiveTwoMoneyOutcome > 0 || (playerAttributes.money >= Mathf.Abs(passiveTwoMoneyOutcome))) &&
-        (passiveTwoMilitaryOutcome > 0 || (playerAttributes.military >= Mathf.Abs(passiveTwoMilitaryOutcome))))
+        if ((_passiveTwoMoneyOutcome > 0 || (playerAttributes.money >= Mathf.Abs(_passiveTwoMoneyOutcome))) &&
+        (_passiveTwoMilitaryOutcome > 0 || (playerAttributes.military >= Mathf.Abs(_passiveTwoMilitaryOutcome))))
         {
             // Handle Money
             // Debug.Log("passiveTwoMoneyOutcome" + passiveTwoMoneyOutcome);
-            iTween.ValueTo(gameObject, iTween.Hash("from", playerAttributes.money, "to", playerAttributes.money + passiveTwoMoneyOutcome, "onupdate", "itweenChangeMoney"));
-            spawnCoins.updateCoins(passiveTwoMoneyOutcome);
+            iTween.ValueTo(gameObject, iTween.Hash("from", playerAttributes.money, "to", playerAttributes.money + _passiveTwoMoneyOutcome, "onupdate", "itweenChangeMoney"));
+            spawnCoins.updateCoins(_passiveTwoMoneyOutcome);
 
             // Debug.Log("passiveTwoMilitaryOutcome" + passiveTwoMilitaryOutcome);
-            iTween.ValueTo(gameObject, iTween.Hash("from", playerAttributes.military, "to", playerAttributes.military + passiveTwoMilitaryOutcome, "onupdate", "itweenChangeMilitary"));
+            iTween.ValueTo(gameObject, iTween.Hash("from", playerAttributes.military, "to", playerAttributes.military + _passiveTwoMilitaryOutcome, "onupdate", "itweenChangeMilitary"));
 
             // // Handle depression
-            int moodOutcome = playerAttributes.depression + passiveTwoDepressionOutcome;
+            int moodOutcome = playerAttributes.depression + _passiveTwoMoodOutcome;
             if (moodOutcome > playerAttributes.maxDepression) moodOutcome = playerAttributes.maxDepression;
             if (moodOutcome <= 0) _speechBehaviour.SpeechLogic.GameIsNowOver = true;
 
@@ -217,7 +246,7 @@ public class ExecuteChoices : MonoBehaviour
             playerAttributes.setMoodState(moodOutcome);
 
             //Display flash text
-            playerAttributes.flashTextValues(passiveTwoMoneyOutcome, passiveTwoMilitaryOutcome, passiveTwoDepressionOutcome);
+            playerAttributes.flashTextValues(_passiveTwoMoneyOutcome, _passiveTwoMilitaryOutcome, _passiveTwoMoodOutcome);
         }
         //Not enough resource
         else
@@ -228,36 +257,28 @@ public class ExecuteChoices : MonoBehaviour
             playerAttributes.flashTextValues(0, 0, -5);
         }
     }
-
-    private void AnimateMoodValueChanging(int moodOutcome)
-    {
-        playerAttributes.setMoodState(moodOutcome);
-
-        //Change mood value shown on screen
-        iTween.ValueTo(gameObject, iTween.Hash("from", playerAttributes.depression, "to", moodOutcome, "onupdate", "itweenChangeMood"
-            , "oncomplete", "itweenCompleteMood"));
-    }
+    */
 
     private void itweenChangeMilitary(int newVal)
     {
-        playerAttributes.setMilitary(newVal);
+        _playerAttributes.setMilitary(newVal);
     }
 
     private void itweenChangeMoney(int newVal)
     {
         // Debug.Log("set Monnie: "+newVal);
-        playerAttributes.setMoney(newVal);
+        _playerAttributes.setMoney(newVal);
     }
 
     private void itweenChangeMood(int newVal)
     {
-        playerAttributes.setMood(newVal);
+        _playerAttributes.setMood(newVal);
     }
 
     private void itweenCompleteMood()
     {
         Debug.Log("got here");
-        playerAttributes.HasAlreadyChangedMood = false;
+        _playerAttributes.HasAlreadyChangedMood = false;
     }
 
     private void endChoiceLogic()

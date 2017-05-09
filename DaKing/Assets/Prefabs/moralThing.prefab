@@ -10,8 +10,8 @@ GameObject:
   - 4: {fileID: 411848}
   - 212: {fileID: 21233698}
   - 114: {fileID: 11468246}
-  - 114: {fileID: 11419808}
   - 114: {fileID: 11462118}
+  - 114: {fileID: 11466790}
   m_Layer: 0
   m_Name: moralThing
   m_TagString: Character
@@ -31,31 +31,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
---- !u!114 &11419808
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 121930}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 12f7bcab77466234b9ab2943e7682aca, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  spawnCoins: {fileID: 0}
-  yesMoneyOutcome: 0
-  noMoneyOutcome: 0
-  yesMilitaryOutcome: 0
-  noMilitaryOutcome: 0
-  noDepressionOutcome: 0
-  yesDepressionOutcome: 0
-  passiveOneMoneyOutcome: 0
-  passiveOneMilitaryOutcome: 0
-  passiveOneDepressionOutcome: 0
-  passiveTwoMoneyOutcome: 0
-  passiveTwoMilitaryOutcome: 0
-  passiveTwoDepressionOutcome: 0
-  outcomeChoice: 0
 --- !u!114 &11462118
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -113,6 +88,17 @@ MonoBehaviour:
   - 
   - 
   cantAffordDialog: []
+--- !u!114 &11466790
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 121930}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f19ec66f1319da4d873241e5ac2dcec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &11468246
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -124,22 +110,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 735a7de9d80dffc419823258c24f75ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speech: {fileID: 157718, guid: 07052e5958546a94f955b9fd92c252ed, type: 2}
-  choices: {fileID: 0}
-  controllerLogic: {fileID: 0}
-  gameover: {fileID: 0}
   enterSpeed: 5
   stoppingPointX: 5
   endingPointX: 20
   startingPointX: 15
   startingPointY: -3.5
-  speechBubbleX: 350
-  speechBubbleY: 0
   exitSpeed: 5
   amplitudeY: 0.01
   omegaY: 5
-  enter: 0
-  exit: 0
 --- !u!212 &21233698
 SpriteRenderer:
   m_ObjectHideFlags: 1

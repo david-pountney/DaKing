@@ -174,11 +174,11 @@ Prefab:
       propertyPath: gameover
       value: 
       objectReference: {fileID: 530247848}
-    - target: {fileID: 11485840, guid: 1dd8df7e3e1d8e84fb5b64da7f3a219a, type: 2}
+    - target: {fileID: 0}
       propertyPath: playerAttributes
       value: 
       objectReference: {fileID: 1341586676}
-    - target: {fileID: 11485840, guid: 1dd8df7e3e1d8e84fb5b64da7f3a219a, type: 2}
+    - target: {fileID: 0}
       propertyPath: spawnCoins
       value: 
       objectReference: {fileID: 1660182462}
@@ -236,7 +236,7 @@ Prefab:
       propertyPath: speechNo
       value: 
       objectReference: {fileID: 0}
-    - target: {fileID: 11485840, guid: 1dd8df7e3e1d8e84fb5b64da7f3a219a, type: 2}
+    - target: {fileID: 0}
       propertyPath: passiveDepressionOutcome
       value: 0
       objectReference: {fileID: 0}
@@ -248,15 +248,15 @@ Prefab:
       propertyPath: startingPointY
       value: -2
       objectReference: {fileID: 0}
-    - target: {fileID: 11485840, guid: 1dd8df7e3e1d8e84fb5b64da7f3a219a, type: 2}
+    - target: {fileID: 0}
       propertyPath: noDepressionOutcome
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 11485840, guid: 1dd8df7e3e1d8e84fb5b64da7f3a219a, type: 2}
+    - target: {fileID: 0}
       propertyPath: yesDepressionOutcome
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 11485840, guid: 1dd8df7e3e1d8e84fb5b64da7f3a219a, type: 2}
+    - target: {fileID: 0}
       propertyPath: yesMoneyOutcome
       value: -5
       objectReference: {fileID: 0}
@@ -274,6 +274,7 @@ Prefab:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 11409854, guid: 1dd8df7e3e1d8e84fb5b64da7f3a219a, type: 2}
+    - {fileID: 0}
   m_ParentPrefab: {fileID: 100100000, guid: 1dd8df7e3e1d8e84fb5b64da7f3a219a, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &26105060 stripped
@@ -301,7 +302,7 @@ MonoBehaviour:
   speechNo: []
   cantAffordDialog: []
   dialogOption2: []
-  previousCharactersDecision: {fileID: 1721028283}
+  previousCharactersDecision: {fileID: 1721028287}
 --- !u!95 &26105063
 Animator:
   serializedVersion: 3
@@ -319,12 +320,6 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!114 &26105064 stripped
-MonoBehaviour:
-  m_PrefabParentObject: {fileID: 11485840, guid: 1dd8df7e3e1d8e84fb5b64da7f3a219a,
-    type: 2}
-  m_PrefabInternal: {fileID: 26105059}
-  m_Script: {fileID: 11500000, guid: 12f7bcab77466234b9ab2943e7682aca, type: 3}
 --- !u!114 &26105065
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -338,6 +333,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speechBubbleX: 350
   speechBubbleY: 125
+--- !u!114 &26105068 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 11409220, guid: 1dd8df7e3e1d8e84fb5b64da7f3a219a,
+    type: 2}
+  m_PrefabInternal: {fileID: 26105059}
+  m_Script: {fileID: 11500000, guid: 7f19ec66f1319da4d873241e5ac2dcec, type: 3}
 --- !u!1 &33585058
 GameObject:
   m_ObjectHideFlags: 0
@@ -560,11 +561,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 11441390, guid: 2260230439d8ae249869b38ced179444, type: 2}
+    - target: {fileID: 0}
       propertyPath: playerAttributes
       value: 
       objectReference: {fileID: 1341586676}
-    - target: {fileID: 11441390, guid: 2260230439d8ae249869b38ced179444, type: 2}
+    - target: {fileID: 0}
       propertyPath: spawnCoins
       value: 
       objectReference: {fileID: 1660182462}
@@ -643,6 +644,7 @@ Prefab:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 11470164, guid: 2260230439d8ae249869b38ced179444, type: 2}
+    - {fileID: 0}
   m_ParentPrefab: {fileID: 100100000, guid: 2260230439d8ae249869b38ced179444, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &54167729 stripped
@@ -1005,11 +1007,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 11441390, guid: 2260230439d8ae249869b38ced179444, type: 2}
+    - target: {fileID: 0}
       propertyPath: playerAttributes
       value: 
       objectReference: {fileID: 1341586676}
-    - target: {fileID: 11441390, guid: 2260230439d8ae249869b38ced179444, type: 2}
+    - target: {fileID: 0}
       propertyPath: spawnCoins
       value: 
       objectReference: {fileID: 1660182462}
@@ -1079,6 +1081,7 @@ Prefab:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 11470164, guid: 2260230439d8ae249869b38ced179444, type: 2}
+    - {fileID: 0}
   m_ParentPrefab: {fileID: 100100000, guid: 2260230439d8ae249869b38ced179444, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &102514186 stripped
@@ -1136,11 +1139,11 @@ Prefab:
       propertyPath: gameover
       value: 
       objectReference: {fileID: 530247848}
-    - target: {fileID: 11476060, guid: 934f232f5c3f3cc4f8a5f3397f45c3a5, type: 2}
+    - target: {fileID: 0}
       propertyPath: playerAttributes
       value: 
       objectReference: {fileID: 1341586676}
-    - target: {fileID: 11476060, guid: 934f232f5c3f3cc4f8a5f3397f45c3a5, type: 2}
+    - target: {fileID: 0}
       propertyPath: spawnCoins
       value: 
       objectReference: {fileID: 1660182462}
@@ -1181,7 +1184,8 @@ Prefab:
       propertyPath: stoppingPointX
       value: 4
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 0}
   m_ParentPrefab: {fileID: 100100000, guid: 934f232f5c3f3cc4f8a5f3397f45c3a5, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &106210241 stripped
@@ -1261,7 +1265,7 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 11479490, guid: acfc9b15f70a445429def5cdab29ea17, type: 2}
+    - target: {fileID: 0}
       propertyPath: spawnCoins
       value: 
       objectReference: {fileID: 1660182462}
@@ -1301,7 +1305,8 @@ Prefab:
       propertyPath: stoppingPointX
       value: 4
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 0}
   m_ParentPrefab: {fileID: 100100000, guid: acfc9b15f70a445429def5cdab29ea17, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &118472702
@@ -1331,7 +1336,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4fdfbb2fc4b489648b33a09b4c023ac2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  theCharacter: {fileID: 0}
+  theCharacter: {fileID: 927470005}
 --- !u!4 &118472704
 Transform:
   m_ObjectHideFlags: 0
@@ -1426,11 +1431,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 11479490, guid: acfc9b15f70a445429def5cdab29ea17, type: 2}
+    - target: {fileID: 0}
       propertyPath: playerAttributes
       value: 
       objectReference: {fileID: 1341586676}
-    - target: {fileID: 11479490, guid: acfc9b15f70a445429def5cdab29ea17, type: 2}
+    - target: {fileID: 0}
       propertyPath: spawnCoins
       value: 
       objectReference: {fileID: 1660182462}
@@ -1454,7 +1459,20 @@ Prefab:
       propertyPath: stoppingPointX
       value: 4
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 423732, guid: acfc9b15f70a445429def5cdab29ea17, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 0.37991378
+      objectReference: {fileID: 0}
+    - target: {fileID: 423732, guid: acfc9b15f70a445429def5cdab29ea17, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 0.37676045
+      objectReference: {fileID: 0}
+    - target: {fileID: 423732, guid: acfc9b15f70a445429def5cdab29ea17, type: 2}
+      propertyPath: m_LocalScale.z
+      value: 0.67278653
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 0}
   m_ParentPrefab: {fileID: 100100000, guid: acfc9b15f70a445429def5cdab29ea17, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &151628160
@@ -1549,11 +1567,11 @@ Prefab:
       propertyPath: gameover
       value: 
       objectReference: {fileID: 530247848}
-    - target: {fileID: 11485840, guid: 1dd8df7e3e1d8e84fb5b64da7f3a219a, type: 2}
+    - target: {fileID: 0}
       propertyPath: playerAttributes
       value: 
       objectReference: {fileID: 1341586676}
-    - target: {fileID: 11485840, guid: 1dd8df7e3e1d8e84fb5b64da7f3a219a, type: 2}
+    - target: {fileID: 0}
       propertyPath: spawnCoins
       value: 
       objectReference: {fileID: 1660182462}
@@ -1586,7 +1604,8 @@ Prefab:
       propertyPath: stoppingPointX
       value: 4
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 0}
   m_ParentPrefab: {fileID: 100100000, guid: 1dd8df7e3e1d8e84fb5b64da7f3a219a, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &152739667 stripped
@@ -1678,11 +1697,11 @@ Prefab:
       propertyPath: gameover
       value: 
       objectReference: {fileID: 530247848}
-    - target: {fileID: 11476060, guid: 934f232f5c3f3cc4f8a5f3397f45c3a5, type: 2}
+    - target: {fileID: 0}
       propertyPath: playerAttributes
       value: 
       objectReference: {fileID: 1341586676}
-    - target: {fileID: 11476060, guid: 934f232f5c3f3cc4f8a5f3397f45c3a5, type: 2}
+    - target: {fileID: 0}
       propertyPath: spawnCoins
       value: 
       objectReference: {fileID: 1660182462}
@@ -1706,7 +1725,12 @@ Prefab:
       propertyPath: startingPointY
       value: -2.75
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 11442876, guid: 934f232f5c3f3cc4f8a5f3397f45c3a5, type: 2}
+      propertyPath: stoppingPointX
+      value: 4
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 0}
   m_ParentPrefab: {fileID: 100100000, guid: 934f232f5c3f3cc4f8a5f3397f45c3a5, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &156968848 stripped
@@ -1831,11 +1855,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 11479490, guid: acfc9b15f70a445429def5cdab29ea17, type: 2}
+    - target: {fileID: 0}
       propertyPath: playerAttributes
       value: 
       objectReference: {fileID: 1341586676}
-    - target: {fileID: 11479490, guid: acfc9b15f70a445429def5cdab29ea17, type: 2}
+    - target: {fileID: 0}
       propertyPath: spawnCoins
       value: 
       objectReference: {fileID: 1660182462}
@@ -1863,7 +1887,20 @@ Prefab:
       propertyPath: stoppingPointX
       value: 4
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 423732, guid: acfc9b15f70a445429def5cdab29ea17, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 0.37991378
+      objectReference: {fileID: 0}
+    - target: {fileID: 423732, guid: acfc9b15f70a445429def5cdab29ea17, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 0.37676045
+      objectReference: {fileID: 0}
+    - target: {fileID: 423732, guid: acfc9b15f70a445429def5cdab29ea17, type: 2}
+      propertyPath: m_LocalScale.z
+      value: 0.67278653
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 0}
   m_ParentPrefab: {fileID: 100100000, guid: acfc9b15f70a445429def5cdab29ea17, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &167826015
@@ -2191,11 +2228,11 @@ Prefab:
       propertyPath: gameover
       value: 
       objectReference: {fileID: 530247848}
-    - target: {fileID: 11476060, guid: 934f232f5c3f3cc4f8a5f3397f45c3a5, type: 2}
+    - target: {fileID: 0}
       propertyPath: playerAttributes
       value: 
       objectReference: {fileID: 1341586676}
-    - target: {fileID: 11476060, guid: 934f232f5c3f3cc4f8a5f3397f45c3a5, type: 2}
+    - target: {fileID: 0}
       propertyPath: spawnCoins
       value: 
       objectReference: {fileID: 1660182462}
@@ -2226,6 +2263,7 @@ Prefab:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 11429960, guid: 934f232f5c3f3cc4f8a5f3397f45c3a5, type: 2}
+    - {fileID: 0}
   m_ParentPrefab: {fileID: 100100000, guid: 934f232f5c3f3cc4f8a5f3397f45c3a5, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &217342301 stripped
@@ -2270,7 +2308,7 @@ MonoBehaviour:
   speechNo: []
   cantAffordDialog: []
   dialogOption2: []
-  previousCharactersDecision: {fileID: 848862166}
+  previousCharactersDecision: {fileID: 848862170}
 --- !u!114 &217342305
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2439,11 +2477,11 @@ Prefab:
       propertyPath: gameover
       value: 
       objectReference: {fileID: 530247848}
-    - target: {fileID: 11476060, guid: 934f232f5c3f3cc4f8a5f3397f45c3a5, type: 2}
+    - target: {fileID: 0}
       propertyPath: playerAttributes
       value: 
       objectReference: {fileID: 1341586676}
-    - target: {fileID: 11476060, guid: 934f232f5c3f3cc4f8a5f3397f45c3a5, type: 2}
+    - target: {fileID: 0}
       propertyPath: spawnCoins
       value: 
       objectReference: {fileID: 1660182462}
@@ -2472,7 +2510,8 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 0.7192893
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 0}
   m_ParentPrefab: {fileID: 100100000, guid: 934f232f5c3f3cc4f8a5f3397f45c3a5, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &244783389 stripped
@@ -2510,6 +2549,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speechBubbleX: 350
   speechBubbleY: 0
+--- !u!114 &244783397 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 11497612, guid: 934f232f5c3f3cc4f8a5f3397f45c3a5,
+    type: 2}
+  m_PrefabInternal: {fileID: 244783388}
+  m_Script: {fileID: 11500000, guid: 7f19ec66f1319da4d873241e5ac2dcec, type: 3}
 --- !u!1 &254203375 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 140534, guid: 934f232f5c3f3cc4f8a5f3397f45c3a5, type: 2}
@@ -2675,11 +2720,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 11441390, guid: 2260230439d8ae249869b38ced179444, type: 2}
+    - target: {fileID: 0}
       propertyPath: playerAttributes
       value: 
       objectReference: {fileID: 1341586676}
-    - target: {fileID: 11441390, guid: 2260230439d8ae249869b38ced179444, type: 2}
+    - target: {fileID: 0}
       propertyPath: spawnCoins
       value: 
       objectReference: {fileID: 1660182462}
@@ -2749,6 +2794,7 @@ Prefab:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 11470164, guid: 2260230439d8ae249869b38ced179444, type: 2}
+    - {fileID: 0}
   m_ParentPrefab: {fileID: 100100000, guid: 2260230439d8ae249869b38ced179444, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &301958380 stripped
@@ -2980,11 +3026,11 @@ Prefab:
       propertyPath: gameover
       value: 
       objectReference: {fileID: 530247848}
-    - target: {fileID: 11473526, guid: 5a2847c57eef820479ddde60c7657051, type: 2}
+    - target: {fileID: 0}
       propertyPath: playerAttributes
       value: 
       objectReference: {fileID: 1341586676}
-    - target: {fileID: 11473526, guid: 5a2847c57eef820479ddde60c7657051, type: 2}
+    - target: {fileID: 0}
       propertyPath: spawnCoins
       value: 
       objectReference: {fileID: 1660182462}
@@ -3021,7 +3067,8 @@ Prefab:
       propertyPath: stoppingPointX
       value: 4
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 0}
   m_ParentPrefab: {fileID: 100100000, guid: 5a2847c57eef820479ddde60c7657051, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &318518678 stripped
@@ -3108,11 +3155,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 11494512, guid: 87100e5cbc89f4f46845eff083187c9e, type: 2}
+    - target: {fileID: 0}
       propertyPath: playerAttributes
       value: 
       objectReference: {fileID: 1341586676}
-    - target: {fileID: 11494512, guid: 87100e5cbc89f4f46845eff083187c9e, type: 2}
+    - target: {fileID: 0}
       propertyPath: spawnCoins
       value: 
       objectReference: {fileID: 1660182462}
@@ -3157,7 +3204,8 @@ Prefab:
       propertyPath: stoppingPointX
       value: 4
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 0}
   m_ParentPrefab: {fileID: 100100000, guid: 87100e5cbc89f4f46845eff083187c9e, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &345197719 stripped
@@ -3249,11 +3297,11 @@ Prefab:
       propertyPath: gameover
       value: 
       objectReference: {fileID: 530247848}
-    - target: {fileID: 11476060, guid: 934f232f5c3f3cc4f8a5f3397f45c3a5, type: 2}
+    - target: {fileID: 0}
       propertyPath: playerAttributes
       value: 
       objectReference: {fileID: 1341586676}
-    - target: {fileID: 11476060, guid: 934f232f5c3f3cc4f8a5f3397f45c3a5, type: 2}
+    - target: {fileID: 0}
       propertyPath: spawnCoins
       value: 
       objectReference: {fileID: 1660182462}
@@ -3294,7 +3342,8 @@ Prefab:
       propertyPath: stoppingPointX
       value: 4
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 0}
   m_ParentPrefab: {fileID: 100100000, guid: 934f232f5c3f3cc4f8a5f3397f45c3a5, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &345544249 stripped
@@ -3335,12 +3384,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speechBubbleX: 350
   speechBubbleY: 100
---- !u!114 &345544253 stripped
+--- !u!114 &345544257 stripped
 MonoBehaviour:
-  m_PrefabParentObject: {fileID: 11476060, guid: 934f232f5c3f3cc4f8a5f3397f45c3a5,
+  m_PrefabParentObject: {fileID: 11497612, guid: 934f232f5c3f3cc4f8a5f3397f45c3a5,
     type: 2}
   m_PrefabInternal: {fileID: 345544248}
-  m_Script: {fileID: 11500000, guid: 12f7bcab77466234b9ab2943e7682aca, type: 3}
+  m_Script: {fileID: 11500000, guid: 7f19ec66f1319da4d873241e5ac2dcec, type: 3}
 --- !u!1 &347970379
 GameObject:
   m_ObjectHideFlags: 0
@@ -3462,11 +3511,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 11442970, guid: 291d6d682230a5d40997e2c6881f717e, type: 2}
+    - target: {fileID: 0}
       propertyPath: playerAttributes
       value: 
       objectReference: {fileID: 1341586676}
-    - target: {fileID: 11442970, guid: 291d6d682230a5d40997e2c6881f717e, type: 2}
+    - target: {fileID: 0}
       propertyPath: spawnCoins
       value: 
       objectReference: {fileID: 1660182462}
@@ -3495,7 +3544,7 @@ Prefab:
       propertyPath: m_Name
       value: sob3
       objectReference: {fileID: 0}
-    - target: {fileID: 11442970, guid: 291d6d682230a5d40997e2c6881f717e, type: 2}
+    - target: {fileID: 0}
       propertyPath: yesMoneyOutcome
       value: 0
       objectReference: {fileID: 0}
@@ -3515,7 +3564,8 @@ Prefab:
       propertyPath: stoppingPointX
       value: 4
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 0}
   m_ParentPrefab: {fileID: 100100000, guid: 291d6d682230a5d40997e2c6881f717e, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &357313455 stripped
@@ -3595,11 +3645,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 11442970, guid: 291d6d682230a5d40997e2c6881f717e, type: 2}
+    - target: {fileID: 0}
       propertyPath: playerAttributes
       value: 
       objectReference: {fileID: 1341586676}
-    - target: {fileID: 11442970, guid: 291d6d682230a5d40997e2c6881f717e, type: 2}
+    - target: {fileID: 0}
       propertyPath: spawnCoins
       value: 
       objectReference: {fileID: 1660182462}
@@ -3628,7 +3678,7 @@ Prefab:
       propertyPath: m_Name
       value: sob5
       objectReference: {fileID: 0}
-    - target: {fileID: 11442970, guid: 291d6d682230a5d40997e2c6881f717e, type: 2}
+    - target: {fileID: 0}
       propertyPath: yesMoneyOutcome
       value: 0
       objectReference: {fileID: 0}
@@ -3648,7 +3698,8 @@ Prefab:
       propertyPath: stoppingPointX
       value: 4
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 0}
   m_ParentPrefab: {fileID: 100100000, guid: 291d6d682230a5d40997e2c6881f717e, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &378195265 stripped
@@ -3768,12 +3819,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speechBubbleX: 350
   speechBubbleY: 125
---- !u!114 &409532696 stripped
+--- !u!114 &409532700 stripped
 MonoBehaviour:
-  m_PrefabParentObject: {fileID: 11485840, guid: 1dd8df7e3e1d8e84fb5b64da7f3a219a,
+  m_PrefabParentObject: {fileID: 11409220, guid: 1dd8df7e3e1d8e84fb5b64da7f3a219a,
     type: 2}
   m_PrefabInternal: {fileID: 1487794435}
-  m_Script: {fileID: 11500000, guid: 12f7bcab77466234b9ab2943e7682aca, type: 3}
+  m_Script: {fileID: 11500000, guid: 7f19ec66f1319da4d873241e5ac2dcec, type: 3}
 --- !u!1 &419626869
 GameObject:
   m_ObjectHideFlags: 0
@@ -3945,11 +3996,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 11441390, guid: 2260230439d8ae249869b38ced179444, type: 2}
+    - target: {fileID: 0}
       propertyPath: playerAttributes
       value: 
       objectReference: {fileID: 1341586676}
-    - target: {fileID: 11441390, guid: 2260230439d8ae249869b38ced179444, type: 2}
+    - target: {fileID: 0}
       propertyPath: spawnCoins
       value: 
       objectReference: {fileID: 1660182462}
@@ -4019,6 +4070,7 @@ Prefab:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 11470164, guid: 2260230439d8ae249869b38ced179444, type: 2}
+    - {fileID: 0}
   m_ParentPrefab: {fileID: 100100000, guid: 2260230439d8ae249869b38ced179444, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &443462725 stripped
@@ -4046,7 +4098,7 @@ MonoBehaviour:
   speechNo: []
   cantAffordDialog: []
   dialogOption2: []
-  previousCharactersDecision: {fileID: 1652082714}
+  previousCharactersDecision: {fileID: 1465830859}
 --- !u!95 &443462728
 Animator:
   serializedVersion: 3
@@ -4077,6 +4129,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speechBubbleX: 350
   speechBubbleY: 150
+--- !u!114 &443462733 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 11489228, guid: 2260230439d8ae249869b38ced179444,
+    type: 2}
+  m_PrefabInternal: {fileID: 443462724}
+  m_Script: {fileID: 11500000, guid: 7f19ec66f1319da4d873241e5ac2dcec, type: 3}
 --- !u!1 &447356781
 GameObject:
   m_ObjectHideFlags: 0
@@ -4260,11 +4318,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 11494512, guid: 87100e5cbc89f4f46845eff083187c9e, type: 2}
+    - target: {fileID: 0}
       propertyPath: playerAttributes
       value: 
       objectReference: {fileID: 1341586676}
-    - target: {fileID: 11494512, guid: 87100e5cbc89f4f46845eff083187c9e, type: 2}
+    - target: {fileID: 0}
       propertyPath: spawnCoins
       value: 
       objectReference: {fileID: 1660182462}
@@ -4309,7 +4367,8 @@ Prefab:
       propertyPath: stoppingPointX
       value: 4
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 0}
   m_ParentPrefab: {fileID: 100100000, guid: 87100e5cbc89f4f46845eff083187c9e, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &467621922 stripped
@@ -4389,11 +4448,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 11400642, guid: 430217818891e6d4b8900b28d508bffa, type: 2}
+    - target: {fileID: 0}
       propertyPath: playerAttributes
       value: 
       objectReference: {fileID: 1341586676}
-    - target: {fileID: 11400642, guid: 430217818891e6d4b8900b28d508bffa, type: 2}
+    - target: {fileID: 0}
       propertyPath: spawnCoins
       value: 
       objectReference: {fileID: 1660182462}
@@ -4438,7 +4497,8 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 0.7647923
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 0}
   m_ParentPrefab: {fileID: 100100000, guid: 430217818891e6d4b8900b28d508bffa, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &485180732
@@ -4573,11 +4633,11 @@ Prefab:
       propertyPath: gameover
       value: 
       objectReference: {fileID: 530247848}
-    - target: {fileID: 11476060, guid: 934f232f5c3f3cc4f8a5f3397f45c3a5, type: 2}
+    - target: {fileID: 0}
       propertyPath: playerAttributes
       value: 
       objectReference: {fileID: 1341586676}
-    - target: {fileID: 11476060, guid: 934f232f5c3f3cc4f8a5f3397f45c3a5, type: 2}
+    - target: {fileID: 0}
       propertyPath: spawnCoins
       value: 
       objectReference: {fileID: 1660182462}
@@ -4608,6 +4668,7 @@ Prefab:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 11429960, guid: 934f232f5c3f3cc4f8a5f3397f45c3a5, type: 2}
+    - {fileID: 0}
   m_ParentPrefab: {fileID: 100100000, guid: 934f232f5c3f3cc4f8a5f3397f45c3a5, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &502978392 stripped
@@ -4649,7 +4710,7 @@ MonoBehaviour:
   speechNo: []
   cantAffordDialog: []
   dialogOption2: []
-  previousCharactersDecision: {fileID: 718731741}
+  previousCharactersDecision: {fileID: 244783397}
 --- !u!114 &502978396
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4714,11 +4775,11 @@ Prefab:
       propertyPath: gameover
       value: 
       objectReference: {fileID: 530247848}
-    - target: {fileID: 11485840, guid: 1dd8df7e3e1d8e84fb5b64da7f3a219a, type: 2}
+    - target: {fileID: 0}
       propertyPath: playerAttributes
       value: 
       objectReference: {fileID: 1341586676}
-    - target: {fileID: 11485840, guid: 1dd8df7e3e1d8e84fb5b64da7f3a219a, type: 2}
+    - target: {fileID: 0}
       propertyPath: spawnCoins
       value: 
       objectReference: {fileID: 1660182462}
@@ -4751,7 +4812,8 @@ Prefab:
       propertyPath: stoppingPointX
       value: 4
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 0}
   m_ParentPrefab: {fileID: 100100000, guid: 1dd8df7e3e1d8e84fb5b64da7f3a219a, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &506658061 stripped
@@ -4839,11 +4901,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 11470816, guid: cd15882634a625242a74d98004538d33, type: 2}
+    - target: {fileID: 0}
       propertyPath: playerAttributes
       value: 
       objectReference: {fileID: 1341586676}
-    - target: {fileID: 11470816, guid: cd15882634a625242a74d98004538d33, type: 2}
+    - target: {fileID: 0}
       propertyPath: spawnCoins
       value: 
       objectReference: {fileID: 1660182462}
@@ -4862,7 +4924,7 @@ Prefab:
     - target: {fileID: 11408118, guid: cd15882634a625242a74d98004538d33, type: 2}
       propertyPath: previousCharactersDecision
       value: 
-      objectReference: {fileID: 989318794}
+      objectReference: {fileID: 989318798}
     - target: {fileID: 21226694, guid: cd15882634a625242a74d98004538d33, type: 2}
       propertyPath: m_Sprite
       value: 
@@ -4884,11 +4946,11 @@ Prefab:
       propertyPath: m_Name
       value: supersoldier5
       objectReference: {fileID: 0}
-    - target: {fileID: 11470816, guid: cd15882634a625242a74d98004538d33, type: 2}
+    - target: {fileID: 0}
       propertyPath: yesMoneyOutcome
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 11470816, guid: cd15882634a625242a74d98004538d33, type: 2}
+    - target: {fileID: 0}
       propertyPath: noDepressionOutcome
       value: 0
       objectReference: {fileID: 0}
@@ -4904,7 +4966,8 @@ Prefab:
       propertyPath: stoppingPointX
       value: 4
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 0}
   m_ParentPrefab: {fileID: 100100000, guid: cd15882634a625242a74d98004538d33, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &532572721 stripped
@@ -4993,11 +5056,11 @@ Prefab:
       propertyPath: gameover
       value: 
       objectReference: {fileID: 530247848}
-    - target: {fileID: 11476060, guid: 934f232f5c3f3cc4f8a5f3397f45c3a5, type: 2}
+    - target: {fileID: 0}
       propertyPath: playerAttributes
       value: 
       objectReference: {fileID: 1341586676}
-    - target: {fileID: 11476060, guid: 934f232f5c3f3cc4f8a5f3397f45c3a5, type: 2}
+    - target: {fileID: 0}
       propertyPath: spawnCoins
       value: 
       objectReference: {fileID: 1660182462}
@@ -5028,6 +5091,7 @@ Prefab:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 11429960, guid: 934f232f5c3f3cc4f8a5f3397f45c3a5, type: 2}
+    - {fileID: 0}
   m_ParentPrefab: {fileID: 100100000, guid: 934f232f5c3f3cc4f8a5f3397f45c3a5, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &537873737 stripped
@@ -5055,7 +5119,7 @@ MonoBehaviour:
   speechNo: []
   cantAffordDialog: []
   dialogOption2: []
-  previousCharactersDecision: {fileID: 718731741}
+  previousCharactersDecision: {fileID: 2078838591}
 --- !u!111 &537873740
 Animation:
   m_ObjectHideFlags: 0
@@ -5083,6 +5147,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speechBubbleX: 350
   speechBubbleY: 0
+--- !u!114 &537873745 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 11497612, guid: 934f232f5c3f3cc4f8a5f3397f45c3a5,
+    type: 2}
+  m_PrefabInternal: {fileID: 537873736}
+  m_Script: {fileID: 11500000, guid: 7f19ec66f1319da4d873241e5ac2dcec, type: 3}
 --- !u!1 &543548728
 GameObject:
   m_ObjectHideFlags: 0
@@ -5287,11 +5357,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 11441390, guid: 2260230439d8ae249869b38ced179444, type: 2}
+    - target: {fileID: 0}
       propertyPath: playerAttributes
       value: 
       objectReference: {fileID: 1341586676}
-    - target: {fileID: 11441390, guid: 2260230439d8ae249869b38ced179444, type: 2}
+    - target: {fileID: 0}
       propertyPath: spawnCoins
       value: 
       objectReference: {fileID: 1660182462}
@@ -5370,6 +5440,7 @@ Prefab:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 11470164, guid: 2260230439d8ae249869b38ced179444, type: 2}
+    - {fileID: 0}
   m_ParentPrefab: {fileID: 100100000, guid: 2260230439d8ae249869b38ced179444, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &614715967
@@ -5464,11 +5535,11 @@ Prefab:
       propertyPath: gameover
       value: 
       objectReference: {fileID: 530247848}
-    - target: {fileID: 11476060, guid: 934f232f5c3f3cc4f8a5f3397f45c3a5, type: 2}
+    - target: {fileID: 0}
       propertyPath: playerAttributes
       value: 
       objectReference: {fileID: 1341586676}
-    - target: {fileID: 11476060, guid: 934f232f5c3f3cc4f8a5f3397f45c3a5, type: 2}
+    - target: {fileID: 0}
       propertyPath: spawnCoins
       value: 
       objectReference: {fileID: 1660182462}
@@ -5499,6 +5570,7 @@ Prefab:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 11429960, guid: 934f232f5c3f3cc4f8a5f3397f45c3a5, type: 2}
+    - {fileID: 0}
   m_ParentPrefab: {fileID: 100100000, guid: 934f232f5c3f3cc4f8a5f3397f45c3a5, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &629821849
@@ -5617,11 +5689,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 11494512, guid: 87100e5cbc89f4f46845eff083187c9e, type: 2}
+    - target: {fileID: 0}
       propertyPath: playerAttributes
       value: 
       objectReference: {fileID: 1341586676}
-    - target: {fileID: 11494512, guid: 87100e5cbc89f4f46845eff083187c9e, type: 2}
+    - target: {fileID: 0}
       propertyPath: spawnCoins
       value: 
       objectReference: {fileID: 1660182462}
@@ -5668,6 +5740,7 @@ Prefab:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 11424578, guid: 87100e5cbc89f4f46845eff083187c9e, type: 2}
+    - {fileID: 0}
   m_ParentPrefab: {fileID: 100100000, guid: 87100e5cbc89f4f46845eff083187c9e, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &632805286 stripped
@@ -5712,7 +5785,7 @@ MonoBehaviour:
   speechNo: []
   cantAffordDialog: []
   dialogOption2: []
-  previousCharactersDecision: {fileID: 345544253}
+  previousCharactersDecision: {fileID: 345544257}
 --- !u!114 &632805290
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5863,11 +5936,11 @@ Prefab:
       propertyPath: gameover
       value: 
       objectReference: {fileID: 530247848}
-    - target: {fileID: 11485840, guid: 1dd8df7e3e1d8e84fb5b64da7f3a219a, type: 2}
+    - target: {fileID: 0}
       propertyPath: playerAttributes
       value: 
       objectReference: {fileID: 1341586676}
-    - target: {fileID: 11485840, guid: 1dd8df7e3e1d8e84fb5b64da7f3a219a, type: 2}
+    - target: {fileID: 0}
       propertyPath: spawnCoins
       value: 
       objectReference: {fileID: 1660182462}
@@ -5925,7 +5998,7 @@ Prefab:
       propertyPath: speechNo
       value: 
       objectReference: {fileID: 0}
-    - target: {fileID: 11485840, guid: 1dd8df7e3e1d8e84fb5b64da7f3a219a, type: 2}
+    - target: {fileID: 0}
       propertyPath: passiveDepressionOutcome
       value: 0
       objectReference: {fileID: 0}
@@ -5937,15 +6010,15 @@ Prefab:
       propertyPath: startingPointY
       value: -2
       objectReference: {fileID: 0}
-    - target: {fileID: 11485840, guid: 1dd8df7e3e1d8e84fb5b64da7f3a219a, type: 2}
+    - target: {fileID: 0}
       propertyPath: noDepressionOutcome
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 11485840, guid: 1dd8df7e3e1d8e84fb5b64da7f3a219a, type: 2}
+    - target: {fileID: 0}
       propertyPath: yesDepressionOutcome
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 11485840, guid: 1dd8df7e3e1d8e84fb5b64da7f3a219a, type: 2}
+    - target: {fileID: 0}
       propertyPath: yesMoneyOutcome
       value: -5
       objectReference: {fileID: 0}
@@ -5963,6 +6036,7 @@ Prefab:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 11409854, guid: 1dd8df7e3e1d8e84fb5b64da7f3a219a, type: 2}
+    - {fileID: 0}
   m_ParentPrefab: {fileID: 100100000, guid: 1dd8df7e3e1d8e84fb5b64da7f3a219a, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &655865495 stripped
@@ -5990,7 +6064,7 @@ MonoBehaviour:
   speechNo: []
   cantAffordDialog: []
   dialogOption2: []
-  previousCharactersDecision: {fileID: 26105064}
+  previousCharactersDecision: {fileID: 26105068}
 --- !u!95 &655865498
 Animator:
   serializedVersion: 3
@@ -6106,11 +6180,11 @@ Prefab:
       propertyPath: gameover
       value: 
       objectReference: {fileID: 530247848}
-    - target: {fileID: 11476060, guid: 934f232f5c3f3cc4f8a5f3397f45c3a5, type: 2}
+    - target: {fileID: 0}
       propertyPath: playerAttributes
       value: 
       objectReference: {fileID: 1341586676}
-    - target: {fileID: 11476060, guid: 934f232f5c3f3cc4f8a5f3397f45c3a5, type: 2}
+    - target: {fileID: 0}
       propertyPath: spawnCoins
       value: 
       objectReference: {fileID: 1660182462}
@@ -6141,6 +6215,7 @@ Prefab:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 11429960, guid: 934f232f5c3f3cc4f8a5f3397f45c3a5, type: 2}
+    - {fileID: 0}
   m_ParentPrefab: {fileID: 100100000, guid: 934f232f5c3f3cc4f8a5f3397f45c3a5, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &661321667 stripped
@@ -6241,6 +6316,12 @@ Animation:
   m_PlayAutomatically: 1
   m_AnimatePhysics: 0
   m_CullingType: 0
+--- !u!114 &665692649 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 11444992, guid: cd15882634a625242a74d98004538d33,
+    type: 2}
+  m_PrefabInternal: {fileID: 1426717639}
+  m_Script: {fileID: 11500000, guid: 7f19ec66f1319da4d873241e5ac2dcec, type: 3}
 --- !u!1001 &684683873
 Prefab:
   m_ObjectHideFlags: 0
@@ -6280,11 +6361,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 11400642, guid: 430217818891e6d4b8900b28d508bffa, type: 2}
+    - target: {fileID: 0}
       propertyPath: playerAttributes
       value: 
       objectReference: {fileID: 1341586676}
-    - target: {fileID: 11400642, guid: 430217818891e6d4b8900b28d508bffa, type: 2}
+    - target: {fileID: 0}
       propertyPath: spawnCoins
       value: 
       objectReference: {fileID: 1660182462}
@@ -6333,7 +6414,8 @@ Prefab:
       propertyPath: stoppingPointX
       value: 4
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 0}
   m_ParentPrefab: {fileID: 100100000, guid: 430217818891e6d4b8900b28d508bffa, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &684683874 stripped
@@ -6381,12 +6463,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   theCharacter: {fileID: 0}
---- !u!114 &718731741 stripped
-MonoBehaviour:
-  m_PrefabParentObject: {fileID: 11442970, guid: 291d6d682230a5d40997e2c6881f717e,
-    type: 2}
-  m_PrefabInternal: {fileID: 1620074248}
-  m_Script: {fileID: 11500000, guid: 12f7bcab77466234b9ab2943e7682aca, type: 3}
 --- !u!1001 &725992381
 Prefab:
   m_ObjectHideFlags: 0
@@ -6426,7 +6502,7 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 11476060, guid: 934f232f5c3f3cc4f8a5f3397f45c3a5, type: 2}
+    - target: {fileID: 0}
       propertyPath: spawnCoins
       value: 
       objectReference: {fileID: 1660182462}
@@ -6462,7 +6538,12 @@ Prefab:
       propertyPath: startingPointY
       value: -2.75
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 11442876, guid: 934f232f5c3f3cc4f8a5f3397f45c3a5, type: 2}
+      propertyPath: stoppingPointX
+      value: 4
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 0}
   m_ParentPrefab: {fileID: 100100000, guid: 934f232f5c3f3cc4f8a5f3397f45c3a5, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &739347577 stripped
@@ -6745,11 +6826,11 @@ Prefab:
       propertyPath: gameover
       value: 
       objectReference: {fileID: 530247848}
-    - target: {fileID: 11476060, guid: 934f232f5c3f3cc4f8a5f3397f45c3a5, type: 2}
+    - target: {fileID: 0}
       propertyPath: playerAttributes
       value: 
       objectReference: {fileID: 1341586676}
-    - target: {fileID: 11476060, guid: 934f232f5c3f3cc4f8a5f3397f45c3a5, type: 2}
+    - target: {fileID: 0}
       propertyPath: spawnCoins
       value: 
       objectReference: {fileID: 1660182462}
@@ -6778,7 +6859,8 @@ Prefab:
       propertyPath: stoppingPointX
       value: 4
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 0}
   m_ParentPrefab: {fileID: 100100000, guid: 934f232f5c3f3cc4f8a5f3397f45c3a5, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &772414575 stripped
@@ -6905,11 +6987,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 11494512, guid: 87100e5cbc89f4f46845eff083187c9e, type: 2}
+    - target: {fileID: 0}
       propertyPath: playerAttributes
       value: 
       objectReference: {fileID: 1341586676}
-    - target: {fileID: 11494512, guid: 87100e5cbc89f4f46845eff083187c9e, type: 2}
+    - target: {fileID: 0}
       propertyPath: spawnCoins
       value: 
       objectReference: {fileID: 1660182462}
@@ -6956,6 +7038,7 @@ Prefab:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 11424578, guid: 87100e5cbc89f4f46845eff083187c9e, type: 2}
+    - {fileID: 0}
   m_ParentPrefab: {fileID: 100100000, guid: 87100e5cbc89f4f46845eff083187c9e, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &775663647 stripped
@@ -7000,7 +7083,7 @@ MonoBehaviour:
   speechNo: []
   cantAffordDialog: []
   dialogOption2: []
-  previousCharactersDecision: {fileID: 345544253}
+  previousCharactersDecision: {fileID: 345544257}
 --- !u!114 &775663651
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7242,11 +7325,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 11400642, guid: 430217818891e6d4b8900b28d508bffa, type: 2}
+    - target: {fileID: 0}
       propertyPath: playerAttributes
       value: 
       objectReference: {fileID: 1341586676}
-    - target: {fileID: 11400642, guid: 430217818891e6d4b8900b28d508bffa, type: 2}
+    - target: {fileID: 0}
       propertyPath: spawnCoins
       value: 
       objectReference: {fileID: 1660182462}
@@ -7295,7 +7378,8 @@ Prefab:
       propertyPath: stoppingPointX
       value: 4
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 0}
   m_ParentPrefab: {fileID: 100100000, guid: 430217818891e6d4b8900b28d508bffa, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &790602210 stripped
@@ -7382,11 +7466,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 11494512, guid: 87100e5cbc89f4f46845eff083187c9e, type: 2}
+    - target: {fileID: 0}
       propertyPath: playerAttributes
       value: 
       objectReference: {fileID: 1341586676}
-    - target: {fileID: 11494512, guid: 87100e5cbc89f4f46845eff083187c9e, type: 2}
+    - target: {fileID: 0}
       propertyPath: spawnCoins
       value: 
       objectReference: {fileID: 1660182462}
@@ -7431,7 +7515,8 @@ Prefab:
       propertyPath: stoppingPointX
       value: 4
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 0}
   m_ParentPrefab: {fileID: 100100000, guid: 87100e5cbc89f4f46845eff083187c9e, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &815141572 stripped
@@ -7593,11 +7678,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 11470816, guid: cd15882634a625242a74d98004538d33, type: 2}
+    - target: {fileID: 0}
       propertyPath: playerAttributes
       value: 
       objectReference: {fileID: 1341586676}
-    - target: {fileID: 11470816, guid: cd15882634a625242a74d98004538d33, type: 2}
+    - target: {fileID: 0}
       propertyPath: spawnCoins
       value: 
       objectReference: {fileID: 1660182462}
@@ -7616,7 +7701,7 @@ Prefab:
     - target: {fileID: 11408118, guid: cd15882634a625242a74d98004538d33, type: 2}
       propertyPath: previousCharactersDecision
       value: 
-      objectReference: {fileID: 1243841678}
+      objectReference: {fileID: 989318798}
     - target: {fileID: 21226694, guid: cd15882634a625242a74d98004538d33, type: 2}
       propertyPath: m_Sprite
       value: 
@@ -7654,7 +7739,8 @@ Prefab:
       propertyPath: stoppingPointX
       value: 4
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 0}
   m_ParentPrefab: {fileID: 100100000, guid: cd15882634a625242a74d98004538d33, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &823921669 stripped
@@ -7930,11 +8016,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 11494512, guid: 87100e5cbc89f4f46845eff083187c9e, type: 2}
+    - target: {fileID: 0}
       propertyPath: playerAttributes
       value: 
       objectReference: {fileID: 1341586676}
-    - target: {fileID: 11494512, guid: 87100e5cbc89f4f46845eff083187c9e, type: 2}
+    - target: {fileID: 0}
       propertyPath: spawnCoins
       value: 
       objectReference: {fileID: 1660182462}
@@ -7979,7 +8065,8 @@ Prefab:
       propertyPath: stoppingPointX
       value: 4
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 0}
   m_ParentPrefab: {fileID: 100100000, guid: 87100e5cbc89f4f46845eff083187c9e, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &848862162 stripped
@@ -8020,12 +8107,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speechBubbleX: 350
   speechBubbleY: 60
---- !u!114 &848862166 stripped
+--- !u!114 &848862170 stripped
 MonoBehaviour:
-  m_PrefabParentObject: {fileID: 11494512, guid: 87100e5cbc89f4f46845eff083187c9e,
+  m_PrefabParentObject: {fileID: 11420286, guid: 87100e5cbc89f4f46845eff083187c9e,
     type: 2}
   m_PrefabInternal: {fileID: 848862161}
-  m_Script: {fileID: 11500000, guid: 12f7bcab77466234b9ab2943e7682aca, type: 3}
+  m_Script: {fileID: 11500000, guid: 7f19ec66f1319da4d873241e5ac2dcec, type: 3}
 --- !u!1 &859831379 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 190014, guid: 2260230439d8ae249869b38ced179444, type: 2}
@@ -8115,11 +8202,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 11419808, guid: bb9ff57f1c991634fa70ca66aa140f2a, type: 2}
+    - target: {fileID: 0}
       propertyPath: playerAttributes
       value: 
       objectReference: {fileID: 1341586676}
-    - target: {fileID: 11419808, guid: bb9ff57f1c991634fa70ca66aa140f2a, type: 2}
+    - target: {fileID: 0}
       propertyPath: spawnCoins
       value: 
       objectReference: {fileID: 1660182462}
@@ -8154,6 +8241,7 @@ Prefab:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 11462118, guid: bb9ff57f1c991634fa70ca66aa140f2a, type: 2}
+    - {fileID: 0}
   m_ParentPrefab: {fileID: 100100000, guid: bb9ff57f1c991634fa70ca66aa140f2a, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &860997502 stripped
@@ -8198,7 +8286,7 @@ MonoBehaviour:
   speechNo: []
   cantAffordDialog: []
   dialogOption2: []
-  previousCharactersDecision: {fileID: 1715413339}
+  previousCharactersDecision: {fileID: 1396435706}
 --- !u!114 &860997506
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8274,12 +8362,6 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!114 &880174894 stripped
-MonoBehaviour:
-  m_PrefabParentObject: {fileID: 11476060, guid: 934f232f5c3f3cc4f8a5f3397f45c3a5,
-    type: 2}
-  m_PrefabInternal: {fileID: 992724736}
-  m_Script: {fileID: 11500000, guid: 12f7bcab77466234b9ab2943e7682aca, type: 3}
 --- !u!114 &880174895
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8293,6 +8375,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speechBubbleX: 350
   speechBubbleY: 0
+--- !u!114 &880174899 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 11497612, guid: 934f232f5c3f3cc4f8a5f3397f45c3a5,
+    type: 2}
+  m_PrefabInternal: {fileID: 992724736}
+  m_Script: {fileID: 11500000, guid: 7f19ec66f1319da4d873241e5ac2dcec, type: 3}
 --- !u!1 &885761568
 GameObject:
   m_ObjectHideFlags: 0
@@ -8577,11 +8665,11 @@ Prefab:
       propertyPath: gameover
       value: 
       objectReference: {fileID: 530247848}
-    - target: {fileID: 11476060, guid: 934f232f5c3f3cc4f8a5f3397f45c3a5, type: 2}
+    - target: {fileID: 0}
       propertyPath: playerAttributes
       value: 
       objectReference: {fileID: 1341586676}
-    - target: {fileID: 11476060, guid: 934f232f5c3f3cc4f8a5f3397f45c3a5, type: 2}
+    - target: {fileID: 0}
       propertyPath: spawnCoins
       value: 
       objectReference: {fileID: 1660182462}
@@ -8622,7 +8710,8 @@ Prefab:
       propertyPath: stoppingPointX
       value: 4
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 0}
   m_ParentPrefab: {fileID: 100100000, guid: 934f232f5c3f3cc4f8a5f3397f45c3a5, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &921364112 stripped
@@ -8734,7 +8823,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speechBubbleX: 350
-  speechBubbleY: -50
+  speechBubbleY: -80
 --- !u!1 &938006730 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 167468, guid: 430217818891e6d4b8900b28d508bffa, type: 2}
@@ -8824,11 +8913,11 @@ Prefab:
       propertyPath: gameover
       value: 
       objectReference: {fileID: 530247848}
-    - target: {fileID: 11476060, guid: 934f232f5c3f3cc4f8a5f3397f45c3a5, type: 2}
+    - target: {fileID: 0}
       propertyPath: playerAttributes
       value: 
       objectReference: {fileID: 1341586676}
-    - target: {fileID: 11476060, guid: 934f232f5c3f3cc4f8a5f3397f45c3a5, type: 2}
+    - target: {fileID: 0}
       propertyPath: spawnCoins
       value: 
       objectReference: {fileID: 1660182462}
@@ -8852,7 +8941,12 @@ Prefab:
       propertyPath: startingPointY
       value: -2.75
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 11442876, guid: 934f232f5c3f3cc4f8a5f3397f45c3a5, type: 2}
+      propertyPath: stoppingPointX
+      value: 4
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 0}
   m_ParentPrefab: {fileID: 100100000, guid: 934f232f5c3f3cc4f8a5f3397f45c3a5, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &974148067 stripped
@@ -8966,11 +9060,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 11470816, guid: cd15882634a625242a74d98004538d33, type: 2}
+    - target: {fileID: 0}
       propertyPath: playerAttributes
       value: 
       objectReference: {fileID: 1341586676}
-    - target: {fileID: 11470816, guid: cd15882634a625242a74d98004538d33, type: 2}
+    - target: {fileID: 0}
       propertyPath: spawnCoins
       value: 
       objectReference: {fileID: 1660182462}
@@ -8989,7 +9083,7 @@ Prefab:
     - target: {fileID: 11408118, guid: cd15882634a625242a74d98004538d33, type: 2}
       propertyPath: previousCharactersDecision
       value: 
-      objectReference: {fileID: 1243841678}
+      objectReference: {fileID: 1470812583}
     - target: {fileID: 21226694, guid: cd15882634a625242a74d98004538d33, type: 2}
       propertyPath: m_Sprite
       value: 
@@ -9023,7 +9117,8 @@ Prefab:
       propertyPath: stoppingPointX
       value: 4
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 0}
   m_ParentPrefab: {fileID: 100100000, guid: cd15882634a625242a74d98004538d33, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &989318790 stripped
@@ -9061,12 +9156,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speechBubbleX: 350
   speechBubbleY: 60
---- !u!114 &989318794 stripped
+--- !u!114 &989318798 stripped
 MonoBehaviour:
-  m_PrefabParentObject: {fileID: 11470816, guid: cd15882634a625242a74d98004538d33,
+  m_PrefabParentObject: {fileID: 11444992, guid: cd15882634a625242a74d98004538d33,
     type: 2}
   m_PrefabInternal: {fileID: 989318789}
-  m_Script: {fileID: 11500000, guid: 12f7bcab77466234b9ab2943e7682aca, type: 3}
+  m_Script: {fileID: 11500000, guid: 7f19ec66f1319da4d873241e5ac2dcec, type: 3}
 --- !u!1001 &992724736
 Prefab:
   m_ObjectHideFlags: 0
@@ -9118,11 +9213,11 @@ Prefab:
       propertyPath: gameover
       value: 
       objectReference: {fileID: 530247848}
-    - target: {fileID: 11476060, guid: 934f232f5c3f3cc4f8a5f3397f45c3a5, type: 2}
+    - target: {fileID: 0}
       propertyPath: playerAttributes
       value: 
       objectReference: {fileID: 1341586676}
-    - target: {fileID: 11476060, guid: 934f232f5c3f3cc4f8a5f3397f45c3a5, type: 2}
+    - target: {fileID: 0}
       propertyPath: spawnCoins
       value: 
       objectReference: {fileID: 1660182462}
@@ -9139,7 +9234,8 @@ Prefab:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 0}
   m_ParentPrefab: {fileID: 100100000, guid: 934f232f5c3f3cc4f8a5f3397f45c3a5, type: 2}
   m_IsPrefabParent: 0
 --- !u!1001 &997996012
@@ -9258,8 +9354,8 @@ Prefab:
     - target: {fileID: 11470164, guid: 2260230439d8ae249869b38ced179444, type: 2}
       propertyPath: previousCharactersDecision
       value: 
-      objectReference: {fileID: 2110231622}
-    - target: {fileID: 11441390, guid: 2260230439d8ae249869b38ced179444, type: 2}
+      objectReference: {fileID: 2110231627}
+    - target: {fileID: 0}
       propertyPath: spawnCoins
       value: 
       objectReference: {fileID: 1660182462}
@@ -9295,7 +9391,8 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 1.158363
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 0}
   m_ParentPrefab: {fileID: 100100000, guid: 2260230439d8ae249869b38ced179444, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &1004408355 stripped
@@ -9390,11 +9487,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 11441390, guid: 2260230439d8ae249869b38ced179444, type: 2}
+    - target: {fileID: 0}
       propertyPath: playerAttributes
       value: 
       objectReference: {fileID: 1341586676}
-    - target: {fileID: 11441390, guid: 2260230439d8ae249869b38ced179444, type: 2}
+    - target: {fileID: 0}
       propertyPath: spawnCoins
       value: 
       objectReference: {fileID: 1660182462}
@@ -9464,6 +9561,7 @@ Prefab:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 11470164, guid: 2260230439d8ae249869b38ced179444, type: 2}
+    - {fileID: 0}
   m_ParentPrefab: {fileID: 100100000, guid: 2260230439d8ae249869b38ced179444, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &1013881984 stripped
@@ -9968,11 +10066,11 @@ Prefab:
       propertyPath: gameover
       value: 
       objectReference: {fileID: 530247848}
-    - target: {fileID: 11476060, guid: 934f232f5c3f3cc4f8a5f3397f45c3a5, type: 2}
+    - target: {fileID: 0}
       propertyPath: playerAttributes
       value: 
       objectReference: {fileID: 1341586676}
-    - target: {fileID: 11476060, guid: 934f232f5c3f3cc4f8a5f3397f45c3a5, type: 2}
+    - target: {fileID: 0}
       propertyPath: spawnCoins
       value: 
       objectReference: {fileID: 1660182462}
@@ -9996,7 +10094,12 @@ Prefab:
       propertyPath: startingPointY
       value: -2.75
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 11442876, guid: 934f232f5c3f3cc4f8a5f3397f45c3a5, type: 2}
+      propertyPath: stoppingPointX
+      value: 4
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 0}
   m_ParentPrefab: {fileID: 100100000, guid: 934f232f5c3f3cc4f8a5f3397f45c3a5, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &1055858293 stripped
@@ -10078,12 +10181,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   theCharacter: {fileID: 0}
---- !u!114 &1084991698 stripped
-MonoBehaviour:
-  m_PrefabParentObject: {fileID: 11442970, guid: 291d6d682230a5d40997e2c6881f717e,
-    type: 2}
-  m_PrefabInternal: {fileID: 1913973692}
-  m_Script: {fileID: 11500000, guid: 12f7bcab77466234b9ab2943e7682aca, type: 3}
 --- !u!1 &1091187766
 GameObject:
   m_ObjectHideFlags: 0
@@ -10111,7 +10208,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4fdfbb2fc4b489648b33a09b4c023ac2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  theCharacter: {fileID: 0}
+  theCharacter: {fileID: 927470005}
 --- !u!4 &1091187768
 Transform:
   m_ObjectHideFlags: 0
@@ -10206,11 +10303,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 11400642, guid: 430217818891e6d4b8900b28d508bffa, type: 2}
+    - target: {fileID: 0}
       propertyPath: playerAttributes
       value: 
       objectReference: {fileID: 1341586676}
-    - target: {fileID: 11400642, guid: 430217818891e6d4b8900b28d508bffa, type: 2}
+    - target: {fileID: 0}
       propertyPath: spawnCoins
       value: 
       objectReference: {fileID: 1660182462}
@@ -10259,7 +10356,8 @@ Prefab:
       propertyPath: stoppingPointX
       value: 4
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 0}
   m_ParentPrefab: {fileID: 100100000, guid: 430217818891e6d4b8900b28d508bffa, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &1103809323 stripped
@@ -10371,11 +10469,11 @@ Prefab:
       propertyPath: gameover
       value: 
       objectReference: {fileID: 530247848}
-    - target: {fileID: 11476060, guid: 934f232f5c3f3cc4f8a5f3397f45c3a5, type: 2}
+    - target: {fileID: 0}
       propertyPath: playerAttributes
       value: 
       objectReference: {fileID: 1341586676}
-    - target: {fileID: 11476060, guid: 934f232f5c3f3cc4f8a5f3397f45c3a5, type: 2}
+    - target: {fileID: 0}
       propertyPath: spawnCoins
       value: 
       objectReference: {fileID: 1660182462}
@@ -10416,7 +10514,8 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 0.8760987
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 0}
   m_ParentPrefab: {fileID: 100100000, guid: 934f232f5c3f3cc4f8a5f3397f45c3a5, type: 2}
   m_IsPrefabParent: 0
 --- !u!1001 &1155423534
@@ -10470,11 +10569,11 @@ Prefab:
       propertyPath: gameover
       value: 
       objectReference: {fileID: 530247848}
-    - target: {fileID: 11476060, guid: 934f232f5c3f3cc4f8a5f3397f45c3a5, type: 2}
+    - target: {fileID: 0}
       propertyPath: playerAttributes
       value: 
       objectReference: {fileID: 1341586676}
-    - target: {fileID: 11476060, guid: 934f232f5c3f3cc4f8a5f3397f45c3a5, type: 2}
+    - target: {fileID: 0}
       propertyPath: spawnCoins
       value: 
       objectReference: {fileID: 1660182462}
@@ -10498,7 +10597,12 @@ Prefab:
       propertyPath: startingPointY
       value: -2.75
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 11442876, guid: 934f232f5c3f3cc4f8a5f3397f45c3a5, type: 2}
+      propertyPath: stoppingPointX
+      value: 4
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 0}
   m_ParentPrefab: {fileID: 100100000, guid: 934f232f5c3f3cc4f8a5f3397f45c3a5, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &1155423535 stripped
@@ -11238,11 +11342,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 11479490, guid: acfc9b15f70a445429def5cdab29ea17, type: 2}
+    - target: {fileID: 0}
       propertyPath: playerAttributes
       value: 
       objectReference: {fileID: 1341586676}
-    - target: {fileID: 11479490, guid: acfc9b15f70a445429def5cdab29ea17, type: 2}
+    - target: {fileID: 0}
       propertyPath: spawnCoins
       value: 
       objectReference: {fileID: 1660182462}
@@ -11262,15 +11366,15 @@ Prefab:
       propertyPath: m_Name
       value: pish5
       objectReference: {fileID: 0}
-    - target: {fileID: 11479490, guid: acfc9b15f70a445429def5cdab29ea17, type: 2}
+    - target: {fileID: 0}
       propertyPath: yesMoneyOutcome
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 11479490, guid: acfc9b15f70a445429def5cdab29ea17, type: 2}
+    - target: {fileID: 0}
       propertyPath: noDepressionOutcome
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 11479490, guid: acfc9b15f70a445429def5cdab29ea17, type: 2}
+    - target: {fileID: 0}
       propertyPath: yesDepressionOutcome
       value: 0
       objectReference: {fileID: 0}
@@ -11278,7 +11382,20 @@ Prefab:
       propertyPath: stoppingPointX
       value: 4
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 423732, guid: acfc9b15f70a445429def5cdab29ea17, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 0.37991378
+      objectReference: {fileID: 0}
+    - target: {fileID: 423732, guid: acfc9b15f70a445429def5cdab29ea17, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 0.37676045
+      objectReference: {fileID: 0}
+    - target: {fileID: 423732, guid: acfc9b15f70a445429def5cdab29ea17, type: 2}
+      propertyPath: m_LocalScale.z
+      value: 0.67278653
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 0}
   m_ParentPrefab: {fileID: 100100000, guid: acfc9b15f70a445429def5cdab29ea17, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &1200726598 stripped
@@ -11424,11 +11541,11 @@ Prefab:
       propertyPath: gameover
       value: 
       objectReference: {fileID: 530247848}
-    - target: {fileID: 11476060, guid: 934f232f5c3f3cc4f8a5f3397f45c3a5, type: 2}
+    - target: {fileID: 0}
       propertyPath: playerAttributes
       value: 
       objectReference: {fileID: 1341586676}
-    - target: {fileID: 11476060, guid: 934f232f5c3f3cc4f8a5f3397f45c3a5, type: 2}
+    - target: {fileID: 0}
       propertyPath: spawnCoins
       value: 
       objectReference: {fileID: 1660182462}
@@ -11452,7 +11569,12 @@ Prefab:
       propertyPath: startingPointY
       value: -2.75
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 11442876, guid: 934f232f5c3f3cc4f8a5f3397f45c3a5, type: 2}
+      propertyPath: stoppingPointX
+      value: 4
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 0}
   m_ParentPrefab: {fileID: 100100000, guid: 934f232f5c3f3cc4f8a5f3397f45c3a5, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &1214206654 stripped
@@ -11532,7 +11654,7 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 11493706, guid: d072e294a65dfa5448077ec3d554b300, type: 2}
+    - target: {fileID: 0}
       propertyPath: spawnCoins
       value: 
       objectReference: {fileID: 1660182462}
@@ -11568,7 +11690,8 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 1.158363
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 0}
   m_ParentPrefab: {fileID: 100100000, guid: d072e294a65dfa5448077ec3d554b300, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &1230850884 stripped
@@ -11626,11 +11749,11 @@ Prefab:
       propertyPath: gameover
       value: 
       objectReference: {fileID: 530247848}
-    - target: {fileID: 11476060, guid: 934f232f5c3f3cc4f8a5f3397f45c3a5, type: 2}
+    - target: {fileID: 0}
       propertyPath: playerAttributes
       value: 
       objectReference: {fileID: 1341586676}
-    - target: {fileID: 11476060, guid: 934f232f5c3f3cc4f8a5f3397f45c3a5, type: 2}
+    - target: {fileID: 0}
       propertyPath: spawnCoins
       value: 
       objectReference: {fileID: 1660182462}
@@ -11671,7 +11794,8 @@ Prefab:
       propertyPath: stoppingPointX
       value: 4
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 0}
   m_ParentPrefab: {fileID: 100100000, guid: 934f232f5c3f3cc4f8a5f3397f45c3a5, type: 2}
   m_IsPrefabParent: 0
 --- !u!1001 &1239333226
@@ -11725,11 +11849,11 @@ Prefab:
       propertyPath: gameover
       value: 
       objectReference: {fileID: 530247848}
-    - target: {fileID: 11476060, guid: 934f232f5c3f3cc4f8a5f3397f45c3a5, type: 2}
+    - target: {fileID: 0}
       propertyPath: playerAttributes
       value: 
       objectReference: {fileID: 1341586676}
-    - target: {fileID: 11476060, guid: 934f232f5c3f3cc4f8a5f3397f45c3a5, type: 2}
+    - target: {fileID: 0}
       propertyPath: spawnCoins
       value: 
       objectReference: {fileID: 1660182462}
@@ -11770,7 +11894,8 @@ Prefab:
       propertyPath: stoppingPointX
       value: 4
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 0}
   m_ParentPrefab: {fileID: 100100000, guid: 934f232f5c3f3cc4f8a5f3397f45c3a5, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &1239333227 stripped
@@ -11828,12 +11953,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speechBubbleX: 350
   speechBubbleY: 60
---- !u!114 &1243841678 stripped
-MonoBehaviour:
-  m_PrefabParentObject: {fileID: 11473526, guid: 5a2847c57eef820479ddde60c7657051,
-    type: 2}
-  m_PrefabInternal: {fileID: 318518677}
-  m_Script: {fileID: 11500000, guid: 12f7bcab77466234b9ab2943e7682aca, type: 3}
 --- !u!111 &1243841681
 Animation:
   m_ObjectHideFlags: 0
@@ -11887,11 +12006,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 11419808, guid: bb9ff57f1c991634fa70ca66aa140f2a, type: 2}
+    - target: {fileID: 0}
       propertyPath: playerAttributes
       value: 
       objectReference: {fileID: 1341586676}
-    - target: {fileID: 11419808, guid: bb9ff57f1c991634fa70ca66aa140f2a, type: 2}
+    - target: {fileID: 0}
       propertyPath: spawnCoins
       value: 
       objectReference: {fileID: 1660182462}
@@ -11936,7 +12055,8 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 0.88285226
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 0}
   m_ParentPrefab: {fileID: 100100000, guid: bb9ff57f1c991634fa70ca66aa140f2a, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &1250858939 stripped
@@ -11994,11 +12114,11 @@ Prefab:
       propertyPath: gameover
       value: 
       objectReference: {fileID: 530247848}
-    - target: {fileID: 11485840, guid: 1dd8df7e3e1d8e84fb5b64da7f3a219a, type: 2}
+    - target: {fileID: 0}
       propertyPath: playerAttributes
       value: 
       objectReference: {fileID: 1341586676}
-    - target: {fileID: 11485840, guid: 1dd8df7e3e1d8e84fb5b64da7f3a219a, type: 2}
+    - target: {fileID: 0}
       propertyPath: spawnCoins
       value: 
       objectReference: {fileID: 1660182462}
@@ -12031,7 +12151,8 @@ Prefab:
       propertyPath: stoppingPointX
       value: 4
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 0}
   m_ParentPrefab: {fileID: 100100000, guid: 1dd8df7e3e1d8e84fb5b64da7f3a219a, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &1251966699 stripped
@@ -12111,11 +12232,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 11419808, guid: bb9ff57f1c991634fa70ca66aa140f2a, type: 2}
+    - target: {fileID: 0}
       propertyPath: playerAttributes
       value: 
       objectReference: {fileID: 1341586676}
-    - target: {fileID: 11419808, guid: bb9ff57f1c991634fa70ca66aa140f2a, type: 2}
+    - target: {fileID: 0}
       propertyPath: spawnCoins
       value: 
       objectReference: {fileID: 1660182462}
@@ -12150,6 +12271,7 @@ Prefab:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 11462118, guid: bb9ff57f1c991634fa70ca66aa140f2a, type: 2}
+    - {fileID: 0}
   m_ParentPrefab: {fileID: 100100000, guid: bb9ff57f1c991634fa70ca66aa140f2a, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &1270572927 stripped
@@ -12194,7 +12316,7 @@ MonoBehaviour:
   speechNo: []
   cantAffordDialog: []
   dialogOption2: []
-  previousCharactersDecision: {fileID: 1084991698}
+  previousCharactersDecision: {fileID: 443462733}
 --- !u!114 &1270572931
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12300,11 +12422,11 @@ Prefab:
       propertyPath: gameover
       value: 
       objectReference: {fileID: 530247848}
-    - target: {fileID: 11476060, guid: 934f232f5c3f3cc4f8a5f3397f45c3a5, type: 2}
+    - target: {fileID: 0}
       propertyPath: playerAttributes
       value: 
       objectReference: {fileID: 1341586676}
-    - target: {fileID: 11476060, guid: 934f232f5c3f3cc4f8a5f3397f45c3a5, type: 2}
+    - target: {fileID: 0}
       propertyPath: spawnCoins
       value: 
       objectReference: {fileID: 1660182462}
@@ -12333,7 +12455,8 @@ Prefab:
       propertyPath: stoppingPointX
       value: 4
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 0}
   m_ParentPrefab: {fileID: 100100000, guid: 934f232f5c3f3cc4f8a5f3397f45c3a5, type: 2}
   m_IsPrefabParent: 0
 --- !u!1001 &1293061795
@@ -12383,11 +12506,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 11441390, guid: 2260230439d8ae249869b38ced179444, type: 2}
+    - target: {fileID: 0}
       propertyPath: playerAttributes
       value: 
       objectReference: {fileID: 1341586676}
-    - target: {fileID: 11441390, guid: 2260230439d8ae249869b38ced179444, type: 2}
+    - target: {fileID: 0}
       propertyPath: spawnCoins
       value: 
       objectReference: {fileID: 1660182462}
@@ -12466,6 +12589,7 @@ Prefab:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 11470164, guid: 2260230439d8ae249869b38ced179444, type: 2}
+    - {fileID: 0}
   m_ParentPrefab: {fileID: 100100000, guid: 2260230439d8ae249869b38ced179444, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &1293061796 stripped
@@ -12675,11 +12799,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 11419808, guid: bb9ff57f1c991634fa70ca66aa140f2a, type: 2}
+    - target: {fileID: 0}
       propertyPath: playerAttributes
       value: 
       objectReference: {fileID: 1341586676}
-    - target: {fileID: 11419808, guid: bb9ff57f1c991634fa70ca66aa140f2a, type: 2}
+    - target: {fileID: 0}
       propertyPath: spawnCoins
       value: 
       objectReference: {fileID: 1660182462}
@@ -12714,6 +12838,7 @@ Prefab:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 11462118, guid: bb9ff57f1c991634fa70ca66aa140f2a, type: 2}
+    - {fileID: 0}
   m_ParentPrefab: {fileID: 100100000, guid: bb9ff57f1c991634fa70ca66aa140f2a, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &1313134973 stripped
@@ -12759,11 +12884,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 11456690, guid: 2ec958086f02ccc4f96461c901faf576, type: 2}
+    - target: {fileID: 0}
       propertyPath: playerAttributes
       value: 
       objectReference: {fileID: 1341586676}
-    - target: {fileID: 11456690, guid: 2ec958086f02ccc4f96461c901faf576, type: 2}
+    - target: {fileID: 0}
       propertyPath: spawnCoins
       value: 
       objectReference: {fileID: 1660182462}
@@ -12816,7 +12941,8 @@ Prefab:
       propertyPath: stoppingPointX
       value: 4
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 0}
   m_ParentPrefab: {fileID: 100100000, guid: 2ec958086f02ccc4f96461c901faf576, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &1314385471 stripped
@@ -12915,11 +13041,11 @@ Prefab:
       propertyPath: gameover
       value: 
       objectReference: {fileID: 530247848}
-    - target: {fileID: 11476060, guid: 934f232f5c3f3cc4f8a5f3397f45c3a5, type: 2}
+    - target: {fileID: 0}
       propertyPath: playerAttributes
       value: 
       objectReference: {fileID: 1341586676}
-    - target: {fileID: 11476060, guid: 934f232f5c3f3cc4f8a5f3397f45c3a5, type: 2}
+    - target: {fileID: 0}
       propertyPath: spawnCoins
       value: 
       objectReference: {fileID: 1660182462}
@@ -12943,7 +13069,12 @@ Prefab:
       propertyPath: startingPointY
       value: -2.75
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 11442876, guid: 934f232f5c3f3cc4f8a5f3397f45c3a5, type: 2}
+      propertyPath: stoppingPointX
+      value: 4
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 0}
   m_ParentPrefab: {fileID: 100100000, guid: 934f232f5c3f3cc4f8a5f3397f45c3a5, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &1339416799 stripped
@@ -13223,11 +13354,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 11494512, guid: 87100e5cbc89f4f46845eff083187c9e, type: 2}
+    - target: {fileID: 0}
       propertyPath: playerAttributes
       value: 
       objectReference: {fileID: 1341586676}
-    - target: {fileID: 11494512, guid: 87100e5cbc89f4f46845eff083187c9e, type: 2}
+    - target: {fileID: 0}
       propertyPath: spawnCoins
       value: 
       objectReference: {fileID: 1660182462}
@@ -13268,7 +13399,8 @@ Prefab:
       propertyPath: stoppingPointX
       value: 4
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 0}
   m_ParentPrefab: {fileID: 100100000, guid: 87100e5cbc89f4f46845eff083187c9e, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &1362249052 stripped
@@ -13525,7 +13657,7 @@ MonoBehaviour:
   speechNo: []
   cantAffordDialog: []
   dialogOption2: []
-  previousCharactersDecision: {fileID: 718731741}
+  previousCharactersDecision: {fileID: 537873745}
 --- !u!111 &1396435701
 Animation:
   m_ObjectHideFlags: 0
@@ -13553,6 +13685,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speechBubbleX: 350
   speechBubbleY: 0
+--- !u!114 &1396435706 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 11497612, guid: 934f232f5c3f3cc4f8a5f3397f45c3a5,
+    type: 2}
+  m_PrefabInternal: {fileID: 621998785}
+  m_Script: {fileID: 11500000, guid: 7f19ec66f1319da4d873241e5ac2dcec, type: 3}
 --- !u!1 &1412212875
 GameObject:
   m_ObjectHideFlags: 0
@@ -13736,11 +13874,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 11470816, guid: cd15882634a625242a74d98004538d33, type: 2}
+    - target: {fileID: 0}
       propertyPath: playerAttributes
       value: 
       objectReference: {fileID: 1341586676}
-    - target: {fileID: 11470816, guid: cd15882634a625242a74d98004538d33, type: 2}
+    - target: {fileID: 0}
       propertyPath: spawnCoins
       value: 
       objectReference: {fileID: 1660182462}
@@ -13759,7 +13897,7 @@ Prefab:
     - target: {fileID: 11408118, guid: cd15882634a625242a74d98004538d33, type: 2}
       propertyPath: previousCharactersDecision
       value: 
-      objectReference: {fileID: 1243841678}
+      objectReference: {fileID: 0}
     - target: {fileID: 21226694, guid: cd15882634a625242a74d98004538d33, type: 2}
       propertyPath: m_Sprite
       value: 
@@ -13795,6 +13933,7 @@ Prefab:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 11408118, guid: cd15882634a625242a74d98004538d33, type: 2}
+    - {fileID: 0}
   m_ParentPrefab: {fileID: 100100000, guid: cd15882634a625242a74d98004538d33, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &1439173635
@@ -13960,11 +14099,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 11441390, guid: 2260230439d8ae249869b38ced179444, type: 2}
+    - target: {fileID: 0}
       propertyPath: playerAttributes
       value: 
       objectReference: {fileID: 1341586676}
-    - target: {fileID: 11441390, guid: 2260230439d8ae249869b38ced179444, type: 2}
+    - target: {fileID: 0}
       propertyPath: spawnCoins
       value: 
       objectReference: {fileID: 1660182462}
@@ -14034,6 +14173,7 @@ Prefab:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 11470164, guid: 2260230439d8ae249869b38ced179444, type: 2}
+    - {fileID: 0}
   m_ParentPrefab: {fileID: 100100000, guid: 2260230439d8ae249869b38ced179444, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &1465830851 stripped
@@ -14090,6 +14230,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speechBubbleX: 350
   speechBubbleY: 150
+--- !u!114 &1465830859 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 11489228, guid: 2260230439d8ae249869b38ced179444,
+    type: 2}
+  m_PrefabInternal: {fileID: 1465830850}
+  m_Script: {fileID: 11500000, guid: 7f19ec66f1319da4d873241e5ac2dcec, type: 3}
 --- !u!1001 &1470812574
 Prefab:
   m_ObjectHideFlags: 0
@@ -14129,11 +14275,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 11470816, guid: cd15882634a625242a74d98004538d33, type: 2}
+    - target: {fileID: 0}
       propertyPath: playerAttributes
       value: 
       objectReference: {fileID: 1341586676}
-    - target: {fileID: 11470816, guid: cd15882634a625242a74d98004538d33, type: 2}
+    - target: {fileID: 0}
       propertyPath: spawnCoins
       value: 
       objectReference: {fileID: 1660182462}
@@ -14152,7 +14298,7 @@ Prefab:
     - target: {fileID: 11408118, guid: cd15882634a625242a74d98004538d33, type: 2}
       propertyPath: previousCharactersDecision
       value: 
-      objectReference: {fileID: 1243841678}
+      objectReference: {fileID: 665692649}
     - target: {fileID: 21226694, guid: cd15882634a625242a74d98004538d33, type: 2}
       propertyPath: m_Sprite
       value: 
@@ -14186,7 +14332,8 @@ Prefab:
       propertyPath: stoppingPointX
       value: 4
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 0}
   m_ParentPrefab: {fileID: 100100000, guid: cd15882634a625242a74d98004538d33, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &1470812575 stripped
@@ -14224,6 +14371,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speechBubbleX: 350
   speechBubbleY: 60
+--- !u!114 &1470812583 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 11444992, guid: cd15882634a625242a74d98004538d33,
+    type: 2}
+  m_PrefabInternal: {fileID: 1470812574}
+  m_Script: {fileID: 11500000, guid: 7f19ec66f1319da4d873241e5ac2dcec, type: 3}
 --- !u!1 &1472801028
 GameObject:
   m_ObjectHideFlags: 0
@@ -14304,11 +14457,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 11442970, guid: 291d6d682230a5d40997e2c6881f717e, type: 2}
+    - target: {fileID: 0}
       propertyPath: playerAttributes
       value: 
       objectReference: {fileID: 1341586676}
-    - target: {fileID: 11442970, guid: 291d6d682230a5d40997e2c6881f717e, type: 2}
+    - target: {fileID: 0}
       propertyPath: spawnCoins
       value: 
       objectReference: {fileID: 1660182462}
@@ -14337,7 +14490,7 @@ Prefab:
       propertyPath: m_Name
       value: sob4
       objectReference: {fileID: 0}
-    - target: {fileID: 11442970, guid: 291d6d682230a5d40997e2c6881f717e, type: 2}
+    - target: {fileID: 0}
       propertyPath: yesMoneyOutcome
       value: 0
       objectReference: {fileID: 0}
@@ -14357,7 +14510,8 @@ Prefab:
       propertyPath: stoppingPointX
       value: 4
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 0}
   m_ParentPrefab: {fileID: 100100000, guid: 291d6d682230a5d40997e2c6881f717e, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &1479027198 stripped
@@ -14487,11 +14641,11 @@ Prefab:
       propertyPath: gameover
       value: 
       objectReference: {fileID: 530247848}
-    - target: {fileID: 11485840, guid: 1dd8df7e3e1d8e84fb5b64da7f3a219a, type: 2}
+    - target: {fileID: 0}
       propertyPath: playerAttributes
       value: 
       objectReference: {fileID: 1341586676}
-    - target: {fileID: 11485840, guid: 1dd8df7e3e1d8e84fb5b64da7f3a219a, type: 2}
+    - target: {fileID: 0}
       propertyPath: spawnCoins
       value: 
       objectReference: {fileID: 1660182462}
@@ -14549,7 +14703,7 @@ Prefab:
       propertyPath: speechNo
       value: 
       objectReference: {fileID: 0}
-    - target: {fileID: 11485840, guid: 1dd8df7e3e1d8e84fb5b64da7f3a219a, type: 2}
+    - target: {fileID: 0}
       propertyPath: passiveDepressionOutcome
       value: 0
       objectReference: {fileID: 0}
@@ -14561,15 +14715,15 @@ Prefab:
       propertyPath: startingPointY
       value: -2
       objectReference: {fileID: 0}
-    - target: {fileID: 11485840, guid: 1dd8df7e3e1d8e84fb5b64da7f3a219a, type: 2}
+    - target: {fileID: 0}
       propertyPath: noDepressionOutcome
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 11485840, guid: 1dd8df7e3e1d8e84fb5b64da7f3a219a, type: 2}
+    - target: {fileID: 0}
       propertyPath: yesDepressionOutcome
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 11485840, guid: 1dd8df7e3e1d8e84fb5b64da7f3a219a, type: 2}
+    - target: {fileID: 0}
       propertyPath: yesMoneyOutcome
       value: -5
       objectReference: {fileID: 0}
@@ -14589,7 +14743,8 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 0.79757357
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 0}
   m_ParentPrefab: {fileID: 100100000, guid: 1dd8df7e3e1d8e84fb5b64da7f3a219a, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &1501162765
@@ -14688,11 +14843,11 @@ Prefab:
       propertyPath: gameover
       value: 
       objectReference: {fileID: 530247848}
-    - target: {fileID: 11485840, guid: 1dd8df7e3e1d8e84fb5b64da7f3a219a, type: 2}
+    - target: {fileID: 0}
       propertyPath: playerAttributes
       value: 
       objectReference: {fileID: 1341586676}
-    - target: {fileID: 11485840, guid: 1dd8df7e3e1d8e84fb5b64da7f3a219a, type: 2}
+    - target: {fileID: 0}
       propertyPath: spawnCoins
       value: 
       objectReference: {fileID: 1660182462}
@@ -14725,7 +14880,8 @@ Prefab:
       propertyPath: stoppingPointX
       value: 4
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 0}
   m_ParentPrefab: {fileID: 100100000, guid: 1dd8df7e3e1d8e84fb5b64da7f3a219a, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &1556412218
@@ -14994,11 +15150,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 11442970, guid: 291d6d682230a5d40997e2c6881f717e, type: 2}
+    - target: {fileID: 0}
       propertyPath: playerAttributes
       value: 
       objectReference: {fileID: 1341586676}
-    - target: {fileID: 11442970, guid: 291d6d682230a5d40997e2c6881f717e, type: 2}
+    - target: {fileID: 0}
       propertyPath: spawnCoins
       value: 
       objectReference: {fileID: 1660182462}
@@ -15031,7 +15187,7 @@ Prefab:
       propertyPath: m_LocalScale.y
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 11442970, guid: 291d6d682230a5d40997e2c6881f717e, type: 2}
+    - target: {fileID: 0}
       propertyPath: yesMoneyOutcome
       value: 0
       objectReference: {fileID: 0}
@@ -15043,7 +15199,8 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 0}
   m_ParentPrefab: {fileID: 100100000, guid: 291d6d682230a5d40997e2c6881f717e, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &1577124444 stripped
@@ -15238,11 +15395,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 11494512, guid: 87100e5cbc89f4f46845eff083187c9e, type: 2}
+    - target: {fileID: 0}
       propertyPath: playerAttributes
       value: 
       objectReference: {fileID: 1341586676}
-    - target: {fileID: 11494512, guid: 87100e5cbc89f4f46845eff083187c9e, type: 2}
+    - target: {fileID: 0}
       propertyPath: spawnCoins
       value: 
       objectReference: {fileID: 1660182462}
@@ -15287,7 +15444,8 @@ Prefab:
       propertyPath: stoppingPointX
       value: 4
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 0}
   m_ParentPrefab: {fileID: 100100000, guid: 87100e5cbc89f4f46845eff083187c9e, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &1601470219 stripped
@@ -15408,11 +15566,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 11442970, guid: 291d6d682230a5d40997e2c6881f717e, type: 2}
+    - target: {fileID: 0}
       propertyPath: playerAttributes
       value: 
       objectReference: {fileID: 1341586676}
-    - target: {fileID: 11442970, guid: 291d6d682230a5d40997e2c6881f717e, type: 2}
+    - target: {fileID: 0}
       propertyPath: spawnCoins
       value: 
       objectReference: {fileID: 1660182462}
@@ -15453,7 +15611,8 @@ Prefab:
       propertyPath: stoppingPointX
       value: 4
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 0}
   m_ParentPrefab: {fileID: 100100000, guid: 291d6d682230a5d40997e2c6881f717e, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &1620074249 stripped
@@ -15515,11 +15674,11 @@ Prefab:
       propertyPath: gameover
       value: 
       objectReference: {fileID: 530247848}
-    - target: {fileID: 11485840, guid: 1dd8df7e3e1d8e84fb5b64da7f3a219a, type: 2}
+    - target: {fileID: 0}
       propertyPath: playerAttributes
       value: 
       objectReference: {fileID: 1341586676}
-    - target: {fileID: 11485840, guid: 1dd8df7e3e1d8e84fb5b64da7f3a219a, type: 2}
+    - target: {fileID: 0}
       propertyPath: spawnCoins
       value: 
       objectReference: {fileID: 1660182462}
@@ -15577,7 +15736,7 @@ Prefab:
       propertyPath: speechNo
       value: 
       objectReference: {fileID: 0}
-    - target: {fileID: 11485840, guid: 1dd8df7e3e1d8e84fb5b64da7f3a219a, type: 2}
+    - target: {fileID: 0}
       propertyPath: passiveDepressionOutcome
       value: 0
       objectReference: {fileID: 0}
@@ -15589,15 +15748,15 @@ Prefab:
       propertyPath: startingPointY
       value: -2
       objectReference: {fileID: 0}
-    - target: {fileID: 11485840, guid: 1dd8df7e3e1d8e84fb5b64da7f3a219a, type: 2}
+    - target: {fileID: 0}
       propertyPath: noDepressionOutcome
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 11485840, guid: 1dd8df7e3e1d8e84fb5b64da7f3a219a, type: 2}
+    - target: {fileID: 0}
       propertyPath: yesDepressionOutcome
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 11485840, guid: 1dd8df7e3e1d8e84fb5b64da7f3a219a, type: 2}
+    - target: {fileID: 0}
       propertyPath: yesMoneyOutcome
       value: 0
       objectReference: {fileID: 0}
@@ -15615,6 +15774,7 @@ Prefab:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 11409854, guid: 1dd8df7e3e1d8e84fb5b64da7f3a219a, type: 2}
+    - {fileID: 0}
   m_ParentPrefab: {fileID: 100100000, guid: 1dd8df7e3e1d8e84fb5b64da7f3a219a, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &1623730179 stripped
@@ -15793,11 +15953,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 11441390, guid: 2260230439d8ae249869b38ced179444, type: 2}
+    - target: {fileID: 0}
       propertyPath: playerAttributes
       value: 
       objectReference: {fileID: 1341586676}
-    - target: {fileID: 11441390, guid: 2260230439d8ae249869b38ced179444, type: 2}
+    - target: {fileID: 0}
       propertyPath: spawnCoins
       value: 
       objectReference: {fileID: 1660182462}
@@ -15867,6 +16027,7 @@ Prefab:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 11470164, guid: 2260230439d8ae249869b38ced179444, type: 2}
+    - {fileID: 0}
   m_ParentPrefab: {fileID: 100100000, guid: 2260230439d8ae249869b38ced179444, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &1652082710 stripped
@@ -15910,12 +16071,6 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!114 &1652082714 stripped
-MonoBehaviour:
-  m_PrefabParentObject: {fileID: 11441390, guid: 2260230439d8ae249869b38ced179444,
-    type: 2}
-  m_PrefabInternal: {fileID: 1652082709}
-  m_Script: {fileID: 11500000, guid: 12f7bcab77466234b9ab2943e7682aca, type: 3}
 --- !u!114 &1652082715
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15980,11 +16135,11 @@ Prefab:
       propertyPath: gameover
       value: 
       objectReference: {fileID: 530247848}
-    - target: {fileID: 11476060, guid: 934f232f5c3f3cc4f8a5f3397f45c3a5, type: 2}
+    - target: {fileID: 0}
       propertyPath: playerAttributes
       value: 
       objectReference: {fileID: 1341586676}
-    - target: {fileID: 11476060, guid: 934f232f5c3f3cc4f8a5f3397f45c3a5, type: 2}
+    - target: {fileID: 0}
       propertyPath: spawnCoins
       value: 
       objectReference: {fileID: 1660182462}
@@ -16008,7 +16163,12 @@ Prefab:
       propertyPath: startingPointY
       value: -2.75
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 11442876, guid: 934f232f5c3f3cc4f8a5f3397f45c3a5, type: 2}
+      propertyPath: stoppingPointX
+      value: 4
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 0}
   m_ParentPrefab: {fileID: 100100000, guid: 934f232f5c3f3cc4f8a5f3397f45c3a5, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &1653748003 stripped
@@ -16301,6 +16461,18 @@ Prefab:
       propertyPath: m_PreserveAspect
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 22460766, guid: 07052e5958546a94f955b9fd92c252ed, type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: 3.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 11490168, guid: 07052e5958546a94f955b9fd92c252ed, type: 2}
+      propertyPath: m_FontData.m_MaxSize
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 22460766, guid: 07052e5958546a94f955b9fd92c252ed, type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 07052e5958546a94f955b9fd92c252ed, type: 2}
   m_IsPrefabParent: 0
@@ -16437,11 +16609,11 @@ Prefab:
       propertyPath: gameover
       value: 
       objectReference: {fileID: 530247848}
-    - target: {fileID: 11476060, guid: 934f232f5c3f3cc4f8a5f3397f45c3a5, type: 2}
+    - target: {fileID: 0}
       propertyPath: playerAttributes
       value: 
       objectReference: {fileID: 1341586676}
-    - target: {fileID: 11476060, guid: 934f232f5c3f3cc4f8a5f3397f45c3a5, type: 2}
+    - target: {fileID: 0}
       propertyPath: spawnCoins
       value: 
       objectReference: {fileID: 1660182462}
@@ -16465,7 +16637,12 @@ Prefab:
       propertyPath: startingPointY
       value: -2.75
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 11442876, guid: 934f232f5c3f3cc4f8a5f3397f45c3a5, type: 2}
+      propertyPath: stoppingPointX
+      value: 4
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 0}
   m_ParentPrefab: {fileID: 100100000, guid: 934f232f5c3f3cc4f8a5f3397f45c3a5, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &1674478044 stripped
@@ -16550,11 +16727,11 @@ Prefab:
       propertyPath: gameover
       value: 
       objectReference: {fileID: 530247848}
-    - target: {fileID: 11476060, guid: 934f232f5c3f3cc4f8a5f3397f45c3a5, type: 2}
+    - target: {fileID: 0}
       propertyPath: playerAttributes
       value: 
       objectReference: {fileID: 1341586676}
-    - target: {fileID: 11476060, guid: 934f232f5c3f3cc4f8a5f3397f45c3a5, type: 2}
+    - target: {fileID: 0}
       propertyPath: spawnCoins
       value: 
       objectReference: {fileID: 1660182462}
@@ -16583,7 +16760,8 @@ Prefab:
       propertyPath: stoppingPointX
       value: 4
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 0}
   m_ParentPrefab: {fileID: 100100000, guid: 934f232f5c3f3cc4f8a5f3397f45c3a5, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &1702144237
@@ -16762,11 +16940,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 11441390, guid: 2260230439d8ae249869b38ced179444, type: 2}
+    - target: {fileID: 0}
       propertyPath: playerAttributes
       value: 
       objectReference: {fileID: 1341586676}
-    - target: {fileID: 11441390, guid: 2260230439d8ae249869b38ced179444, type: 2}
+    - target: {fileID: 0}
       propertyPath: spawnCoins
       value: 
       objectReference: {fileID: 1660182462}
@@ -16836,6 +17014,7 @@ Prefab:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 11470164, guid: 2260230439d8ae249869b38ced179444, type: 2}
+    - {fileID: 0}
   m_ParentPrefab: {fileID: 100100000, guid: 2260230439d8ae249869b38ced179444, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &1715413335 stripped
@@ -16879,12 +17058,6 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!114 &1715413339 stripped
-MonoBehaviour:
-  m_PrefabParentObject: {fileID: 11441390, guid: 2260230439d8ae249869b38ced179444,
-    type: 2}
-  m_PrefabInternal: {fileID: 1715413334}
-  m_Script: {fileID: 11500000, guid: 12f7bcab77466234b9ab2943e7682aca, type: 3}
 --- !u!114 &1715413340
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16953,11 +17126,11 @@ Prefab:
       propertyPath: gameover
       value: 
       objectReference: {fileID: 530247848}
-    - target: {fileID: 11485840, guid: 1dd8df7e3e1d8e84fb5b64da7f3a219a, type: 2}
+    - target: {fileID: 0}
       propertyPath: playerAttributes
       value: 
       objectReference: {fileID: 1341586676}
-    - target: {fileID: 11485840, guid: 1dd8df7e3e1d8e84fb5b64da7f3a219a, type: 2}
+    - target: {fileID: 0}
       propertyPath: spawnCoins
       value: 
       objectReference: {fileID: 1660182462}
@@ -17015,7 +17188,7 @@ Prefab:
       propertyPath: speechNo
       value: 
       objectReference: {fileID: 0}
-    - target: {fileID: 11485840, guid: 1dd8df7e3e1d8e84fb5b64da7f3a219a, type: 2}
+    - target: {fileID: 0}
       propertyPath: passiveDepressionOutcome
       value: 0
       objectReference: {fileID: 0}
@@ -17027,15 +17200,15 @@ Prefab:
       propertyPath: startingPointY
       value: -2
       objectReference: {fileID: 0}
-    - target: {fileID: 11485840, guid: 1dd8df7e3e1d8e84fb5b64da7f3a219a, type: 2}
+    - target: {fileID: 0}
       propertyPath: noDepressionOutcome
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 11485840, guid: 1dd8df7e3e1d8e84fb5b64da7f3a219a, type: 2}
+    - target: {fileID: 0}
       propertyPath: yesDepressionOutcome
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 11485840, guid: 1dd8df7e3e1d8e84fb5b64da7f3a219a, type: 2}
+    - target: {fileID: 0}
       propertyPath: yesMoneyOutcome
       value: -5
       objectReference: {fileID: 0}
@@ -17053,6 +17226,7 @@ Prefab:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 11409854, guid: 1dd8df7e3e1d8e84fb5b64da7f3a219a, type: 2}
+    - {fileID: 0}
   m_ParentPrefab: {fileID: 100100000, guid: 1dd8df7e3e1d8e84fb5b64da7f3a219a, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &1721028279 stripped
@@ -17097,13 +17271,7 @@ MonoBehaviour:
   speechNo: []
   cantAffordDialog: []
   dialogOption2: []
-  previousCharactersDecision: {fileID: 409532696}
---- !u!114 &1721028283 stripped
-MonoBehaviour:
-  m_PrefabParentObject: {fileID: 11485840, guid: 1dd8df7e3e1d8e84fb5b64da7f3a219a,
-    type: 2}
-  m_PrefabInternal: {fileID: 1721028278}
-  m_Script: {fileID: 11500000, guid: 12f7bcab77466234b9ab2943e7682aca, type: 3}
+  previousCharactersDecision: {fileID: 409532700}
 --- !u!114 &1721028284
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17117,6 +17285,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speechBubbleX: 350
   speechBubbleY: 125
+--- !u!114 &1721028287 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 11409220, guid: 1dd8df7e3e1d8e84fb5b64da7f3a219a,
+    type: 2}
+  m_PrefabInternal: {fileID: 1721028278}
+  m_Script: {fileID: 11500000, guid: 7f19ec66f1319da4d873241e5ac2dcec, type: 3}
 --- !u!1 &1727885685
 GameObject:
   m_ObjectHideFlags: 0
@@ -17330,11 +17504,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 11494512, guid: 87100e5cbc89f4f46845eff083187c9e, type: 2}
+    - target: {fileID: 0}
       propertyPath: playerAttributes
       value: 
       objectReference: {fileID: 1341586676}
-    - target: {fileID: 11494512, guid: 87100e5cbc89f4f46845eff083187c9e, type: 2}
+    - target: {fileID: 0}
       propertyPath: spawnCoins
       value: 
       objectReference: {fileID: 1660182462}
@@ -17381,6 +17555,7 @@ Prefab:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 11424578, guid: 87100e5cbc89f4f46845eff083187c9e, type: 2}
+    - {fileID: 0}
   m_ParentPrefab: {fileID: 100100000, guid: 87100e5cbc89f4f46845eff083187c9e, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &1734976491 stripped
@@ -17425,7 +17600,7 @@ MonoBehaviour:
   speechNo: []
   cantAffordDialog: []
   dialogOption2: []
-  previousCharactersDecision: {fileID: 345544253}
+  previousCharactersDecision: {fileID: 0}
 --- !u!114 &1734976495
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17535,11 +17710,11 @@ Prefab:
       propertyPath: gameover
       value: 
       objectReference: {fileID: 530247848}
-    - target: {fileID: 11485840, guid: 1dd8df7e3e1d8e84fb5b64da7f3a219a, type: 2}
+    - target: {fileID: 0}
       propertyPath: playerAttributes
       value: 
       objectReference: {fileID: 1341586676}
-    - target: {fileID: 11485840, guid: 1dd8df7e3e1d8e84fb5b64da7f3a219a, type: 2}
+    - target: {fileID: 0}
       propertyPath: spawnCoins
       value: 
       objectReference: {fileID: 1660182462}
@@ -17600,7 +17775,7 @@ Prefab:
       propertyPath: speechNo
       value: 
       objectReference: {fileID: 0}
-    - target: {fileID: 11485840, guid: 1dd8df7e3e1d8e84fb5b64da7f3a219a, type: 2}
+    - target: {fileID: 0}
       propertyPath: passiveDepressionOutcome
       value: -10
       objectReference: {fileID: 0}
@@ -17620,7 +17795,8 @@ Prefab:
       propertyPath: stoppingPointX
       value: 4
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 0}
   m_ParentPrefab: {fileID: 100100000, guid: 1dd8df7e3e1d8e84fb5b64da7f3a219a, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &1738957374 stripped
@@ -17700,11 +17876,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 11494512, guid: 87100e5cbc89f4f46845eff083187c9e, type: 2}
+    - target: {fileID: 0}
       propertyPath: playerAttributes
       value: 
       objectReference: {fileID: 1341586676}
-    - target: {fileID: 11494512, guid: 87100e5cbc89f4f46845eff083187c9e, type: 2}
+    - target: {fileID: 0}
       propertyPath: spawnCoins
       value: 
       objectReference: {fileID: 1660182462}
@@ -17749,7 +17925,8 @@ Prefab:
       propertyPath: stoppingPointX
       value: 4
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 0}
   m_ParentPrefab: {fileID: 100100000, guid: 87100e5cbc89f4f46845eff083187c9e, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &1744116743 stripped
@@ -17870,11 +18047,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 11442970, guid: 291d6d682230a5d40997e2c6881f717e, type: 2}
+    - target: {fileID: 0}
       propertyPath: playerAttributes
       value: 
       objectReference: {fileID: 1341586676}
-    - target: {fileID: 11442970, guid: 291d6d682230a5d40997e2c6881f717e, type: 2}
+    - target: {fileID: 0}
       propertyPath: spawnCoins
       value: 
       objectReference: {fileID: 1660182462}
@@ -17899,7 +18076,7 @@ Prefab:
       propertyPath: speechBubbleY
       value: 20
       objectReference: {fileID: 0}
-    - target: {fileID: 11442970, guid: 291d6d682230a5d40997e2c6881f717e, type: 2}
+    - target: {fileID: 0}
       propertyPath: yesMoneyOutcome
       value: 0
       objectReference: {fileID: 0}
@@ -17919,7 +18096,8 @@ Prefab:
       propertyPath: stoppingPointX
       value: 4
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 0}
   m_ParentPrefab: {fileID: 100100000, guid: 291d6d682230a5d40997e2c6881f717e, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &1750719968 stripped
@@ -18671,11 +18849,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 11442970, guid: 291d6d682230a5d40997e2c6881f717e, type: 2}
+    - target: {fileID: 0}
       propertyPath: playerAttributes
       value: 
       objectReference: {fileID: 1341586676}
-    - target: {fileID: 11442970, guid: 291d6d682230a5d40997e2c6881f717e, type: 2}
+    - target: {fileID: 0}
       propertyPath: spawnCoins
       value: 
       objectReference: {fileID: 1660182462}
@@ -18712,7 +18890,8 @@ Prefab:
       propertyPath: stoppingPointX
       value: 4
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 0}
   m_ParentPrefab: {fileID: 100100000, guid: 291d6d682230a5d40997e2c6881f717e, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &1913973693 stripped
@@ -19260,11 +19439,11 @@ Prefab:
       propertyPath: gameover
       value: 
       objectReference: {fileID: 530247848}
-    - target: {fileID: 11476060, guid: 934f232f5c3f3cc4f8a5f3397f45c3a5, type: 2}
+    - target: {fileID: 0}
       propertyPath: playerAttributes
       value: 
       objectReference: {fileID: 1341586676}
-    - target: {fileID: 11476060, guid: 934f232f5c3f3cc4f8a5f3397f45c3a5, type: 2}
+    - target: {fileID: 0}
       propertyPath: spawnCoins
       value: 
       objectReference: {fileID: 1660182462}
@@ -19288,7 +19467,12 @@ Prefab:
       propertyPath: startingPointY
       value: -2.75
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 11442876, guid: 934f232f5c3f3cc4f8a5f3397f45c3a5, type: 2}
+      propertyPath: stoppingPointX
+      value: 4
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 0}
   m_ParentPrefab: {fileID: 100100000, guid: 934f232f5c3f3cc4f8a5f3397f45c3a5, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &1995921785 stripped
@@ -19453,11 +19637,11 @@ Prefab:
       propertyPath: gameover
       value: 
       objectReference: {fileID: 530247848}
-    - target: {fileID: 11476060, guid: 934f232f5c3f3cc4f8a5f3397f45c3a5, type: 2}
+    - target: {fileID: 0}
       propertyPath: playerAttributes
       value: 
       objectReference: {fileID: 1341586676}
-    - target: {fileID: 11476060, guid: 934f232f5c3f3cc4f8a5f3397f45c3a5, type: 2}
+    - target: {fileID: 0}
       propertyPath: spawnCoins
       value: 
       objectReference: {fileID: 1660182462}
@@ -19486,7 +19670,8 @@ Prefab:
       propertyPath: stoppingPointX
       value: 4
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 0}
   m_ParentPrefab: {fileID: 100100000, guid: 934f232f5c3f3cc4f8a5f3397f45c3a5, type: 2}
   m_IsPrefabParent: 0
 --- !u!1001 &2018800806
@@ -19528,11 +19713,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 11442970, guid: 291d6d682230a5d40997e2c6881f717e, type: 2}
+    - target: {fileID: 0}
       propertyPath: playerAttributes
       value: 
       objectReference: {fileID: 1341586676}
-    - target: {fileID: 11442970, guid: 291d6d682230a5d40997e2c6881f717e, type: 2}
+    - target: {fileID: 0}
       propertyPath: spawnCoins
       value: 
       objectReference: {fileID: 1660182462}
@@ -19565,7 +19750,8 @@ Prefab:
       propertyPath: m_LocalScale.y
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 0}
   m_ParentPrefab: {fileID: 100100000, guid: 291d6d682230a5d40997e2c6881f717e, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &2018800807 stripped
@@ -19682,7 +19868,7 @@ CanvasGroup:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2028054101}
   m_Enabled: 1
-  m_Alpha: 0
+  m_Alpha: 1
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
@@ -19761,7 +19947,7 @@ MonoBehaviour:
   speechNo: []
   cantAffordDialog: []
   dialogOption2: []
-  previousCharactersDecision: {fileID: 880174894}
+  previousCharactersDecision: {fileID: 880174899}
 --- !u!95 &2056898155
 Animator:
   serializedVersion: 3
@@ -20046,11 +20232,11 @@ Prefab:
       propertyPath: gameover
       value: 
       objectReference: {fileID: 530247848}
-    - target: {fileID: 11485840, guid: 1dd8df7e3e1d8e84fb5b64da7f3a219a, type: 2}
+    - target: {fileID: 0}
       propertyPath: playerAttributes
       value: 
       objectReference: {fileID: 1341586676}
-    - target: {fileID: 11485840, guid: 1dd8df7e3e1d8e84fb5b64da7f3a219a, type: 2}
+    - target: {fileID: 0}
       propertyPath: spawnCoins
       value: 
       objectReference: {fileID: 1660182462}
@@ -20079,7 +20265,8 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 0.71220726
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 0}
   m_ParentPrefab: {fileID: 100100000, guid: 1dd8df7e3e1d8e84fb5b64da7f3a219a, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &2071140286 stripped
@@ -20103,6 +20290,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speechBubbleX: 350
   speechBubbleY: 0
+--- !u!114 &2078838591 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 11471240, guid: 291d6d682230a5d40997e2c6881f717e,
+    type: 2}
+  m_PrefabInternal: {fileID: 2018800806}
+  m_Script: {fileID: 11500000, guid: 7f19ec66f1319da4d873241e5ac2dcec, type: 3}
 --- !u!1001 &2098630280
 Prefab:
   m_ObjectHideFlags: 0
@@ -20142,11 +20335,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 11479490, guid: acfc9b15f70a445429def5cdab29ea17, type: 2}
+    - target: {fileID: 0}
       propertyPath: playerAttributes
       value: 
       objectReference: {fileID: 1341586676}
-    - target: {fileID: 11479490, guid: acfc9b15f70a445429def5cdab29ea17, type: 2}
+    - target: {fileID: 0}
       propertyPath: spawnCoins
       value: 
       objectReference: {fileID: 1660182462}
@@ -20170,7 +20363,20 @@ Prefab:
       propertyPath: stoppingPointX
       value: 4
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 423732, guid: acfc9b15f70a445429def5cdab29ea17, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 0.37991378
+      objectReference: {fileID: 0}
+    - target: {fileID: 423732, guid: acfc9b15f70a445429def5cdab29ea17, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 0.37676045
+      objectReference: {fileID: 0}
+    - target: {fileID: 423732, guid: acfc9b15f70a445429def5cdab29ea17, type: 2}
+      propertyPath: m_LocalScale.z
+      value: 0.67278653
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 0}
   m_ParentPrefab: {fileID: 100100000, guid: acfc9b15f70a445429def5cdab29ea17, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &2098630281 stripped
@@ -20292,11 +20498,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 11441390, guid: 2260230439d8ae249869b38ced179444, type: 2}
+    - target: {fileID: 0}
       propertyPath: playerAttributes
       value: 
       objectReference: {fileID: 1341586676}
-    - target: {fileID: 11441390, guid: 2260230439d8ae249869b38ced179444, type: 2}
+    - target: {fileID: 0}
       propertyPath: spawnCoins
       value: 
       objectReference: {fileID: 1660182462}
@@ -20375,6 +20581,7 @@ Prefab:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 11470164, guid: 2260230439d8ae249869b38ced179444, type: 2}
+    - {fileID: 0}
   m_ParentPrefab: {fileID: 100100000, guid: 2260230439d8ae249869b38ced179444, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &2108014998 stripped
@@ -20486,11 +20693,11 @@ Prefab:
       propertyPath: gameover
       value: 
       objectReference: {fileID: 530247848}
-    - target: {fileID: 11485840, guid: 1dd8df7e3e1d8e84fb5b64da7f3a219a, type: 2}
+    - target: {fileID: 0}
       propertyPath: playerAttributes
       value: 
       objectReference: {fileID: 1341586676}
-    - target: {fileID: 11485840, guid: 1dd8df7e3e1d8e84fb5b64da7f3a219a, type: 2}
+    - target: {fileID: 0}
       propertyPath: spawnCoins
       value: 
       objectReference: {fileID: 1660182462}
@@ -20551,7 +20758,7 @@ Prefab:
       propertyPath: speechNo
       value: 
       objectReference: {fileID: 0}
-    - target: {fileID: 11485840, guid: 1dd8df7e3e1d8e84fb5b64da7f3a219a, type: 2}
+    - target: {fileID: 0}
       propertyPath: passiveDepressionOutcome
       value: -10
       objectReference: {fileID: 0}
@@ -20575,7 +20782,8 @@ Prefab:
       propertyPath: startingPointY
       value: -2
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 0}
   m_ParentPrefab: {fileID: 100100000, guid: 1dd8df7e3e1d8e84fb5b64da7f3a219a, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &2110231620 stripped
@@ -20599,12 +20807,6 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!114 &2110231622 stripped
-MonoBehaviour:
-  m_PrefabParentObject: {fileID: 11493706, guid: d072e294a65dfa5448077ec3d554b300,
-    type: 2}
-  m_PrefabInternal: {fileID: 1230850883}
-  m_Script: {fileID: 11500000, guid: 12f7bcab77466234b9ab2943e7682aca, type: 3}
 --- !u!114 &2110231623
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20618,6 +20820,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speechBubbleX: 350
   speechBubbleY: 150
+--- !u!114 &2110231627 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 11449356, guid: d072e294a65dfa5448077ec3d554b300,
+    type: 2}
+  m_PrefabInternal: {fileID: 1230850883}
+  m_Script: {fileID: 11500000, guid: 7f19ec66f1319da4d873241e5ac2dcec, type: 3}
 --- !u!1 &2110886392 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 140534, guid: 934f232f5c3f3cc4f8a5f3397f45c3a5, type: 2}
@@ -20768,11 +20976,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 11494512, guid: 87100e5cbc89f4f46845eff083187c9e, type: 2}
+    - target: {fileID: 0}
       propertyPath: playerAttributes
       value: 
       objectReference: {fileID: 1341586676}
-    - target: {fileID: 11494512, guid: 87100e5cbc89f4f46845eff083187c9e, type: 2}
+    - target: {fileID: 0}
       propertyPath: spawnCoins
       value: 
       objectReference: {fileID: 1660182462}
@@ -20819,6 +21027,7 @@ Prefab:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 11424578, guid: 87100e5cbc89f4f46845eff083187c9e, type: 2}
+    - {fileID: 0}
   m_ParentPrefab: {fileID: 100100000, guid: 87100e5cbc89f4f46845eff083187c9e, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &2143296580 stripped
@@ -20863,7 +21072,7 @@ MonoBehaviour:
   speechNo: []
   cantAffordDialog: []
   dialogOption2: []
-  previousCharactersDecision: {fileID: 345544253}
+  previousCharactersDecision: {fileID: 345544257}
 --- !u!114 &2143296584
 MonoBehaviour:
   m_ObjectHideFlags: 0

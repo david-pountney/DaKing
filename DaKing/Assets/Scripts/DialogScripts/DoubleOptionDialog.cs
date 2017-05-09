@@ -5,20 +5,20 @@ using System.Collections.Generic;
 public class DoubleOptionDialog : DeterminDialog {
 
     public List<string> dialogOption2;
-    public ExecuteChoices previousCharactersDecision;
+    public ExecuteChoicesBehaviour previousCharactersDecision;
 
     public override List<string> GetDialog()
     {
-        if (!previousCharactersDecision)
+        if (previousCharactersDecision != null)
             Debug.Log("ERROR: No previous character reference on " + this.gameObject.name + " on Double Option script");
 
         //if yes
-        if (previousCharactersDecision.outcomeChoice)
+        if (previousCharactersDecision.ExecuteChoices.outcomeChoice)
         {
             return dialogOption1;
         }
         //if no
-        if (!previousCharactersDecision.outcomeChoice)
+        if (!previousCharactersDecision.ExecuteChoices.outcomeChoice)
         {
             return dialogOption2;
         }

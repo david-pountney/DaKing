@@ -81,7 +81,7 @@ public class PlayerAttributes : MonoBehaviour
     public void setMood(int newVal)
     {
         depression = newVal;
-        MoodDisplayScript.instance.handleMood(depression);
+        GlobalReferencesBehaviour.instance.SceneData.controller.GetComponent<MoodDisplayScript>().handleMood(depression);
     }
 
     public void flashTextValues(int moneyAmount, int militaryAmount, int depressionAmount)

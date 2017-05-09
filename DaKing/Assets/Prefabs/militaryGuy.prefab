@@ -10,8 +10,8 @@ GameObject:
   - 4: {fileID: 490430}
   - 212: {fileID: 21239212}
   - 114: {fileID: 11455102}
-  - 114: {fileID: 11493706}
   - 114: {fileID: 11456104}
+  - 114: {fileID: 11449356}
   m_Layer: 0
   m_Name: militaryGuy
   m_TagString: Character
@@ -31,6 +31,17 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
+--- !u!114 &11449356
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 162158}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f19ec66f1319da4d873241e5ac2dcec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &11455102
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -42,22 +53,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 735a7de9d80dffc419823258c24f75ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speech: {fileID: 157718, guid: 07052e5958546a94f955b9fd92c252ed, type: 2}
-  choices: {fileID: 0}
-  controllerLogic: {fileID: 0}
-  gameover: {fileID: 0}
   enterSpeed: 5
   stoppingPointX: 5
   endingPointX: 20
   startingPointX: 15
   startingPointY: -2.5
-  speechBubbleX: 350
-  speechBubbleY: 150
   exitSpeed: 5
   amplitudeY: 0.01
   omegaY: 5
-  enter: 0
-  exit: 0
 --- !u!114 &11456104
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -129,31 +132,6 @@ MonoBehaviour:
   cantAffordDialog:
   - I'm sorry my liege, but you do not have the funds in the treasury.
   - I'll send the men we have.
---- !u!114 &11493706
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 162158}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 12f7bcab77466234b9ab2943e7682aca, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  spawnCoins: {fileID: 0}
-  yesMoneyOutcome: 0
-  noMoneyOutcome: 0
-  yesMilitaryOutcome: 0
-  noMilitaryOutcome: 0
-  noDepressionOutcome: 0
-  yesDepressionOutcome: 0
-  passiveOneMoneyOutcome: 0
-  passiveOneMilitaryOutcome: 0
-  passiveOneDepressionOutcome: 0
-  passiveTwoMoneyOutcome: 0
-  passiveTwoMilitaryOutcome: 0
-  passiveTwoDepressionOutcome: 0
-  outcomeChoice: 0
 --- !u!212 &21239212
 SpriteRenderer:
   m_ObjectHideFlags: 1

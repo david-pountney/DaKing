@@ -10,6 +10,11 @@ public class UIControllerBehaviour : MonoBehaviour {
     {
         _uiControllerLogic = new UIControllerLogic();
 
+
+    }
+
+    void Start()
+    {
         Setup();
     }
 
@@ -17,6 +22,9 @@ public class UIControllerBehaviour : MonoBehaviour {
     {
         _uiControllerLogic.LoadingUI = GlobalReferencesBehaviour.instance.SceneData.loadingui;
         _uiControllerLogic.MainMenuCanvas = GlobalReferencesBehaviour.instance.SceneData.menuui;
+        _uiControllerLogic.GameUI = GlobalReferencesBehaviour.instance.SceneData.gameui;
+
+        _uiControllerLogic.FadeOutGameUI();
     }
 
     public void EventCallback_FinishedLoading()

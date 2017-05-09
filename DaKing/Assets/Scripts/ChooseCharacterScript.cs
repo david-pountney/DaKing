@@ -17,13 +17,13 @@ public class ChooseCharacterScript : MonoBehaviour {
     public MovementBehaviour ChooseCharacter()
     {
         //Get the script that contains the 'yes'/'no' decision a character made
-        ExecuteChoices theChoice = null;
+        ExecuteChoicesBehaviour theChoice = null;
 
         Transform child1 = null;
         Transform child2 = null;
 
         if (theCharacter)
-            theChoice = theCharacter.GetComponent<ExecuteChoices>();
+            theChoice = theCharacter.GetComponent<ExecuteChoicesBehaviour>();
 
         if(transform.childCount > 0)
             child1 = transform.GetChild(0);
@@ -42,7 +42,7 @@ public class ChooseCharacterScript : MonoBehaviour {
 
         //We always assume a previous 'yes' choice means the first child, otherwise the second child
         //If 'yes'...
-        if (theChoice.outcomeChoice)
+        if (theChoice.ExecuteChoices.outcomeChoice)
         {
             if (child1)
                 return child1.GetComponent<MovementBehaviour>();

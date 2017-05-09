@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public class NextDayBehaviour : MonoBehaviour {
 
@@ -30,9 +31,4 @@ public class NextDayBehaviour : MonoBehaviour {
         _playerAttributes = GlobalReferencesBehaviour.instance.SceneData.playerAttributes;
         _controllerBehaviour = GlobalReferencesBehaviour.instance.SceneData.controller.GetComponent<ControllerBehaviour>();
     }
-
-    // Update is called once per frame
-    void Update () {
-	
-	}
 }

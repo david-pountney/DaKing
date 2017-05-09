@@ -16,13 +16,18 @@ public class ControllerBehaviour : MonoBehaviour {
     {
         _controllerLogic = new ControllerLogic();
 
+    }
+
+    void Start()
+    {
         Setup();
+
     }
 
     private void Setup()
     {
         _controllerLogic.MusicController = GlobalReferencesBehaviour.instance.SceneData.musicController;
-
+        _controllerLogic.MoodDisplay = GlobalReferencesBehaviour.instance.SceneData.controller.GetComponent<MoodDisplayScript>();
         _controllerLogic.GetAllCharacters();
 
     }

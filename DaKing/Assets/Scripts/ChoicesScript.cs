@@ -26,10 +26,12 @@ public class ChoicesScript : MonoBehaviour {
     public void yesButtonClicked()
     {
         Debug.Log("Clicked Yes");
-        MovementBehaviour character = GlobalReferencesBehaviour.instance.SceneData.controller.GetComponent<ControllerBehaviour>().ControllerLogic.CurrentChar; 
+        MovementBehaviour character = GlobalReferencesBehaviour.instance.SceneData.controller.GetComponent<ControllerBehaviour>().ControllerLogic.CurrentChar;
+
+        IChoiceLogic choiceLogic = new YesChoiceLogic();
 
         if(character)
-            character.GetComponent<ExecuteChoices>().ExecuteYesChoice();
+            character.GetComponent<ExecuteChoicesBehaviour>().ExecuteChoices.ExecuteChoice(choiceLogic);
         
         gameObject.SetActive(false);
 
@@ -40,8 +42,10 @@ public class ChoicesScript : MonoBehaviour {
         Debug.Log("Clicked No");
         MovementBehaviour character = GlobalReferencesBehaviour.instance.SceneData.controller.GetComponent<ControllerBehaviour>().ControllerLogic.CurrentChar;
 
+        IChoiceLogic choiceLogic = new YesChoiceLogic();
+
         if (character)
-            character.GetComponent<ExecuteChoices>().ExecuteNoChoice();
+            character.GetComponent<ExecuteChoicesBehaviour>().ExecuteChoices.ExecuteChoice(choiceLogic);
         
         gameObject.SetActive(false);
     }

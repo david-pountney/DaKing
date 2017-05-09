@@ -53,13 +53,6 @@ public class TransitionToGameScript : MonoBehaviour
         mainMenuCanvasGroup = transform.parent.GetComponent<CanvasGroup>();
     }
 
-    void OnLevelWasLoaded()
-    {
-        controllerBehaviour = GlobalReferencesBehaviour.instance.SceneData.controller.GetComponent<ControllerBehaviour>();
-        gameCameraPosition = GlobalReferencesBehaviour.instance.SceneData.gameCameraPosition.transform;
-        mainMenuCanvasGroup = transform.parent.GetComponent<CanvasGroup>();
-    }
-
     /// <summary>
     /// When we start the game by pressing the start button
     /// </summary>

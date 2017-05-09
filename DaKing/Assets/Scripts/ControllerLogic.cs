@@ -7,6 +7,7 @@ using System;
 public class ControllerLogic {
 
     public GameObject MusicController { get { return _musicController; } set { _musicController = value; } }
+    public MoodDisplayScript MoodDisplay { get { return _moodDisplay; } set { _moodDisplay = value; } }
 
     public List<GameObject> _listOfCharacters;
 
@@ -23,6 +24,8 @@ public class ControllerLogic {
 
     //This is the character we are bringing on the screen
     private MovementBehaviour characterChild;
+
+    private MoodDisplayScript _moodDisplay;
 
     public void GetAllCharacters()
     {
@@ -47,12 +50,8 @@ public class ControllerLogic {
 
         PlayerAttributes playerAttributes = GlobalReferencesBehaviour.instance.SceneData.playerAttributes;
 
-        Debug.Log(playerAttributes.depression);
-
-        //PlayerAttributes playerAttributes = GameObject.FindGameObjectWithTag("King").GetComponent<PlayerAttributes>();
-
         //Init default values of mood
-        MoodDisplayScript.instance.handleMood(playerAttributes.depression);
+        _moodDisplay.handleMood(playerAttributes.depression);
 
         nextCharacter();
     }

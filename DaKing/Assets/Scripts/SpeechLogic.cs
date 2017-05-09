@@ -301,22 +301,22 @@ public class SpeechLogic {
 
     private void executePassiveOne()
     {
-        _thisTransform.GetComponent<ExecuteChoices>().ExecutePassiveOneChoice();
+       // _thisTransform.GetComponent<ExecuteChoices>().ExecutePassiveOneChoice();
     }
 
     private void executePassiveTwo()
     {
-        _thisTransform.GetComponent<ExecuteChoices>().ExecutePassiveTwoChoice();
+        //_thisTransform.GetComponent<ExecuteChoices>().ExecutePassiveTwoChoice();
     }
 
     public void executeRemoveAllMoney()
     {
-        _thisTransform.GetComponent<ExecuteChoices>().ExecuteRemoveAll(true, false, false);
+        //_thisTransform.GetComponent<ExecuteChoices>().ExecuteRemoveAll(true, false, false);
     }
 
     public void executeRemoveAllMilitary()
     {
-        _thisTransform.GetComponent<ExecuteChoices>().ExecuteRemoveAll(false, true, false);
+        //_thisTransform.GetComponent<ExecuteChoices>().ExecuteRemoveAll(false, true, false);
     }
 
     public void ExecuteCantAffordSpeech()

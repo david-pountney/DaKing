@@ -5,20 +5,10 @@ using UnityStandardAssets.ImageEffects;
 public class MoodDisplayScript : MonoBehaviour {
 
     private IMoodEffect[] arrMoodEffects = new IMoodEffect[4];
-
-    public static MoodDisplayScript instance;
+    
     void Awake()
     {
-        if (instance == null)
-        {
-            DontDestroyOnLoad(transform.gameObject);
-            this.init();
-            instance = this;
-        }
-        else
-        {
-            Destroy(this.gameObject);
-        }
+        this.init();
     }
 
     private void init()

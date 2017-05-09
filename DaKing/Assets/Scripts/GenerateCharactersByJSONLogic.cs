@@ -32,8 +32,8 @@ public class GenerateCharactersByJSONLogic {
         _superSoldiersCount = 0;
         _superSoldiersNeeded = 4;
         
-        PrintToConsole("lstJsonData Count: " + _resourceManager._resourceManagerLogic.LstJsonData.Count);
-        foreach (string jsonFile in _resourceManager._resourceManagerLogic.LstJsonData)
+        PrintToConsole("lstJsonData Count: " + _resourceManager._jsonManagerLogic.LstJsonData.Count);
+        foreach (string jsonFile in _resourceManager._jsonManagerLogic.LstJsonData)
         {
             PrintToConsole("jsonFile:"+jsonFile);
             _lstCharData.Add(JsonUtility.FromJson<CharacterData>(jsonFile));
@@ -62,7 +62,7 @@ public class GenerateCharactersByJSONLogic {
             if (CurrentChar.dependentCharName != null)
             {
                 PrintToConsole("Character has dependent character, assigning theChoice");
-                charInstance.theChoice = GameObject.Find(CurrentChar.dependentCharName).GetComponent<ExecuteChoices>();
+                charInstance.theChoice = GameObject.Find(CurrentChar.dependentCharName).GetComponent<ExecuteChoicesBehaviour>();
             }
 
             if (CurrentChar.lstDialogOne.Count > 0)
@@ -103,36 +103,36 @@ public class GenerateCharactersByJSONLogic {
             if (CurrentChar.lstOutcomeYesResult.Count > 0)
             {
                 PrintToConsole("Adding yes result text");
-                charInstance.theChoice.yesMoneyOutcome = CurrentChar.lstOutcomeYesResult[0];
-                charInstance.theChoice.yesMilitaryOutcome = CurrentChar.lstOutcomeYesResult[1];
-                charInstance.theChoice.yesDepressionOutcome = CurrentChar.lstOutcomeYesResult[2];
+                charInstance.theChoice.ExecuteChoices.YesMoneyOutcome = CurrentChar.lstOutcomeYesResult[0];
+                charInstance.theChoice.ExecuteChoices.YesMilitaryOutcome = CurrentChar.lstOutcomeYesResult[1];
+                charInstance.theChoice.ExecuteChoices.YesMoodOutcome = CurrentChar.lstOutcomeYesResult[2];
             }
 
             //No outcome result
             if (CurrentChar.lstOutcomeNoResult.Count > 0)
             {
                 PrintToConsole("Adding no result text");
-                charInstance.theChoice.noMoneyOutcome = CurrentChar.lstOutcomeNoResult[0];
-                charInstance.theChoice.noMilitaryOutcome = CurrentChar.lstOutcomeNoResult[1];
-                charInstance.theChoice.noDepressionOutcome = CurrentChar.lstOutcomeNoResult[2];
+                charInstance.theChoice.ExecuteChoices.NoMoneyOutcome = CurrentChar.lstOutcomeNoResult[0];
+                charInstance.theChoice.ExecuteChoices.NoMilitaryOutcome = CurrentChar.lstOutcomeNoResult[1];
+                charInstance.theChoice.ExecuteChoices.NoMoodOutcome = CurrentChar.lstOutcomeNoResult[2];
             }
 
             //Passive result one
             if (CurrentChar.lstOutcomePassiveResultOne.Count > 0)
             {
                 PrintToConsole("Adding passive result 1 text");
-                charInstance.theChoice.passiveOneMoneyOutcome = CurrentChar.lstOutcomePassiveResultOne[0];
-                charInstance.theChoice.passiveOneMilitaryOutcome = CurrentChar.lstOutcomePassiveResultOne[1];
-                charInstance.theChoice.passiveOneDepressionOutcome = CurrentChar.lstOutcomePassiveResultOne[2];
+                charInstance.theChoice.ExecuteChoices.PassiveOneMoneyOutcome = CurrentChar.lstOutcomePassiveResultOne[0];
+                charInstance.theChoice.ExecuteChoices.PassiveOneMilitaryOutcome = CurrentChar.lstOutcomePassiveResultOne[1];
+                charInstance.theChoice.ExecuteChoices.PassiveOneMoodOutcome = CurrentChar.lstOutcomePassiveResultOne[2];
             }
 
             //Passive result two
             if (CurrentChar.lstOutcomePassiveResultTwo.Count > 0)
             {
                 PrintToConsole("Adding passive result 2 text");
-                charInstance.theChoice.passiveTwoMoneyOutcome = CurrentChar.lstOutcomePassiveResultTwo[0];
-                charInstance.theChoice.passiveTwoMilitaryOutcome = CurrentChar.lstOutcomePassiveResultTwo[1];
-                charInstance.theChoice.passiveTwoDepressionOutcome = CurrentChar.lstOutcomePassiveResultTwo[2];
+                charInstance.theChoice.ExecuteChoices.PassiveTwoMoneyOutcome = CurrentChar.lstOutcomePassiveResultTwo[0];
+                charInstance.theChoice.ExecuteChoices.PassiveTwoMilitaryOutcome = CurrentChar.lstOutcomePassiveResultTwo[1];
+                charInstance.theChoice.ExecuteChoices.PassiveTwoMoodOutcome = CurrentChar.lstOutcomePassiveResultTwo[2];
             }
             PrintToConsole("Character loaded.");
 

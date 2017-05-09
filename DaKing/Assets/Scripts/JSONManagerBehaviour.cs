@@ -7,7 +7,7 @@ using System;
 
 public class JSONManagerBehaviour : MonoBehaviour
 {
-    public JSONManagerLogic _resourceManagerLogic;
+    public JSONManagerLogic _jsonManagerLogic;
     
     public string jsonDataPath;
 
@@ -16,21 +16,28 @@ public class JSONManagerBehaviour : MonoBehaviour
     
     void Awake()
     {
-        _resourceManagerLogic = new JSONManagerLogic();
+        _jsonManagerLogic = new JSONManagerLogic();
     }
 
     void Start()
     {
         Setup();
 
-        _resourceManagerLogic.StartLoadingCharacterTextFiles();
-
+        _jsonManagerLogic.StartLoadingCharacterTextFiles();
     }
+    /*
+    void OnLevelWasLoaded()
+    {
+        Setup();
+
+        _jsonManagerLogic.StartLoadingCharacterTextFiles();
+    }
+    */
 
     private void Setup()
     {
-        _resourceManagerLogic.ResourceManager = this;
-        _resourceManagerLogic.JsonDataPath = jsonDataPath; 
+        _jsonManagerLogic.ResourceManager = this;
+        _jsonManagerLogic.JsonDataPath = jsonDataPath; 
     }
 
     void OnDestroy()
@@ -40,7 +47,7 @@ public class JSONManagerBehaviour : MonoBehaviour
 
     public void CreateCoroutine(string filePath)
     {
-        StartCoroutine(_resourceManagerLogic.LoadWWW(filePath));
+        StartCoroutine(_jsonManagerLogic.LoadWWW(filePath));
     }
 
     
