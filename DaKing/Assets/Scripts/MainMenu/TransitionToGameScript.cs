@@ -78,7 +78,7 @@ public class TransitionToGameScript : MonoBehaviour
             StartCoroutine(FadeOut());
 
             //Start reading in characters json files
-            controllerBehaviour.GetComponent<GameMaster>().Init();
+            controllerBehaviour.GetComponent<GenerateCharactersByJSONBehaviour>().GameMasterLogic.Init();
         }
     }
 

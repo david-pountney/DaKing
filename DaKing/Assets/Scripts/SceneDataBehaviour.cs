@@ -8,16 +8,20 @@ public class SceneDataBehaviour : MonoBehaviour {
     
     public GameObject gameOver;
     public PlayerAttributes playerAttributes;
-    public GameMaster gameMaster;
-    public MenuController menuController;
+    public GenerateCharactersByJSONBehaviour gameMaster;
+    public UIControllerBehaviour menuController;
     public ChoicesScript choices;
-    public ResourceManager resourceManager;
+    public JSONManagerBehaviour resourceManager;
     public GameObject speechBubble;
     public SoundDef soundScript;
     public GameObject controller;
     public GameObject nextDay;
     public GameObject musicController;
     public GameObject gameCameraPosition;
+    public GameObject loadingui;
+    public GameObject gameui;
+    public GameObject menuui;
+
 
     private List<MovementBehaviour> characters;
 

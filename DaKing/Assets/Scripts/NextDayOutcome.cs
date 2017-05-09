@@ -29,7 +29,7 @@ public class NextDayOutcome : AnimatedMenu {
     // Use this for initialization
     void Start () {
         _playerAttributes = GlobalReferencesBehaviour.instance.SceneData.playerAttributes;
-        _controllerBehaviour = GlobalReferencesBehaviour.instance.SceneData.GetComponent<ControllerBehaviour>();
+        _controllerBehaviour = GlobalReferencesBehaviour.instance.SceneData.controller.GetComponent<ControllerBehaviour>();
     }
 
     /// <summary>

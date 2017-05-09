@@ -222,7 +222,7 @@ public class SpeechLogic {
         //Adds to the super soldier count
         if (checkForTags(@"|super"))
         {
-            ResourceManager.instance.getGameMaster().addSoldierCount();
+            GlobalReferencesBehaviour.instance.SceneData.gameMaster.GameMasterLogic.SuperSoldierCount++;
             removeTagFromText(6);
         }
 
@@ -230,8 +230,8 @@ public class SpeechLogic {
         if (checkForTags(@"|superlast"))
         {
             removeTagFromText(10);
-            GameMaster gm = ResourceManager.instance.getGameMaster();
-            _thisTransform.GetComponent<ExecuteChoices>().outcomeChoice = gm.getSoldireCount() >= gm.superSoldiersNeeded;
+            GenerateCharactersByJSONBehaviour gm = GlobalReferencesBehaviour.instance.SceneData.gameMaster;
+            _thisTransform.GetComponent<ExecuteChoices>().outcomeChoice = gm.GameMasterLogic.SuperSoldierCount >= gm.GameMasterLogic.SuperSoldierNeeded;
         }
     }
 
@@ -358,15 +358,15 @@ public class SpeechLogic {
 
         if (checkForTags(@"|super"))
         {
-            ResourceManager.instance.getGameMaster().addSoldierCount();
+            GlobalReferencesBehaviour.instance.SceneData.gameMaster.GameMasterLogic.SuperSoldierCount++;
             removeTagFromText(6);
         }
 
         if (checkForTags(@"|superlast"))
         {
             removeTagFromText(10);
-            GameMaster gm = ResourceManager.instance.getGameMaster();
-            _thisTransform.GetComponent<ExecuteChoices>().outcomeChoice = gm.getSoldireCount() >= gm.superSoldiersNeeded;
+            GenerateCharactersByJSONBehaviour gm = GlobalReferencesBehaviour.instance.SceneData.gameMaster;
+            _thisTransform.GetComponent<ExecuteChoices>().outcomeChoice = gm.GameMasterLogic.SuperSoldierCount >= gm.GameMasterLogic.SuperSoldierNeeded;
         }
     }
 
