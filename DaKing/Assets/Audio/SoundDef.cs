@@ -14,7 +14,7 @@ public class SoundDef : MonoBehaviour {
 	
 	public float[] timers;
 	
-	public float vol;
+	public float vol = 1f;
 
 	public bool looping = true;
 	
@@ -27,7 +27,7 @@ public class SoundDef : MonoBehaviour {
 		
 		for(int i = 0; i < numSources; i++)
 		{
-			AudioSource theSource = transform.gameObject.AddComponent<AudioSource>();
+            AudioSource theSource = Camera.main.GetComponent<AudioSource>();//transform.gameObject.AddComponent<AudioSource>();
 			sources.Add(theSource);
 			sources[i].volume = vol;
 			timers[i] = Random.Range(minFrequency, MaxFrequency);
@@ -53,7 +53,7 @@ public class SoundDef : MonoBehaviour {
 					sources[i].pitch = Random.Range(0.8f, 1.2f);
 					sources[i].volume = Random.Range(0.8f*vol, 1f*vol);
 					//Debug.Log (sources[i].volume);
-					sources[i].Play();
+					sources[i].PlayOneShot(sources[i].clip);
 					timers[i] = Random.Range(minFrequency, MaxFrequency);
 				}
 			}

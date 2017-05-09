@@ -1,0 +1,16 @@
+E:\DaKing\DaKing\DaKingTests\bin\Debug\DaKingTests.dll
+E:\DaKing\DaKing\DaKingTests\bin\Debug\DaKingTests.pdb
+E:\DaKing\DaKing\DaKingTests\bin\Debug\Assembly-CSharp.dll
+E:\DaKing\DaKing\DaKingTests\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+E:\DaKing\DaKing\DaKingTests\bin\Debug\UnityEngine.dll
+E:\DaKing\DaKing\DaKingTests\bin\Debug\UnityEngine.UI.dll
+E:\DaKing\DaKing\DaKingTests\bin\Debug\Assembly-CSharp-firstpass.dll
+E:\DaKing\DaKing\DaKingTests\bin\Debug\UnityEditor.dll
+E:\DaKing\DaKing\DaKingTests\bin\Debug\Assembly-CSharp.pdb
+E:\DaKing\DaKing\DaKingTests\bin\Debug\UnityEngine.xml
+E:\DaKing\DaKing\DaKingTests\bin\Debug\UnityEngine.UI.xml
+E:\DaKing\DaKing\DaKingTests\bin\Debug\Assembly-CSharp-firstpass.pdb
+E:\DaKing\DaKing\DaKingTests\bin\Debug\UnityEditor.xml
+E:\DaKing\DaKing\DaKingTests\obj\Debug\DaKingTests.csprojResolveAssemblyReference.cache
+E:\DaKing\DaKing\DaKingTests\obj\Debug\DaKingTests.dll
+E:\DaKing\DaKing\DaKingTests\obj\Debug\DaKingTests.pdb
