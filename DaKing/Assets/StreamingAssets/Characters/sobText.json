@@ -3,14 +3,13 @@
 	"lstDialogOne":[
 		"Wow! Look at all that!",
 		"...That's a lot of gold",
-		"I could look after that for you, you know",
+		"(2)I could look after that for you, you know",
 		"Just say the words",
 		"You won't be around to worry about it all",
 		"Let me be king|c"
 	],
 	"lstOutcomeYesText":[
-		"Haha! Fool! The kingdom is mine!",
-		"MINE|d"
+		"Haha! Fool! The kingdom is mine! |d"
 	],
 	"lstOutcomeNoText":[
 		"...",
@@ -20,5 +19,10 @@
 		0,
 		0,
 		0
+	],
+	"lstOutcomeYesResult":[
+		-99999,
+		-99999,
+		-99999
 	]
 }

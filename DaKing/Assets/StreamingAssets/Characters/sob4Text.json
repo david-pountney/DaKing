@@ -4,7 +4,7 @@
 		"Can I have all of the kingdoms military?|c"
 	],
 	"lstOutcomeYesText":[
-		"Hahar! You fool!|rmil"
+		"Hahar! You fool!"
 	],
 	"lstOutcomeNoText":[
 		"Darn!",
@@ -14,6 +14,11 @@
 	"lstOutcomeNoResult":[
 		0,
 		0,
+		0
+	],
+	"lstOutcomeYesResult":[
+		0,
+		-99999,
 		0
 	]
 }

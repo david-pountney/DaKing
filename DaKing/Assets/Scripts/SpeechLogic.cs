@@ -2,6 +2,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.UI;
+using System;
+using System.Linq;
+using System.Text.RegularExpressions;
 
 public class SpeechLogic {
 
@@ -17,6 +20,7 @@ public class SpeechLogic {
     public List<string> NoText { get { return _noText; } set { _noText = value; } }
     public float SpeechBubbleX { get { return _speechBubbleX; } set { _speechBubbleX = value; } }
     public float SpeechBubbleY { get { return _speechBubbleY; } set { _speechBubbleY = value; } }
+    public Vector3 NormalSpeechBubbleScale { get { return _normalSpeechBubbleScale; } set { _normalSpeechBubbleScale = value; } }
     public SoundDef SoundScript { get { return _soundScript; } set { _soundScript = value; } }
     public bool GameIsNowOver { get { return _gameIsNowOver; } set { _gameIsNowOver = value; } }
 
@@ -44,6 +48,8 @@ public class SpeechLogic {
     private float _speechBubbleX;
     private float _speechBubbleY;
 
+    private Vector3 _normalSpeechBubbleScale;
+
     private bool _choicesOpen = false;
     private bool _gameIsNowOver = false;
 
@@ -64,6 +70,10 @@ public class SpeechLogic {
 
     //Sound script
     private SoundDef _soundScript;
+    
+    //How long the current speech should be delayed for before it is shown
+    private int _speechDelay = 0;
+    private bool _speechShowing = false;
 
     public void HandleInput()
     {
@@ -79,19 +89,22 @@ public class SpeechLogic {
             ChangeSpeak();
     }
 
-    public void StartSpeak()
+    private void Init()
     {
         _speechInstance.transform.localPosition = new Vector2(_speechBubbleX, _speechBubbleY);
 
         //Get dialog
         _dialogText = _dialogScript.GetDialog();
 
-        _speechInstance.transform.GetComponentInChildren<Text>().text = _dialogText[_currentTextIndex];
+        //We can now show the speech bubble
+        _speechShowing = true;
+    }
 
-        //Check if we show choices, or execute passive abilities, and then remove the tags from the speech bubble text
-        ParseAllTags();
-
-        PlayPageTurnSound();
+    public void StartSpeak()
+    {
+        Init();
+        ShowSpeechBubble();
+        ChangeSpeak();
     }
 
     public void ChangeSpeak()
@@ -104,9 +117,6 @@ public class SpeechLogic {
         else if (!AnsweredLogic())
         //Otherwise just run the normal logic
             NormalDialogLogic();
-
-        //Check if we show choices, or execute passive abilities, and then remove the tags from the speech bubble text
-        ParseAllTags();
 
         PlayPageTurnSound();
     }
@@ -123,14 +133,57 @@ public class SpeechLogic {
         //Get yes/no dialog
         _yesText = _dialogScript.SpeechYes;
 
-        _speechInstance.transform.GetComponentInChildren<Text>().text = _dialogScript.SpeechYes[_currentYesTextIndex];
-        
         _answeredYes = true;
 
-        //Check if we show choices, or execute passive abilities, and then remove the tags from the speech bubble text
-        ParseAllTags();
-        
+        string nextSpeech = _dialogScript.SpeechYes[_currentYesTextIndex];
+
+        //Show next speech bubble
+        _speechInstance.transform.GetComponentInChildren<Text>().text = ParseAllTags(nextSpeech);
+
         PlayPageTurnSound();
+    }
+
+    private void RemoveSpeechBubble()
+    {
+        Text speechText = _speechInstance.GetComponentInChildren<Text>();
+        speechText.enabled = false;
+
+        iTween.ScaleTo(_speechInstance.gameObject, iTween.Hash("scale", Vector3.zero,
+                                                              "time", .25f,
+                                                              "easetype", iTween.EaseType.linear,
+                                                              "oncomplete", "itweenCallback_FinishedRemovingSpeechBubble",
+                                                              "oncompletetarget", _thisTransform.gameObject));
+
+        //We are now hiding the speech bubble
+        _speechShowing = false;
+    }
+
+    private void HideSpeechBubble()
+    {
+        Text speechText = _speechInstance.GetComponentInChildren<Text>();
+        speechText.enabled = false;
+
+        iTween.ScaleTo(_speechInstance.gameObject, iTween.Hash("scale", Vector3.zero,
+                                                              "time", .25f,
+                                                              "easetype", iTween.EaseType.linear));
+
+        //We are now hiding the speech bubble
+        _speechShowing = false;
+    }
+
+    public void ShowSpeechBubble()
+    {
+        Text speechText = _speechInstance.GetComponentInChildren<Text>();
+        speechText.enabled = true;
+
+        _speechInstance.transform.localScale = Vector3.zero;
+
+        iTween.ScaleTo(_speechInstance.gameObject, iTween.Hash("scale", _normalSpeechBubbleScale,
+                                                      "time", .25f,
+                                                      "easetype", iTween.EaseType.linear));
+
+        //We are now showing the speech bubble 
+        _speechShowing = true;
     }
 
     public void ShowNoSpeech()
@@ -138,12 +191,12 @@ public class SpeechLogic {
         //Get yes/no dialog
         _noText = _dialogScript.SpeechNo;
 
-        _speechInstance.transform.GetComponentInChildren<Text>().text = _dialogScript.SpeechNo[_currentNoTextIndex];
-
         _answeredNo = true;
 
-        //Check if we show choices, or execute passive abilities, and then remove the tags from the speech bubble text
-        ParseAllTags();
+        string nextSpeech = _dialogScript.SpeechNo[_currentNoTextIndex];
+
+        //Show next speech bubble
+        _speechInstance.transform.GetComponentInChildren<Text>().text = ParseAllTags(nextSpeech);
 
         //Play the page turning sound
         PlayPageTurnSound();
@@ -151,15 +204,28 @@ public class SpeechLogic {
 
     private void NormalDialogLogic()
     {
-        if (_currentTextIndex >= DialogText.Count - 1)
-        {
-            killSpeechAndChoices();
-            _movementLogic.MovementLogic.StartMovingCharacterOut();
-
+        if (CheckIfFinishedDialog())
             return;
+        
+        string nextSpeech = _dialogText[_currentTextIndex];
+
+        //Show next speech bubble
+        _speechInstance.transform.GetComponentInChildren<Text>().text = ParseAllTags(nextSpeech);
+
+        _currentTextIndex++;
+    }
+
+    private bool CheckIfFinishedDialog()
+    {
+        if (_currentTextIndex > DialogText.Count - 1)
+        {
+            KillSpeechAndChoices();
+            
+
+            return true;
         }
 
-        _speechInstance.transform.GetComponentInChildren<Text>().text = _dialogText[++_currentTextIndex];
+        return false;
     }
 
     private void PlayPageTurnSound()
@@ -170,71 +236,105 @@ public class SpeechLogic {
 
     private bool CheckIfSpeechEnabled()
     {
-        if (_choices.activeSelf && _choicesOpen) return false;
+        if ((_choices.activeSelf && _choicesOpen) || !_speechShowing) return false;
 
         return true;
     }
 
-    private void ParseAllTags()
+    private string ParseAllTags(string newSpeech)
     {
         //Check if we show choices now
-        if (checkForTags(@"|c"))
+        if (checkForTags(newSpeech, @"|c"))
         {
-            removeTagFromText(2);
+            removeTagFromEndOfText(ref newSpeech, 2);
             createChoices();
         }
 
         //Check if we exexcute passives now
-        if (checkForTags(@"|p1"))
+        if (checkForTags(newSpeech, @"|p1"))
         {
-            removeTagFromText(3);
+            removeTagFromEndOfText(ref newSpeech, 3);
             executePassiveOne();
         }
 
         //Check if we exexcute passives now
-        if (checkForTags(@"|p2"))
+        if (checkForTags(newSpeech, @"|p2"))
         {
-            removeTagFromText(3);
+            removeTagFromEndOfText(ref newSpeech, 3);
             executePassiveTwo();
         }
 
         //Check if the player has died
-        if (checkForTags(@"|d"))
+        if (checkForTags(newSpeech, @"|d"))
         {
-            removeTagFromText(2);
+            removeTagFromEndOfText(ref newSpeech, 2);
+            ChangeSpeechBubbleSprite();
             _gameIsNowOver = true;
         }
 
-        //Check if we should remove all the players money
-        if (checkForTags(@"|rmon"))
-        {
-            removeTagFromText(5);
-            executeRemoveAllMoney();
-        }
-
-        //Check if we should remove all the players military
-        if (checkForTags(@"|rmil"))
-        {
-            removeTagFromText(5);
-            executeRemoveAllMilitary();
-        }
-
         //Adds to the super soldier count
-        if (checkForTags(@"|super"))
+        if (checkForTags(newSpeech, @"|super"))
         {
             GlobalReferencesBehaviour.instance.SceneData.gameMaster.GameMasterLogic.SuperSoldierCount++;
-            removeTagFromText(6);
+            removeTagFromEndOfText(ref newSpeech, 6);
         }
 
         //Triggers the check for whether the player has enough super soldiers
-        if (checkForTags(@"|superlast"))
+        if (checkForTags(newSpeech, @"|superlast"))
         {
-            removeTagFromText(10);
+            removeTagFromEndOfText(ref newSpeech, 10);
             GenerateCharactersByJSONBehaviour gm = GlobalReferencesBehaviour.instance.SceneData.gameMaster;
             _thisTransform.GetComponent<ExecuteChoices>().outcomeChoice = gm.GameMasterLogic.SuperSoldierCount >= gm.GameMasterLogic.SuperSoldierNeeded;
         }
+
+        if (checkForTags(newSpeech, "("))
+        {
+            ParseSpeechDelay(newSpeech);
+
+            removeTagFromBeginningOfText(ref newSpeech, 3);
+        }
+
+        return newSpeech;
     }
 
+    private void ParseSpeechDelay(string newSpeech)
+    {
+        string text = newSpeech.Substring(0, 3);
+        string stringLength = String.Empty;
+        var isMatch = Regex.Match(text, @"^(\([0-9-]+\))+$");
+
+        if (isMatch.Value != String.Empty)
+        {
+            stringLength = isMatch.ToString().Substring(1, 1);
+            _speechDelay = int.Parse(stringLength);
+
+            if (_speechDelay > 0)
+            {
+                HideSpeechBubble();
+                WaitForSpeechDelay();
+            }
+        }
+    }
+
+    private void WaitForSpeechDelay()
+    {
+        iTween.ValueTo(_thisTransform.gameObject, iTween.Hash("from", 0f, "to", 1f,
+                                                              "time", _speechDelay, 
+                                                              "onupdate", "null",
+                                                              "oncomplete", "itweenCallback_FinishedWaitingForSpeechDelay"));
+
+        //Reset SpeechDelay
+        _speechDelay = 0;
+    }
+
+    private void ChangeSpeechBubbleSprite()
+    {
+        GlobalReferencesBehaviour.instance.SceneData.speechBubble.GetComponent<Image>().sprite =
+            Resources.Load<Sprite>("speechInverted");
+
+        GlobalReferencesBehaviour.instance.SceneData.speechBubble.GetComponentInChildren<Text>().color = Color.white;
+    }
+    
     private bool AnsweredLogic()
     {
         if (_answeredYes)
@@ -243,13 +343,17 @@ public class SpeechLogic {
             if (_currentYesTextIndex >= _yesText.Count - 1)
             {
                 //Get rid of the speech bubble
-                killSpeechAndChoices();
+                KillSpeechAndChoices();
                 //Move character out
                 _movementLogic.MovementLogic.StartMovingCharacterOut();
             }
-            else
+            else {
+
+                string nextSpeech = _yesText[++_currentYesTextIndex];
+
                 //Show next yes speech bubble
-                _speechInstance.transform.GetComponentInChildren<Text>().text = _yesText[++_currentYesTextIndex];
+                _speechInstance.transform.GetComponentInChildren<Text>().text = ParseAllTags(nextSpeech);
+            }
 
             return true;
         }
@@ -258,11 +362,15 @@ public class SpeechLogic {
         {
             if (_currentNoTextIndex >= _noText.Count - 1)
             {
-                killSpeechAndChoices();
+                KillSpeechAndChoices();
                 _movementLogic.MovementLogic.StartMovingCharacterOut();
             }
-            else
-                _speechInstance.transform.GetComponentInChildren<Text>().text = _noText[++_currentNoTextIndex];
+            else {
+                string nextSpeech = _noText[++_currentNoTextIndex];
+
+                //Show next yes speech bubble
+                _speechInstance.transform.GetComponentInChildren<Text>().text = ParseAllTags(nextSpeech);
+            }
 
             return true;
         }
@@ -275,48 +383,49 @@ public class SpeechLogic {
         _gameover.SetActive(true);
         _gameover.GetComponent<CurtainActivate>().startEndDay();
 
-        GameObject.Find("MusicController").GetComponent<SimpleMusicController>().fade_out();
-
-        killSpeechAndChoices();
+        GlobalReferencesBehaviour.instance.SceneData.musicController.GetComponent<SimpleMusicController>().fade_out();
+        
+        KillSpeechAndChoices();
 
         _disableSpeech = true;
     }
 
-    private bool checkForTags(string tag)
+    private bool checkForTags(string newSpeech, string tag)
     {
-        if (_speechInstance.transform.GetComponentInChildren<Text>().text.Contains(tag))
+        if (newSpeech.Contains(tag))
         {
             return true;
         }
+
         return false;
     }
     
-    private void removeTagFromText(int length)
+    private void removeTagFromEndOfText(ref string newSpeech, int length)
     {
-        //Ch string
-        string temp = _speechInstance.transform.GetComponentInChildren<Text>().text;
+        string temp = newSpeech;
         string temp2 = temp.Remove(temp.Length - length, length);
-        _speechInstance.transform.GetComponentInChildren<Text>().text = temp2;
+        newSpeech = temp2;
+    }
+
+    private void removeTagFromBeginningOfText(ref string newSpeech, int length)
+    {
+        string temp = newSpeech;
+        string temp2 = temp.Remove(0, length);
+        newSpeech = temp2;
     }
 
     private void executePassiveOne()
     {
-       // _thisTransform.GetComponent<ExecuteChoices>().ExecutePassiveOneChoice();
+        IChoiceLogic choiceLogic = new PassiveOneChoiceLogic();
+
+        _thisTransform.GetComponent<ExecuteChoicesBehaviour>().ExecuteChoices.ExecuteChoice(choiceLogic);
     }
 
     private void executePassiveTwo()
     {
-        //_thisTransform.GetComponent<ExecuteChoices>().ExecutePassiveTwoChoice();
-    }
+        IChoiceLogic choiceLogic = new PassiveTwoChoiceLogic();
 
-    public void executeRemoveAllMoney()
-    {
-        //_thisTransform.GetComponent<ExecuteChoices>().ExecuteRemoveAll(true, false, false);
-    }
-
-    public void executeRemoveAllMilitary()
-    {
-        //_thisTransform.GetComponent<ExecuteChoices>().ExecuteRemoveAll(false, true, false);
+        _thisTransform.GetComponent<ExecuteChoicesBehaviour>().ExecuteChoices.ExecuteChoice(choiceLogic);
     }
 
     public void ExecuteCantAffordSpeech()
@@ -335,40 +444,6 @@ public class SpeechLogic {
             _soundScript.fire();
         }
     }
-    
-    public void ParseTags()
-    {
-        if (checkForTags(@"|d"))
-        {
-            removeTagFromText(2);
-            _gameIsNowOver = true;
-        }
-
-        if (checkForTags(@"|rmon"))
-        {
-            removeTagFromText(5);
-            executeRemoveAllMoney();
-        }
-
-        if (checkForTags(@"|rmil"))
-        {
-            removeTagFromText(5);
-            executeRemoveAllMilitary();
-        }
-
-        if (checkForTags(@"|super"))
-        {
-            GlobalReferencesBehaviour.instance.SceneData.gameMaster.GameMasterLogic.SuperSoldierCount++;
-            removeTagFromText(6);
-        }
-
-        if (checkForTags(@"|superlast"))
-        {
-            removeTagFromText(10);
-            GenerateCharactersByJSONBehaviour gm = GlobalReferencesBehaviour.instance.SceneData.gameMaster;
-            _thisTransform.GetComponent<ExecuteChoices>().outcomeChoice = gm.GameMasterLogic.SuperSoldierCount >= gm.GameMasterLogic.SuperSoldierNeeded;
-        }
-    }
 
     private void createChoices()
     {
@@ -379,9 +454,11 @@ public class SpeechLogic {
         }
     }
 
-    private void killSpeechAndChoices()
+    private void KillSpeechAndChoices()
     {
         _choices.SetActive(false);
+
+        RemoveSpeechBubble();
 
         //Play the page turning sound
         _soundScript.fire();

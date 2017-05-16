@@ -4,7 +4,7 @@
 		"Can I have all the money in the treasury?|c"
 	],
 	"lstOutcomeYesText":[
-		"Hahar! You fool!|rmon"
+		"Hahar! You fool!"
 	],
 	"lstOutcomeNoText":[
 		"Darn!",
@@ -13,6 +13,11 @@
 	],
 	"lstOutcomeNoResult":[
 		0,
+		0,
+		0
+	],
+	"lstOutcomeYesResult":[
+		-99999,
 		0,
 		0
 	]

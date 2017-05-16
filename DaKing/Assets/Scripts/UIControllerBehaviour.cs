@@ -29,9 +29,7 @@ public class UIControllerBehaviour : MonoBehaviour {
 
     public void EventCallback_FinishedLoading()
     {
-        _uiControllerLogic.DisableLoadingScreen();
-        _uiControllerLogic.EnableMainMenuCanvas();
+        _uiControllerLogic.StartGame();
     }
-
-
+    
 }

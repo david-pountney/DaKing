@@ -7,7 +7,7 @@ public class SceneDataBehaviour : MonoBehaviour {
     public List<MovementBehaviour> Characters { get { return characters; } set { characters = value; } }
     
     public GameObject gameOver;
-    public PlayerAttributes playerAttributes;
+    public PlayerAttributesBehaviour playerAttributes;
     public GenerateCharactersByJSONBehaviour gameMaster;
     public UIControllerBehaviour menuController;
     public ChoicesScript choices;

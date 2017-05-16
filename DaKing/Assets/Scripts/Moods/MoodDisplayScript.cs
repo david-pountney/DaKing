@@ -27,7 +27,7 @@ public class MoodDisplayScript : MonoBehaviour {
         for (int i = 0; i < arrMoodEffects.Length; ++i)
         {
             arrMoodEffects[i].SetEffect(moodPercent);
-           // StartCoroutine(arrMoodEffects[i].updateEffect(moodPercent));
+            StartCoroutine(arrMoodEffects[i].updateEffect(moodPercent));
         }
     }
 }

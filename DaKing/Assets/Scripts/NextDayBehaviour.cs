@@ -22,7 +22,7 @@ public class NextDayBehaviour : MonoBehaviour {
     private int depressionDif;
 
     //We use this for player stats
-    private PlayerAttributes _playerAttributes;
+    private PlayerAttributesBehaviour _playerAttributes;
     private ControllerBehaviour _controllerBehaviour;
 
     // Use this for initialization

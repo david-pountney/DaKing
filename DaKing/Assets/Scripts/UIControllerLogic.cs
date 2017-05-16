@@ -11,18 +11,14 @@ public class UIControllerLogic {
     private GameObject _mainMenuCanvas;
     private GameObject _gameUI;
 
-    public void DisableLoadingScreen()
-    {
-        _loadingUI.SetActive(false);
-    }
-
-    public void EnableMainMenuCanvas()
-    {
-        _mainMenuCanvas.SetActive(true);
-    }
-
     public void FadeOutGameUI()
     {
         _gameUI.GetComponent<CanvasGroup>().alpha = 0f;
+    }
+
+    public void StartGame()
+    {
+        //Start reading in characters json files
+        GlobalReferencesBehaviour.instance.SceneData.menuController.GetComponent<TransitionToGameScript>().BeginTransitionToGame();
     }
 }

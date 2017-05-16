@@ -23,7 +23,7 @@ public class NextDayOutcome : AnimatedMenu {
     private int depressionDif;
 
     //We use this for player stats
-    private PlayerAttributes _playerAttributes;
+    private PlayerAttributesBehaviour _playerAttributes;
     private ControllerBehaviour _controllerBehaviour;
 
     // Use this for initialization
@@ -127,14 +127,14 @@ public class NextDayOutcome : AnimatedMenu {
     /// </summary>
     private void calculateOutcomeValues()
     {
-        moneyDif = (_playerAttributes.money - PlayerAttributes.newDayMoney);
-        militaryDif = (_playerAttributes.military - PlayerAttributes.newDayMilitary);
-        depressionDif = (_playerAttributes.depression - PlayerAttributes.newDayDepression);
+        moneyDif = (_playerAttributes.PlayerAttributesLogic.Money - _playerAttributes.PlayerAttributesLogic.NewDayMoney);
+        militaryDif = (_playerAttributes.PlayerAttributesLogic.Military - _playerAttributes.PlayerAttributesLogic.NewDayMilitary);
+        depressionDif = (_playerAttributes.PlayerAttributesLogic.Mood - _playerAttributes.PlayerAttributesLogic.NewDayMood);
 
         //Set new day money to current day's money
-        PlayerAttributes.newDayMoney = _playerAttributes.money;
-        PlayerAttributes.newDayMilitary = _playerAttributes.military;
-        PlayerAttributes.newDayDepression = _playerAttributes.depression;
+        _playerAttributes.PlayerAttributesLogic.NewDayMoney = _playerAttributes.PlayerAttributesLogic.Money;
+        _playerAttributes.PlayerAttributesLogic.NewDayMilitary = _playerAttributes.PlayerAttributesLogic.Military;
+        _playerAttributes.PlayerAttributesLogic.NewDayMood = _playerAttributes.PlayerAttributesLogic.Mood;
     }
 
     private IEnumerator startFadingSequence()

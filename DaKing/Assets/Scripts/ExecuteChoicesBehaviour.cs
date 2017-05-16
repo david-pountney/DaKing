@@ -26,4 +26,24 @@ public class ExecuteChoicesBehaviour : MonoBehaviour {
         _executeChoices.SpeechBehaviour = GetComponent<SpeechBehaviour>();
         _executeChoices.SpawnCoins = GlobalReferencesBehaviour.instance.SceneData.controller.GetComponent<SpawnCoins>();
     }
+
+    private void itweenCallback_ChangeMilitary(int newVal)
+    {
+        _executeChoices.PlayerAttributes.PlayerAttributesLogic.SetMilitary(newVal);
+    }
+
+    private void itweenCallback_ChangeMoney(int newVal)
+    {
+        _executeChoices.PlayerAttributes.PlayerAttributesLogic.SetMoney(newVal);
+    }
+
+    private void itweenCallback_ChangeMood(int newVal)
+    {
+        _executeChoices.PlayerAttributes.PlayerAttributesLogic.SetMood(newVal);
+    }
+
+    private void itweenCallback_CompleteMood()
+    {
+        
+    }
 }

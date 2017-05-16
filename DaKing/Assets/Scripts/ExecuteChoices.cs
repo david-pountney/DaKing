@@ -5,7 +5,7 @@ public class ExecuteChoices
 {
     public Transform ThisTransform { get { return _thisTransform; } set { _thisTransform = value; } }
 
-    public PlayerAttributes PlayerAttributes { get { return _playerAttributes; } set { _playerAttributes = value; } }
+    public PlayerAttributesBehaviour PlayerAttributes { get { return _playerAttributes; } set { _playerAttributes = value; } }
     public MovementBehaviour MovementForChars { get { return _movementForChars; } set { _movementForChars = value; } }
     public SpeechBehaviour SpeechBehaviour { get { return _speechBehaviour; } set { _speechBehaviour = value; } }
     public SpawnCoins SpawnCoins { get { return _spawnCoins; } set { _spawnCoins = value; } }
@@ -31,7 +31,7 @@ public class ExecuteChoices
 
     private Transform _thisTransform;
 
-    private PlayerAttributes _playerAttributes;
+    private PlayerAttributesBehaviour _playerAttributes;
     private MovementBehaviour _movementForChars;
     private SpeechBehaviour _speechBehaviour;
 
@@ -72,219 +72,46 @@ public class ExecuteChoices
     //How much mood does the player lose if he doesn't have enough resources to make a choice?
     private int _moodLoss = 5;
 
+    //Values for special tags to remove all of something
+    private const int _loseAllMoney = -99999;
+    private const int _loseAllMilitary = -99999;
+    private const int _loseAllMood = -99999;
+
     public void ExecuteChoice(IChoiceLogic theChoiceType)
     {
         theChoiceType.ExecuteChoice(this);
     }
-    /*
-    public void ExecuteYesChoice()
+    
+    public bool CheckIfYouHaveEnoughResources(int moneyAmount, int militaryAmount)
     {
-        if (CheckIfYouHaveEnoughResources())
-        {
-            _speechBehaviour.SpeechLogic.ShowYesSpeech();
+        if ((moneyAmount > 0 || (_playerAttributes.PlayerAttributesLogic.Money >= Mathf.Abs(moneyAmount))) &&
+            (militaryAmount > 0 || (_playerAttributes.PlayerAttributesLogic.Military >= Mathf.Abs(militaryAmount))))
 
-            // Handle Money
-            iTween.ValueTo(gameObject, iTween.Hash("from", playerAttributes.money, "to", playerAttributes.money + _yesMoneyOutcome, "onupdate", "itweenChangeMoney"));
-            spawnCoins.updateCoins(_yesMoneyOutcome);
+            return true;
 
-            // Handle military
-            iTween.ValueTo(gameObject, iTween.Hash("from", playerAttributes.military, "to", playerAttributes.military + _yesMilitaryOutcome, "onupdate", "itweenChangeMilitary"));
+        return false;
+    }
 
-            // // Handle mood
-            int moodOutcome = playerAttributes.depression + _yesMoodOutcome;
-            if (moodOutcome > playerAttributes.maxDepression) moodOutcome = playerAttributes.maxDepression;
-            if (moodOutcome <= 0) _speechBehaviour.SpeechLogic.GameIsNowOver = true;
+    public void AnimateMoodValueChanging(int moodOutcome)
+    {
+        _playerAttributes.PlayerAttributesLogic.SetMoodState(moodOutcome);
 
-            if (moodOutcome != playerAttributes.depression)
-                AnimateMoodValueChanging(moodOutcome);
-
-            //Display flash text
-            playerAttributes.flashTextValues(_yesMoneyOutcome, _yesMilitaryOutcome, _yesMoodOutcome);
-
-            //Save the decision the player made
-            outcomeChoice = true;
-
-            endChoiceLogic();
-        }
-        //Not enough resource
-        else
-        {
-            _speechBehaviour.SpeechLogic.ExecuteCantAffordSpeech();
-
-            //Remove depression
-            AnimateMoodValueChanging(playerAttributes.depression - 5);
-
-
-            //Display flash text
-            playerAttributes.flashTextValues(0, 0, -5);
-        }
-
+        //Change mood value shown on screen
+        iTween.ValueTo(_thisTransform.gameObject, iTween.Hash("from", _playerAttributes.PlayerAttributesLogic.Mood, "to", moodOutcome, "onupdate", "itweenCallback_ChangeMood"
+            ));
     }
     
-    public void ExecuteNoChoice()
+    //Handles 'remove all' special codes
+    public void CheckForSpecialValues(ref int moneyAmount, ref int militaryAmount, ref int moodAmount)
     {
-        if ((_noMoneyOutcome > 0 || (playerAttributes.money >= Mathf.Abs(_noMoneyOutcome))) &&
-            (_noMilitaryOutcome > 0 || (playerAttributes.military >= Mathf.Abs(_noMilitaryOutcome))))
-        {
-            _speechBehaviour.SpeechLogic.ShowNoSpeech();
+        if (moneyAmount == _loseAllMoney)
+            moneyAmount = -_playerAttributes.PlayerAttributesLogic.Money;
 
-            // Handle Money
-            iTween.ValueTo(gameObject, iTween.Hash("from", playerAttributes.money, "to", playerAttributes.money + _noMoneyOutcome, "onupdate", "itweenChangeMoney"));
-            spawnCoins.updateCoins(_noMoneyOutcome);
+        if (militaryAmount == _loseAllMilitary)
+            militaryAmount = -_playerAttributes.PlayerAttributesLogic.Military;
 
-            // Handle Military
-            iTween.ValueTo(gameObject, iTween.Hash("from", playerAttributes.military, "to", playerAttributes.military + _noMilitaryOutcome, "onupdate", "itweenChangeMilitary"));
-
-            // Handle Mood
-            int moodOutcome = playerAttributes.depression + _noMoodOutcome;
-            if (moodOutcome > playerAttributes.maxDepression) moodOutcome = playerAttributes.maxDepression;
-            if (moodOutcome <= 0) _speechBehaviour.SpeechLogic.GameIsNowOver = true;
-
-            if (moodOutcome != playerAttributes.depression)
-                AnimateMoodValueChanging(moodOutcome);
-
-            //Display flash text
-            playerAttributes.flashTextValues(_noMoneyOutcome, _noMilitaryOutcome, _noMoodOutcome);
-
-            //Save the decision the player made
-            outcomeChoice = false;
-
-            endChoiceLogic();
-        }
-        //Not enough resource
-        else
-        {
-            _speechBehaviour.SpeechLogic.ExecuteCantAffordSpeech();
-
-            //Remove depression
-            AnimateMoodValueChanging(playerAttributes.depression - 5);
-
-            // StartCoroutine(changeDepression(-5, -1));
-
-            //Display flash text
-            playerAttributes.flashTextValues(0, 0, -5);
-        }
+        if (moodAmount == _loseAllMood)
+            moodAmount = -_playerAttributes.PlayerAttributesLogic.Mood;
     }
-
-    public void ExecutePassiveOneChoice()
-    {
-        // Handle Money
-        // Debug.Log("passiveOneMoneyOutcome" + passiveOneMoneyOutcome);
-        if ((_passiveOneMoneyOutcome > 0 || (playerAttributes.money >= Mathf.Abs(_passiveOneMoneyOutcome))) &&
-            (_passiveOneMilitaryOutcome > 0 || (playerAttributes.military >= Mathf.Abs(_passiveOneMilitaryOutcome))))
-        {
-            iTween.ValueTo(gameObject, iTween.Hash("from", playerAttributes.money, "to", playerAttributes.money + _passiveOneMoneyOutcome, "onupdate", "itweenChangeMoney"));
-            spawnCoins.updateCoins(_passiveOneMoneyOutcome);
-
-            // Handle Militry
-            iTween.ValueTo(gameObject, iTween.Hash("from", playerAttributes.military, "to", playerAttributes.military + _passiveOneMilitaryOutcome, "onupdate", "itweenChangeMilitary"));
-
-            // // Handle depression
-            int moodOutcome = playerAttributes.depression + _passiveOneMoodOutcome;
-            if (moodOutcome > playerAttributes.maxDepression) moodOutcome = playerAttributes.maxDepression;
-            if (moodOutcome <= 0) _speechBehaviour.SpeechLogic.GameIsNowOver = true;
-
-            if (moodOutcome != playerAttributes.depression)
-                AnimateMoodValueChanging(moodOutcome);
-
-            // if (passiveOneDepressionOutcome > 0) StartCoroutine(changeDepression(passiveOneDepressionOutcome, 1));
-            // else if (passiveOneDepressionOutcome < 0) StartCoroutine(changeDepression(passiveOneDepressionOutcome, -1));
-
-            //Display flash text
-            playerAttributes.flashTextValues(_passiveOneMoneyOutcome, _passiveOneMilitaryOutcome, _passiveOneMoodOutcome);
-        }
-        //Not enough resource
-        else
-        {
-            AnimateMoodValueChanging(playerAttributes.depression - 5);
-
-            //Display flash text
-            playerAttributes.flashTextValues(0, 0, -5);
-        }
-    }
-
-    public void ExecuteRemoveAll(bool loseMoney, bool loseMilitary, bool loseDepression)
-    {
-        // Handle Money
-        if (loseMoney)
-        {
-            _yesMoneyOutcome = -playerAttributes.money;
-            _noMoneyOutcome = -playerAttributes.money;
-        }
-
-        // Handle Militry
-        if (loseMilitary)
-        {
-            _yesMilitaryOutcome = -playerAttributes.military;
-            _noMilitaryOutcome = -playerAttributes.military;
-        }
-
-        if (loseDepression)
-            Debug.Log("Not implemented code");
-    }
-
-    public void ExecutePassiveTwoChoice()
-    {
-        if ((_passiveTwoMoneyOutcome > 0 || (playerAttributes.money >= Mathf.Abs(_passiveTwoMoneyOutcome))) &&
-        (_passiveTwoMilitaryOutcome > 0 || (playerAttributes.military >= Mathf.Abs(_passiveTwoMilitaryOutcome))))
-        {
-            // Handle Money
-            // Debug.Log("passiveTwoMoneyOutcome" + passiveTwoMoneyOutcome);
-            iTween.ValueTo(gameObject, iTween.Hash("from", playerAttributes.money, "to", playerAttributes.money + _passiveTwoMoneyOutcome, "onupdate", "itweenChangeMoney"));
-            spawnCoins.updateCoins(_passiveTwoMoneyOutcome);
-
-            // Debug.Log("passiveTwoMilitaryOutcome" + passiveTwoMilitaryOutcome);
-            iTween.ValueTo(gameObject, iTween.Hash("from", playerAttributes.military, "to", playerAttributes.military + _passiveTwoMilitaryOutcome, "onupdate", "itweenChangeMilitary"));
-
-            // // Handle depression
-            int moodOutcome = playerAttributes.depression + _passiveTwoMoodOutcome;
-            if (moodOutcome > playerAttributes.maxDepression) moodOutcome = playerAttributes.maxDepression;
-            if (moodOutcome <= 0) _speechBehaviour.SpeechLogic.GameIsNowOver = true;
-
-            AnimateMoodValueChanging(moodOutcome);
-            
-            playerAttributes.setMoodState(moodOutcome);
-
-            //Display flash text
-            playerAttributes.flashTextValues(_passiveTwoMoneyOutcome, _passiveTwoMilitaryOutcome, _passiveTwoMoodOutcome);
-        }
-        //Not enough resource
-        else
-        {
-            AnimateMoodValueChanging(playerAttributes.depression - 5);
-
-            //Display flash text
-            playerAttributes.flashTextValues(0, 0, -5);
-        }
-    }
-    */
-
-    private void itweenChangeMilitary(int newVal)
-    {
-        _playerAttributes.setMilitary(newVal);
-    }
-
-    private void itweenChangeMoney(int newVal)
-    {
-        // Debug.Log("set Monnie: "+newVal);
-        _playerAttributes.setMoney(newVal);
-    }
-
-    private void itweenChangeMood(int newVal)
-    {
-        _playerAttributes.setMood(newVal);
-    }
-
-    private void itweenCompleteMood()
-    {
-        Debug.Log("got here");
-        _playerAttributes.HasAlreadyChangedMood = false;
-    }
-
-    private void endChoiceLogic()
-    {
-        
-    }
-
 
 }

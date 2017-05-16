@@ -25,18 +25,10 @@ public class JSONManagerBehaviour : MonoBehaviour
 
         _jsonManagerLogic.StartLoadingCharacterTextFiles();
     }
-    /*
-    void OnLevelWasLoaded()
-    {
-        Setup();
-
-        _jsonManagerLogic.StartLoadingCharacterTextFiles();
-    }
-    */
 
     private void Setup()
     {
-        _jsonManagerLogic.ResourceManager = this;
+        _jsonManagerLogic.JsonManagerBehaviour = this;
         _jsonManagerLogic.JsonDataPath = jsonDataPath; 
     }
 

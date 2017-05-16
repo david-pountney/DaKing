@@ -7,14 +7,10 @@ public class MoodEffectSaturation : IMoodEffect  {
     private float updateVelocity    = 0f;
     private float updateDelay       = 0f;
     private float UpdateDuration    = 0.5f;
-    private float effectMax         = 0.9f;
-    private float effectMin         = 0f;
+    private float effectMax         = 1f;
+    private float effectMin         = 0f;  
 
     ColorCorrectionCurves colorCorrection;
-
-    public MoodEffectSaturation()
-    {
-    }
 
     public void SetEffect(float moodPercent)
     {
@@ -28,7 +24,6 @@ public class MoodEffectSaturation : IMoodEffect  {
         colorCorrection = Camera.main.GetComponent<ColorCorrectionCurves>();
 
         float saturationTarget = MathsHelper.ConvertRange(effectMin, effectMax, moodPercent);
-        //Debug.Log("Saturation Target = " + saturationTarget);
 
         bool reachedTarget = false;
         while (!reachedTarget)

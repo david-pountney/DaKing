@@ -48,11 +48,6 @@ public class ControllerLogic {
     {
         _musicController.GetComponent<SimpleMusicController>().fade_in();
 
-        PlayerAttributes playerAttributes = GlobalReferencesBehaviour.instance.SceneData.playerAttributes;
-
-        //Init default values of mood
-        _moodDisplay.handleMood(playerAttributes.depression);
-
         nextCharacter();
     }
 

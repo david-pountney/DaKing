@@ -25,7 +25,6 @@ public class ChoicesScript : MonoBehaviour {
 
     public void yesButtonClicked()
     {
-        Debug.Log("Clicked Yes");
         MovementBehaviour character = GlobalReferencesBehaviour.instance.SceneData.controller.GetComponent<ControllerBehaviour>().ControllerLogic.CurrentChar;
 
         IChoiceLogic choiceLogic = new YesChoiceLogic();
@@ -39,10 +38,9 @@ public class ChoicesScript : MonoBehaviour {
 
     public void noButtonClicked()
     {
-        Debug.Log("Clicked No");
         MovementBehaviour character = GlobalReferencesBehaviour.instance.SceneData.controller.GetComponent<ControllerBehaviour>().ControllerLogic.CurrentChar;
 
-        IChoiceLogic choiceLogic = new YesChoiceLogic();
+        IChoiceLogic choiceLogic = new NoChoiceLogic();
 
         if (character)
             character.GetComponent<ExecuteChoicesBehaviour>().ExecuteChoices.ExecuteChoice(choiceLogic);

@@ -31,7 +31,13 @@ public class MovementBehaviour : MonoBehaviour {
     public float startingPointY = 1200f;
 
     public float exitSpeed;
-    
+
+    [Header("Animation Options")]
+    public iTween.EaseType moveInAnimationType = iTween.EaseType.easeOutQuart;
+    public iTween.EaseType moveOutAnimationType = iTween.EaseType.easeInSine;
+
+    public IdleAnimationType idleAnimationType = IdleAnimationType.Bob;
+
     [Header("Sine Wave Options")]
     public float amplitudeY;
     public float omegaY;
@@ -94,6 +100,10 @@ public class MovementBehaviour : MonoBehaviour {
         _movementLogic.StartingPointX = startingPointX;
         _movementLogic.StartingPointY = startingPointY;
         _movementLogic.ExitSpeed = exitSpeed;
+        _movementLogic.MoveInEaseType = moveInAnimationType;
+        _movementLogic.MoveOutEaseType = moveOutAnimationType;
+
+        _movementLogic.IdleAnimationType = idleAnimationType;
 
         _movementLogic.AmplitudeY = amplitudeY;
         _movementLogic.OmegaY = omegaY;
@@ -108,6 +118,16 @@ public class MovementBehaviour : MonoBehaviour {
 
         if (Input.GetKeyUp(KeyCode.Space))
             _movementLogic.HandleInput();
+    }
+
+    private void itweenCallback_FinishedMovingOntoScreen()
+    {
+        _movementLogic.FinishedMovingOntoScreen();
+    }
+
+    private void itweenCallback_FinishedMovingOffScreen()
+    {
+        _movementLogic.FinishedMovingOffScreen();
     }
 
 }

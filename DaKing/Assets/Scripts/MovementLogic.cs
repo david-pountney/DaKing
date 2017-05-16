@@ -4,8 +4,13 @@ using System.Collections.Generic;
 using System;
 using UnityEngine.UI;
 
-public class MovementLogic {
+public enum IdleAnimationType
+{
+    Bob,
+    Swift
+}
 
+public class MovementLogic {
     public Transform ThisTransform { get { return _thisTransform; } set { _thisTransform = value; } }
     public SpeechBehaviour SpeechBehaviour { get { return _speechBehaviour; } set { _speechBehaviour = value; } }
     public GameObject SpeechInstance { get { return _speechInstance; } set { _speechInstance = value; } }
@@ -23,6 +28,9 @@ public class MovementLogic {
     public bool GameIsNowOver { get { return _gameIsNowOver; } set { _gameIsNowOver = value; } }
     public bool Enter { get { return _enter; } set { _enter = value; } }
     public bool Exit { get { return _exit; } set { _exit = value; } }
+    public iTween.EaseType MoveInEaseType { get { return _moveInAnimationType; } set { _moveInAnimationType = value; } }
+    public iTween.EaseType MoveOutEaseType { get { return _moveOutAnimationType; } set { _moveOutAnimationType = value; } }
+    public IdleAnimationType IdleAnimationType { get { return _idleAnimationType; } set { _idleAnimationType = value; } }
 
     private Transform _thisTransform;
 
@@ -81,12 +89,22 @@ public class MovementLogic {
 
     private SpeechBehaviour _speechBehaviour;
 
+    //Animation
+    private iTween.EaseType _moveInAnimationType;
+    private iTween.EaseType _moveOutAnimationType;
+
+    private IdleAnimationType _idleAnimationType;
+
     public void UpdateSineWave()
     {
         //Sine wave
         _sineWaveIndex += Time.deltaTime;
         float y = _amplitudeY * Mathf.Sin(_omegaY * _sineWaveIndex);
-        _thisTransform.localPosition = new Vector2(_thisTransform.localPosition.x, _thisTransform.localPosition.y + y);
+
+        if(_idleAnimationType == IdleAnimationType.Bob)
+            _thisTransform.localPosition = new Vector2(_thisTransform.localPosition.x, _thisTransform.localPosition.y + y);
+        if (_idleAnimationType == IdleAnimationType.Swift)
+            _thisTransform.localRotation = new Quaternion(_thisTransform.localRotation.x, _thisTransform.localRotation.y, y, 1f);
     }
 
     public void HandleMovement()
@@ -94,17 +112,15 @@ public class MovementLogic {
         //Enter/exit
         if (_enter && _thisTransform.localPosition.x > _stoppingPointX)
         {
-            moveLeft();
+            MoveLeft();
         }
         else if (_enter)
         {
-            _speechBehaviour.SpeechLogic.StartSpeak();
-            _enter = false;
+
         }
         else if (_exit)
         {
-            _speechInstance.transform.localPosition = new Vector3(999f, 999f, 999f);
-            moveRight();
+            MoveRight();
         }
     }
 
@@ -117,7 +133,8 @@ public class MovementLogic {
     {
         _thisTransform.localPosition = new Vector2(_startingPointX, _startingPointY);
         _choicesOpen = false;
-        _enter = true;
+        //_enter = true;
+        MoveLeft();
     }
 
     /// <summary>
@@ -128,7 +145,7 @@ public class MovementLogic {
         _thisTransform.localScale = new Vector2(_thisTransform.localScale.x * -1, _thisTransform.localScale.y);
     }
 
-    private bool checkForTags(string tag)
+    private bool CheckForTags(string tag)
     {
         if (_speechInstance.transform.GetComponentInChildren<Text>().text.Contains(tag))
         {
@@ -137,7 +154,7 @@ public class MovementLogic {
         return false;
     }
 
-    private void removeTagFromText(int length)
+    private void RemoveTagFromText(int length)
     {
         //Ch string
         string temp = _speechInstance.transform.GetComponentInChildren<Text>().text;
@@ -147,22 +164,36 @@ public class MovementLogic {
 
     public void StartMovingCharacterOut()
     {
-        _exit = true;
+        MoveRight();
     }
 
-    private void moveLeft()
+    private void MoveLeft()
     {
-        _thisTransform.position = new Vector2(_thisTransform.position.x - (_enterSpeed * Time.deltaTime), _thisTransform.position.y);
+        iTween.MoveTo(_thisTransform.gameObject, iTween.Hash("position", new Vector3(_stoppingPointX, _thisTransform.position.y, 0f),
+                                                             "time", 3f,
+                                                             "easeType", _moveInAnimationType,
+                                                             "oncomplete", "itweenCallback_FinishedMovingOntoScreen"));
     }
 
-    private void moveRight()
+    public void FinishedMovingOntoScreen()
+    {
+        _speechBehaviour.SpeechLogic.StartSpeak();
+    }
+
+    private void MoveRight()
     {
         _thisTransform.position = new Vector2(_thisTransform.position.x + (_exitSpeed * Time.deltaTime), _thisTransform.position.y);
-        if (_thisTransform.position.x > _endingPointX)
-        {
-            _exit = false;
-            killSelf();
-        }
+        //_speechInstance.transform.localPosition = new Vector3(999f, 999f, 999f);
+
+        iTween.MoveTo(_thisTransform.gameObject, iTween.Hash("position", new Vector3(_endingPointX, _thisTransform.position.y, 0f),
+                                                     "time", 3f,
+                                                     "easeType", _moveOutAnimationType,
+                                                     "oncomplete", "itweenCallback_FinishedMovingOffScreen"));
+    }
+
+    public void FinishedMovingOffScreen()
+    {
+        killSelf();
     }
 
     private void killSpeechAndChoices()

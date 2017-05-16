@@ -7,7 +7,7 @@ public class JSONManagerLogic {
     public List<string> LstJsonData { get { return _lstJsonData; } set { _lstJsonData = value; } }
     public Dictionary<string, GameObject> DicCharacterByName { get { return _dicCharacterByName; } set { _dicCharacterByName = value; } }
     public string JsonDataPath { get { return _jsonDataPath; } set { _jsonDataPath = value; } }
-    public JSONManagerBehaviour ResourceManager { get { return _resourceManager; } set { _resourceManager = value; } }
+    public JSONManagerBehaviour JsonManagerBehaviour { get { return _jsonManagerBehaviour; } set { _jsonManagerBehaviour = value; } }
 
     private List<string> _lstJsonData = new List<string>();
     private Dictionary<string, GameObject> _dicCharacterByName;
@@ -17,7 +17,7 @@ public class JSONManagerLogic {
 
     private string _jsonDataPath;
 
-    private JSONManagerBehaviour _resourceManager;
+    private JSONManagerBehaviour _jsonManagerBehaviour;
 
     public void StartLoadingCharacterTextFiles()
     {
@@ -42,7 +42,7 @@ public class JSONManagerLogic {
         foreach (MovementBehaviour character in characters)
         {
             //Debug.Log("loading characters...");
-            _resourceManager.CreateCoroutine(filePath + "/" + character.gameObject.name + "Text.json");
+            _jsonManagerBehaviour.CreateCoroutine(filePath + "/" + character.gameObject.name + "Text.json");
             character.gameObject.SetActive(false);
         }
 
@@ -86,8 +86,8 @@ public class JSONManagerLogic {
 
     private void LoadingFinished()
     {
-        if (_resourceManager.onLoaded != null)
-            _resourceManager.onLoaded.Invoke();
+        if (_jsonManagerBehaviour.onLoaded != null)
+            _jsonManagerBehaviour.onLoaded.Invoke();
     }
 
 }

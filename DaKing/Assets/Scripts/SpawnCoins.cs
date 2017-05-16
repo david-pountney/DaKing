@@ -17,7 +17,7 @@ public class SpawnCoins : MonoBehaviour
     public GameObject coin;
 
     public List<Vector2> _listOfPositions;
-    private PlayerAttributes playerAttributes;
+    private PlayerAttributesLogic playerAttributes;
 
     private float gapX;
     private float gapY;
@@ -27,7 +27,7 @@ public class SpawnCoins : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        playerAttributes = GameObject.Find("king").GetComponent<PlayerAttributes>();
+        playerAttributes = GlobalReferencesBehaviour.instance.SceneData.playerAttributes.PlayerAttributesLogic;
             
         _listOfPositions = new List<Vector2>();
 

@@ -16,7 +16,6 @@ public class SpeechBehaviour : MonoBehaviour {
 	void Awake () {
         _speechLogic = new SpeechLogic();
         _movementLogic = this.GetComponent<MovementBehaviour>();
-        
 	}
 
     private void SetUpLogic()
@@ -29,13 +28,13 @@ public class SpeechBehaviour : MonoBehaviour {
         _speechLogic.GameOver = GlobalReferencesBehaviour.instance.sceneData.gameOver;
         _speechLogic.SpeechBubbleX = speechBubbleX;
         _speechLogic.SpeechBubbleY = speechBubbleY;
+        _speechLogic.NormalSpeechBubbleScale = _speechLogic.SpeechInstance.transform.localScale;
         _speechLogic.SoundScript = GlobalReferencesBehaviour.instance.sceneData.soundScript;
     }
 
     void Start()
     {
         SetUpLogic();
-
     }
 
     void Update()
@@ -43,6 +42,15 @@ public class SpeechBehaviour : MonoBehaviour {
         if (Input.GetKeyUp(KeyCode.Space))
             _speechLogic.HandleInput();
     }
-	
 
+    private void itweenCallback_FinishedWaitingForSpeechDelay()
+    {
+        _speechLogic.ShowSpeechBubble();
+    }
+
+    private void itweenCallback_FinishedRemovingSpeechBubble()
+    {
+        _movementLogic.MovementLogic.StartMovingCharacterOut();
+    }
+    
 }

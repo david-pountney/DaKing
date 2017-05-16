@@ -35,6 +35,9 @@ public class TransitionToGameScript : MonoBehaviour
     [Tooltip("The main menu canvas")]
     private CanvasGroup mainMenuCanvasGroup;
 
+    [Tooltip("The main menu canvas")]
+    private CanvasGroup loadingUI;
+
     private AudioSource audioSource;
 
     //Is the main menu enabled? 
@@ -50,7 +53,8 @@ public class TransitionToGameScript : MonoBehaviour
     {
         controllerBehaviour = GlobalReferencesBehaviour.instance.SceneData.controller.GetComponent<ControllerBehaviour>();
         gameCameraPosition = GlobalReferencesBehaviour.instance.SceneData.gameCameraPosition.transform;
-        mainMenuCanvasGroup = transform.parent.GetComponent<CanvasGroup>();
+        mainMenuCanvasGroup = GlobalReferencesBehaviour.instance.SceneData.menuui.GetComponent<CanvasGroup>();
+        loadingUI = GlobalReferencesBehaviour.instance.SceneData.loadingui.GetComponent<CanvasGroup>();
     }
 
     /// <summary>
@@ -75,6 +79,18 @@ public class TransitionToGameScript : MonoBehaviour
         }
     }
 
+    public void BeginTransitionToGame()
+    {
+        //Fade main menu out
+        StartCoroutine(FadeOut());
+
+        //Play starting game sound
+        audioSource.PlayOneShot(audioClip);
+
+        //Start reading in characters json files
+        controllerBehaviour.GetComponent<GenerateCharactersByJSONBehaviour>().GameMasterLogic.Init();
+    }
+
     /// <summary>
     /// Fade out the main menu canvas
     /// </summary>
@@ -82,9 +98,9 @@ public class TransitionToGameScript : MonoBehaviour
     private IEnumerator FadeOut()
     {
         float time = timeToAnimateFadeOutMainMenu;
-        while (mainMenuCanvasGroup.alpha > 0)
+        while (loadingUI.alpha > 0)
         {
-            mainMenuCanvasGroup.alpha -= Time.deltaTime / time;
+            loadingUI.alpha -= Time.deltaTime / time;
             yield return null;
         }
 

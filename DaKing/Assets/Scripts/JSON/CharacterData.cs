@@ -22,4 +22,6 @@ public class CharacterData
     public List<int> lstOutcomeNoResult;
     public List<int> lstOutcomePassiveResultOne;
     public List<int> lstOutcomePassiveResultTwo;
+
+
 }
