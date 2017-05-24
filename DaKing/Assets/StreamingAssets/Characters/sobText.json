@@ -1,19 +1,34 @@
 {
 	"charName" : "sob",
 	"lstDialogOne":[
-		"Wow! Look at all that!",
-		"...That's a lot of gold",
-		"(2)I could look after that for you, you know",
-		"Just say the words",
-		"You won't be around to worry about it all",
-		"Let me be king|c"
+		"Ah Majesty, my old friend!",
+		"It's good to see you're back on the throne",
+		"I understand things have been..",
+		"(2)'Uneasy'",
+		"For you and your family lately",
+		"I just want you to know, friend",
+		"I'm here for you if you need me",
+		"It can't be easy being responcible for an entire kingdom",
+		"Having to bare the weight of thousands of people's lives on your shoulders",
+		"Would drive a man crazy",
+		"(3)Say..",
+		"(2)I could look after the kingdom for you, you know",
+		"Just for a while.",
+		"You can be with your wife and kids again",
+		"I'm sure you don't want your health deterorating further than it already has",
+		"Just take a break",
+		"For your family's sake",
+		"How about it?",
+		"Give the kingdom to me|c"
 	],
 	"lstOutcomeYesText":[
-		"Haha! Fool! The kingdom is mine! |d"
+		"Haha!",
+		"Fool!",
+		"Guards!!|d"
 	],
 	"lstOutcomeNoText":[
-		"...",
-		"You haven't seen the last of me"
+		"Absolutly King",
+		"Your word is law"
 	],
 	"lstOutcomeNoResult":[
 		0,

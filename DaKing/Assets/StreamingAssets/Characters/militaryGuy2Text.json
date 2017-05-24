@@ -1,5 +1,6 @@
 {
 	"charName" : "militaryGuy2",
+	"previousCharacterDecisionName" : "militaryGuy",
 	"lstDialogOne":[
 		"M'lord",
 		"The battle was decisivly won",

@@ -9,7 +9,8 @@ public class JSONManagerBehaviour : MonoBehaviour
 {
     public JSONManagerLogic _jsonManagerLogic;
     
-    public string jsonDataPath;
+    public string jsonCharacterDataPath;
+    public string jsonCharacterOptionDataPath;
 
     [Header("Events")]
     public UnityEvent onLoaded;
@@ -24,12 +25,14 @@ public class JSONManagerBehaviour : MonoBehaviour
         Setup();
 
         _jsonManagerLogic.StartLoadingCharacterTextFiles();
+        _jsonManagerLogic.StartLoadingCharacterOptionFiles();
     }
 
     private void Setup()
     {
         _jsonManagerLogic.JsonManagerBehaviour = this;
-        _jsonManagerLogic.JsonDataPath = jsonDataPath; 
+        _jsonManagerLogic.JsonCharacterDataPath = jsonCharacterDataPath;
+        _jsonManagerLogic.JsonCharacterOptionDataPath = jsonCharacterOptionDataPath;
     }
 
     void OnDestroy()
@@ -37,11 +40,14 @@ public class JSONManagerBehaviour : MonoBehaviour
 
     }
 
-    public void CreateCoroutine(string filePath)
+    public void LoadCharacterTextCoroutine(string filePath)
     {
-        StartCoroutine(_jsonManagerLogic.LoadWWW(filePath));
+        StartCoroutine(_jsonManagerLogic.LoadCharacterWWW(filePath));
     }
 
-    
+    public void LoadCharacterOptionsTextCoroutine(string filePath)
+    {
+        StartCoroutine(_jsonManagerLogic.LoadCharacterOptionsWWW(filePath));
+    }
 
 }

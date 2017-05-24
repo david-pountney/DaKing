@@ -7,14 +7,14 @@ public class GenerateCharactersByJSONLogic {
 
     public List<CharacterData> LstCharData { get { return _lstCharData; } set { _lstCharData = value; } }
     public CharacterData CurrentChar { get { return _currentChar; } set { _currentChar = value; } }
-    public JSONManagerBehaviour ResourceManager { get { return _resourceManager; } set { _resourceManager = value; } }
+    public JSONManagerBehaviour ResourceManager { get { return _jsonManagerBehaviour; } set { _jsonManagerBehaviour = value; } }
     public int SuperSoldierNeeded { get { return _superSoldiersNeeded; } set { _superSoldiersNeeded = value; } }
     public int SuperSoldierCount { get { return _superSoldiersCount; } set { _superSoldiersCount = value; } }
     public bool DevMode { get { return _devMode; } set { _devMode = value; } }
     
     private List<CharacterData> _lstCharData;
     private CharacterData _currentChar;
-    private JSONManagerBehaviour _resourceManager; 
+    private JSONManagerBehaviour _jsonManagerBehaviour; 
 
     private int _superSoldiersCount;
     private int _superSoldiersNeeded;
@@ -32,8 +32,8 @@ public class GenerateCharactersByJSONLogic {
         _superSoldiersCount = 0;
         _superSoldiersNeeded = 4;
         
-        PrintToConsole("lstJsonData Count: " + _resourceManager._jsonManagerLogic.LstJsonData.Count);
-        foreach (string jsonFile in _resourceManager._jsonManagerLogic.LstJsonData)
+        PrintToConsole("lstJsonData Count: " + _jsonManagerBehaviour._jsonManagerLogic.LstJsonCharacterData.Count);
+        foreach (string jsonFile in _jsonManagerBehaviour._jsonManagerLogic.LstJsonCharacterData)
         {
             PrintToConsole("jsonFile:"+jsonFile);
             _lstCharData.Add(JsonUtility.FromJson<CharacterData>(jsonFile));
@@ -134,10 +134,30 @@ public class GenerateCharactersByJSONLogic {
                 charInstance.theChoice.ExecuteChoices.PassiveTwoMilitaryOutcome = CurrentChar.lstOutcomePassiveResultTwo[1];
                 charInstance.theChoice.ExecuteChoices.PassiveTwoMoodOutcome = CurrentChar.lstOutcomePassiveResultTwo[2];
             }
-            PrintToConsole("Character loaded.");
 
+            if(CurrentChar.previousCharacterDecisionName != null)
+            {
+                DoubleOptionDialog dod = charInstance as DoubleOptionDialog;
+                if (dod)
+                    dod.previousCharactersDecision = GetCharacterChoice();
+            }
+
+            PrintToConsole("Character loaded.");
+            
             currentCharacter.gameObject.SetActive(false);
+
+
         }
+    }
+
+    private ExecuteChoicesBehaviour GetCharacterChoice()
+    {
+        MovementBehaviour currentCharacter = (from go in GlobalReferencesBehaviour.instance.SceneData.Characters
+                                              where go.gameObject.name == CurrentChar.previousCharacterDecisionName
+                                              select go).FirstOrDefault();
+
+        return currentCharacter.GetComponent<ExecuteChoicesBehaviour>();
+
     }
 
     private void PrintToConsole(string text)

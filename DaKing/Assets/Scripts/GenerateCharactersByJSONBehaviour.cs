@@ -5,10 +5,7 @@ using System;
 
 public class GenerateCharactersByJSONBehaviour : MonoBehaviour {
 
-    public GenerateCharactersByJSONLogic GameMasterLogic { get { return _gameMaster; } set { _gameMaster = value; } }
-
-    [SerializeField]
-    private List<CharacterData> lstCharData;
+    public GenerateCharactersByJSONLogic GenerateCharactersByJSONLogic { get { return _generateCharactersByJSONLogic; } set { _generateCharactersByJSONLogic = value; } }
 
     [SerializeField]
     private int superSoldiersCount;
@@ -18,11 +15,11 @@ public class GenerateCharactersByJSONBehaviour : MonoBehaviour {
     [Header("Dev Options")]
     public bool devMode = false;
 
-    private GenerateCharactersByJSONLogic _gameMaster;
+    private GenerateCharactersByJSONLogic _generateCharactersByJSONLogic;
 
     // Use this for initialization
     void Awake () {
-        _gameMaster = new GenerateCharactersByJSONLogic();
+        _generateCharactersByJSONLogic = new GenerateCharactersByJSONLogic();
 	}
 	
     void Start()
@@ -32,9 +29,9 @@ public class GenerateCharactersByJSONBehaviour : MonoBehaviour {
 
     private void Setup()
     {
-        _gameMaster.SuperSoldierNeeded = superSoldiersNeeded;
-        _gameMaster.DevMode = devMode;
-        _gameMaster.ResourceManager = GlobalReferencesBehaviour.instance.SceneData.resourceManager;
+        _generateCharactersByJSONLogic.SuperSoldierNeeded = superSoldiersNeeded;
+        _generateCharactersByJSONLogic.DevMode = devMode;
+        _generateCharactersByJSONLogic.ResourceManager = GlobalReferencesBehaviour.instance.SceneData.resourceManager;
     }
 
 }

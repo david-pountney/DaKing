@@ -8,22 +8,22 @@ using System.Collections;
 /// </summary>
 public class ChooseCharacterScript : MonoBehaviour {
 
+    public ExecuteChoicesBehaviour PreviouscharacterChoice { get { return _previousCharacterChoice; } set { _previousCharacterChoice = value; } }
+
     //Which character in another Character objects children are we basing this decision on?
     public GameObject theCharacter;
-	
+
+    //Get the script that contains the 'yes'/'no' decision a character made
+    [SerializeField]
+    private ExecuteChoicesBehaviour _previousCharacterChoice;
+
     /// <summary>
     /// Call this method to decide which character is chosen based on a previous choice the player has made
     /// </summary>
     public MovementBehaviour ChooseCharacter()
     {
-        //Get the script that contains the 'yes'/'no' decision a character made
-        ExecuteChoicesBehaviour theChoice = null;
-
         Transform child1 = null;
         Transform child2 = null;
-
-        if (theCharacter)
-            theChoice = theCharacter.GetComponent<ExecuteChoicesBehaviour>();
 
         if(transform.childCount > 0)
             child1 = transform.GetChild(0);
@@ -37,12 +37,12 @@ public class ChooseCharacterScript : MonoBehaviour {
             return null;
         }
         //There is no previous choice effecting which character we pick, so just pick the first child
-        if (!theChoice)
+        if (!_previousCharacterChoice)
             return child1.GetComponent<MovementBehaviour>();
 
         //We always assume a previous 'yes' choice means the first child, otherwise the second child
         //If 'yes'...
-        if (theChoice.ExecuteChoices.outcomeChoice)
+        if (_previousCharacterChoice.ExecuteChoices.outcomeChoice)
         {
             if (child1)
                 return child1.GetComponent<MovementBehaviour>();

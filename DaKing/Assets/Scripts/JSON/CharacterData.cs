@@ -23,5 +23,5 @@ public class CharacterData
     public List<int> lstOutcomePassiveResultOne;
     public List<int> lstOutcomePassiveResultTwo;
 
-
+    public string previousCharacterDecisionName;
 }

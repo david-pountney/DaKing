@@ -75,7 +75,11 @@ public class TransitionToGameScript : MonoBehaviour
             StartCoroutine(FadeOut());
 
             //Start reading in characters json files
-            controllerBehaviour.GetComponent<GenerateCharactersByJSONBehaviour>().GameMasterLogic.Init();
+            controllerBehaviour.GetComponent<GenerateCharactersByJSONBehaviour>().GenerateCharactersByJSONLogic.Init();
+
+            //Start reading in character option json files
+            controllerBehaviour.GetComponent<GenerateCharacterOptionsByJSONBehaviour>().GenerateCharacterOptionsByJSONLogic.Init();
+            
         }
     }
 
@@ -88,7 +92,11 @@ public class TransitionToGameScript : MonoBehaviour
         audioSource.PlayOneShot(audioClip);
 
         //Start reading in characters json files
-        controllerBehaviour.GetComponent<GenerateCharactersByJSONBehaviour>().GameMasterLogic.Init();
+        controllerBehaviour.GetComponent<GenerateCharactersByJSONBehaviour>().GenerateCharactersByJSONLogic.Init();
+
+        //Start reading in character option json files
+        controllerBehaviour.GetComponent<GenerateCharacterOptionsByJSONBehaviour>().GenerateCharacterOptionsByJSONLogic.Init();
+
     }
 
     /// <summary>

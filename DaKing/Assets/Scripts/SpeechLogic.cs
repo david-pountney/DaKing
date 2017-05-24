@@ -275,7 +275,7 @@ public class SpeechLogic {
         //Adds to the super soldier count
         if (checkForTags(newSpeech, @"|super"))
         {
-            GlobalReferencesBehaviour.instance.SceneData.gameMaster.GameMasterLogic.SuperSoldierCount++;
+            GlobalReferencesBehaviour.instance.SceneData.gameMaster.GenerateCharactersByJSONLogic.SuperSoldierCount++;
             removeTagFromEndOfText(ref newSpeech, 6);
         }
 
@@ -284,7 +284,7 @@ public class SpeechLogic {
         {
             removeTagFromEndOfText(ref newSpeech, 10);
             GenerateCharactersByJSONBehaviour gm = GlobalReferencesBehaviour.instance.SceneData.gameMaster;
-            _thisTransform.GetComponent<ExecuteChoices>().outcomeChoice = gm.GameMasterLogic.SuperSoldierCount >= gm.GameMasterLogic.SuperSoldierNeeded;
+            _thisTransform.GetComponent<ExecuteChoices>().outcomeChoice = gm.GenerateCharactersByJSONLogic.SuperSoldierCount >= gm.GenerateCharactersByJSONLogic.SuperSoldierNeeded;
         }
 
         if (checkForTags(newSpeech, "("))

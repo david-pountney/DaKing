@@ -29,7 +29,7 @@ public class ControllerLogic {
 
     public void GetAllCharacters()
     {
-        GameObject characterContainer = GameObject.Find("Characters");
+        GameObject characterContainer = GlobalReferencesBehaviour.instance.SceneData.characterContainer;
         GameObject nextDay = GameObject.Find("NextDayMarker");
 
         _listOfCharacters = new List<GameObject>();

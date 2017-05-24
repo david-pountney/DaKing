@@ -1,27 +1,39 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 
 public class JSONManagerLogic {
 
-    public List<string> LstJsonData { get { return _lstJsonData; } set { _lstJsonData = value; } }
-    public Dictionary<string, GameObject> DicCharacterByName { get { return _dicCharacterByName; } set { _dicCharacterByName = value; } }
-    public string JsonDataPath { get { return _jsonDataPath; } set { _jsonDataPath = value; } }
+    public List<string> LstJsonCharacterData { get { return _lstJsonCharacterData; } set { _lstJsonCharacterData = value; } }
+    public List<string> LstJsonCharacterOptionsData { get { return _lstJsonCharacterOptionsData; } set { _lstJsonCharacterOptionsData = value; } }
+    public string JsonCharacterDataPath { get { return _jsonCharacterDataPath; } set { _jsonCharacterDataPath = value; } }
+    public string JsonCharacterOptionDataPath { get { return _jsonCharacterOptionDataPath; } set { _jsonCharacterOptionDataPath = value; } }
     public JSONManagerBehaviour JsonManagerBehaviour { get { return _jsonManagerBehaviour; } set { _jsonManagerBehaviour = value; } }
 
-    private List<string> _lstJsonData = new List<string>();
+    private List<string> _lstJsonCharacterData = new List<string>();
+    private List<string> _lstJsonCharacterOptionsData = new List<string>();
     private Dictionary<string, GameObject> _dicCharacterByName;
     
-    private int _jsonLoadCount = 0;
-    private int _jsonCount = 9999;
+    //Character files
+    private int _jsonCharacterLoadCount = 0;
+    private int _jsonCharacterCount = 9999;
 
-    private string _jsonDataPath;
+    //Character Option files
+    private int _jsonCharacterOptionsLoadCount = 0;
+    private int _jsonCharacterOptionsCount = 9999;
+
+    private string _jsonCharacterDataPath;
+    private string _jsonCharacterOptionDataPath;
+
+    private bool _loadedCharacters = false;
+    private bool _loadedCharacterOptions = false;
 
     private JSONManagerBehaviour _jsonManagerBehaviour;
 
     public void StartLoadingCharacterTextFiles()
     {
-        GameObject characterContainer = GameObject.Find("Characters");
+        GameObject characterContainer = GlobalReferencesBehaviour.instance.SceneData.characterContainer;
         List<MovementBehaviour> characters = new List<MovementBehaviour>();
         characterContainer.GetComponentsInChildren<MovementBehaviour>(true, characters);
 
@@ -29,28 +41,60 @@ public class JSONManagerLogic {
         GlobalReferencesBehaviour.instance.SceneData.Characters = characters;
 
         //Get all characters
-        _jsonCount = characters.Count;
+        _jsonCharacterCount = characters.Count;
 
         //If already loaded, dont do it again
-        if (hasJsonLoaded())
+        if (hasJsonCharactersLoaded())
         {
             LoadingFinished();
             return;
         }
 
-        string filePath = System.IO.Path.Combine(Application.streamingAssetsPath, _jsonDataPath);
+        string filePath = System.IO.Path.Combine(Application.streamingAssetsPath, _jsonCharacterDataPath);
         foreach (MovementBehaviour character in characters)
         {
             //Debug.Log("loading characters...");
-            _jsonManagerBehaviour.CreateCoroutine(filePath + "/" + character.gameObject.name + "Text.json");
+            _jsonManagerBehaviour.LoadCharacterTextCoroutine(filePath + "/" + character.gameObject.name + "Text.json");
             character.gameObject.SetActive(false);
         }
-
     }
 
-    public bool hasJsonLoaded()
+    public void StartLoadingCharacterOptionFiles()
     {
-        return _jsonLoadCount >= _jsonCount;
+        List<ChooseCharacterScript> chooseCharacterScripts = new List<ChooseCharacterScript>();
+
+        GameObject characterContainer = GlobalReferencesBehaviour.instance.SceneData.characterContainer;
+
+        //If already loaded, dont do it again
+        if (hasJsonCharacterOptionsLoaded())
+        {
+            LoadingFinished();
+            return;
+        }
+
+        string filePath = System.IO.Path.Combine(Application.streamingAssetsPath, _jsonCharacterOptionDataPath);
+        //Get all character options
+        characterContainer.GetComponentsInChildren<ChooseCharacterScript>(false, chooseCharacterScripts);
+
+        //Count all character options
+        _jsonCharacterOptionsCount = chooseCharacterScripts.Count;
+
+        foreach (ChooseCharacterScript characterOption in chooseCharacterScripts)
+        {
+            Debug.Log("loading character options...");
+            _jsonManagerBehaviour.LoadCharacterOptionsTextCoroutine(filePath + "/" + characterOption.gameObject.name.ToLower() + "OptionsText.json");
+            //characterOption.gameObject.SetActive(false);
+        }
+    }
+
+    public bool hasJsonCharactersLoaded()
+    {
+        return _jsonCharacterLoadCount >= _jsonCharacterCount;
+    }
+
+    public bool hasJsonCharacterOptionsLoaded()
+    {
+        return _jsonCharacterOptionsLoadCount >= _jsonCharacterOptionsCount;
     }
 
     public GameObject getCharacterByName(string charName)
@@ -60,7 +104,7 @@ public class JSONManagerLogic {
         return theChar;
     }
 
-    public IEnumerator LoadWWW(string filePath)
+    public IEnumerator LoadCharacterWWW(string filePath)
     {
         //Debug.Log("filePath is: " + filePath);
         if (filePath.Contains("://"))
@@ -70,17 +114,39 @@ public class JSONManagerLogic {
             //Debug.Log(www.text);
             //Debug.Log("On a remote machine, loading the file via WWW");
 
-            _lstJsonData.Add(www.text);
-            ++_jsonLoadCount;
+            _lstJsonCharacterData.Add(www.text);
+            ++_jsonCharacterLoadCount;
+        }
+        else {
+            //Debug.Log("On a local machine, loading the file via System.IO");
+            _lstJsonCharacterData.Add(System.IO.File.ReadAllText(filePath));
+            ++_jsonCharacterLoadCount;
+        }
+    }
+
+    public IEnumerator LoadCharacterOptionsWWW(string filePath)
+    {
+        //Debug.Log("filePath is: " + filePath);
+        if (filePath.Contains("://"))
+        {
+            WWW www = new WWW(filePath);
+
+            yield return www;
+
+            _lstJsonCharacterOptionsData.Add(www.text);
+            ++_jsonCharacterOptionsLoadCount;
         }
         else {
             //Debug.Log("On a local machine, loading the file via System.IO");
 
-            _lstJsonData.Add(System.IO.File.ReadAllText(filePath));
-            ++_jsonLoadCount;
+            if (File.Exists(filePath))
+            {
+                _lstJsonCharacterOptionsData.Add(System.IO.File.ReadAllText(filePath));
+                ++_jsonCharacterOptionsLoadCount;
+            }
         }
 
-        if (hasJsonLoaded())
+        if (hasJsonCharacterOptionsLoaded())
             LoadingFinished();
     }
 
